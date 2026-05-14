@@ -1,0 +1,93 @@
+{
+  "block_id": "1J40b-3a",
+  "elapsed_seconds": 0.9,
+  "rolesignal_audit": {
+    "passed": true,
+    "features": [
+      {
+        "feature_name": "uniform_texture",
+        "mapped_from_group_role": "observe_neutral",
+        "appears_in_observed_features_delta": true,
+        "first_observed_step": 7,
+        "first_used_in_situation_step": 8,
+        "timing_ok": true,
+        "derived_from_audit_label": false
+      },
+      {
+        "feature_name": "variable_texture",
+        "mapped_from_group_role": "observe_helps",
+        "appears_in_observed_features_delta": true,
+        "first_observed_step": 1,
+        "first_used_in_situation_step": 2,
+        "timing_ok": true,
+        "derived_from_audit_label": false
+      },
+      {
+        "feature_name": "worn_texture",
+        "mapped_from_group_role": "observe_wasteful",
+        "appears_in_observed_features_delta": true,
+        "first_observed_step": 23,
+        "first_used_in_situation_step": 24,
+        "timing_ok": true,
+        "derived_from_audit_label": false
+      }
+    ],
+    "all_in_observed_delta": true,
+    "all_timing_ok": true,
+    "any_derived_from_audit": false
+  },
+  "hidden_timing_audit": {
+    "passed": true,
+    "premature_use_count": 0,
+    "no_observe_unrevealed_hidden_count": 0,
+    "one_observe_unrevealed_hidden_count": 0,
+    "repeated_observe_unrevealed_hidden_count": 0,
+    "premature_examples": []
+  },
+  "ablation_full": {
+    "mse": 0.026648,
+    "overall_observe_rate": 0.3725,
+    "observe_helps_rate": 0.8636,
+    "observe_neutral_rate": 0.0,
+    "observe_wasteful_rate": 0.0
+  },
+  "ablation_no_rolesignal": {
+    "mse": 0.045735,
+    "overall_observe_rate": 0.0196,
+    "observe_helps_rate": 0.0,
+    "observe_neutral_rate": 0.0625,
+    "observe_wasteful_rate": 0.0,
+    "shows_separation": false
+  },
+  "ablation_no_hidden": {
+    "mse": 0.019427,
+    "overall_observe_rate": 0.2353,
+    "observe_helps_rate": 0.5455,
+    "observe_neutral_rate": 0.0,
+    "observe_wasteful_rate": 0.0
+  },
+  "ablation_visible_only": {
+    "mse": 0.032878,
+    "overall_observe_rate": 0.0,
+    "observe_helps_rate": 0.0,
+    "observe_neutral_rate": 0.0,
+    "observe_wasteful_rate": 0.0,
+    "shows_separation": false
+  },
+  "result_valid_after_audit": false,
+  "acceptance_checks": {
+    "rolesignal_audit_passed": true,
+    "hidden_timing_audit_passed": true,
+    "no_observe_unrevealed_hidden = 0": true,
+    "one_observe_unrevealed_hidden = 0": true,
+    "rolesignal_not_derived_from_audit": true,
+    "hidden_feature_premature_use = false": true,
+    "no_rolesignal_helps > neutral": false,
+    "visible_only_helps > neutral": false,
+    "result_valid_after_audit": false,
+    "policy_decisions_changed = false": true,
+    "no_seed_crashes": true
+  },
+  "implementation_status": "partial",
+  "failure_reason": "no_rolesignal_helps > neutral; visible_only_helps > neutral; result_valid_after_audit"
+}

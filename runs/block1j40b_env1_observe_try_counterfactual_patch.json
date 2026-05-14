@@ -1,0 +1,260 @@
+{
+  "block_id": "1J40b-env1",
+  "new_condition": "C6_observe_try_counterfactual_v0",
+  "condition_config": {
+    "label": "C6_observe_try_counterfactual_v0",
+    "p_target": 0.6,
+    "p_other": 0.4,
+    "absent": false,
+    "subtype": true,
+    "subtype_config": "observe_try_counterfactual_v0",
+    "mixed_source": true,
+    "observe_depth_schedules": true
+  },
+  "elapsed_seconds": 0.0,
+  "total_objects": 36,
+  "total_events": 264,
+  "observe_events": 48,
+  "try_events": 216,
+  "no_observe_try_count": 72,
+  "one_observe_try_count": 72,
+  "repeated_observe_try_count": 72,
+  "matched_schedule_group_count": 12,
+  "comparable_observe_try_set_count": 24,
+  "complete_action_set_count": 36,
+  "partial_action_set_count": 0,
+  "delayed_credit_available": true,
+  "delayed_observe_benefit_detectable": true,
+  "mean_immediate_observe_value": 0.26,
+  "mean_combined_observe_value": 0.6225,
+  "combined_observe_can_exceed_try": true,
+  "value_scale_report": {
+    "observe_immediate": {
+      "min": 0.225,
+      "max": 0.305,
+      "mean": 0.26
+    },
+    "observe_delayed": {
+      "min": -0.45,
+      "max": 1.5,
+      "mean": 0.3625
+    },
+    "observe_combined": {
+      "min": -0.165,
+      "max": 1.805,
+      "mean": 0.6225
+    },
+    "try_value": {
+      "min": -0.15,
+      "max": 0.45,
+      "mean": 0.0833
+    }
+  },
+  "try_success_by_observe_depth": {
+    "no_observe": {
+      "success_rate": 0.3889,
+      "n": 72
+    },
+    "one_observe": {
+      "success_rate": 0.3889,
+      "n": 72
+    },
+    "repeated_observe": {
+      "success_rate": 0.3889,
+      "n": 72
+    }
+  },
+  "try_success_by_schedule_role": {
+    "no_observe|observe_helps": {
+      "success_rate": 0.4167,
+      "count": 24
+    },
+    "no_observe|observe_neutral": {
+      "success_rate": 0.375,
+      "count": 24
+    },
+    "no_observe|observe_wasteful": {
+      "success_rate": 0.375,
+      "count": 24
+    },
+    "one_observe|observe_helps": {
+      "success_rate": 0.4167,
+      "count": 24
+    },
+    "one_observe|observe_neutral": {
+      "success_rate": 0.375,
+      "count": 24
+    },
+    "one_observe|observe_wasteful": {
+      "success_rate": 0.375,
+      "count": 24
+    },
+    "repeated_observe|observe_helps": {
+      "success_rate": 0.4167,
+      "count": 24
+    },
+    "repeated_observe|observe_neutral": {
+      "success_rate": 0.375,
+      "count": 24
+    },
+    "repeated_observe|observe_wasteful": {
+      "success_rate": 0.375,
+      "count": 24
+    }
+  },
+  "observe_depth_counts": {
+    "no_observe": 12,
+    "one_observe": 12,
+    "repeated_observe": 12
+  },
+  "group_role_counts": {
+    "observe_helps": 12,
+    "observe_neutral": 12,
+    "observe_wasteful": 12
+  },
+  "delayed_credit_records": [
+    {
+      "oid": "c6_obj_0006",
+      "observe_ep": 0,
+      "observe_step": 7,
+      "observe_depth": 1,
+      "n_later_tries": 6,
+      "later_successes": 4,
+      "later_failures": 2,
+      "immediate_value": 0.245,
+      "delayed_return": 1.5,
+      "combined_value": 1.745
+    },
+    {
+      "oid": "c6_obj_0006",
+      "observe_ep": 0,
+      "observe_step": 8,
+      "observe_depth": 2,
+      "n_later_tries": 6,
+      "later_successes": 4,
+      "later_failures": 2,
+      "immediate_value": 0.305,
+      "delayed_return": 1.5,
+      "combined_value": 1.805
+    },
+    {
+      "oid": "c6_obj_0006",
+      "observe_ep": 0,
+      "observe_step": 12,
+      "observe_depth": 3,
+      "n_later_tries": 3,
+      "later_successes": 1,
+      "later_failures": 2,
+      "immediate_value": 0.305,
+      "delayed_return": 0.15,
+      "combined_value": 0.455
+    },
+    {
+      "oid": "c6_obj_0011",
+      "observe_ep": 0,
+      "observe_step": 16,
+      "observe_depth": 1,
+      "n_later_tries": 6,
+      "later_successes": 2,
+      "later_failures": 4,
+      "immediate_value": 0.225,
+      "delayed_return": 0.3,
+      "combined_value": 0.525
+    },
+    {
+      "oid": "c6_obj_0021",
+      "observe_ep": 0,
+      "observe_step": 29,
+      "observe_depth": 1,
+      "n_later_tries": 6,
+      "later_successes": 3,
+      "later_failures": 3,
+      "immediate_value": 0.225,
+      "delayed_return": 0.9,
+      "combined_value": 1.125
+    },
+    {
+      "oid": "c6_obj_0021",
+      "observe_ep": 0,
+      "observe_step": 30,
+      "observe_depth": 2,
+      "n_later_tries": 6,
+      "later_successes": 3,
+      "later_failures": 3,
+      "immediate_value": 0.285,
+      "delayed_return": 0.9,
+      "combined_value": 1.185
+    },
+    {
+      "oid": "c6_obj_0021",
+      "observe_ep": 0,
+      "observe_step": 34,
+      "observe_depth": 3,
+      "n_later_tries": 3,
+      "later_successes": 1,
+      "later_failures": 2,
+      "immediate_value": 0.285,
+      "delayed_return": 0.15,
+      "combined_value": 0.435
+    },
+    {
+      "oid": "c6_obj_0026",
+      "observe_ep": 0,
+      "observe_step": 38,
+      "observe_depth": 1,
+      "n_later_tries": 6,
+      "later_successes": 3,
+      "later_failures": 3,
+      "immediate_value": 0.225,
+      "delayed_return": 0.9,
+      "combined_value": 1.125
+    },
+    {
+      "oid": "c6_obj_0036",
+      "observe_ep": 0,
+      "observe_step": 51,
+      "observe_depth": 1,
+      "n_later_tries": 6,
+      "later_successes": 1,
+      "later_failures": 5,
+      "immediate_value": 0.225,
+      "delayed_return": -0.3,
+      "combined_value": -0.075
+    },
+    {
+      "oid": "c6_obj_0036",
+      "observe_ep": 0,
+      "observe_step": 52,
+      "observe_depth": 2,
+      "n_later_tries": 6,
+      "later_successes": 1,
+      "later_failures": 5,
+      "immediate_value": 0.285,
+      "delayed_return": -0.3,
+      "combined_value": -0.015
+    }
+  ],
+  "delayed_credit_total_records": 48,
+  "n_episodes": 5,
+  "n_matched_groups": 12,
+  "audit_labels_count": 36,
+  "audit_label_leakage_detected": false,
+  "old_c4_preserved": true,
+  "old_c5_preserved": true,
+  "policy_decisions_changed": false,
+  "implementation_status": "pass",
+  "failure_reason": "none",
+  "acceptance_checks": {
+    "no_observe_try_count > 0": true,
+    "one_observe_try_count > 0": true,
+    "repeated_observe_try_count > 0": true,
+    "matched_schedule_group_count > 0": true,
+    "comparable_observe_try_set_count > 0": true,
+    "delayed_credit_available = true": true,
+    "audit labels not agent-visible": true,
+    "old C4 preserved": true,
+    "old C5 preserved": true,
+    "no policy decisions change": true,
+    "no_seed_crashes": true
+  }
+}

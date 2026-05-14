@@ -1,0 +1,175 @@
+{
+  "block_id": "1H3",
+  "data_sources": [
+    "runs/calibration_block1h0_balanced_evaluation_audit.json",
+    "runs/calibration_block1h1_balanced_policy_rescore.json",
+    "runs/calibration_block1h2_balanced_utility_feasibility.json"
+  ],
+  "accepted_findings": [
+    "raw_composite_accuracy_is_majority_class_dominated",
+    "macro_query_balanced_accuracy_is_primary_task_metric",
+    "c13_has_weak_macro_bal_gain_not_driven_by_improved_positive_recall_c13_positive_recall_sum_lower_than_c0b",
+    "c13_is_not_cost_effective_under_current_cost_scale",
+    "stop_on_skip_is_metric_exploit",
+    "current_scalar_utility_not_policy_comparison_ready"
+  ],
+  "invalidated_claims": [
+    "c13_raw_comp_gain_not_sufficient_evidence_of_policy_success_balanced_metrics_show_small_macro_bal_gain_while_positive_recall_decreases",
+    "stop_on_skip_is_valid_policy",
+    "distance_filter_fixes_c13",
+    "beta_0_25_supports_interactive_policy_ranking"
+  ],
+  "pareto_evaluation_protocol": {
+    "primary_metric": "macro_query_balanced_accuracy",
+    "cost_metric": "normalized_cost",
+    "secondary_only": "balanced_utility_beta0.25",
+    "dominance_rule": {
+      "condition": "macro_bal_A >= macro_bal_B AND normalized_cost_A <= normalized_cost_B AND at_least_one_strict",
+      "no_dominance_action": "report_trade_off_instead_of_scalar_ranking"
+    },
+    "per_policy_required_fields": [
+      "raw_comp",
+      "macro_query_balanced_accuracy",
+      "normalized_cost",
+      "probe_count",
+      "positive_recall_per_query",
+      "negative_recall_per_query",
+      "balanced_utility_beta0.25"
+    ]
+  },
+  "policy_status": {
+    "all_false": {
+      "macro_bal": 0.5,
+      "ncost": 0.0,
+      "bal_ub25": 0.5,
+      "raw_comp": 0.7,
+      "dominated_by": ["oracle_unconstrained"],
+      "status": "baseline — duplicate zero-cost chance baseline (same point as iom_prior)"
+    },
+    "iom_prior": {
+      "macro_bal": 0.5,
+      "ncost": 0.0,
+      "bal_ub25": 0.5,
+      "raw_comp": 0.7,
+      "dominated_by": ["oracle_unconstrained"],
+      "status": "baseline — duplicate zero-cost chance baseline (same point as all_false)"
+    },
+    "c0b": {
+      "macro_bal": 0.5444,
+      "ncost": 0.7533,
+      "bal_ub25": 0.3561,
+      "raw_comp": 0.7033,
+      "visited_count": 60,
+      "probe_count": 0,
+      "dominated_by": ["oracle_unconstrained"],
+      "status": "Pareto-optimal (observation-only frontier)"
+    },
+    "c13": {
+      "macro_bal": 0.5578,
+      "ncost": 0.9667,
+      "bal_ub25": 0.3161,
+      "raw_comp": 0.7267,
+      "visited_count": 22,
+      "probe_count": 22,
+      "effective_probe_count": 11,
+      "dominated_by": ["oracle_unconstrained"],
+      "dominates": ["c13_distance_filter", "c13_distance_aware_selection"],
+      "status": "Pareto-optimal (probe frontier; dominates filter/aware)"
+    },
+    "c13_distance_filter": {
+      "macro_bal": 0.5533,
+      "ncost": 0.9667,
+      "bal_ub25": 0.3117,
+      "raw_comp": 0.72,
+      "visited_count": 32,
+      "probe_count": 19,
+      "dominated_by": ["c13", "oracle_unconstrained"],
+      "status": "dominated — same cost as C13, lower macro_bal"
+    },
+    "c13_distance_aware_selection": {
+      "macro_bal": 0.5533,
+      "ncost": 0.9667,
+      "bal_ub25": 0.3117,
+      "raw_comp": 0.72,
+      "visited_count": 32,
+      "probe_count": 19,
+      "dominated_by": ["c13", "oracle_unconstrained"],
+      "status": "dominated — identical to distance_filter"
+    },
+    "c13_distance_filter_stop_on_skip": {
+      "macro_bal": 0.4933,
+      "ncost": 0.0533,
+      "bal_ub25": 0.48,
+      "raw_comp": 0.6933,
+      "visited_count": 2,
+      "probe_count": 1,
+      "dominated_by": ["all_false", "iom_prior", "oracle_unconstrained"],
+      "status": "dominated — metric exploit; macro_bal below chance"
+    },
+    "oracle_unconstrained": {
+      "macro_bal": 1.0,
+      "ncost": 0.0,
+      "bal_ub25": 1.0,
+      "raw_comp": 1.0,
+      "dominated_by": [],
+      "status": "undominated upper bound"
+    }
+  },
+  "pareto_frontier_non_oracle": ["all_false", "iom_prior", "c0b", "c13"],
+  "pareto_dominated": ["c13_distance_filter", "c13_distance_aware_selection", "c13_distance_filter_stop_on_skip"],
+  "per_query_recall_summary": {
+    "all_false": {
+      "need_planks": {"pos_recall": 0.0, "neg_recall": 1.0},
+      "need_stone": {"pos_recall": 0.0, "neg_recall": 1.0},
+      "need_food": {"pos_recall": 0.0, "neg_recall": 1.0},
+      "need_tool": {"pos_recall": 0.0, "neg_recall": 1.0},
+      "need_fuel": {"pos_recall": 0.0, "neg_recall": 1.0}
+    },
+    "c0b": {
+      "need_planks": {"pos_recall": 0.1333, "neg_recall": 0.9556},
+      "need_stone": {"pos_recall": 0.1333, "neg_recall": 0.9556},
+      "need_food": {"pos_recall": 0.3333, "neg_recall": 0.9333},
+      "need_tool": {"pos_recall": 0.0, "neg_recall": 0.9333},
+      "need_fuel": {"pos_recall": 0.4333, "neg_recall": 0.6333}
+    },
+    "c13": {
+      "need_planks": {"pos_recall": 0.2, "neg_recall": 1.0},
+      "need_stone": {"pos_recall": 0.2, "neg_recall": 0.9778},
+      "need_food": {"pos_recall": 0.1333, "neg_recall": 1.0},
+      "need_tool": {"pos_recall": 0.0667, "neg_recall": 1.0},
+      "need_fuel": {"pos_recall": 0.1333, "neg_recall": 0.8667}
+    },
+    "c13_distance_filter": {
+      "need_planks": {"pos_recall": 0.1333, "neg_recall": 0.9778},
+      "need_stone": {"pos_recall": 0.1333, "neg_recall": 0.9778},
+      "need_food": {"pos_recall": 0.2, "neg_recall": 1.0},
+      "need_tool": {"pos_recall": 0.1333, "neg_recall": 0.9778},
+      "need_fuel": {"pos_recall": 0.2333, "neg_recall": 0.7667}
+    },
+    "stop_on_skip": {
+      "need_planks": {"pos_recall": 0.0, "neg_recall": 1.0},
+      "need_stone": {"pos_recall": 0.0, "neg_recall": 1.0},
+      "need_food": {"pos_recall": 0.0, "neg_recall": 1.0},
+      "need_tool": {"pos_recall": 0.0, "neg_recall": 1.0},
+      "need_fuel": {"pos_recall": 0.0, "neg_recall": 0.9333}
+    },
+    "oracle": {
+      "need_planks": {"pos_recall": 1.0, "neg_recall": 1.0},
+      "need_stone": {"pos_recall": 1.0, "neg_recall": 1.0},
+      "need_food": {"pos_recall": 1.0, "neg_recall": 1.0},
+      "need_tool": {"pos_recall": 1.0, "neg_recall": 1.0},
+      "need_fuel": {"pos_recall": 1.0, "neg_recall": 1.0}
+    }
+  },
+  "recommended_next_direction": {
+    "primary": "C: report macro_bal/cost Pareto without scalar utility",
+    "secondary": "A_subset: investigate why macro_bal gain ceiling is ~0.058 given oracle gap of 0.442"
+  },
+  "final_checkpoint_decision": {
+    "policy_comparison_ready": false,
+    "scalar_utility_ready": false,
+    "balanced_metric_ready": true,
+    "pareto_reporting_ready": true,
+    "directive": "All future Mini-MC v0 policy evaluation SHALL use Pareto (macro_bal, ncost) reporting as the primary comparison framework. Scalar utility (bal_ub25) is secondary only."
+  }
+}

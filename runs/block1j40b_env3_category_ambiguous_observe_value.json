@@ -1,0 +1,158 @@
+{
+  "block_id": "1J40b-env3",
+  "elapsed_seconds": 23.8,
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "total_objects_per_seed": 36,
+  "total_objects_all_seeds": 180,
+  "total_events_all_seeds": 1320,
+  "implementation_status": "pass",
+  "acceptance_checks": {
+    "recursive_leakage_check_passed": true,
+    "direct_role_marker_detected = false": true,
+    "full_visible_role_probe_accuracy <= 0.45": true,
+    "mean_seed_role_probe_accuracy <= 0.45": true,
+    "max_seed_role_probe_accuracy <= 0.55": true,
+    "single_feature_role_probe_clean": true,
+    "feature_pairs_exclusive_to_one_role = 0": true,
+    "hidden_timing_audit_passed": true,
+    "old C4 preserved": true,
+    "old C5 preserved": true,
+    "no_seed_crashes": true,
+    "schedule_label_removed_all_seeds": true,
+    "category_probe_ambient < 1.0": true,
+    "category_probe_ambient <= 0.70": true,
+    "category_probe_core = 1.0": true,
+    "pre_oracle_gap > 0": true,
+    "post_mean > pre_mean": true,
+    "positive_gain_rate > 0": true,
+    "post_oracle_gap < pre_oracle_gap": true,
+    "post_pre_gain >= +0.03": true,
+    "positive_gain_rate >= 0.25": true
+  },
+  "failure_reasons": [],
+  "ambient_groups": {
+    "A": {
+      "features": [
+        "brownish",
+        "rough_texture",
+        "long_shape",
+        "heavy_weight"
+      ],
+      "categories": [
+        "wood_log",
+        "stone_block"
+      ]
+    },
+    "B": {
+      "features": [
+        "greenish",
+        "smooth_texture",
+        "round_small",
+        "light_weight"
+      ],
+      "categories": [
+        "apple",
+        "wooden_pickaxe"
+      ]
+    }
+  },
+  "affordance_changes_from_env2": {
+    "wood_log": {
+      "mine_with_pickaxe": "success -> fail"
+    },
+    "apple": {
+      "mine_with_pickaxe": "success -> fail"
+    }
+  },
+  "category_probes": {
+    "ambient": 0.5,
+    "core": 1.0,
+    "diagnostic": 1.0,
+    "core_plus_diagnostic": 1.0,
+    "all_visible": 1.0
+  },
+  "pre_observe_ambiguity": {
+    "pre_mean_true_return_randomized_tie": 0.1711,
+    "pre_mean_true_return_fixed_tie": 0.17,
+    "oracle_mean_true_return": 0.45,
+    "pre_oracle_gap_randomized": 0.2789,
+    "pre_oracle_gap_fixed": 0.28
+  },
+  "source_ablations": {
+    "pre_ambient_only": {
+      "mean_return": 0.1711,
+      "mean_gain_vs_pre": 0.0,
+      "mean_oracle_gap": 0.2789
+    },
+    "post_core_only": {
+      "mean_return": 0.45,
+      "mean_gain_vs_pre": 0.2789,
+      "mean_oracle_gap": 0.0
+    },
+    "post_diagnostic_only": {
+      "mean_return": 0.45,
+      "mean_gain_vs_pre": 0.2789,
+      "mean_oracle_gap": 0.0
+    },
+    "post_full": {
+      "mean_return": 0.45,
+      "mean_gain_vs_pre": 0.2789,
+      "mean_oracle_gap": 0.0
+    }
+  },
+  "possible_observe_gain": {
+    "pre_mean_true_return": 0.1711,
+    "post_mean_true_return": 0.45,
+    "oracle_mean_true_return": 0.45,
+    "pre_oracle_gap": 0.2789,
+    "post_oracle_gap": 0.0,
+    "post_pre_gain": 0.2789,
+    "positive_gain_count": 174,
+    "positive_gain_rate": 0.9667,
+    "best_action_change_rate": 1.0
+  },
+  "distinguish_metrics": {
+    "mean_all_try_return_pre": 0.025,
+    "mean_all_try_return_post": 0.0583,
+    "mean_all_try_improvement": 0.0333,
+    "best_action_selected_return_pre": 0.1711,
+    "best_action_selected_return_post": 0.45,
+    "best_action_selected_improvement": 0.2789
+  },
+  "role_leakage": {
+    "full_role_probe_accuracy": 0.3333,
+    "mean_seed_role_probe": 0.3333,
+    "max_seed_role_probe": 0.3333,
+    "single_feature_high_count": 0,
+    "feature_pairs_exclusive": 0,
+    "direct_role_marker_detected": false,
+    "features_in_all_roles": 40,
+    "features_in_2_roles": 0,
+    "features_in_1_role": 0,
+    "max_role_gap": 0.0
+  },
+  "hidden_timing": {
+    "no_observe_hidden": 0,
+    "one_observe_hidden": 0,
+    "repeated_observe_hidden_before_reveal": 0,
+    "audit_passed": true
+  },
+  "env2_to_env3_profile_changes": {
+    "wood_log": {
+      "mine_with_pickaxe": "success -> fail"
+    },
+    "apple": {
+      "mine_with_pickaxe": "success -> fail"
+    }
+  },
+  "old_c4_preserved": true,
+  "old_c5_preserved": true,
+  "recursive_leakage_check_passed": true,
+  "schedule_label_removed": true
+}

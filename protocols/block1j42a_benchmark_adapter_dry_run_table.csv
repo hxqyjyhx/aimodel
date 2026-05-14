@@ -1,0 +1,10 @@
+seed,mode,episode_count,observation_conversion_success_rate,action_conversion_success_rate,outcome_conversion_success_rate,goal_context_assignment_rate,event_memory_count,object_memory_count,outcome_memory_count,common_sense_record_count,experience_record_count,records_with_goal_context,goal_context_coverage,average_return,random_baseline_return,simple_policy_return,strategy_candidate_count,experience_trigger_count,false_application_proxy,hidden_leakage_detected,three_world_separation_passed
+101,adapter_only,64,1.0,1.0,1.0,1.0,95,,,,,,,0.905,,,,,,False,True
+101,record_replay,64,,,,1.0,95,52,45,6,6,6,1.0,,,,6,,,False,True
+101,simple_policy_probe,52,,,,1.0,95,52,45,6,6,6,1.0,0.4707692307692308,0.4584615384615385,0.32,6,16,0.0,False,True
+207,adapter_only,64,1.0,1.0,1.0,1.0,91,,,,,,,0.92875,,,,,,False,True
+207,record_replay,64,,,,1.0,91,47,45,9,9,9,1.0,,,,9,,,False,True
+207,simple_policy_probe,52,,,,1.0,91,47,45,9,9,9,1.0,0.47692307692307695,0.5138461538461538,0.4,9,16,0.5,False,True
+404,adapter_only,64,1.0,1.0,1.0,1.0,94,,,,,,,0.9625,,,,,,False,True
+404,record_replay,64,,,,1.0,94,53,46,8,8,8,1.0,,,,8,,,False,True
+404,simple_policy_probe,52,,,,1.0,94,53,46,8,8,8,1.0,0.5123076923076924,0.38153846153846155,0.4,8,16,0.5,False,True

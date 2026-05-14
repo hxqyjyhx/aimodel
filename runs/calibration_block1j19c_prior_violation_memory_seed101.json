@@ -1,0 +1,2442 @@
+{
+  "block_id": "1J19c",
+  "condition": "C4_instance_subtype_cued_v1",
+  "smoke_seed": 101,
+  "budget": 1.5,
+  "n_episodes": 5,
+  "risk_alpha": 5.0,
+  "max_risk": 2.0,
+  "prior_violation_threshold": 0.6,
+  "min_violation_support": 2,
+  "feature_universe_size": 24,
+  "threshold_sensitivity_not_tested_yet": true,
+  "c15b_macro_bal": 0.5975,
+  "c15b_probed_n": 7,
+  "c0b_macro_bal": 0.5871,
+  "deceptive_visible_deviation_valid": true,
+  "deceptive_features_in_feature_universe": [
+    "brownish",
+    "grayish",
+    "heavy_weight",
+    "rough_texture",
+    "smooth_texture"
+  ],
+  "n_deceptive_objects": 13,
+  "mode_original_safe": {
+    "mode_name": "original_safe",
+    "explore_fraction": 0.0,
+    "n_objects": 60,
+    "n_episodes": 5,
+    "A_mean_macro_bal": 0.5948,
+    "A_std_macro_bal": 0.006,
+    "A_final_macro_bal": 0.5958,
+    "A_learning_slope": 0.002667,
+    "B_mean_macro_bal": 0.5834,
+    "B_std_macro_bal": 0.0097,
+    "B_final_macro_bal": 0.5708,
+    "B_learning_slope": -0.002209,
+    "C_mean_macro_bal": 0.5902,
+    "C_std_macro_bal": 0.0101,
+    "C_final_macro_bal": 0.5825,
+    "C_learning_slope": 0.001042,
+    "delta_B_vs_A_bal": -0.0114,
+    "delta_C_vs_A_bal": -0.0047,
+    "delta_B_vs_C_bal": -0.0068,
+    "total_effective_B": 18,
+    "total_zero_B": 17,
+    "total_harmful_B": 0,
+    "prior_violation_threshold": 0.6,
+    "total_prior_violations_A": 16,
+    "total_prior_violations_B": 11,
+    "total_prior_violations_C": 14,
+    "total_repeated_prior_violations_B": 1,
+    "B_reduces_prior_violations_vs_A": true,
+    "B_beats_C_on_prior_violations": true,
+    "memory_update_nontrivial": true,
+    "eligible_updates": 35,
+    "ineligible_updates": 0,
+    "violation_updates": 11,
+    "nonviolation_updates": 24,
+    "risk_weights_nonzero_count": 57,
+    "max_risk_weight": 0.458145,
+    "mean_abs_risk_weight": 0.072986,
+    "top_risk_features": [
+      {
+        "feature": "elongated_with_handle",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_wood_grain",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_grip_area",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "on_left_side",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_granular_surface",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "heavy_weight",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.389097,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "long_shape",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.389097,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "movable",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.314304,
+        "violation_with": 3.0,
+        "nonviolation_with": 2.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 3.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "smooth_texture",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.314304,
+        "violation_with": 3.0,
+        "nonviolation_with": 2.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 3.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "solid",
+        "goal": "need_stone",
+        "action": "mine_by_hand",
+        "risk_weight": 0.304099,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_peel_texture",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.304099,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_stem_remnant",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.304099,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "recently_seen",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.304099,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "round_small",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.304099,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "near_table",
+        "goal": "need_tool",
+        "action": "use_as_tool",
+        "risk_weight": 0.304099,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "elongated_with_handle",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.304099,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "long_shape",
+        "goal": "need_tool",
+        "action": "use_as_tool",
+        "risk_weight": 0.304099,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_bark_texture",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.304099,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_stem_remnant",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.261239,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "recently_seen",
+        "goal": "need_stone",
+        "action": "mine_by_hand",
+        "risk_weight": 0.152049,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 2.0
+      }
+    ],
+    "top_risk_feature_names": [
+      "elongated_with_handle",
+      "has_bark_texture",
+      "has_granular_surface",
+      "has_grip_area",
+      "has_peel_texture",
+      "has_stem_remnant",
+      "has_wood_grain",
+      "heavy_weight",
+      "long_shape",
+      "movable",
+      "near_table",
+      "on_left_side",
+      "recently_seen",
+      "round_small",
+      "smooth_texture",
+      "solid"
+    ],
+    "injected_deviation_features": [
+      "brownish",
+      "grayish",
+      "heavy_weight",
+      "rough_texture",
+      "smooth_texture"
+    ],
+    "risk_overlap_injected": [
+      "heavy_weight",
+      "smooth_texture"
+    ],
+    "top_risk_features_include_deceptive_features": true,
+    "iom_isolated": true,
+    "absence_counts_valid": true,
+    "hard_exclusion_used": false,
+    "min_final_score_overall": 0.636358,
+    "per_episode_A": [
+      {
+        "episode": 0,
+        "macro_bal": 0.58875,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 3
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.592083,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 3
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.592917,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 4
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.604583,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 2
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.595833,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 4
+      }
+    ],
+    "per_episode_B": [
+      {
+        "episode": 0,
+        "macro_bal": 0.58875,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 3,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 3,
+        "prior_violation_events": [
+          {
+            "oid": "test_wooden_pickaxe_001",
+            "action": "use_as_tool",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_apple_000",
+            "action": "eat",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_009",
+            "action": "mine_by_hand",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wood_log_013",
+            "action": "mine_by_hand",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_004",
+            "action": "mine_by_hand",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wood_log_002",
+            "action": "craft_plank",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_apple_009",
+            "action": "craft_plank",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          }
+        ]
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.575417,
+        "probed": 7,
+        "effective": 1,
+        "zero": 6,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 1,
+        "prior_violation_repeated": 1,
+        "new_violation_signals": 1,
+        "prior_violation_events": [
+          {
+            "oid": "test_wooden_pickaxe_010",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_apple_009",
+            "action": "craft_plank",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": true
+          },
+          {
+            "oid": "test_wood_log_014",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_wooden_pickaxe_007",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_wood_log_013",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_011",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_005",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          }
+        ]
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.592917,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 4,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 4,
+        "prior_violation_events": [
+          {
+            "oid": "test_wooden_pickaxe_013",
+            "action": "use_as_tool",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_010",
+            "action": "use_as_tool",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_005",
+            "action": "eat",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_001",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_apple_004",
+            "action": "eat",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_003",
+            "action": "eat",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_apple_011",
+            "action": "eat",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.589166,
+        "probed": 7,
+        "effective": 4,
+        "zero": 3,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 3,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 3,
+        "prior_violation_events": [
+          {
+            "oid": "test_stone_block_001",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_003",
+            "action": "burn_as_fuel",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_006",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_011",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_apple_006",
+            "action": "burn_as_fuel",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_013",
+            "action": "burn_as_fuel",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wood_log_007",
+            "action": "burn_as_fuel",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.570833,
+        "probed": 7,
+        "effective": 0,
+        "zero": 7,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 0,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 0,
+        "prior_violation_events": [
+          {
+            "oid": "test_stone_block_009",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_001",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_013",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_002",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_wooden_pickaxe_007",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_004",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_wooden_pickaxe_010",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          }
+        ]
+      }
+    ],
+    "per_episode_C": [
+      {
+        "episode": 0,
+        "macro_bal": 0.57625,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 5
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.598333,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.796607,
+        "n_at_floor": 0,
+        "prior_violation_count": 5
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.5975,
+        "probed": 6,
+        "effective": 5,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.636358,
+        "n_at_floor": 0,
+        "prior_violation_count": 3
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.59625,
+        "probed": 5,
+        "effective": 4,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.796607,
+        "n_at_floor": 0,
+        "prior_violation_count": 1
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.5825,
+        "probed": 4,
+        "effective": 2,
+        "zero": 2,
+        "harmful": 0,
+        "min_final_score": 0.743596,
+        "n_at_floor": 0,
+        "prior_violation_count": 0
+      }
+    ]
+  },
+  "mode_deceptive_high_prior_diagnostic": {
+    "mode_name": "deceptive_high_prior_diagnostic",
+    "explore_fraction": 0.0,
+    "n_objects": 60,
+    "n_episodes": 5,
+    "A_mean_macro_bal": 0.5791,
+    "A_std_macro_bal": 0.011,
+    "A_final_macro_bal": 0.588,
+    "A_learning_slope": 0.00555,
+    "B_mean_macro_bal": 0.561,
+    "B_std_macro_bal": 0.0131,
+    "B_final_macro_bal": 0.5622,
+    "B_learning_slope": -0.003519,
+    "C_mean_macro_bal": 0.5562,
+    "C_std_macro_bal": 0.0105,
+    "C_final_macro_bal": 0.5601,
+    "C_learning_slope": 0.000443,
+    "delta_B_vs_A_bal": -0.0181,
+    "delta_C_vs_A_bal": -0.0229,
+    "delta_B_vs_C_bal": 0.0048,
+    "total_effective_B": 27,
+    "total_zero_B": 7,
+    "total_harmful_B": 0,
+    "prior_violation_threshold": 0.6,
+    "total_prior_violations_A": 20,
+    "total_prior_violations_B": 15,
+    "total_prior_violations_C": 18,
+    "total_repeated_prior_violations_B": 2,
+    "B_reduces_prior_violations_vs_A": true,
+    "B_beats_C_on_prior_violations": true,
+    "memory_update_nontrivial": true,
+    "eligible_updates": 34,
+    "ineligible_updates": 0,
+    "violation_updates": 15,
+    "nonviolation_updates": 19,
+    "risk_weights_nonzero_count": 72,
+    "max_risk_weight": 1.102621,
+    "mean_abs_risk_weight": 0.148765,
+    "top_risk_features": [
+      {
+        "feature": "grayish",
+        "goal": "need_tool",
+        "action": "use_as_tool",
+        "risk_weight": 1.102621,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 7.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "elongated_with_handle",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.915026,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 5.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "greenish",
+        "goal": "need_tool",
+        "action": "use_as_tool",
+        "risk_weight": 0.853104,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 7.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_stem_remnant",
+        "goal": "need_tool",
+        "action": "use_as_tool",
+        "risk_weight": 0.853104,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 7.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_granular_surface",
+        "goal": "need_tool",
+        "action": "use_as_tool",
+        "risk_weight": 0.853104,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 7.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_bark_texture",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.660878,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "greenish",
+        "goal": "need_stone",
+        "action": "mine_with_pickaxe",
+        "risk_weight": 0.599243,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 5.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_stem_remnant",
+        "goal": "need_stone",
+        "action": "mine_with_pickaxe",
+        "risk_weight": 0.599243,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 5.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "recently_seen",
+        "goal": "need_stone",
+        "action": "mine_by_hand",
+        "risk_weight": 0.581575,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 3.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "greenish",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.51069,
+        "violation_with": 4.0,
+        "nonviolation_with": 2.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "heavy_weight",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.51069,
+        "violation_with": 4.0,
+        "nonviolation_with": 2.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "rough_texture",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.51069,
+        "violation_with": 4.0,
+        "nonviolation_with": 2.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "has_stem_remnant",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "light_weight",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_wood_grain",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_crystal_flecks",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_granular_surface",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.458145,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "on_left_side",
+        "goal": "need_stone",
+        "action": "mine_with_pickaxe",
+        "risk_weight": 0.442326,
+        "violation_with": 3.0,
+        "nonviolation_with": 2.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 2.0
+      },
+      {
+        "feature": "has_granular_surface",
+        "goal": "need_stone",
+        "action": "mine_by_hand",
+        "risk_weight": 0.437734,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 3.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "has_peel_texture",
+        "goal": "need_tool",
+        "action": "use_as_tool",
+        "risk_weight": 0.426552,
+        "violation_with": 1.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 3.0,
+        "nonviolation_without": 7.0,
+        "actual_violations": 2.0
+      }
+    ],
+    "top_risk_feature_names": [
+      "elongated_with_handle",
+      "grayish",
+      "greenish",
+      "has_bark_texture",
+      "has_crystal_flecks",
+      "has_granular_surface",
+      "has_peel_texture",
+      "has_stem_remnant",
+      "has_wood_grain",
+      "heavy_weight",
+      "light_weight",
+      "on_left_side",
+      "recently_seen",
+      "rough_texture"
+    ],
+    "injected_deviation_features": [
+      "brownish",
+      "grayish",
+      "heavy_weight",
+      "rough_texture",
+      "smooth_texture"
+    ],
+    "risk_overlap_injected": [
+      "grayish",
+      "heavy_weight",
+      "rough_texture"
+    ],
+    "top_risk_features_include_deceptive_features": true,
+    "iom_isolated": true,
+    "absence_counts_valid": true,
+    "hard_exclusion_used": false,
+    "min_final_score_overall": 0.258187,
+    "per_episode_A": [
+      {
+        "episode": 0,
+        "macro_bal": 0.561299,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 5
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.584172,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 2
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.57576,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 5
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.586177,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 4
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.588049,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 4
+      }
+    ],
+    "per_episode_B": [
+      {
+        "episode": 0,
+        "macro_bal": 0.561299,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 5,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 5,
+        "prior_violation_events": [
+          {
+            "oid": "test_wooden_pickaxe_003",
+            "action": "use_as_tool",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_apple_009",
+            "action": "craft_plank",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_003",
+            "action": "craft_plank",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_008",
+            "action": "eat",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_004",
+            "action": "craft_plank",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "zero",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_005",
+            "action": "mine_by_hand",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_012",
+            "action": "eat",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          }
+        ]
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.578696,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 3,
+        "prior_violation_repeated": 1,
+        "new_violation_signals": 3,
+        "prior_violation_events": [
+          {
+            "oid": "test_wood_log_013",
+            "action": "mine_by_hand",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_001",
+            "action": "mine_by_hand",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_apple_005",
+            "action": "eat",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_002",
+            "action": "mine_by_hand",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wood_log_000",
+            "action": "burn_as_fuel",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_003",
+            "action": "eat",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_005",
+            "action": "mine_by_hand",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": true
+          }
+        ]
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.561089,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 3,
+        "prior_violation_repeated": 1,
+        "new_violation_signals": 3,
+        "prior_violation_events": [
+          {
+            "oid": "test_wooden_pickaxe_011",
+            "action": "eat",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_005",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_apple_008",
+            "action": "eat",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": true
+          },
+          {
+            "oid": "test_apple_012",
+            "action": "eat",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_003",
+            "action": "burn_as_fuel",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wood_log_011",
+            "action": "burn_as_fuel",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_wood_log_006",
+            "action": "burn_as_fuel",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.541732,
+        "probed": 7,
+        "effective": 2,
+        "zero": 5,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 2,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 2,
+        "prior_violation_events": [
+          {
+            "oid": "test_stone_block_009",
+            "action": "mine_with_pickaxe",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "zero",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_002",
+            "action": "mine_with_pickaxe",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "zero",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_000",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_001",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_wooden_pickaxe_001",
+            "action": "use_as_tool",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_004",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_wooden_pickaxe_000",
+            "action": "use_as_tool",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.562188,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.576113,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.060069,
+        "prior_violation_count": 2,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 2,
+        "prior_violation_events": [
+          {
+            "oid": "test_wooden_pickaxe_000",
+            "action": "use_as_tool",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_wooden_pickaxe_001",
+            "action": "use_as_tool",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_apple_010",
+            "action": "use_as_tool",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wooden_pickaxe_013",
+            "action": "use_as_tool",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wooden_pickaxe_012",
+            "action": "use_as_tool",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_wood_log_006",
+            "action": "burn_as_fuel",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          }
+        ]
+      }
+    ],
+    "per_episode_C": [
+      {
+        "episode": 0,
+        "macro_bal": 0.548799,
+        "probed": 7,
+        "effective": 5,
+        "zero": 2,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 5
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.572244,
+        "probed": 7,
+        "effective": 4,
+        "zero": 3,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 6
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.545732,
+        "probed": 5,
+        "effective": 4,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.697068,
+        "n_at_floor": 0,
+        "prior_violation_count": 3
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.554065,
+        "probed": 5,
+        "effective": 4,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.544948,
+        "n_at_floor": 0,
+        "prior_violation_count": 2
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.560105,
+        "probed": 5,
+        "effective": 3,
+        "zero": 2,
+        "harmful": 0,
+        "min_final_score": 0.258187,
+        "n_at_floor": 0,
+        "prior_violation_count": 2
+      }
+    ],
+    "deceptive_visible_deviation_valid": true
+  },
+  "mode_epsilon_boundary_explore": {
+    "mode_name": "epsilon_boundary_explore",
+    "explore_fraction": 0.3,
+    "n_objects": 60,
+    "n_episodes": 5,
+    "A_mean_macro_bal": 0.6024,
+    "A_std_macro_bal": 0.0056,
+    "A_final_macro_bal": 0.5962,
+    "A_learning_slope": -0.002083,
+    "B_mean_macro_bal": 0.5857,
+    "B_std_macro_bal": 0.011,
+    "B_final_macro_bal": 0.5858,
+    "B_learning_slope": -0.003208,
+    "C_mean_macro_bal": 0.5933,
+    "C_std_macro_bal": 0.0136,
+    "C_final_macro_bal": 0.5892,
+    "C_learning_slope": -0.0055,
+    "delta_B_vs_A_bal": -0.0167,
+    "delta_C_vs_A_bal": -0.0091,
+    "delta_B_vs_C_bal": -0.0077,
+    "total_effective_B": 21,
+    "total_zero_B": 9,
+    "total_harmful_B": 0,
+    "prior_violation_threshold": 0.6,
+    "total_prior_violations_A": 19,
+    "total_prior_violations_B": 15,
+    "total_prior_violations_C": 12,
+    "total_repeated_prior_violations_B": 1,
+    "B_reduces_prior_violations_vs_A": true,
+    "B_beats_C_on_prior_violations": false,
+    "memory_update_nontrivial": true,
+    "eligible_updates": 30,
+    "ineligible_updates": 0,
+    "violation_updates": 15,
+    "nonviolation_updates": 15,
+    "risk_weights_nonzero_count": 42,
+    "max_risk_weight": 0.756161,
+    "mean_abs_risk_weight": 0.072279,
+    "top_risk_features": [
+      {
+        "feature": "has_stem_remnant",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.756161,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "has_peel_texture",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.599243,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "rough_texture",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.599243,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "smooth_texture",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.458145,
+        "violation_with": 5.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 4.0
+      },
+      {
+        "feature": "has_peel_texture",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.389097,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "has_stem_remnant",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.389097,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "movable",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.389097,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "on_left_side",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.389097,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 1.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "has_shaft_shape",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.37808,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 3.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "has_crystal_flecks",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.37808,
+        "violation_with": 2.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 3.0,
+        "nonviolation_without": 4.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "heavy_weight",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.346574,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 4.0
+      },
+      {
+        "feature": "on_left_side",
+        "goal": "need_food",
+        "action": "eat",
+        "risk_weight": 0.346574,
+        "violation_with": 4.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 4.0
+      },
+      {
+        "feature": "light_weight",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.261239,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "near_table",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.261239,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "has_stem_remnant",
+        "goal": "need_tool",
+        "action": "use_as_tool",
+        "risk_weight": 0.261239,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "block_like",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.261239,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "brownish",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.261239,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "long_shape",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.261239,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "heavy_weight",
+        "goal": "need_tool",
+        "action": "use_as_tool",
+        "risk_weight": 0.261239,
+        "violation_with": 3.0,
+        "nonviolation_with": 1.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 2.0,
+        "actual_violations": 3.0
+      },
+      {
+        "feature": "recently_seen",
+        "goal": "need_fuel",
+        "action": "burn_as_fuel",
+        "risk_weight": 0.221163,
+        "violation_with": 3.0,
+        "nonviolation_with": 2.0,
+        "violation_without": 2.0,
+        "nonviolation_without": 3.0,
+        "actual_violations": 3.0
+      }
+    ],
+    "top_risk_feature_names": [
+      "block_like",
+      "brownish",
+      "has_crystal_flecks",
+      "has_peel_texture",
+      "has_shaft_shape",
+      "has_stem_remnant",
+      "heavy_weight",
+      "light_weight",
+      "long_shape",
+      "movable",
+      "near_table",
+      "on_left_side",
+      "recently_seen",
+      "rough_texture",
+      "smooth_texture"
+    ],
+    "injected_deviation_features": [
+      "brownish",
+      "grayish",
+      "heavy_weight",
+      "rough_texture",
+      "smooth_texture"
+    ],
+    "risk_overlap_injected": [
+      "brownish",
+      "heavy_weight",
+      "rough_texture",
+      "smooth_texture"
+    ],
+    "top_risk_features_include_deceptive_features": true,
+    "iom_isolated": true,
+    "absence_counts_valid": true,
+    "hard_exclusion_used": false,
+    "min_final_score_overall": 0.40782,
+    "per_episode_A": [
+      {
+        "episode": 0,
+        "macro_bal": 0.607083,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 5
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.599167,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 3
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.609583,
+        "probed": 5,
+        "effective": 5,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 2
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.6,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 4
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.59625,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 5
+      }
+    ],
+    "per_episode_B": [
+      {
+        "episode": 0,
+        "macro_bal": 0.600833,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 7,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 7,
+        "prior_violation_events": [
+          {
+            "oid": "test_wooden_pickaxe_011",
+            "action": "eat",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_004",
+            "action": "eat",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_010",
+            "action": "use_as_tool",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_apple_006",
+            "action": "craft_plank",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wood_log_009",
+            "action": "eat",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_004",
+            "action": "mine_by_hand",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_005",
+            "action": "mine_by_hand",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          }
+        ]
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.57625,
+        "probed": 5,
+        "effective": 3,
+        "zero": 2,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "prior_violation_count": 3,
+        "prior_violation_repeated": 1,
+        "new_violation_signals": 3,
+        "prior_violation_events": [
+          {
+            "oid": "test_stone_block_002",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_apple_014",
+            "action": "use_as_tool",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_013",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_apple_006",
+            "action": "craft_plank",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": true
+          },
+          {
+            "oid": "test_wooden_pickaxe_002",
+            "action": "use_as_tool",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          }
+        ]
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.59125,
+        "probed": 6,
+        "effective": 3,
+        "zero": 3,
+        "harmful": 0,
+        "min_final_score": 0.563824,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.063561,
+        "prior_violation_count": 2,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 2,
+        "prior_violation_events": [
+          {
+            "oid": "test_wood_log_003",
+            "action": "burn_as_fuel",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_004",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_wood_log_001",
+            "action": "eat",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_stone_block_011",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_003",
+            "action": "burn_as_fuel",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wooden_pickaxe_010",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.574167,
+        "probed": 6,
+        "effective": 5,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.583333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.04262,
+        "prior_violation_count": 2,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 2,
+        "prior_violation_events": [
+          {
+            "oid": "test_apple_006",
+            "action": "burn_as_fuel",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wooden_pickaxe_007",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_apple_009",
+            "action": "burn_as_fuel",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          },
+          {
+            "oid": "test_wood_log_007",
+            "action": "burn_as_fuel",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_wooden_pickaxe_002",
+            "action": "burn_as_fuel",
+            "outcome": 1.0,
+            "soft_prior": 0.6,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_apple_000",
+            "action": "eat",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.585833,
+        "probed": 6,
+        "effective": 3,
+        "zero": 3,
+        "harmful": 0,
+        "min_final_score": 0.40782,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.270189,
+        "prior_violation_count": 1,
+        "prior_violation_repeated": 0,
+        "new_violation_signals": 1,
+        "prior_violation_events": [
+          {
+            "oid": "test_wood_log_014",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_stone_block_013",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_wooden_pickaxe_000",
+            "action": "use_as_tool",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_wood_log_010",
+            "action": "craft_plank",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "effective"
+          },
+          {
+            "oid": "test_stone_block_012",
+            "action": "mine_with_pickaxe",
+            "outcome": 1.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": false,
+            "probe_utility_signal": "zero"
+          },
+          {
+            "oid": "test_apple_009",
+            "action": "craft_plank",
+            "outcome": 0.0,
+            "soft_prior": 0.85,
+            "is_eligible": true,
+            "is_violation": true,
+            "probe_utility_signal": "effective",
+            "repeated": false
+          }
+        ]
+      }
+    ],
+    "per_episode_C": [
+      {
+        "episode": 0,
+        "macro_bal": 0.6175,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.7247,
+        "n_at_floor": 0,
+        "prior_violation_count": 3
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.585833,
+        "probed": 5,
+        "effective": 5,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.648884,
+        "n_at_floor": 0,
+        "prior_violation_count": 3
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.586667,
+        "probed": 4,
+        "effective": 3,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.60547,
+        "n_at_floor": 0,
+        "prior_violation_count": 2
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.5875,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.5177,
+        "n_at_floor": 0,
+        "prior_violation_count": 4
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.589167,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "prior_violation_count": 0
+      }
+    ]
+  },
+  "mode_original_prior_violation_count": 11,
+  "mode_deceptive_prior_violation_count": 15,
+  "mode_boundary_prior_violation_count": 15,
+  "top_risk_features_include_deceptive_features": true,
+  "B_reduces_repeated_prior_violations": true,
+  "B_beats_permuted_control": true,
+  "feature_risk_memory_supported": true,
+  "hard_exclusion_used": false,
+  "ready_for_full_1j19": true,
+  "next_recommended_route": "run_small_multiseed_1j19c",
+  "elapsed_s": 39.0
+}

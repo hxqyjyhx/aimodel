@@ -1,0 +1,465 @@
+{
+  "block_id": "1J2",
+  "condition": "C4_instance_subtype_cued_v1",
+  "seed": 101,
+  "budget": 1.5,
+  "config": {
+    "grid_rows": 7,
+    "grid_cols": 9,
+    "agent_start": [
+      3,
+      4
+    ],
+    "reach_cost_per_unit": 0.01,
+    "observe_cost": 0.005,
+    "probe_cost": 0.05,
+    "instance_k": 10,
+    "similarity_mode": "nb_likelihood",
+    "coverage": 0.5
+  },
+  "baselines": {
+    "all_false": {
+      "macro_query_balanced_accuracy": 0.5,
+      "macro_query_accuracy": 0.74,
+      "raw_comp": 0.74,
+      "per_query": {
+        "need_food": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_fuel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 30,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.5
+        },
+        "need_planks": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_stone": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        }
+      },
+      "cost": {
+        "visit_count": 0,
+        "probe_count": 0,
+        "total_cost": 0.0,
+        "normalized_cost": 0.0,
+        "total_reach_cost": 0.0,
+        "total_observe_cost": 0.0,
+        "total_probe_cost": 0.0,
+        "budget_remaining": 1.5,
+        "budget_spent": 0.0,
+        "initial_budget": 1.5
+      }
+    },
+    "C_minus_prior_only": {
+      "macro_query_balanced_accuracy": 0.5,
+      "macro_query_accuracy": 0.74,
+      "raw_comp": 0.74,
+      "per_query": {
+        "need_food": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_fuel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 30,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.5
+        },
+        "need_planks": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_stone": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        }
+      },
+      "cost": {
+        "visit_count": 0,
+        "probe_count": 0,
+        "total_cost": 0.0,
+        "normalized_cost": 0.0,
+        "total_reach_cost": 0,
+        "total_observe_cost": 0,
+        "total_probe_cost": 0,
+        "budget_remaining": 1.5,
+        "budget_spent": 0.0,
+        "initial_budget": 1.5
+      }
+    },
+    "C0b_observe_only": {
+      "macro_query_balanced_accuracy": 0.587083,
+      "macro_query_accuracy": 0.753333,
+      "raw_comp": 0.7533333333333333,
+      "per_query": {
+        "need_food": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 3,
+          "fp": 9,
+          "tn": 39,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.7
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 3,
+          "tn": 45,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.766667
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 3,
+          "tn": 45,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.677083,
+          "accuracy": 0.833333
+        }
+      },
+      "cost": {
+        "visit_count": 60,
+        "probe_count": 0,
+        "total_cost": 1.1300000000000001,
+        "normalized_cost": 0.7533333333333334,
+        "total_reach_cost": 0.8300000000000001,
+        "total_observe_cost": 0.3,
+        "total_probe_cost": 0,
+        "budget_remaining": 0.37000000000000255,
+        "budget_spent": 1.1300000000000006,
+        "initial_budget": 1.5
+      }
+    },
+    "C_oracle_full_information": {
+      "macro_query_balanced_accuracy": 1.0,
+      "macro_query_accuracy": 1.0,
+      "raw_comp": 1.0,
+      "per_query": {
+        "need_food": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_fuel": {
+          "tp": 30,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_planks": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_stone": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_tool": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        }
+      },
+      "cost": {
+        "visit_count": 0,
+        "probe_count": 0,
+        "total_cost": 0.0,
+        "normalized_cost": 0.0,
+        "total_reach_cost": 0.0,
+        "total_observe_cost": 0.0,
+        "total_probe_cost": 0.0,
+        "budget_remaining": 1.5,
+        "budget_spent": 0.0,
+        "initial_budget": 1.5,
+        "note": "oracle_unconstrained \u2014 cost is zero, full information ceiling"
+      }
+    },
+    "random_probe_budgeted": {
+      "macro_query_balanced_accuracy": 0.5425,
+      "macro_query_accuracy": 0.74,
+      "raw_comp": 0.74,
+      "per_query": {
+        "need_food": {
+          "tp": 4,
+          "fp": 0,
+          "tn": 48,
+          "fn": 8,
+          "positive_recall": 0.333333,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.666667,
+          "accuracy": 0.866667
+        },
+        "need_fuel": {
+          "tp": 5,
+          "fp": 6,
+          "tn": 24,
+          "fn": 25,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.8,
+          "balanced_accuracy": 0.483333,
+          "accuracy": 0.483333
+        },
+        "need_planks": {
+          "tp": 1,
+          "fp": 4,
+          "tn": 44,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.916667,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.75
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 1,
+          "tn": 47,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.979167,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 1,
+          "fp": 1,
+          "tn": 47,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.979167,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.8
+        }
+      },
+      "cost": {
+        "visit_count": 22,
+        "probe_count": 22,
+        "total_cost": 1.4500000000000002,
+        "normalized_cost": 0.9666666666666668,
+        "total_reach_cost": 0.24,
+        "total_observe_cost": 0.11,
+        "total_probe_cost": 1.1,
+        "budget_remaining": 0.049999999999999975,
+        "budget_spent": 1.4500000000000002,
+        "initial_budget": 1.5
+      }
+    },
+    "category_majority": {
+      "macro_query_balanced_accuracy": 0.975,
+      "macro_query_accuracy": 0.96,
+      "raw_comp": 0.96,
+      "per_query": {
+        "need_food": {
+          "tp": 12,
+          "fp": 3,
+          "tn": 45,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.96875,
+          "accuracy": 0.95
+        },
+        "need_fuel": {
+          "tp": 30,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_planks": {
+          "tp": 12,
+          "fp": 3,
+          "tn": 45,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.96875,
+          "accuracy": 0.95
+        },
+        "need_stone": {
+          "tp": 12,
+          "fp": 3,
+          "tn": 45,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.96875,
+          "accuracy": 0.95
+        },
+        "need_tool": {
+          "tp": 12,
+          "fp": 3,
+          "tn": 45,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.96875,
+          "accuracy": 0.95
+        }
+      },
+      "cost": {
+        "visit_count": 0,
+        "probe_count": 0,
+        "total_cost": 0.0,
+        "normalized_cost": 0.0,
+        "total_reach_cost": 0.0,
+        "total_observe_cost": 0.0,
+        "total_probe_cost": 0.0,
+        "budget_remaining": 1.5,
+        "budget_spent": 0.0,
+        "initial_budget": 1.5
+      }
+    }
+  },
+  "deltas": {
+    "C0b_minus_Cminus": 0.087083,
+    "C_oracle_minus_C0b": 0.412917,
+    "C_oracle_minus_Cminus": 0.5,
+    "random_probe_minus_C0b": -0.044583,
+    "category_majority_minus_C0b": 0.387917,
+    "category_majority_minus_Cminus": 0.475,
+    "oracle_pos_recall_minus_C0b_pos_recall": 0.69,
+    "oracle_neg_recall_minus_C0b_neg_recall": 0.135833
+  },
+  "acceptance_checks": {
+    "1_all_false_macro_bal_approx_0.5": true,
+    "2_oracle_macro_bal_ge_0.7": true,
+    "3_oracle_minus_c0b_ge_0.1": true,
+    "4_c0b_minus_cminus_ge_0.05": true,
+    "5_oracle_pos_recall_minus_c0b_pos_recall_ge_0.1": true,
+    "6_oracle_neg_recall_minus_c0b_neg_recall_ge_0.1": true,
+    "7_c0b_macro_bal_0.55_to_0.65": true,
+    "8_oracle_improves_both_pos_and_neg": true,
+    "9_random_probe_reported": true,
+    "category_majority_dominates_environment": false,
+    "probe_marginal_value_insufficient": false,
+    "observation_value_insufficient": false,
+    "positive_discovery_still_hard": true
+  },
+  "mandatory_checks_pass": true,
+  "environment_passed_marginal_audit": true,
+  "ready_for_policy_comparison": true
+}

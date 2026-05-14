@@ -1,0 +1,133 @@
+{
+  "block_id": "1J40b-env1-fix",
+  "new_condition": "C6_observe_try_counterfactual_v0",
+  "elapsed_seconds": 0.0,
+  "total_objects": 36,
+  "total_events": 264,
+  "observe_events": 48,
+  "try_events": 216,
+  "schedule_label_removed_from_agent_visible": true,
+  "recursive_leakage_check_passed": true,
+  "leakage_violations": [],
+  "no_observe_try_count": 72,
+  "one_observe_try_count": 72,
+  "repeated_observe_try_count": 72,
+  "matched_schedule_group_count": 12,
+  "comparable_observe_try_set_count": 24,
+  "complete_action_set_count": 36,
+  "partial_action_set_count": 0,
+  "delayed_credit_available": true,
+  "delayed_observe_benefit_detectable": true,
+  "delayed_credit_overattribution_risk": false,
+  "overattribution_note": "Delayed per-try return is within single-try bounds. No overattribution.",
+  "delayed_credit_total_records": 36,
+  "delayed_credit_role_breakdown": {
+    "observe_helps": {
+      "count": 12,
+      "mean_immediate": 0.25,
+      "mean_delayed_raw": 0.6,
+      "mean_delayed_discounted": 0.4686,
+      "mean_delayed_per_try": 0.1,
+      "mean_combined_raw": 0.85
+    },
+    "observe_neutral": {
+      "count": 12,
+      "mean_immediate": 0.25,
+      "mean_delayed_raw": 0.45,
+      "mean_delayed_discounted": 0.4138,
+      "mean_delayed_per_try": 0.075,
+      "mean_combined_raw": 0.7
+    },
+    "observe_wasteful": {
+      "count": 12,
+      "mean_immediate": 0.25,
+      "mean_delayed_raw": 0.45,
+      "mean_delayed_discounted": 0.4138,
+      "mean_delayed_per_try": 0.075,
+      "mean_combined_raw": 0.7
+    }
+  },
+  "observe_advantage_vs_matched_no_observe": 0.0,
+  "observe_advantage_vs_one_observe": 0.0,
+  "observe_helps_advantage": 0.6,
+  "observe_neutral_advantage": 0.45,
+  "observe_wasteful_advantage": 0.45,
+  "role_sanity_pass": true,
+  "mean_immediate_observe_value": 0.25,
+  "mean_combined_observe_value_raw": 0.75,
+  "mean_delayed_per_try": 0.0833,
+  "combined_observe_can_exceed_try": true,
+  "value_scale_report": {
+    "observe_immediate": {
+      "min": 0.225,
+      "max": 0.305,
+      "mean": 0.25
+    },
+    "delayed_return_raw": {
+      "min": -0.3,
+      "max": 1.5,
+      "mean": 0.5
+    },
+    "delayed_return_discounted": {
+      "min": -0.0926,
+      "max": 1.1851,
+      "mean": 0.432
+    },
+    "delayed_return_normalized_per_try": {
+      "min": -0.05,
+      "max": 0.25,
+      "mean": 0.0833
+    },
+    "observe_combined_raw": {
+      "min": -0.075,
+      "max": 1.805,
+      "mean": 0.75
+    },
+    "observe_combined_discounted": {
+      "min": 0.1324,
+      "max": 1.4901,
+      "mean": 0.682
+    },
+    "try_value": {
+      "min": -0.15,
+      "max": 0.45,
+      "mean": 0.0833
+    }
+  },
+  "try_success_by_observe_depth": {
+    "no_observe": {
+      "success_rate": 0.3889,
+      "n": 72
+    },
+    "one_observe": {
+      "success_rate": 0.3889,
+      "n": 72
+    },
+    "repeated_observe": {
+      "success_rate": 0.3889,
+      "n": 72
+    }
+  },
+  "audit_label_leakage_detected": false,
+  "old_c4_preserved": true,
+  "old_c5_preserved": true,
+  "policy_decisions_changed": false,
+  "implementation_status": "pass",
+  "failure_reason": "none",
+  "acceptance_checks": {
+    "schedule_label_removed_from_agent_visible": true,
+    "recursive_leakage_check_passed": true,
+    "no_observe_try_count > 0": true,
+    "one_observe_try_count > 0": true,
+    "repeated_observe_try_count > 0": true,
+    "matched_schedule_group_count > 0": true,
+    "comparable_observe_try_set_count > 0": true,
+    "delayed_credit_available = true": true,
+    "delayed_credit_overattribution_risk reported": true,
+    "role_sanity_check": true,
+    "old C4 preserved": true,
+    "old C5 preserved": true,
+    "no policy decisions change": true,
+    "no_seed_crashes": true
+  }
+}

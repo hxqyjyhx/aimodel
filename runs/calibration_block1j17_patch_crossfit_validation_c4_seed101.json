@@ -1,0 +1,189 @@
+{
+  "block_id": "1J17_patch",
+  "condition": "C4_instance_subtype_cued_v1",
+  "seed": 101,
+  "budget": 1.5,
+  "desc": "Cross-Fitted Learned Probe-Value Critic Deployment Validation. Each candidate scored by critic trained WITHOUT that object's oracle labels.",
+  "design_validation": {
+    "no_environment_change": true,
+    "no_budget_cost_change": true,
+    "no_multi_seed": true,
+    "no_hidden_labels_in_deployment": true,
+    "no_oracle_labels_in_deployment_scoring": true,
+    "no_same_object_oracle_leakage": true,
+    "cross_fitting_method": "leave_object_out"
+  },
+  "key_results": {
+    "c15b_macro_bal": 0.614167,
+    "c15b_probe_count": 8,
+    "train_all_mlp_macro_bal": 0.6225,
+    "crossfit_mlp_macro_bal": 0.594167,
+    "crossfit_delta_vs_c15b": -0.02,
+    "crossfit_probe_count": 5,
+    "crossfit_overlap_with_oracle_k8": 0,
+    "crossfit_overlap_with_C15b": 0,
+    "crossfit_effective_probe_count": 4,
+    "crossfit_zero_probe_count": 1,
+    "crossfit_harmful_probe_count": 0,
+    "oof_auc": 0.653817,
+    "oof_precision_at_8": 0.125,
+    "train_all_mlp_overlap_oracle_k8": 5,
+    "train_all_mlp_effective": 5,
+    "train_all_mlp_harmful": 0,
+    "oracle_k8_macro_bal": 0.64875,
+    "oracle_macro_bal": 1.0,
+    "C0b_macro_bal": 0.587083,
+    "C18b_macro_bal": 0.5975,
+    "1J16_best_C19_macro_bal": 0.6067
+  },
+  "comparisons": {
+    "train_all_vs_crossfit": {
+      "train_all_macro_bal": 0.6225,
+      "crossfit_macro_bal": 0.594167,
+      "delta": -0.028333,
+      "note": "Negative delta = cross-fitting removes same-object leakage advantage"
+    },
+    "crossfit_vs_c15b": {
+      "delta": -0.02,
+      "improves": false
+    },
+    "gap_capture": {
+      "C0b_base": 0.587083,
+      "oracle_ceiling": 1.0,
+      "oracle_c0b_gap": 0.412917,
+      "C15b_gap_capture_pct": 6.56,
+      "train_all_mlp_gap_capture_pct": 8.58,
+      "crossfit_mlp_gap_capture_pct": 1.72,
+      "oracle_k8_gap_capture_pct": 14.93
+    },
+    "probe_pair_overlap": {
+      "C15b_pairs": "[('test_wooden_pickaxe_006', 'burn_as_fuel'), ('test_wooden_pickaxe_003', 'burn_as_fuel'), ('test_stone_block_001', 'mine_by_hand'), ('test_apple_007', 'eat'), ('test_wood_log_002', 'craft_plank'), ('test_stone_block_009', 'mine_by_hand'), ('test_apple_010', 'eat'), ('test_stone_block_000', 'mine_by_hand')]",
+      "oracle_k8_pairs": "[('test_stone_block_003', 'mine_by_hand'), ('test_stone_block_008', 'burn_as_fuel'), ('test_apple_014', 'eat'), ('test_wooden_pickaxe_005', 'use_as_tool'), ('test_wooden_pickaxe_003', 'use_as_tool'), ('test_apple_012', 'eat'), ('test_stone_block_014', 'mine_by_hand'), ('test_stone_block_011', 'mine_by_hand')]",
+      "crossfit_pairs": "[('test_stone_block_011', 'use_as_tool'), ('test_stone_block_003', 'eat'), ('test_wood_log_003', 'mine_by_hand'), ('test_apple_006', 'eat'), ('test_wood_log_007', 'eat')]",
+      "train_all_pairs": "[('test_stone_block_003', 'mine_by_hand'), ('test_stone_block_011', 'mine_by_hand'), ('test_wooden_pickaxe_005', 'use_as_tool'), ('test_stone_block_008', 'burn_as_fuel'), ('test_apple_014', 'eat')]",
+      "crossfit_overlap_oracle_k8": 0,
+      "train_all_overlap_oracle_k8": 5
+    }
+  },
+  "crossfit_probe_effects": [
+    {
+      "oid": "test_stone_block_011",
+      "action": "use_as_tool",
+      "outcome": 0.0,
+      "utility_delta": 0.033116,
+      "is_effective": true,
+      "is_zero": false,
+      "is_harmful": false
+    },
+    {
+      "oid": "test_stone_block_003",
+      "action": "eat",
+      "outcome": 0.0,
+      "utility_delta": 0.017076,
+      "is_effective": true,
+      "is_zero": false,
+      "is_harmful": false
+    },
+    {
+      "oid": "test_wood_log_003",
+      "action": "mine_by_hand",
+      "outcome": 1.0,
+      "utility_delta": 0.016762,
+      "is_effective": true,
+      "is_zero": false,
+      "is_harmful": false
+    },
+    {
+      "oid": "test_apple_006",
+      "action": "eat",
+      "outcome": 1.0,
+      "utility_delta": 0.04879,
+      "is_effective": true,
+      "is_zero": false,
+      "is_harmful": false
+    },
+    {
+      "oid": "test_wood_log_007",
+      "action": "eat",
+      "outcome": 0.0,
+      "utility_delta": 0.0,
+      "is_effective": false,
+      "is_zero": true,
+      "is_harmful": false
+    }
+  ],
+  "crossfit_selected_scores": [
+    {
+      "oid": "test_stone_block_011",
+      "selected_action": "use_as_tool",
+      "selected_score": 0.22088416878615655,
+      "action_scores": {
+        "mine_by_hand": 0.19440615752270773,
+        "mine_with_pickaxe": 0.09829307313157101,
+        "craft_plank": 0.02963733614363401,
+        "eat": 0.17834846637609275,
+        "use_as_tool": 0.22088416878615655,
+        "burn_as_fuel": 0.0737244366323638
+      }
+    },
+    {
+      "oid": "test_stone_block_003",
+      "selected_action": "eat",
+      "selected_score": 0.1873006750754171,
+      "action_scores": {
+        "mine_by_hand": 0.05759226822993654,
+        "mine_with_pickaxe": 0.0179577496830904,
+        "craft_plank": 0.014441080926243405,
+        "eat": 0.1873006750754171,
+        "use_as_tool": 0.11187030007711658,
+        "burn_as_fuel": 0.07801067945008607
+      }
+    },
+    {
+      "oid": "test_wood_log_003",
+      "selected_action": "mine_by_hand",
+      "selected_score": 0.17246808186237905,
+      "action_scores": {
+        "mine_by_hand": 0.17246808186237905,
+        "mine_with_pickaxe": 0.0722720562821568,
+        "craft_plank": 0.01768266242233317,
+        "eat": 0.0528754281764629,
+        "use_as_tool": 0.09751894918261281,
+        "burn_as_fuel": 0.03671804751056791
+      }
+    },
+    {
+      "oid": "test_apple_006",
+      "selected_action": "eat",
+      "selected_score": 0.15311359485848167,
+      "action_scores": {
+        "mine_by_hand": 0.09009988479987728,
+        "mine_with_pickaxe": 0.12268065423422805,
+        "craft_plank": 0.02111060251757306,
+        "eat": 0.15311359485848167,
+        "use_as_tool": 0.08269905337904898,
+        "burn_as_fuel": 0.013887234213540364
+      }
+    },
+    {
+      "oid": "test_wood_log_007",
+      "selected_action": "eat",
+      "selected_score": 0.1475488047263487,
+      "action_scores": {
+        "mine_by_hand": 0.04278509817337102,
+        "mine_with_pickaxe": 0.03105858333928289,
+        "craft_plank": 0.01888734169195606,
+        "eat": 0.1475488047263487,
+        "use_as_tool": 0.05855642316812802,
+        "burn_as_fuel": 0.02900776009934455
+      }
+    }
+  ],
+  "interpretation": {
+    "deployable_generalization_supported": false,
+    "learned_probe_value_route_status": "not_supported",
+    "candidate_ready_for_small_multiseed": false,
+    "ready_for_multiseed": false,
+    "text": "Cross-fit MLP (0.5942, -0.0200 vs C15b) does NOT improve over C15b, while train-all MLP (0.6225) does. 1J17 improvement was likely same-candidate supervision overfit. Deployable features with OOF critic scores are insufficient."
+  }
+}

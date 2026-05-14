@@ -1,0 +1,145 @@
+{
+  "block_id": "1H2",
+  "beta": 0.25,
+  "data_source": "runs/calibration_block1h1_balanced_policy_rescore.json",
+  "per_policy_feasibility": {
+    "all_false": {
+      "macro_bal": 0.5,
+      "normalized_cost": 0.0,
+      "bal_ub25": 0.5,
+      "gain_over_chance": 0.0,
+      "cost_penalty_beta025": 0.0,
+      "net_gain_over_chance": 0.0,
+      "required_mb_to_beat_all_false": 0.5,
+      "margin_to_beat_all_false": 0.0,
+      "required_beta_to_break_even_vs_all_false": null,
+      "max_ncost_at_beta025": 0.0
+    },
+    "iom_prior": {
+      "macro_bal": 0.5,
+      "normalized_cost": 0.0,
+      "bal_ub25": 0.5,
+      "gain_over_chance": 0.0,
+      "cost_penalty_beta025": 0.0,
+      "net_gain_over_chance": 0.0,
+      "required_mb_to_beat_all_false": 0.5,
+      "margin_to_beat_all_false": 0.0,
+      "required_beta_to_break_even_vs_all_false": null,
+      "max_ncost_at_beta025": 0.0
+    },
+    "c0b": {
+      "macro_bal": 0.5444444444444445,
+      "normalized_cost": 0.7533333333333334,
+      "bal_ub25": 0.35611111111111116,
+      "gain_over_chance": 0.04444444444444451,
+      "cost_penalty_beta025": 0.18833333333333335,
+      "net_gain_over_chance": -0.14388888888888884,
+      "required_mb_to_beat_all_false": 0.6883333333333334,
+      "margin_to_beat_all_false": -0.14388888888888884,
+      "required_beta_to_break_even_vs_all_false": 0.05899705014749271,
+      "max_ncost_at_beta025": 0.17777777777777803
+    },
+    "c13": {
+      "macro_bal": 0.5577777777777777,
+      "normalized_cost": 0.9666666666666668,
+      "bal_ub25": 0.316111111111111,
+      "gain_over_chance": 0.057777777777777706,
+      "cost_penalty_beta025": 0.2416666666666667,
+      "net_gain_over_chance": -0.183888888888889,
+      "required_mb_to_beat_all_false": 0.7416666666666667,
+      "margin_to_beat_all_false": -0.183888888888889,
+      "required_beta_to_break_even_vs_all_false": 0.05977011494252865,
+      "max_ncost_at_beta025": 0.23111111111111082
+    },
+    "c13_distance_filter": {
+      "macro_bal": 0.5533333333333333,
+      "normalized_cost": 0.9666666666666667,
+      "bal_ub25": 0.31166666666666665,
+      "gain_over_chance": 0.053333333333333344,
+      "cost_penalty_beta025": 0.24166666666666667,
+      "net_gain_over_chance": -0.18833333333333332,
+      "required_mb_to_beat_all_false": 0.7416666666666667,
+      "margin_to_beat_all_false": -0.18833333333333335,
+      "required_beta_to_break_even_vs_all_false": 0.05517241379310346,
+      "max_ncost_at_beta025": 0.21333333333333337
+    },
+    "c13_distance_aware_selection": {
+      "macro_bal": 0.5533333333333333,
+      "normalized_cost": 0.9666666666666667,
+      "bal_ub25": 0.31166666666666665,
+      "gain_over_chance": 0.053333333333333344,
+      "cost_penalty_beta025": 0.24166666666666667,
+      "net_gain_over_chance": -0.18833333333333332,
+      "required_mb_to_beat_all_false": 0.7416666666666667,
+      "margin_to_beat_all_false": -0.18833333333333335,
+      "required_beta_to_break_even_vs_all_false": 0.05517241379310346,
+      "max_ncost_at_beta025": 0.21333333333333337
+    },
+    "c13_distance_filter_stop_on_skip": {
+      "macro_bal": 0.49333333333333335,
+      "normalized_cost": 0.05333333333333334,
+      "bal_ub25": 0.48000000000000004,
+      "gain_over_chance": -0.006666666666666654,
+      "cost_penalty_beta025": 0.013333333333333334,
+      "net_gain_over_chance": -0.01999999999999999,
+      "required_mb_to_beat_all_false": 0.5133333333333333,
+      "margin_to_beat_all_false": -0.019999999999999962,
+      "required_beta_to_break_even_vs_all_false": -0.12499999999999975,
+      "max_ncost_at_beta025": 0.0
+    },
+    "oracle_unconstrained": {
+      "macro_bal": 1.0,
+      "normalized_cost": 0.0,
+      "bal_ub25": 1.0,
+      "gain_over_chance": 0.5,
+      "cost_penalty_beta025": 0.0,
+      "net_gain_over_chance": 0.5,
+      "required_mb_to_beat_all_false": 0.5,
+      "margin_to_beat_all_false": 0.5,
+      "required_beta_to_break_even_vs_all_false": null,
+      "max_ncost_at_beta025": 2.0
+    }
+  },
+  "pairwise": {
+    "c13_to_beat_c0b": {
+      "c0b_bal_ub25": 0.35611111111111116,
+      "c13_macro_bal": 0.5577777777777777,
+      "c13_ncost": 0.9666666666666668,
+      "required_c13_mb": 0.5977777777777779,
+      "margin": -0.04000000000000015,
+      "required_beta": 0.06249999999999935,
+      "max_ncost_at_beta025": 0.8066666666666662
+    },
+    "c13_to_beat_all_false": {
+      "all_false_bal_ub25": 0.5,
+      "required_c13_mb": 0.7416666666666667,
+      "margin": -0.183888888888889
+    },
+    "distance_filter_to_beat_c13": {
+      "same_cost": true,
+      "required_mb": 0.5577777777777777,
+      "filter_mb": 0.5533333333333333,
+      "diff": -0.004444444444444362
+    },
+    "stop_on_skip_metric_exploit": {
+      "stop_mb": 0.49333333333333335,
+      "stop_ncost": 0.05333333333333334,
+      "stop_bal_ub25": 0.48000000000000004,
+      "c0b_bal_ub25": 0.35611111111111116,
+      "min_acceptable_mb": 0.5133333333333333,
+      "is_exploit": true
+    }
+  },
+  "diagnostic_questions": {
+    "q1_c13_gain_justifies_cost": false,
+    "q2_beta_c13_vs_all_false": 0.05977011494252865,
+    "q3_beta_c13_vs_c0b": 0.06249999999999935,
+    "q4_beta_too_high": true,
+    "q5_low_signal_high_cost": "both",
+    "q6_recommendation": "D: report macro_bal and cost separately"
+  },
+  "summary_flags": {
+    "current_beta_feasible": false,
+    "policy_comparison_ready": false
+  }
+}

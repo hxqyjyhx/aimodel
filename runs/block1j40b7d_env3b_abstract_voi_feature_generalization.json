@@ -1,0 +1,1595 @@
+{
+  "block_id": "1J40b-7d",
+  "elapsed_seconds": 19.2,
+  "implementation_status": "FAIL",
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "variants": {
+    "D0": "raw pre_vec only (7c baseline)",
+    "D1": "raw pre_vec + abstract features",
+    "D2": "abstract features only",
+    "D3": "raw + abstract, minus exact-signature features (10,11)"
+  },
+  "abstract_features": {
+    "n_features": 17,
+    "feature_names": [
+      "n_pre_surface_features",
+      "n_ambient_features_known",
+      "n_shared_surface_cues_known",
+      "n_pre_visible_diagnostic_cues_known",
+      "has_any_pre_visible_diagnostic_cue",
+      "has_any_shared_surface_cue",
+      "pre_try_value_spread",
+      "pre_best_second_margin",
+      "pre_action_value_variance",
+      "training_support_count_for_exact_signature",
+      "training_mean_observe_target_for_exact_signature",
+      "cue_support_mean",
+      "cue_support_max",
+      "cue_observe_target_mean",
+      "cue_observe_target_max",
+      "nfeat_group_mean_observe_target",
+      "shared_cue_conflict_sum"
+    ],
+    "forbidden_field_leak": false,
+    "legality": "All features computable from pre_surface_features, training experience, and trained Q-function. No test post_vec or audit labels used."
+  },
+  "forbidden_field_audit": {
+    "forbidden_in_model_keys": 0,
+    "abstract_forbidden_leak": false,
+    "hidden_before_reveal_violations": 0
+  },
+  "decision_time_audit": {
+    "post_vec_before_decision": false,
+    "two_stage_policy": true,
+    "observe_value_from_pre_only": true,
+    "post_vec_only_after_observe": true
+  },
+  "primary": {
+    "cost": 0.03,
+    "evaluations": {
+      "A_D0": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.01
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "A_D1": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.01
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "A_D2": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.01
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "A_D3": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.01
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "B_D0": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.01
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "B_D1": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.01
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "B_D2": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.01
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "B_D3": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.01
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "C_D0": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.43,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "policy_learned_minus_always_obs": 0.01,
+          "policy_learned_minus_oracle": 0.0
+        },
+        "checks": {
+          "policy_net > always_observe_net": true,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": true,
+          "pos_obs > nonpos_obs": true
+        }
+      },
+      "C_D1": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.43,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "policy_learned_minus_always_obs": 0.01,
+          "policy_learned_minus_oracle": 0.0
+        },
+        "checks": {
+          "policy_net > always_observe_net": true,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": true,
+          "pos_obs > nonpos_obs": true
+        }
+      },
+      "C_D2": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.43,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "policy_learned_minus_always_obs": 0.01,
+          "policy_learned_minus_oracle": 0.0
+        },
+        "checks": {
+          "policy_net > always_observe_net": true,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": true,
+          "pos_obs > nonpos_obs": true
+        }
+      },
+      "C_D3": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.43,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "policy_learned_minus_always_obs": 0.01,
+          "policy_learned_minus_oracle": 0.0
+        },
+        "checks": {
+          "policy_net > always_observe_net": true,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": true,
+          "pos_obs > nonpos_obs": true
+        }
+      }
+    },
+    "A_variants": {
+      "D0": [
+        {
+          "test_variant_id": "A1",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A2",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A3",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A4",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D1": [
+        {
+          "test_variant_id": "A1",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A2",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A3",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A4",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D2": [
+        {
+          "test_variant_id": "A1",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A2",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A3",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A4",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D3": [
+        {
+          "test_variant_id": "A1",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A2",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A3",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A4",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        }
+      ]
+    },
+    "B_variants": {
+      "D0": [
+        {
+          "test_variant_id": "B1",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "B2",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D1": [
+        {
+          "test_variant_id": "B1",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "B2",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D2": [
+        {
+          "test_variant_id": "B1",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "B2",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D3": [
+        {
+          "test_variant_id": "B1",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "B2",
+          "policy_net": 0.42,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        }
+      ]
+    },
+    "C_variants": {
+      "D0": [
+        {
+          "test_variant_id": "C_seed101",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed103",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed107",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed109",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed113",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D1": [
+        {
+          "test_variant_id": "C_seed101",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed103",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed107",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed109",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed113",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D2": [
+        {
+          "test_variant_id": "C_seed101",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed103",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed107",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed109",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed113",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D3": [
+        {
+          "test_variant_id": "C_seed101",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed103",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed107",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed109",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed113",
+          "policy_net": 0.43,
+          "always_observe_net": 0.42,
+          "oracle_selective": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        }
+      ]
+    }
+  },
+  "robustness": {
+    "cost": 0.05,
+    "evaluations": {
+      "A_D0": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.0167
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "A_D1": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.0167
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "A_D2": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.0167
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "A_D3": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.0167
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "B_D0": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.0167
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "B_D1": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.0167
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "B_D2": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.0167
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "B_D3": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "policy_learned_minus_always_obs": 0.0,
+          "policy_learned_minus_oracle": 0.0167
+        },
+        "checks": {
+          "policy_net > always_observe_net": false,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": false,
+          "pos_obs > nonpos_obs": false
+        }
+      },
+      "C_D0": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4167,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "policy_learned_minus_always_obs": 0.0167,
+          "policy_learned_minus_oracle": 0.0
+        },
+        "checks": {
+          "policy_net > always_observe_net": true,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": true,
+          "pos_obs > nonpos_obs": true
+        }
+      },
+      "C_D1": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4167,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "policy_learned_minus_always_obs": 0.0167,
+          "policy_learned_minus_oracle": 0.0
+        },
+        "checks": {
+          "policy_net > always_observe_net": true,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": true,
+          "pos_obs > nonpos_obs": true
+        }
+      },
+      "C_D2": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4167,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "policy_learned_minus_always_obs": 0.0167,
+          "policy_learned_minus_oracle": 0.0
+        },
+        "checks": {
+          "policy_net > always_observe_net": true,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": true,
+          "pos_obs > nonpos_obs": true
+        }
+      },
+      "C_D3": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4167,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "policy_learned_minus_always_obs": 0.0167,
+          "policy_learned_minus_oracle": 0.0
+        },
+        "checks": {
+          "policy_net > always_observe_net": true,
+          "policy_net > always_try": true,
+          "obs_rate between 0 and 1": true,
+          "pos_obs > nonpos_obs": true
+        }
+      }
+    },
+    "A_variants": {
+      "D0": [
+        {
+          "test_variant_id": "A1",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A2",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A3",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A4",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D1": [
+        {
+          "test_variant_id": "A1",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A2",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A3",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A4",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D2": [
+        {
+          "test_variant_id": "A1",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A2",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A3",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A4",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D3": [
+        {
+          "test_variant_id": "A1",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A2",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A3",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "A4",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        }
+      ]
+    },
+    "B_variants": {
+      "D0": [
+        {
+          "test_variant_id": "B1",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "B2",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D1": [
+        {
+          "test_variant_id": "B1",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "B2",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D2": [
+        {
+          "test_variant_id": "B1",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "B2",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D3": [
+        {
+          "test_variant_id": "B1",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "B2",
+          "policy_net": 0.4,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        }
+      ]
+    },
+    "C_variants": {
+      "D0": [
+        {
+          "test_variant_id": "C_seed101",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed103",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed107",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed109",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed113",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 35,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D1": [
+        {
+          "test_variant_id": "C_seed101",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed103",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed107",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed109",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed113",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 52,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D2": [
+        {
+          "test_variant_id": "C_seed101",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed103",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed107",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed109",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed113",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 17,
+          "ov_true_target_corr": 1.0
+        }
+      ],
+      "D3": [
+        {
+          "test_variant_id": "C_seed101",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed103",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed107",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed109",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        },
+        {
+          "test_variant_id": "C_seed113",
+          "policy_net": 0.4167,
+          "always_observe_net": 0.4,
+          "oracle_selective": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0,
+          "ov_n_features": 50,
+          "ov_true_target_corr": 1.0
+        }
+      ]
+    }
+  }
+}

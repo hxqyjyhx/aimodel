@@ -1,0 +1,618 @@
+{
+  "block_id": "1J3",
+  "condition": "C4_instance_subtype_cued_v1",
+  "seed": 101,
+  "budget": 1.5,
+  "cost_weight": 0.5,
+  "primary_metric": "macro_query_balanced_accuracy",
+  "reporting_mode": "Pareto: macro_bal vs normalized_cost",
+  "baselines": {
+    "all_false": {
+      "macro_query_balanced_accuracy": 0.5,
+      "macro_query_accuracy": 0.74,
+      "raw_comp": 0.74,
+      "mean_positive_recall": 0.0,
+      "mean_negative_recall": 1.0,
+      "per_query": {
+        "need_food": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_fuel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 30,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.5
+        },
+        "need_planks": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_stone": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        }
+      },
+      "cost": {
+        "visit_count": 0,
+        "observe_count": 0,
+        "probe_count": 0,
+        "total_cost": 0.0,
+        "normalized_cost": 0.0,
+        "total_reach_cost": 0.0,
+        "total_observe_cost": 0.0,
+        "total_probe_cost": 0.0,
+        "budget_remaining": 1.5,
+        "budget_spent": 0.0,
+        "initial_budget": 1.5
+      }
+    },
+    "C_minus_prior_only": {
+      "macro_query_balanced_accuracy": 0.5,
+      "macro_query_accuracy": 0.74,
+      "raw_comp": 0.74,
+      "mean_positive_recall": 0.0,
+      "mean_negative_recall": 1.0,
+      "per_query": {
+        "need_food": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_fuel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 30,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.5
+        },
+        "need_planks": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_stone": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        }
+      },
+      "cost": {
+        "visit_count": 0,
+        "observe_count": 0,
+        "probe_count": 0,
+        "total_cost": 0.0,
+        "normalized_cost": 0.0,
+        "total_reach_cost": 0,
+        "total_observe_cost": 0,
+        "total_probe_cost": 0,
+        "budget_remaining": 1.5,
+        "budget_spent": 0.0,
+        "initial_budget": 1.5
+      }
+    },
+    "C0b_observe_only": {
+      "macro_query_balanced_accuracy": 0.587083,
+      "macro_query_accuracy": 0.753333,
+      "raw_comp": 0.753333,
+      "mean_positive_recall": 0.31,
+      "mean_negative_recall": 0.864167,
+      "per_query": {
+        "need_food": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 3,
+          "fp": 9,
+          "tn": 39,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.7
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 3,
+          "tn": 45,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.766667
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 3,
+          "tn": 45,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.677083,
+          "accuracy": 0.833333
+        }
+      },
+      "cost": {
+        "visit_count": 60,
+        "observe_count": 60,
+        "probe_count": 0,
+        "total_cost": 1.1300000000000001,
+        "normalized_cost": 0.7533333333333334,
+        "total_reach_cost": 0.8300000000000001,
+        "total_observe_cost": 0.3,
+        "total_probe_cost": 0,
+        "budget_remaining": 0.37000000000000255,
+        "budget_spent": 1.1300000000000006,
+        "initial_budget": 1.5
+      }
+    },
+    "random_probe_budgeted": {
+      "macro_query_balanced_accuracy": 0.5425,
+      "macro_query_accuracy": 0.74,
+      "raw_comp": 0.74,
+      "mean_positive_recall": 0.15,
+      "mean_negative_recall": 0.935,
+      "per_query": {
+        "need_food": {
+          "tp": 4,
+          "fp": 0,
+          "tn": 48,
+          "fn": 8,
+          "positive_recall": 0.333333,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.666667,
+          "accuracy": 0.866667
+        },
+        "need_fuel": {
+          "tp": 5,
+          "fp": 6,
+          "tn": 24,
+          "fn": 25,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.8,
+          "balanced_accuracy": 0.483333,
+          "accuracy": 0.483333
+        },
+        "need_planks": {
+          "tp": 1,
+          "fp": 4,
+          "tn": 44,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.916667,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.75
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 1,
+          "tn": 47,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.979167,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 1,
+          "fp": 1,
+          "tn": 47,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.979167,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.8
+        }
+      },
+      "cost": {
+        "visit_count": 22,
+        "observe_count": 22,
+        "probe_count": 22,
+        "total_cost": 1.4500000000000002,
+        "normalized_cost": 0.9666666666666668,
+        "total_reach_cost": 0.24,
+        "total_observe_cost": 0.11,
+        "total_probe_cost": 1.1,
+        "budget_remaining": 0.049999999999999975,
+        "budget_spent": 1.4500000000000002,
+        "initial_budget": 1.5
+      }
+    },
+    "C13_instance_VOI_original": {
+      "macro_query_balanced_accuracy": 0.573333,
+      "macro_query_accuracy": 0.753333,
+      "raw_comp": 0.753333,
+      "mean_positive_recall": 0.2,
+      "mean_negative_recall": 0.946667,
+      "per_query": {
+        "need_food": {
+          "tp": 5,
+          "fp": 0,
+          "tn": 48,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.708333,
+          "accuracy": 0.883333
+        },
+        "need_fuel": {
+          "tp": 5,
+          "fp": 3,
+          "tn": 27,
+          "fn": 25,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.9,
+          "balanced_accuracy": 0.533333,
+          "accuracy": 0.533333
+        },
+        "need_planks": {
+          "tp": 2,
+          "fp": 7,
+          "tn": 41,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.854167,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.716667
+        },
+        "need_stone": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_tool": {
+          "tp": 1,
+          "fp": 1,
+          "tn": 47,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.979167,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.8
+        }
+      },
+      "cost": {
+        "visit_count": 22,
+        "observe_count": 22,
+        "probe_count": 22,
+        "total_cost": 1.4500000000000002,
+        "normalized_cost": 0.9666666666666668,
+        "total_reach_cost": 0.24,
+        "total_observe_cost": 0.11,
+        "total_probe_cost": 1.1,
+        "budget_remaining": 0.049999999999999975,
+        "budget_spent": 1.4500000000000002,
+        "initial_budget": 1.5
+      },
+      "probe_efficiency": {
+        "total_probe_count": 22,
+        "effective_probe_count": 11,
+        "zero_gain_probe_count": 11,
+        "harmful_probe_count": 0,
+        "effective_probe_rate": 0.5,
+        "zero_gain_rate": 0.5,
+        "harmful_rate": 0.0
+      }
+    },
+    "category_majority": {
+      "macro_query_balanced_accuracy": 0.975,
+      "macro_query_accuracy": 0.96,
+      "raw_comp": 0.96,
+      "mean_positive_recall": 1.0,
+      "mean_negative_recall": 0.95,
+      "per_query": {
+        "need_food": {
+          "tp": 12,
+          "fp": 3,
+          "tn": 45,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.96875,
+          "accuracy": 0.95
+        },
+        "need_fuel": {
+          "tp": 30,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_planks": {
+          "tp": 12,
+          "fp": 3,
+          "tn": 45,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.96875,
+          "accuracy": 0.95
+        },
+        "need_stone": {
+          "tp": 12,
+          "fp": 3,
+          "tn": 45,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.96875,
+          "accuracy": 0.95
+        },
+        "need_tool": {
+          "tp": 12,
+          "fp": 3,
+          "tn": 45,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.96875,
+          "accuracy": 0.95
+        }
+      },
+      "cost": {
+        "visit_count": 0,
+        "observe_count": 0,
+        "probe_count": 0,
+        "total_cost": 0.0,
+        "normalized_cost": 0.0,
+        "total_reach_cost": 0.0,
+        "total_observe_cost": 0.0,
+        "total_probe_cost": 0.0,
+        "budget_remaining": 1.5,
+        "budget_spent": 0.0,
+        "initial_budget": 1.5
+      }
+    },
+    "C_oracle_full_information": {
+      "macro_query_balanced_accuracy": 1.0,
+      "macro_query_accuracy": 1.0,
+      "raw_comp": 1.0,
+      "mean_positive_recall": 1.0,
+      "mean_negative_recall": 1.0,
+      "per_query": {
+        "need_food": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_fuel": {
+          "tp": 30,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_planks": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_stone": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_tool": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        }
+      },
+      "cost": {
+        "visit_count": 0,
+        "observe_count": 0,
+        "probe_count": 0,
+        "total_cost": 0.0,
+        "normalized_cost": 0.0,
+        "total_reach_cost": 0.0,
+        "total_observe_cost": 0.0,
+        "total_probe_cost": 0.0,
+        "budget_remaining": 1.5,
+        "budget_spent": 0.0,
+        "initial_budget": 1.5,
+        "note": "oracle_unconstrained"
+      }
+    }
+  },
+  "comparisons": {
+    "C13_vs_C0b": {
+      "delta_macro_bal": -0.01375,
+      "delta_normalized_cost": 0.213333,
+      "pareto_relation": "c0b_dominates_c13",
+      "c13_dominates_c0b": false,
+      "c0b_dominates_c13": true
+    },
+    "C13_vs_random_probe": {
+      "delta_macro_bal": 0.030833,
+      "delta_normalized_cost": 0.0,
+      "c13_beats_random": true
+    },
+    "C13_vs_C_minus": {
+      "delta_macro_bal": 0.073333
+    },
+    "gap_capture": {
+      "oracle_c0b_gap": 0.412917,
+      "c13_gain_over_c0b": -0.01375,
+      "c13_gap_capture_vs_c0b": -0.0333,
+      "practical_threshold": 0.041292,
+      "c13_passes_practical": false,
+      "c13_macro_bal_needed": 0.628375
+    },
+    "positive_discovery": {
+      "c13_mean_pos_recall": 0.2,
+      "c0b_mean_pos_recall": 0.31,
+      "delta_pos_recall": -0.11,
+      "delta_neg_recall": 0.0825,
+      "recall_source": "negative_only_tradeoff",
+      "c13_improves_positive_recall": false,
+      "metric_exploit_detected": true
+    }
+  },
+  "probe_efficiency": {
+    "total_probe_count": 22,
+    "effective_probe_count": 11,
+    "zero_gain_probe_count": 11,
+    "harmful_probe_count": 0,
+    "effective_probe_rate": 0.5,
+    "zero_gain_rate": 0.5,
+    "harmful_rate": 0.0
+  },
+  "pareto_frontier": [
+    {
+      "name": "all_false",
+      "macro_bal": 0.5,
+      "normalized_cost": 0.0
+    },
+    {
+      "name": "C0b_observe_only",
+      "macro_bal": 0.587083,
+      "normalized_cost": 0.753333
+    }
+  ],
+  "pareto_frontier_note": "Computed from 5 normal policies only (all_false, C_minus, C0b, random_probe, C13). category_majority excluded because it uses test-time hidden_category information not available to the agent. C_minus is identical to all_false at same cost so only one appears. C13 is Pareto-dominated by C0b (lower macro_bal, higher cost).",
+  "category_majority_diagnostic": {
+    "classification": "diagnostic_category_majority_upper_bound",
+    "macro_bal": 0.975,
+    "normalized_cost": 0.0,
+    "excluded_from_pareto": true,
+    "exclusion_reason": "Uses test-time hidden_category information not available to the agent. Category identity is NOT explicitly available for free. This is a leakage-risk diagnostic, not a deployable policy.",
+    "interpretation": "category_majority = 0.975 shows that category-level majority information nearly solves C4. This is a major environment-design risk — C4 still has a strong category shortcut. However, C_minus_prior_only = 0.5000 confirms the current zero-interaction IOM prior does NOT automatically exploit this shortcut. The 20% minority-subtype objects (3 per category) are the only challenge cases.",
+    "environment_design_risk": "category_shortcut_still_strong",
+    "mitigation": "C_minus = 0.5000 shows the agent does NOT have free access to category identity, so the shortcut is not automatically exploited."
+  },
+  "oracle_reference": {
+    "name": "C_oracle_full_information (reference)",
+    "macro_bal": 1.0,
+    "normalized_cost": 0.0
+  },
+  "c13_single_seed_assessment": {
+    "A_c13_gt_c0b": false,
+    "B_c13_gt_random": true,
+    "C_improves_positive_recall": false,
+    "D_10pct_gap_capture": false,
+    "E_not_pareto_dominated": false,
+    "F_no_metric_exploit": false,
+    "c13_single_seed_promising": false,
+    "ready_for_multiseed": false
+  },
+  "final_interpretation": {
+    "c13_weak_selectivity_signal": "C13 has weak selectivity signal over random probing (+0.0308 macro_bal at same cost), confirming VOI-based action selection provides some signal over random choice.",
+    "c13_pareto_dominated_by_c0b": "C13 is Pareto-dominated by C0b (lower macro_bal 0.5733 vs 0.5871, higher cost 0.9667 vs 0.7533). C13 should NOT proceed to multi-seed.",
+    "c13_does_not_improve_positive_recall": "C13 worsens positive recall (-0.11) while improving negative recall (+0.0825). This is the same negative-only asymmetric failure mode from Block 1I0.",
+    "recommendation": "Do NOT proceed to multi-seed with original C13 on C4. C13 needs redesign before further evaluation.",
+    "category_majority_diagnostic_only": "category_majority = 0.975 is a leakage-risk diagnostic, not a deployable policy point. It uses test-time hidden_category information not available to the agent.",
+    "environment_design_note": "C4 has a strong category shortcut (0.975), but the agent's IOM prior (C_minus = 0.5000) does not exploit it. The shortcut is latent, not active."
+  },
+  "block_id_patch": "1J3_patch",
+  "category_majority_reclassified_as_diagnostic": true,
+  "normal_pareto_frontier_fixed": true,
+  "c13_dominated_by_c0b": true
+}

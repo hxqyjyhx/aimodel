@@ -1,0 +1,6 @@
+seed,total_candidates,stable_candidates,provisional_candidates,conflict_candidates,single_event_promotion_count,total_exp_records,stable_exp_records,provisional_exp_records,contradicted_exp_records,rejected_exp_records,total_contradictions,feature_only_rule,hidden_leakage,oracle_leakage,policy_changed,consistent_cands,mixed_cands,split_needed_cands,reinforced_cands
+101,25,5,20,17,0,150,67,48,29,6,41,False,False,False,False,10,15,0,10
+103,31,6,25,17,0,186,74,78,34,0,34,False,False,False,False,15,16,0,15
+107,26,3,23,17,0,156,61,54,35,6,47,False,False,False,False,10,16,0,10
+109,29,7,22,21,0,174,88,48,35,3,41,False,False,False,False,13,16,0,13
+113,28,6,22,16,0,168,71,60,35,2,39,False,False,False,False,12,16,0,12

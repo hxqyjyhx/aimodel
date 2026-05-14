@@ -1,0 +1,115 @@
+{
+  "block_id": "1J5_patch",
+  "block_id_patch": "1J5_patch — added Route F (blurred peripheral observation) and search-tree/MCTS framing",
+  "condition": "C4_instance_subtype_cued_v1",
+  "based_on": "Block 1J4 failure decomposition",
+  "accepted_findings": {
+    "c13_loses_to_c0b": true,
+    "c13_better_on_visited_objects": true,
+    "c13_visited_subset_macro_bal": 0.7163,
+    "c0b_same_subset_macro_bal": 0.557,
+    "posterior_prediction_bias_is_problem": false,
+    "main_diagnosis": "visit_breadth_loss+poor_differentiating_action_selection+poor_minority_subtype_targeting+persistent_negative_only_tradeoff+environment_category_shortcut_risk",
+    "visit_breadth": "22/60 objects visited, 82.5% of FN from unvisited positives",
+    "action_relevance": "40.9% differentiating action probes, 59.1% non-differentiating",
+    "minority_targeting": "2/12 minority visited, enrichment ratio 1.0",
+    "c13_beats_random": true,
+    "c13_vs_random_delta": 0.0308,
+    "category_majority_diagnostic_only": true
+  },
+  "route_comparison": {
+    "route_a_breadth_preserving": {
+      "candidate": "C15_two_pass_observe_then_probe",
+      "addresses": "visit_breadth_loss",
+      "justification": "C13 achieves 0.7163 on visited vs C0b 0.5570. 82.5% FN from unvisited. Two-pass separates observation from probing.",
+      "success_criterion": "C15 macro_bal > C0b (0.5871), positive recall > C0b (0.31), selective probing",
+      "invalid_if": "probes nearly all objects, requires hidden info, exploits negative-only tradeoff",
+      "recommendation": "IMPLEMENT_NOW_PRIMARY",
+      "complexity": "moderate"
+    },
+    "route_b_differentiating_action": {
+      "candidate": "subtype-diagnostic action VOI / cross-action VOI",
+      "addresses": "poor_differentiating_action_selection",
+      "justification": "59.1% probes on non-differentiating actions, 61.5% of those zero-gain. Diff-action probes 66.7% effective.",
+      "success_criterion": "differentiating action probe rate > 60%, effective probe rate improves, macro_bal improves",
+      "invalid_if": "hard-codes differentiating action from ground truth, uses hidden_category",
+      "recommendation": "IMPLEMENT_NOW_SECONDARY",
+      "complexity": "low-moderate"
+    },
+    "route_c_minority_targeting": {
+      "candidate": "visible-cue outlier targeting / cluster uncertainty",
+      "addresses": "poor_minority_subtype_targeting",
+      "justification": "2/12 minority visited, enrichment 1.0. Minority probes 0% effective (sample too small).",
+      "success_criterion": "minority enrichment > 1.5, more minority objects probed, effective minority probe rate improves",
+      "invalid_if": "uses hidden_subtype directly, achieves enrichment by chance",
+      "recommendation": "DEFER",
+      "reason": "Likely addressed as side effect of Route A. Re-evaluate after A+B."
+    },
+    "route_d_environment_redesign": {
+      "candidate": "C5_balanced_subtypes_or_cross_category_queries",
+      "addresses": "environment_category_shortcut_risk",
+      "justification": "category_majority = 0.975. Only 0.025 gap to oracle. 80/20 ratios create strong category shortcut.",
+      "success_criterion": "category_majority < 0.70, C0b in 0.50-0.65, oracle gap > 0.20",
+      "invalid_if": "designed to make C13 win, iterated until C13 looks good, not pre-registered",
+      "recommendation": "DEFER",
+      "reason": "Fix policy design first. Pre-register environment before any runs. Only pursue if A+B cannot beat C0b."
+    },
+    "route_e_cost_redesign": {
+      "candidate": "separate budgets / lower probe cost / larger total budget",
+      "addresses": "visit_breadth_loss (indirectly)",
+      "justification": "Budget 1.5 forces 22/60 visits. C0b visits 60 at cost 1.13 leaving 0.37 unused.",
+      "success_criterion": "C13 visits more objects, macro_bal improves, tradeoff less extreme",
+      "invalid_if": "tuned until C13 wins, probe_cost so low probing is free, post-hoc changes",
+      "recommendation": "DEFER",
+      "reason": "Premature. Current costs validated by 1J2. Revisit if A+B show promise but are budget-constrained."
+    },
+    "route_f_blurred_peripheral_observation": {
+      "candidate": "C16_multi_layer_blurred_observation",
+      "addresses": "visit_breadth_loss (indirectly) + poor_minority_subtype_targeting + lack of local scene/context distribution",
+      "justification": "Current observation is point-like. C13 fails partly because narrow focal probing loses scene coverage. Multi-layer observation may help the agent estimate local positive/negative sample balance and identify better objects for focused probing.",
+      "success_criterion": "C0b improves moderately but does not saturate, C_oracle - C0b >= 0.10, no true label or hidden subtype leakage, policy can use local context to improve object selection",
+      "invalid_if": "blurred observation reveals hidden subtype directly, local context makes category_majority shortcut even stronger, observation alone reaches near-oracle and removes probe value",
+      "recommendation": "DEFER",
+      "reason": "Keep as interface-level Route F after C15/C15+B, or if 1J6/1J7 show point-like observation remains the bottleneck.",
+      "complexity": "moderate-high",
+      "type": "observation_interface_change"
+    }
+  },
+  "search_tree_mcts_framing": {
+    "added": true,
+    "description": "Mini-MC framed as cost-constrained search over object-action decision tree. Design analogy only, not a claim of MCTS implementation.",
+    "mapping": {
+      "breadth_expansion": "observe more objects / expand local scene coverage",
+      "depth_expansion": "probe selected object-action branches to reduce subtype uncertainty",
+      "value_estimate": "expected query-level gain / macro_bal improvement from visiting+probing",
+      "rollout_leaf_evaluation": "IOM posterior prediction given current observations and probe outcomes",
+      "stopping_criterion": "budget-aware termination — stop when no remaining object has positive expected net VOI",
+      "exploration_exploitation": "visit new objects (explore) vs probe already-visited objects deeper (exploit)",
+      "search_budget": "total cost budget (reach + observe + probe)"
+    },
+    "two_pass_mapping": "Pass 1 (breadth-first): observe many objects cheaply to build a wide search frontier. Pass 2 (depth-selective): probe high-value frontier nodes. C13 is depth-biased; C0b is breadth-only; C15 aims for breadth-then-depth balance.",
+    "c13_diagnosis_in_search_terms": "C13 is depth-biased: spends budget on probe depth for a small set of objects, leaving most of the search space unexplored.",
+    "c0b_diagnosis_in_search_terms": "C0b is breadth-only: sees all objects but never probes depth.",
+    "future_directions": "May inform interleaved breadth-depth, UCB-style object selection, explicit VOI bandits. No MCTS implementation planned for immediate next blocks."
+  },
+  "final_recommendation": {
+    "primary_next_route": "Route_A_breadth_preserving_two_pass_C15",
+    "secondary_next_route": "Route_B_differentiating_action_selection",
+    "implement_policy_now": false,
+    "environment_redesign_now": false,
+    "cost_redesign_now": false,
+    "ready_for_multiseed": false,
+    "next_block": "1J6",
+    "next_block_description": "Implement and evaluate C15_two_pass_observe_then_probe on seed=101",
+    "explicit_constraints": [
+      "Do NOT run multi-seed yet",
+      "Do NOT treat original C13 as promising",
+      "Do NOT change the environment",
+      "Do NOT change the observation interface yet (Route F deferred)",
+      "Implement Route A first, then layer Route B",
+      "Evaluate each increment separately"
+    ],
+    "deferred_routes": ["C", "D", "E", "F"],
+    "search_tree_mcts_framing_applied": true
+  }
+}

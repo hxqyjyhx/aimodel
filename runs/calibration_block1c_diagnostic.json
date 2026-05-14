@@ -1,0 +1,918 @@
+{
+  "block_id": "1C",
+  "elapsed_s": 151.45331239700317,
+  "cue": "C3_P060_O040",
+  "budget": 1.5,
+  "seed": 101,
+  "probed_n": 22,
+  "unprobed_n": 38,
+  "probed_comp": 0.7818181818181819,
+  "unprobed_comp": 0.6947368421052632,
+  "c0b_probed_comp": 0.6818181818181818,
+  "c0b_unprobed_comp": 0.7157894736842105,
+  "comp_gain": 0.023333333333333317,
+  "c13_vs_c0b": {
+    "n_diff_from_c0b": 11,
+    "n_diff_to_correct_vs_c0b": 11,
+    "n_diff_to_wrong_vs_c0b": 0,
+    "net_diff_vs_c0b": 11
+  },
+  "probe_before_after": {
+    "n_records": 22,
+    "total_before_comp": 75,
+    "total_after_comp": 86,
+    "total_delta_comp": 11,
+    "total_changed_features": 11,
+    "changed_to_correct": 11,
+    "changed_to_wrong": 0,
+    "net_gain": 11,
+    "per_probe": [
+      {
+        "object_id": "test_apple_008",
+        "action": "use_as_tool",
+        "before_probs": {
+          "mine_by_hand_success": 0.702121,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.107773,
+          "eat_success": 0.397202,
+          "use_as_tool_success": 0.489706,
+          "burn_as_fuel_success": 0.601891
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.702121,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.107773,
+          "eat_success": 0.397202,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.601891
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 1,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 3,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_stone_block_013",
+        "action": "mine_by_hand",
+        "before_probs": {
+          "mine_by_hand_success": 0.594863,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.293156,
+          "eat_success": 0.190452,
+          "use_as_tool_success": 0.096077,
+          "burn_as_fuel_success": 0.596465
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.0,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.293156,
+          "eat_success": 0.190452,
+          "use_as_tool_success": 0.096077,
+          "burn_as_fuel_success": 0.596465
+        },
+        "gt": {
+          "mine_by_hand_success": 0,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 4,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "mine_by_hand_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_stone_block_001",
+        "action": "mine_by_hand",
+        "before_probs": {
+          "mine_by_hand_success": 0.40297,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.296167,
+          "eat_success": 0.297704,
+          "use_as_tool_success": 0.106014,
+          "burn_as_fuel_success": 0.30307
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.0,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.296167,
+          "eat_success": 0.297704,
+          "use_as_tool_success": 0.106014,
+          "burn_as_fuel_success": 0.30307
+        },
+        "gt": {
+          "mine_by_hand_success": 0,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 5,
+        "after_composite_correct_count": 5,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wood_log_003",
+        "action": "use_as_tool",
+        "before_probs": {
+          "mine_by_hand_success": 0.697437,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.294639,
+          "eat_success": 0.197651,
+          "use_as_tool_success": 0.303664,
+          "burn_as_fuel_success": 0.804056
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.697437,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.294639,
+          "eat_success": 0.197651,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.804056
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 1,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 4,
+        "after_composite_correct_count": 4,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_apple_005",
+        "action": "eat",
+        "before_probs": {
+          "mine_by_hand_success": 0.803957,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.204176,
+          "eat_success": 0.603415,
+          "use_as_tool_success": 0.105146,
+          "burn_as_fuel_success": 0.302159
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.803957,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.204176,
+          "eat_success": 1.0,
+          "use_as_tool_success": 0.105146,
+          "burn_as_fuel_success": 0.302159
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 1,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 5,
+        "after_composite_correct_count": 5,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_stone_block_010",
+        "action": "burn_as_fuel",
+        "before_probs": {
+          "mine_by_hand_success": 0.598676,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.397964,
+          "eat_success": 0.191016,
+          "use_as_tool_success": 0.18918,
+          "burn_as_fuel_success": 0.500491
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.598676,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.397964,
+          "eat_success": 0.191016,
+          "use_as_tool_success": 0.18918,
+          "burn_as_fuel_success": 0.0
+        },
+        "gt": {
+          "mine_by_hand_success": 0,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 4,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "burn_as_fuel_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_stone_block_006",
+        "action": "use_as_tool",
+        "before_probs": {
+          "mine_by_hand_success": 0.703943,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.399522,
+          "eat_success": 0.198781,
+          "use_as_tool_success": 0.40028,
+          "burn_as_fuel_success": 0.607206
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.703943,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.399522,
+          "eat_success": 0.198781,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.607206
+        },
+        "gt": {
+          "mine_by_hand_success": 0,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 3,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wooden_pickaxe_006",
+        "action": "burn_as_fuel",
+        "before_probs": {
+          "mine_by_hand_success": 0.898642,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.199584,
+          "eat_success": 0.39611,
+          "use_as_tool_success": 0.397904,
+          "burn_as_fuel_success": 0.595123
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.898642,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.199584,
+          "eat_success": 0.39611,
+          "use_as_tool_success": 0.397904,
+          "burn_as_fuel_success": 1.0
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 1,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 4,
+        "after_composite_correct_count": 4,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_stone_block_014",
+        "action": "use_as_tool",
+        "before_probs": {
+          "mine_by_hand_success": 0.695912,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.196757,
+          "eat_success": 0.294602,
+          "use_as_tool_success": 0.503195,
+          "burn_as_fuel_success": 0.411496
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.695912,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.196757,
+          "eat_success": 0.294602,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.411496
+        },
+        "gt": {
+          "mine_by_hand_success": 0,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 4,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "use_as_tool_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_apple_006",
+        "action": "use_as_tool",
+        "before_probs": {
+          "mine_by_hand_success": 0.804228,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.199434,
+          "eat_success": 0.600595,
+          "use_as_tool_success": 0.401978,
+          "burn_as_fuel_success": 0.401467
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.804228,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.199434,
+          "eat_success": 0.600595,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.401467
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 1,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 5,
+        "after_composite_correct_count": 5,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wood_log_006",
+        "action": "craft_plank",
+        "before_probs": {
+          "mine_by_hand_success": 0.802056,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.514135,
+          "eat_success": 0.100339,
+          "use_as_tool_success": 0.096669,
+          "burn_as_fuel_success": 0.598651
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.802056,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 1.0,
+          "eat_success": 0.100339,
+          "use_as_tool_success": 0.096669,
+          "burn_as_fuel_success": 0.598651
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 1,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 5,
+        "after_composite_correct_count": 5,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_apple_014",
+        "action": "use_as_tool",
+        "before_probs": {
+          "mine_by_hand_success": 0.702823,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.301193,
+          "eat_success": 0.196187,
+          "use_as_tool_success": 0.606439,
+          "burn_as_fuel_success": 0.706035
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.702823,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.301193,
+          "eat_success": 0.196187,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.706035
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 1,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 2,
+        "after_composite_correct_count": 3,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "use_as_tool_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wood_log_007",
+        "action": "use_as_tool",
+        "before_probs": {
+          "mine_by_hand_success": 0.896576,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.396054,
+          "eat_success": 0.10009,
+          "use_as_tool_success": 0.499902,
+          "burn_as_fuel_success": 0.402173
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.896576,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.396054,
+          "eat_success": 0.10009,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.402173
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 1,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 3,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wood_log_014",
+        "action": "mine_by_hand",
+        "before_probs": {
+          "mine_by_hand_success": 0.499617,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.300422,
+          "eat_success": 0.304053,
+          "use_as_tool_success": 0.099916,
+          "burn_as_fuel_success": 0.401119
+        },
+        "after_probs": {
+          "mine_by_hand_success": 1.0,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.300422,
+          "eat_success": 0.304053,
+          "use_as_tool_success": 0.099916,
+          "burn_as_fuel_success": 0.401119
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 1,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 2,
+        "after_composite_correct_count": 3,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "mine_by_hand_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wood_log_008",
+        "action": "burn_as_fuel",
+        "before_probs": {
+          "mine_by_hand_success": 0.695537,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.599544,
+          "eat_success": 0.0,
+          "use_as_tool_success": 0.19566,
+          "burn_as_fuel_success": 0.594829
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.695537,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.599544,
+          "eat_success": 0.0,
+          "use_as_tool_success": 0.19566,
+          "burn_as_fuel_success": 1.0
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 1,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 5,
+        "after_composite_correct_count": 5,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wooden_pickaxe_003",
+        "action": "eat",
+        "before_probs": {
+          "mine_by_hand_success": 0.797211,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.10734,
+          "eat_success": 0.500379,
+          "use_as_tool_success": 0.290874,
+          "burn_as_fuel_success": 0.302141
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.797211,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.10734,
+          "eat_success": 0.0,
+          "use_as_tool_success": 0.290874,
+          "burn_as_fuel_success": 0.302141
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 1,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 2,
+        "after_composite_correct_count": 3,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "eat_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_stone_block_008",
+        "action": "mine_by_hand",
+        "before_probs": {
+          "mine_by_hand_success": 0.503434,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.410548,
+          "eat_success": 0.193472,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.406742
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.0,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.410548,
+          "eat_success": 0.193472,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.406742
+        },
+        "gt": {
+          "mine_by_hand_success": 0,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 4,
+        "after_composite_correct_count": 5,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "mine_by_hand_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_apple_012",
+        "action": "burn_as_fuel",
+        "before_probs": {
+          "mine_by_hand_success": 0.794311,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.300377,
+          "eat_success": 0.403682,
+          "use_as_tool_success": 0.300009,
+          "burn_as_fuel_success": 0.59218
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.794311,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.300377,
+          "eat_success": 0.403682,
+          "use_as_tool_success": 0.300009,
+          "burn_as_fuel_success": 0.0
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 1,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 4,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "burn_as_fuel_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wood_log_004",
+        "action": "craft_plank",
+        "before_probs": {
+          "mine_by_hand_success": 0.399974,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.401387,
+          "eat_success": 0.298394,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.198446
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.399974,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 1.0,
+          "eat_success": 0.298394,
+          "use_as_tool_success": 0.0,
+          "burn_as_fuel_success": 0.198446
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 1,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 2,
+        "after_composite_correct_count": 3,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "craft_plank_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_stone_block_012",
+        "action": "craft_plank",
+        "before_probs": {
+          "mine_by_hand_success": 0.705246,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.50537,
+          "eat_success": 0.102173,
+          "use_as_tool_success": 0.103797,
+          "burn_as_fuel_success": 0.299321
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.705246,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.0,
+          "eat_success": 0.102173,
+          "use_as_tool_success": 0.103797,
+          "burn_as_fuel_success": 0.299321
+        },
+        "gt": {
+          "mine_by_hand_success": 0,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 0,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 4,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "craft_plank_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wooden_pickaxe_009",
+        "action": "use_as_tool",
+        "before_probs": {
+          "mine_by_hand_success": 1.0,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.297983,
+          "eat_success": 0.10167,
+          "use_as_tool_success": 0.499836,
+          "burn_as_fuel_success": 0.497054
+        },
+        "after_probs": {
+          "mine_by_hand_success": 1.0,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.297983,
+          "eat_success": 0.10167,
+          "use_as_tool_success": 1.0,
+          "burn_as_fuel_success": 0.497054
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 0,
+          "eat_success": 0,
+          "use_as_tool_success": 1,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 0
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 4,
+        "delta_composite_correct": 1,
+        "changed_features": [
+          "use_as_tool_success"
+        ],
+        "changed_to_correct": 1,
+        "changed_to_wrong": 0
+      },
+      {
+        "object_id": "test_wood_log_010",
+        "action": "eat",
+        "before_probs": {
+          "mine_by_hand_success": 0.699224,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.199361,
+          "eat_success": 0.40018,
+          "use_as_tool_success": 0.103668,
+          "burn_as_fuel_success": 0.39605
+        },
+        "after_probs": {
+          "mine_by_hand_success": 0.699224,
+          "mine_with_pickaxe_success": 1.0,
+          "craft_plank_success": 0.199361,
+          "eat_success": 0.0,
+          "use_as_tool_success": 0.103668,
+          "burn_as_fuel_success": 0.39605
+        },
+        "gt": {
+          "mine_by_hand_success": 1,
+          "mine_with_pickaxe_success": 1,
+          "craft_plank_success": 1,
+          "eat_success": 0,
+          "use_as_tool_success": 0,
+          "burn_as_fuel_success": 1,
+          "tap_sound_clear": 1
+        },
+        "before_composite_correct_count": 3,
+        "after_composite_correct_count": 3,
+        "delta_composite_correct": 0,
+        "changed_features": [],
+        "changed_to_correct": 0,
+        "changed_to_wrong": 0
+      }
+    ]
+  },
+  "costs": {
+    "c13_visit": 0.24,
+    "c13_observe": 0.11,
+    "c13_probe": 1.1,
+    "c13_total": 1.4500000000000002,
+    "c0b_total": 1.1300000000000001
+  },
+  "c0b_visited_all": true,
+  "cw_diagnostic": {
+    "CW=0.5": {
+      "n_probed": 22,
+      "n_visited": 22,
+      "comp": 0.7266666666666667,
+      "ncost": 0.9666666666666668
+    },
+    "CW=1.0": {
+      "n_probed": 22,
+      "n_visited": 22,
+      "comp": 0.7266666666666667,
+      "ncost": 0.9666666666666668
+    },
+    "CW=1.5": {
+      "n_probed": 22,
+      "n_visited": 22,
+      "comp": 0.7266666666666667,
+      "ncost": 0.9666666666666668
+    },
+    "all_identical": true,
+    "pairwise_jaccard": {
+      "CW=0.5_vs_CW=1.0": {
+        "intersection": 22,
+        "union": 22,
+        "jaccard": 1.0,
+        "a_only": [],
+        "b_only": []
+      },
+      "CW=0.5_vs_CW=1.5": {
+        "intersection": 22,
+        "union": 22,
+        "jaccard": 1.0,
+        "a_only": [],
+        "b_only": []
+      },
+      "CW=1.0_vs_CW=1.5": {
+        "intersection": 22,
+        "union": 22,
+        "jaccard": 1.0,
+        "a_only": [],
+        "b_only": []
+      }
+    }
+  },
+  "per_action_efficacy": {
+    "use_as_tool": {
+      "n": 8,
+      "delta_comp": 3,
+      "avg_delta": 0.375,
+      "n_changed": 3,
+      "correct": 3,
+      "wrong": 0
+    },
+    "mine_by_hand": {
+      "n": 4,
+      "delta_comp": 3,
+      "avg_delta": 0.75,
+      "n_changed": 3,
+      "correct": 3,
+      "wrong": 0
+    },
+    "eat": {
+      "n": 3,
+      "delta_comp": 1,
+      "avg_delta": 0.3333333333333333,
+      "n_changed": 1,
+      "correct": 1,
+      "wrong": 0
+    },
+    "burn_as_fuel": {
+      "n": 4,
+      "delta_comp": 2,
+      "avg_delta": 0.5,
+      "n_changed": 2,
+      "correct": 2,
+      "wrong": 0
+    },
+    "craft_plank": {
+      "n": 3,
+      "delta_comp": 2,
+      "avg_delta": 0.6666666666666666,
+      "n_changed": 2,
+      "correct": 2,
+      "wrong": 0
+    }
+  }
+}

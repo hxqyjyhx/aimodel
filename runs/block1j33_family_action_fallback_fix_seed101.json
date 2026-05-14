@@ -1,0 +1,5802 @@
+{
+  "block_id": "1J33",
+  "seed": 101,
+  "condition": "C4_instance_subtype_cued_v1",
+  "elapsed_seconds": 10.1,
+  "variants": {},
+  "comparison": {
+    "A_no_memory": {
+      "total_prior_violations": 13,
+      "deceptive_prior_violations": 4,
+      "normal_prior_violations": 9,
+      "mean_macro_bal": 0.5699
+    },
+    "B_signed_sum_current": {
+      "variant": "B_signed_sum_current",
+      "total_prior_violations": 9,
+      "deceptive_object_prior_violations": 4,
+      "normal_object_prior_violations": 5,
+      "mean_macro_bal": 0.5723,
+      "macro_delta_vs_A": 0.0024,
+      "effective_probe_count": 20,
+      "avoided_effective_probe_count": 0,
+      "avoided_prior_violation_count": 2,
+      "avoided_nonviolation_count": 3,
+      "helpful_avoidance_count": 2,
+      "harmful_avoidance_count": 3,
+      "hard_exclusion_used": false,
+      "agg": {
+        "mean_macro_bal": 0.5723,
+        "total_prior_violations": 9,
+        "total_deceptive_prior_violations": 4,
+        "total_normal_prior_violations": 5,
+        "per_episode": [
+          {
+            "episode": 0,
+            "macro_bal": 0.572208,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 2,
+                "tn": 50,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.961538,
+                "balanced_accuracy": 0.543269,
+                "accuracy": 0.85
+              },
+              "need_fuel": {
+                "tp": 14,
+                "fp": 16,
+                "tn": 19,
+                "fn": 11,
+                "positive_recall": 0.56,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.551429,
+                "accuracy": 0.55
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 7,
+                "tn": 41,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.854167,
+                "balanced_accuracy": 0.552083,
+                "accuracy": 0.733333
+              },
+              "need_stone": {
+                "tp": 1,
+                "fp": 4,
+                "tn": 47,
+                "fn": 8,
+                "positive_recall": 0.111111,
+                "negative_recall": 0.921569,
+                "balanced_accuracy": 0.51634,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 1,
+                "tn": 47,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.979167,
+                "balanced_accuracy": 0.697917,
+                "accuracy": 0.866667
+              }
+            },
+            "prior_violation_count": 3,
+            "deceptive_prior_violation_count": 2,
+            "normal_prior_violation_count": 1,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wooden_pickaxe_012",
+                "action": "use_as_tool",
+                "outcome": 1.0,
+                "family": "tool-like",
+                "query": "need_tool",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_stone_block_000",
+                "action": "mine_by_hand",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_stone_block_002",
+                "action": "mine_by_hand",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "hollow_sound",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              },
+              {
+                "oid": "test_apple_004",
+                "action": "eat",
+                "outcome": 0.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "damp_texture",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              }
+            ]
+          },
+          {
+            "episode": 1,
+            "macro_bal": 0.553495,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 14,
+                "fp": 16,
+                "tn": 19,
+                "fn": 11,
+                "positive_recall": 0.56,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.551429,
+                "accuracy": 0.55
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 8,
+                "tn": 40,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.541667,
+                "accuracy": 0.716667
+              },
+              "need_stone": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 48,
+                "fn": 8,
+                "positive_recall": 0.111111,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.526144,
+                "accuracy": 0.816667
+              },
+              "need_tool": {
+                "tp": 3,
+                "fp": 1,
+                "tn": 47,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.979167,
+                "balanced_accuracy": 0.614583,
+                "accuracy": 0.833333
+              }
+            },
+            "prior_violation_count": 4,
+            "deceptive_prior_violation_count": 2,
+            "normal_prior_violation_count": 2,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wooden_pickaxe_013",
+                "action": "use_as_tool",
+                "outcome": 0.0,
+                "family": "tool-like",
+                "query": "need_tool",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_stone_block_005",
+                "action": "mine_by_hand",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_stone_block_014",
+                "action": "mine_by_hand",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -0.167358,
+                "scaled_risk_penalty": -0.167358,
+                "final_score": 0.988184,
+                "injected_deviation_present": [
+                  "hollow_sound",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              },
+              {
+                "oid": "test_apple_006",
+                "action": "eat",
+                "outcome": 0.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "damp_texture",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              }
+            ]
+          },
+          {
+            "episode": 2,
+            "macro_bal": 0.573468,
+            "per_query": {
+              "need_food": {
+                "tp": 2,
+                "fp": 3,
+                "tn": 49,
+                "fn": 6,
+                "positive_recall": 0.25,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.596154,
+                "accuracy": 0.85
+              },
+              "need_fuel": {
+                "tp": 15,
+                "fp": 16,
+                "tn": 19,
+                "fn": 10,
+                "positive_recall": 0.6,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.571429,
+                "accuracy": 0.566667
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 8,
+                "tn": 40,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.541667,
+                "accuracy": 0.716667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 48,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.470588,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 2,
+                "tn": 46,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.6875,
+                "accuracy": 0.85
+              }
+            },
+            "prior_violation_count": 2,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 2,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_001",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_011",
+                "action": "craft_plank",
+                "outcome": 0.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_apple_003",
+                "action": "eat",
+                "outcome": 1.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_stone_block_010",
+                "action": "craft_plank",
+                "outcome": 0.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              }
+            ]
+          },
+          {
+            "episode": 3,
+            "macro_bal": 0.580491,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 15,
+                "fp": 15,
+                "tn": 20,
+                "fn": 10,
+                "positive_recall": 0.6,
+                "negative_recall": 0.571429,
+                "balanced_accuracy": 0.585714,
+                "accuracy": 0.583333
+              },
+              "need_planks": {
+                "tp": 6,
+                "fp": 8,
+                "tn": 40,
+                "fn": 6,
+                "positive_recall": 0.5,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.666667,
+                "accuracy": 0.766667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 48,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.470588,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 4,
+                "fp": 2,
+                "tn": 46,
+                "fn": 8,
+                "positive_recall": 0.333333,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.645833,
+                "accuracy": 0.833333
+              }
+            },
+            "prior_violation_count": 0,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_008",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -0.735622,
+                "scaled_risk_penalty": -0.735622,
+                "final_score": 1.757096,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_012",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -0.976544,
+                "scaled_risk_penalty": -0.976544,
+                "final_score": 2.240308,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_000",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.163151,
+                "scaled_risk_penalty": -1.163151,
+                "final_score": 2.703333,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_005",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.313425,
+                "scaled_risk_penalty": -1.313425,
+                "final_score": 3.144389,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              }
+            ]
+          },
+          {
+            "episode": 4,
+            "macro_bal": 0.582012,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 13,
+                "fp": 16,
+                "tn": 19,
+                "fn": 12,
+                "positive_recall": 0.52,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.531429,
+                "accuracy": 0.533333
+              },
+              "need_planks": {
+                "tp": 6,
+                "fp": 7,
+                "tn": 41,
+                "fn": 6,
+                "positive_recall": 0.5,
+                "negative_recall": 0.854167,
+                "balanced_accuracy": 0.677083,
+                "accuracy": 0.783333
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 2,
+                "tn": 49,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.960784,
+                "balanced_accuracy": 0.480392,
+                "accuracy": 0.816667
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 2,
+                "tn": 46,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.6875,
+                "accuracy": 0.85
+              }
+            },
+            "prior_violation_count": 0,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_000",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.437501,
+                "scaled_risk_penalty": -1.437501,
+                "final_score": 3.56197,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_001",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.541862,
+                "scaled_risk_penalty": -1.541862,
+                "final_score": 3.955625,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_005",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.630943,
+                "scaled_risk_penalty": -1.630943,
+                "final_score": 4.32572,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_008",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.707912,
+                "scaled_risk_penalty": -1.707912,
+                "final_score": 4.673147,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              }
+            ]
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "episode": 0,
+          "macro_bal": 0.572208,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 2,
+              "tn": 50,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.961538,
+              "balanced_accuracy": 0.543269,
+              "accuracy": 0.85
+            },
+            "need_fuel": {
+              "tp": 14,
+              "fp": 16,
+              "tn": 19,
+              "fn": 11,
+              "positive_recall": 0.56,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.551429,
+              "accuracy": 0.55
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 7,
+              "tn": 41,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.854167,
+              "balanced_accuracy": 0.552083,
+              "accuracy": 0.733333
+            },
+            "need_stone": {
+              "tp": 1,
+              "fp": 4,
+              "tn": 47,
+              "fn": 8,
+              "positive_recall": 0.111111,
+              "negative_recall": 0.921569,
+              "balanced_accuracy": 0.51634,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 1,
+              "tn": 47,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.979167,
+              "balanced_accuracy": 0.697917,
+              "accuracy": 0.866667
+            }
+          },
+          "prior_violation_count": 3,
+          "deceptive_prior_violation_count": 2,
+          "normal_prior_violation_count": 1,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wooden_pickaxe_012",
+              "action": "use_as_tool",
+              "outcome": 1.0,
+              "family": "tool-like",
+              "query": "need_tool",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_stone_block_000",
+              "action": "mine_by_hand",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_stone_block_002",
+              "action": "mine_by_hand",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "hollow_sound",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            },
+            {
+              "oid": "test_apple_004",
+              "action": "eat",
+              "outcome": 0.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "damp_texture",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            }
+          ]
+        },
+        {
+          "episode": 1,
+          "macro_bal": 0.553495,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 14,
+              "fp": 16,
+              "tn": 19,
+              "fn": 11,
+              "positive_recall": 0.56,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.551429,
+              "accuracy": 0.55
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 8,
+              "tn": 40,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.541667,
+              "accuracy": 0.716667
+            },
+            "need_stone": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 48,
+              "fn": 8,
+              "positive_recall": 0.111111,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.526144,
+              "accuracy": 0.816667
+            },
+            "need_tool": {
+              "tp": 3,
+              "fp": 1,
+              "tn": 47,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.979167,
+              "balanced_accuracy": 0.614583,
+              "accuracy": 0.833333
+            }
+          },
+          "prior_violation_count": 4,
+          "deceptive_prior_violation_count": 2,
+          "normal_prior_violation_count": 2,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wooden_pickaxe_013",
+              "action": "use_as_tool",
+              "outcome": 0.0,
+              "family": "tool-like",
+              "query": "need_tool",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_stone_block_005",
+              "action": "mine_by_hand",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_stone_block_014",
+              "action": "mine_by_hand",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -0.167358,
+              "scaled_risk_penalty": -0.167358,
+              "final_score": 0.988184,
+              "injected_deviation_present": [
+                "hollow_sound",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            },
+            {
+              "oid": "test_apple_006",
+              "action": "eat",
+              "outcome": 0.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "damp_texture",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            }
+          ]
+        },
+        {
+          "episode": 2,
+          "macro_bal": 0.573468,
+          "per_query": {
+            "need_food": {
+              "tp": 2,
+              "fp": 3,
+              "tn": 49,
+              "fn": 6,
+              "positive_recall": 0.25,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.596154,
+              "accuracy": 0.85
+            },
+            "need_fuel": {
+              "tp": 15,
+              "fp": 16,
+              "tn": 19,
+              "fn": 10,
+              "positive_recall": 0.6,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.571429,
+              "accuracy": 0.566667
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 8,
+              "tn": 40,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.541667,
+              "accuracy": 0.716667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 3,
+              "tn": 48,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.470588,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.6875,
+              "accuracy": 0.85
+            }
+          },
+          "prior_violation_count": 2,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 2,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_001",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_011",
+              "action": "craft_plank",
+              "outcome": 0.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_apple_003",
+              "action": "eat",
+              "outcome": 1.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_stone_block_010",
+              "action": "craft_plank",
+              "outcome": 0.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            }
+          ]
+        },
+        {
+          "episode": 3,
+          "macro_bal": 0.580491,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 15,
+              "fp": 15,
+              "tn": 20,
+              "fn": 10,
+              "positive_recall": 0.6,
+              "negative_recall": 0.571429,
+              "balanced_accuracy": 0.585714,
+              "accuracy": 0.583333
+            },
+            "need_planks": {
+              "tp": 6,
+              "fp": 8,
+              "tn": 40,
+              "fn": 6,
+              "positive_recall": 0.5,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.666667,
+              "accuracy": 0.766667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 3,
+              "tn": 48,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.470588,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 4,
+              "fp": 2,
+              "tn": 46,
+              "fn": 8,
+              "positive_recall": 0.333333,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.645833,
+              "accuracy": 0.833333
+            }
+          },
+          "prior_violation_count": 0,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_008",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -0.735622,
+              "scaled_risk_penalty": -0.735622,
+              "final_score": 1.757096,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_012",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -0.976544,
+              "scaled_risk_penalty": -0.976544,
+              "final_score": 2.240308,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_000",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.163151,
+              "scaled_risk_penalty": -1.163151,
+              "final_score": 2.703333,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_005",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.313425,
+              "scaled_risk_penalty": -1.313425,
+              "final_score": 3.144389,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            }
+          ]
+        },
+        {
+          "episode": 4,
+          "macro_bal": 0.582012,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 13,
+              "fp": 16,
+              "tn": 19,
+              "fn": 12,
+              "positive_recall": 0.52,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.531429,
+              "accuracy": 0.533333
+            },
+            "need_planks": {
+              "tp": 6,
+              "fp": 7,
+              "tn": 41,
+              "fn": 6,
+              "positive_recall": 0.5,
+              "negative_recall": 0.854167,
+              "balanced_accuracy": 0.677083,
+              "accuracy": 0.783333
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 49,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.960784,
+              "balanced_accuracy": 0.480392,
+              "accuracy": 0.816667
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.6875,
+              "accuracy": 0.85
+            }
+          },
+          "prior_violation_count": 0,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_000",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.437501,
+              "scaled_risk_penalty": -1.437501,
+              "final_score": 3.56197,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_001",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.541862,
+              "scaled_risk_penalty": -1.541862,
+              "final_score": 3.955625,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_005",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.630943,
+              "scaled_risk_penalty": -1.630943,
+              "final_score": 4.32572,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_008",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.707912,
+              "scaled_risk_penalty": -1.707912,
+              "final_score": 4.673147,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            }
+          ]
+        }
+      ]
+    },
+    "Family_only": {
+      "variant": "Family_only",
+      "total_prior_violations": 12,
+      "deceptive_object_prior_violations": 6,
+      "normal_object_prior_violations": 6,
+      "mean_macro_bal": 0.5645,
+      "macro_delta_vs_A": -0.0054,
+      "effective_probe_count": 15,
+      "avoided_effective_probe_count": 5,
+      "avoided_prior_violation_count": 2,
+      "avoided_nonviolation_count": 2,
+      "helpful_avoidance_count": 2,
+      "harmful_avoidance_count": 2,
+      "hard_exclusion_used": false,
+      "agg": {
+        "mean_macro_bal": 0.5645,
+        "total_prior_violations": 12,
+        "total_deceptive_prior_violations": 6,
+        "total_normal_prior_violations": 6,
+        "per_episode": [
+          {
+            "episode": 0,
+            "macro_bal": 0.572208,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 2,
+                "tn": 50,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.961538,
+                "balanced_accuracy": 0.543269,
+                "accuracy": 0.85
+              },
+              "need_fuel": {
+                "tp": 14,
+                "fp": 16,
+                "tn": 19,
+                "fn": 11,
+                "positive_recall": 0.56,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.551429,
+                "accuracy": 0.55
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 7,
+                "tn": 41,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.854167,
+                "balanced_accuracy": 0.552083,
+                "accuracy": 0.733333
+              },
+              "need_stone": {
+                "tp": 1,
+                "fp": 4,
+                "tn": 47,
+                "fn": 8,
+                "positive_recall": 0.111111,
+                "negative_recall": 0.921569,
+                "balanced_accuracy": 0.51634,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 1,
+                "tn": 47,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.979167,
+                "balanced_accuracy": 0.697917,
+                "accuracy": 0.866667
+              }
+            },
+            "prior_violation_count": 3,
+            "deceptive_prior_violation_count": 2,
+            "normal_prior_violation_count": 1,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wooden_pickaxe_012",
+                "action": "use_as_tool",
+                "outcome": 1.0,
+                "family": "tool-like",
+                "query": "need_tool",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_stone_block_000",
+                "action": "mine_by_hand",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_stone_block_002",
+                "action": "mine_by_hand",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "hollow_sound",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              },
+              {
+                "oid": "test_apple_004",
+                "action": "eat",
+                "outcome": 0.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "damp_texture",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              }
+            ]
+          },
+          {
+            "episode": 1,
+            "macro_bal": 0.556845,
+            "per_query": {
+              "need_food": {
+                "tp": 2,
+                "fp": 3,
+                "tn": 49,
+                "fn": 6,
+                "positive_recall": 0.25,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.596154,
+                "accuracy": 0.85
+              },
+              "need_fuel": {
+                "tp": 14,
+                "fp": 16,
+                "tn": 19,
+                "fn": 11,
+                "positive_recall": 0.56,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.551429,
+                "accuracy": 0.55
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 8,
+                "tn": 40,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.541667,
+                "accuracy": 0.716667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 2,
+                "tn": 49,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.960784,
+                "balanced_accuracy": 0.480392,
+                "accuracy": 0.816667
+              },
+              "need_tool": {
+                "tp": 3,
+                "fp": 1,
+                "tn": 47,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.979167,
+                "balanced_accuracy": 0.614583,
+                "accuracy": 0.833333
+              }
+            },
+            "prior_violation_count": 1,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 1,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wooden_pickaxe_013",
+                "action": "use_as_tool",
+                "outcome": 0.0,
+                "family": "tool-like",
+                "query": "need_tool",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_stone_block_005",
+                "action": "mine_with_pickaxe",
+                "outcome": 1.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "zero",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_apple_005",
+                "action": "eat",
+                "outcome": 1.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_stone_block_000",
+                "action": "mine_with_pickaxe",
+                "outcome": 1.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "zero",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              }
+            ]
+          },
+          {
+            "episode": 2,
+            "macro_bal": 0.573468,
+            "per_query": {
+              "need_food": {
+                "tp": 2,
+                "fp": 3,
+                "tn": 49,
+                "fn": 6,
+                "positive_recall": 0.25,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.596154,
+                "accuracy": 0.85
+              },
+              "need_fuel": {
+                "tp": 15,
+                "fp": 16,
+                "tn": 19,
+                "fn": 10,
+                "positive_recall": 0.6,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.571429,
+                "accuracy": 0.566667
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 8,
+                "tn": 40,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.541667,
+                "accuracy": 0.716667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 48,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.470588,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 2,
+                "tn": 46,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.6875,
+                "accuracy": 0.85
+              }
+            },
+            "prior_violation_count": 2,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 2,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_001",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_011",
+                "action": "craft_plank",
+                "outcome": 0.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_apple_003",
+                "action": "eat",
+                "outcome": 1.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_stone_block_010",
+                "action": "craft_plank",
+                "outcome": 0.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              }
+            ]
+          },
+          {
+            "episode": 3,
+            "macro_bal": 0.561206,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 15,
+                "fp": 13,
+                "tn": 22,
+                "fn": 10,
+                "positive_recall": 0.6,
+                "negative_recall": 0.628571,
+                "balanced_accuracy": 0.614286,
+                "accuracy": 0.616667
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 8,
+                "tn": 40,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.541667,
+                "accuracy": 0.716667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 48,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.470588,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 4,
+                "fp": 2,
+                "tn": 46,
+                "fn": 8,
+                "positive_recall": 0.333333,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.645833,
+                "accuracy": 0.833333
+              }
+            },
+            "prior_violation_count": 4,
+            "deceptive_prior_violation_count": 2,
+            "normal_prior_violation_count": 2,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_008",
+                "action": "burn_as_fuel",
+                "outcome": 0.0,
+                "family": "wood-like",
+                "query": "need_fuel",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              },
+              {
+                "oid": "test_apple_011",
+                "action": "eat",
+                "outcome": 0.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_stone_block_007",
+                "action": "burn_as_fuel",
+                "outcome": 0.0,
+                "family": "wood-like",
+                "query": "need_fuel",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_stone_block_002",
+                "action": "mine_with_pickaxe",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "zero",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "hollow_sound",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              }
+            ]
+          },
+          {
+            "episode": 4,
+            "macro_bal": 0.558935,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 2,
+                "tn": 50,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.961538,
+                "balanced_accuracy": 0.543269,
+                "accuracy": 0.85
+              },
+              "need_fuel": {
+                "tp": 13,
+                "fp": 16,
+                "tn": 19,
+                "fn": 12,
+                "positive_recall": 0.52,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.531429,
+                "accuracy": 0.533333
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 7,
+                "tn": 41,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.854167,
+                "balanced_accuracy": 0.552083,
+                "accuracy": 0.733333
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 2,
+                "tn": 49,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.960784,
+                "balanced_accuracy": 0.480392,
+                "accuracy": 0.816667
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 2,
+                "tn": 46,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.6875,
+                "accuracy": 0.85
+              }
+            },
+            "prior_violation_count": 2,
+            "deceptive_prior_violation_count": 2,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 1,
+            "probe_details": [
+              {
+                "oid": "test_wooden_pickaxe_001",
+                "action": "use_as_tool",
+                "outcome": 1.0,
+                "family": "tool-like",
+                "query": "need_tool",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_apple_004",
+                "action": "eat",
+                "outcome": 0.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "damp_texture",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": true
+              },
+              {
+                "oid": "test_stone_block_001",
+                "action": "mine_with_pickaxe",
+                "outcome": 1.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "zero",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_stone_block_009",
+                "action": "mine_with_pickaxe",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "zero",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "hollow_sound",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              }
+            ]
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "episode": 0,
+          "macro_bal": 0.572208,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 2,
+              "tn": 50,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.961538,
+              "balanced_accuracy": 0.543269,
+              "accuracy": 0.85
+            },
+            "need_fuel": {
+              "tp": 14,
+              "fp": 16,
+              "tn": 19,
+              "fn": 11,
+              "positive_recall": 0.56,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.551429,
+              "accuracy": 0.55
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 7,
+              "tn": 41,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.854167,
+              "balanced_accuracy": 0.552083,
+              "accuracy": 0.733333
+            },
+            "need_stone": {
+              "tp": 1,
+              "fp": 4,
+              "tn": 47,
+              "fn": 8,
+              "positive_recall": 0.111111,
+              "negative_recall": 0.921569,
+              "balanced_accuracy": 0.51634,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 1,
+              "tn": 47,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.979167,
+              "balanced_accuracy": 0.697917,
+              "accuracy": 0.866667
+            }
+          },
+          "prior_violation_count": 3,
+          "deceptive_prior_violation_count": 2,
+          "normal_prior_violation_count": 1,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wooden_pickaxe_012",
+              "action": "use_as_tool",
+              "outcome": 1.0,
+              "family": "tool-like",
+              "query": "need_tool",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_stone_block_000",
+              "action": "mine_by_hand",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_stone_block_002",
+              "action": "mine_by_hand",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "hollow_sound",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            },
+            {
+              "oid": "test_apple_004",
+              "action": "eat",
+              "outcome": 0.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "damp_texture",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            }
+          ]
+        },
+        {
+          "episode": 1,
+          "macro_bal": 0.556845,
+          "per_query": {
+            "need_food": {
+              "tp": 2,
+              "fp": 3,
+              "tn": 49,
+              "fn": 6,
+              "positive_recall": 0.25,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.596154,
+              "accuracy": 0.85
+            },
+            "need_fuel": {
+              "tp": 14,
+              "fp": 16,
+              "tn": 19,
+              "fn": 11,
+              "positive_recall": 0.56,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.551429,
+              "accuracy": 0.55
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 8,
+              "tn": 40,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.541667,
+              "accuracy": 0.716667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 49,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.960784,
+              "balanced_accuracy": 0.480392,
+              "accuracy": 0.816667
+            },
+            "need_tool": {
+              "tp": 3,
+              "fp": 1,
+              "tn": 47,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.979167,
+              "balanced_accuracy": 0.614583,
+              "accuracy": 0.833333
+            }
+          },
+          "prior_violation_count": 1,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 1,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wooden_pickaxe_013",
+              "action": "use_as_tool",
+              "outcome": 0.0,
+              "family": "tool-like",
+              "query": "need_tool",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_stone_block_005",
+              "action": "mine_with_pickaxe",
+              "outcome": 1.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "zero",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_apple_005",
+              "action": "eat",
+              "outcome": 1.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_stone_block_000",
+              "action": "mine_with_pickaxe",
+              "outcome": 1.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "zero",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            }
+          ]
+        },
+        {
+          "episode": 2,
+          "macro_bal": 0.573468,
+          "per_query": {
+            "need_food": {
+              "tp": 2,
+              "fp": 3,
+              "tn": 49,
+              "fn": 6,
+              "positive_recall": 0.25,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.596154,
+              "accuracy": 0.85
+            },
+            "need_fuel": {
+              "tp": 15,
+              "fp": 16,
+              "tn": 19,
+              "fn": 10,
+              "positive_recall": 0.6,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.571429,
+              "accuracy": 0.566667
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 8,
+              "tn": 40,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.541667,
+              "accuracy": 0.716667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 3,
+              "tn": 48,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.470588,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.6875,
+              "accuracy": 0.85
+            }
+          },
+          "prior_violation_count": 2,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 2,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_001",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_011",
+              "action": "craft_plank",
+              "outcome": 0.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_apple_003",
+              "action": "eat",
+              "outcome": 1.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_stone_block_010",
+              "action": "craft_plank",
+              "outcome": 0.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            }
+          ]
+        },
+        {
+          "episode": 3,
+          "macro_bal": 0.561206,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 15,
+              "fp": 13,
+              "tn": 22,
+              "fn": 10,
+              "positive_recall": 0.6,
+              "negative_recall": 0.628571,
+              "balanced_accuracy": 0.614286,
+              "accuracy": 0.616667
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 8,
+              "tn": 40,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.541667,
+              "accuracy": 0.716667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 3,
+              "tn": 48,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.470588,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 4,
+              "fp": 2,
+              "tn": 46,
+              "fn": 8,
+              "positive_recall": 0.333333,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.645833,
+              "accuracy": 0.833333
+            }
+          },
+          "prior_violation_count": 4,
+          "deceptive_prior_violation_count": 2,
+          "normal_prior_violation_count": 2,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_008",
+              "action": "burn_as_fuel",
+              "outcome": 0.0,
+              "family": "wood-like",
+              "query": "need_fuel",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            },
+            {
+              "oid": "test_apple_011",
+              "action": "eat",
+              "outcome": 0.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_stone_block_007",
+              "action": "burn_as_fuel",
+              "outcome": 0.0,
+              "family": "wood-like",
+              "query": "need_fuel",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_stone_block_002",
+              "action": "mine_with_pickaxe",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "zero",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "hollow_sound",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            }
+          ]
+        },
+        {
+          "episode": 4,
+          "macro_bal": 0.558935,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 2,
+              "tn": 50,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.961538,
+              "balanced_accuracy": 0.543269,
+              "accuracy": 0.85
+            },
+            "need_fuel": {
+              "tp": 13,
+              "fp": 16,
+              "tn": 19,
+              "fn": 12,
+              "positive_recall": 0.52,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.531429,
+              "accuracy": 0.533333
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 7,
+              "tn": 41,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.854167,
+              "balanced_accuracy": 0.552083,
+              "accuracy": 0.733333
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 49,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.960784,
+              "balanced_accuracy": 0.480392,
+              "accuracy": 0.816667
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.6875,
+              "accuracy": 0.85
+            }
+          },
+          "prior_violation_count": 2,
+          "deceptive_prior_violation_count": 2,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 1,
+          "probe_details": [
+            {
+              "oid": "test_wooden_pickaxe_001",
+              "action": "use_as_tool",
+              "outcome": 1.0,
+              "family": "tool-like",
+              "query": "need_tool",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_apple_004",
+              "action": "eat",
+              "outcome": 0.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "damp_texture",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": true
+            },
+            {
+              "oid": "test_stone_block_001",
+              "action": "mine_with_pickaxe",
+              "outcome": 1.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "zero",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_stone_block_009",
+              "action": "mine_with_pickaxe",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "zero",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "hollow_sound",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            }
+          ]
+        }
+      ]
+    },
+    "B_dev_plus_family_action_fallback": {
+      "variant": "B_dev_plus_family_action_fallback",
+      "total_prior_violations": 6,
+      "deceptive_object_prior_violations": 2,
+      "normal_object_prior_violations": 4,
+      "mean_macro_bal": 0.573,
+      "macro_delta_vs_A": 0.0031,
+      "effective_probe_count": 18,
+      "avoided_effective_probe_count": 2,
+      "avoided_prior_violation_count": 3,
+      "avoided_nonviolation_count": 2,
+      "helpful_avoidance_count": 3,
+      "harmful_avoidance_count": 2,
+      "hard_exclusion_used": false,
+      "agg": {
+        "mean_macro_bal": 0.573,
+        "total_prior_violations": 6,
+        "total_deceptive_prior_violations": 2,
+        "total_normal_prior_violations": 4,
+        "per_episode": [
+          {
+            "episode": 0,
+            "macro_bal": 0.572208,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 2,
+                "tn": 50,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.961538,
+                "balanced_accuracy": 0.543269,
+                "accuracy": 0.85
+              },
+              "need_fuel": {
+                "tp": 14,
+                "fp": 16,
+                "tn": 19,
+                "fn": 11,
+                "positive_recall": 0.56,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.551429,
+                "accuracy": 0.55
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 7,
+                "tn": 41,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.854167,
+                "balanced_accuracy": 0.552083,
+                "accuracy": 0.733333
+              },
+              "need_stone": {
+                "tp": 1,
+                "fp": 4,
+                "tn": 47,
+                "fn": 8,
+                "positive_recall": 0.111111,
+                "negative_recall": 0.921569,
+                "balanced_accuracy": 0.51634,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 1,
+                "tn": 47,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.979167,
+                "balanced_accuracy": 0.697917,
+                "accuracy": 0.866667
+              }
+            },
+            "prior_violation_count": 3,
+            "deceptive_prior_violation_count": 2,
+            "normal_prior_violation_count": 1,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wooden_pickaxe_012",
+                "action": "use_as_tool",
+                "outcome": 1.0,
+                "family": "tool-like",
+                "query": "need_tool",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_stone_block_000",
+                "action": "mine_by_hand",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_stone_block_002",
+                "action": "mine_by_hand",
+                "outcome": 0.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "hollow_sound",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              },
+              {
+                "oid": "test_apple_004",
+                "action": "eat",
+                "outcome": 0.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "damp_texture",
+                  "brittle_surface"
+                ],
+                "is_deceptive": true,
+                "repeated": false
+              }
+            ]
+          },
+          {
+            "episode": 1,
+            "macro_bal": 0.556845,
+            "per_query": {
+              "need_food": {
+                "tp": 2,
+                "fp": 3,
+                "tn": 49,
+                "fn": 6,
+                "positive_recall": 0.25,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.596154,
+                "accuracy": 0.85
+              },
+              "need_fuel": {
+                "tp": 14,
+                "fp": 16,
+                "tn": 19,
+                "fn": 11,
+                "positive_recall": 0.56,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.551429,
+                "accuracy": 0.55
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 8,
+                "tn": 40,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.541667,
+                "accuracy": 0.716667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 2,
+                "tn": 49,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.960784,
+                "balanced_accuracy": 0.480392,
+                "accuracy": 0.816667
+              },
+              "need_tool": {
+                "tp": 3,
+                "fp": 1,
+                "tn": 47,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.979167,
+                "balanced_accuracy": 0.614583,
+                "accuracy": 0.833333
+              }
+            },
+            "prior_violation_count": 1,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 1,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wooden_pickaxe_013",
+                "action": "use_as_tool",
+                "outcome": 0.0,
+                "family": "tool-like",
+                "query": "need_tool",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_stone_block_005",
+                "action": "mine_with_pickaxe",
+                "outcome": 1.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "zero",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_apple_005",
+                "action": "eat",
+                "outcome": 1.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_stone_block_000",
+                "action": "mine_with_pickaxe",
+                "outcome": 1.0,
+                "family": "stone-like",
+                "query": "need_stone",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "zero",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              }
+            ]
+          },
+          {
+            "episode": 2,
+            "macro_bal": 0.573468,
+            "per_query": {
+              "need_food": {
+                "tp": 2,
+                "fp": 3,
+                "tn": 49,
+                "fn": 6,
+                "positive_recall": 0.25,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.596154,
+                "accuracy": 0.85
+              },
+              "need_fuel": {
+                "tp": 15,
+                "fp": 16,
+                "tn": 19,
+                "fn": 10,
+                "positive_recall": 0.6,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.571429,
+                "accuracy": 0.566667
+              },
+              "need_planks": {
+                "tp": 3,
+                "fp": 8,
+                "tn": 40,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.541667,
+                "accuracy": 0.716667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 48,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.470588,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 2,
+                "tn": 46,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.6875,
+                "accuracy": 0.85
+              }
+            },
+            "prior_violation_count": 2,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 2,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_001",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_011",
+                "action": "craft_plank",
+                "outcome": 0.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              },
+              {
+                "oid": "test_apple_003",
+                "action": "eat",
+                "outcome": 1.0,
+                "family": "apple-like",
+                "query": "need_food",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false
+              },
+              {
+                "oid": "test_stone_block_010",
+                "action": "craft_plank",
+                "outcome": 0.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": true,
+                "is_nonviolation": false,
+                "probe_utility_signal": "effective",
+                "risk_penalty": 0.0,
+                "scaled_risk_penalty": 0.0,
+                "final_score": 0.833333,
+                "injected_deviation_present": [],
+                "is_deceptive": false,
+                "repeated": false
+              }
+            ]
+          },
+          {
+            "episode": 3,
+            "macro_bal": 0.580491,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 15,
+                "fp": 15,
+                "tn": 20,
+                "fn": 10,
+                "positive_recall": 0.6,
+                "negative_recall": 0.571429,
+                "balanced_accuracy": 0.585714,
+                "accuracy": 0.583333
+              },
+              "need_planks": {
+                "tp": 6,
+                "fp": 8,
+                "tn": 40,
+                "fn": 6,
+                "positive_recall": 0.5,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.666667,
+                "accuracy": 0.766667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 48,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.470588,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 4,
+                "fp": 2,
+                "tn": 46,
+                "fn": 8,
+                "positive_recall": 0.333333,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.645833,
+                "accuracy": 0.833333
+              }
+            },
+            "prior_violation_count": 0,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_008",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -0.735622,
+                "scaled_risk_penalty": -0.735622,
+                "final_score": 1.757096,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_012",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -0.976544,
+                "scaled_risk_penalty": -0.976544,
+                "final_score": 2.240308,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_000",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.163151,
+                "scaled_risk_penalty": -1.163151,
+                "final_score": 2.703333,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_005",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.313425,
+                "scaled_risk_penalty": -1.313425,
+                "final_score": 3.144389,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              }
+            ]
+          },
+          {
+            "episode": 4,
+            "macro_bal": 0.582012,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 13,
+                "fp": 16,
+                "tn": 19,
+                "fn": 12,
+                "positive_recall": 0.52,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.531429,
+                "accuracy": 0.533333
+              },
+              "need_planks": {
+                "tp": 6,
+                "fp": 7,
+                "tn": 41,
+                "fn": 6,
+                "positive_recall": 0.5,
+                "negative_recall": 0.854167,
+                "balanced_accuracy": 0.677083,
+                "accuracy": 0.783333
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 2,
+                "tn": 49,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.960784,
+                "balanced_accuracy": 0.480392,
+                "accuracy": 0.816667
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 2,
+                "tn": 46,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.6875,
+                "accuracy": 0.85
+              }
+            },
+            "prior_violation_count": 0,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_000",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.437501,
+                "scaled_risk_penalty": -1.437501,
+                "final_score": 3.56197,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_001",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.541862,
+                "scaled_risk_penalty": -1.541862,
+                "final_score": 3.955625,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_005",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.630943,
+                "scaled_risk_penalty": -1.630943,
+                "final_score": 4.32572,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_008",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -1.707912,
+                "scaled_risk_penalty": -1.707912,
+                "final_score": 4.673147,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              }
+            ]
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "episode": 0,
+          "macro_bal": 0.572208,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 2,
+              "tn": 50,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.961538,
+              "balanced_accuracy": 0.543269,
+              "accuracy": 0.85
+            },
+            "need_fuel": {
+              "tp": 14,
+              "fp": 16,
+              "tn": 19,
+              "fn": 11,
+              "positive_recall": 0.56,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.551429,
+              "accuracy": 0.55
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 7,
+              "tn": 41,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.854167,
+              "balanced_accuracy": 0.552083,
+              "accuracy": 0.733333
+            },
+            "need_stone": {
+              "tp": 1,
+              "fp": 4,
+              "tn": 47,
+              "fn": 8,
+              "positive_recall": 0.111111,
+              "negative_recall": 0.921569,
+              "balanced_accuracy": 0.51634,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 1,
+              "tn": 47,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.979167,
+              "balanced_accuracy": 0.697917,
+              "accuracy": 0.866667
+            }
+          },
+          "prior_violation_count": 3,
+          "deceptive_prior_violation_count": 2,
+          "normal_prior_violation_count": 1,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wooden_pickaxe_012",
+              "action": "use_as_tool",
+              "outcome": 1.0,
+              "family": "tool-like",
+              "query": "need_tool",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_stone_block_000",
+              "action": "mine_by_hand",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_stone_block_002",
+              "action": "mine_by_hand",
+              "outcome": 0.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "hollow_sound",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            },
+            {
+              "oid": "test_apple_004",
+              "action": "eat",
+              "outcome": 0.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "damp_texture",
+                "brittle_surface"
+              ],
+              "is_deceptive": true,
+              "repeated": false
+            }
+          ]
+        },
+        {
+          "episode": 1,
+          "macro_bal": 0.556845,
+          "per_query": {
+            "need_food": {
+              "tp": 2,
+              "fp": 3,
+              "tn": 49,
+              "fn": 6,
+              "positive_recall": 0.25,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.596154,
+              "accuracy": 0.85
+            },
+            "need_fuel": {
+              "tp": 14,
+              "fp": 16,
+              "tn": 19,
+              "fn": 11,
+              "positive_recall": 0.56,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.551429,
+              "accuracy": 0.55
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 8,
+              "tn": 40,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.541667,
+              "accuracy": 0.716667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 49,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.960784,
+              "balanced_accuracy": 0.480392,
+              "accuracy": 0.816667
+            },
+            "need_tool": {
+              "tp": 3,
+              "fp": 1,
+              "tn": 47,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.979167,
+              "balanced_accuracy": 0.614583,
+              "accuracy": 0.833333
+            }
+          },
+          "prior_violation_count": 1,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 1,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wooden_pickaxe_013",
+              "action": "use_as_tool",
+              "outcome": 0.0,
+              "family": "tool-like",
+              "query": "need_tool",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_stone_block_005",
+              "action": "mine_with_pickaxe",
+              "outcome": 1.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "zero",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_apple_005",
+              "action": "eat",
+              "outcome": 1.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_stone_block_000",
+              "action": "mine_with_pickaxe",
+              "outcome": 1.0,
+              "family": "stone-like",
+              "query": "need_stone",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "zero",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            }
+          ]
+        },
+        {
+          "episode": 2,
+          "macro_bal": 0.573468,
+          "per_query": {
+            "need_food": {
+              "tp": 2,
+              "fp": 3,
+              "tn": 49,
+              "fn": 6,
+              "positive_recall": 0.25,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.596154,
+              "accuracy": 0.85
+            },
+            "need_fuel": {
+              "tp": 15,
+              "fp": 16,
+              "tn": 19,
+              "fn": 10,
+              "positive_recall": 0.6,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.571429,
+              "accuracy": 0.566667
+            },
+            "need_planks": {
+              "tp": 3,
+              "fp": 8,
+              "tn": 40,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.541667,
+              "accuracy": 0.716667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 3,
+              "tn": 48,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.470588,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.6875,
+              "accuracy": 0.85
+            }
+          },
+          "prior_violation_count": 2,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 2,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_001",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_011",
+              "action": "craft_plank",
+              "outcome": 0.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            },
+            {
+              "oid": "test_apple_003",
+              "action": "eat",
+              "outcome": 1.0,
+              "family": "apple-like",
+              "query": "need_food",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false
+            },
+            {
+              "oid": "test_stone_block_010",
+              "action": "craft_plank",
+              "outcome": 0.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": true,
+              "is_nonviolation": false,
+              "probe_utility_signal": "effective",
+              "risk_penalty": 0.0,
+              "scaled_risk_penalty": 0.0,
+              "final_score": 0.833333,
+              "injected_deviation_present": [],
+              "is_deceptive": false,
+              "repeated": false
+            }
+          ]
+        },
+        {
+          "episode": 3,
+          "macro_bal": 0.580491,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 15,
+              "fp": 15,
+              "tn": 20,
+              "fn": 10,
+              "positive_recall": 0.6,
+              "negative_recall": 0.571429,
+              "balanced_accuracy": 0.585714,
+              "accuracy": 0.583333
+            },
+            "need_planks": {
+              "tp": 6,
+              "fp": 8,
+              "tn": 40,
+              "fn": 6,
+              "positive_recall": 0.5,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.666667,
+              "accuracy": 0.766667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 3,
+              "tn": 48,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.470588,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 4,
+              "fp": 2,
+              "tn": 46,
+              "fn": 8,
+              "positive_recall": 0.333333,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.645833,
+              "accuracy": 0.833333
+            }
+          },
+          "prior_violation_count": 0,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_008",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -0.735622,
+              "scaled_risk_penalty": -0.735622,
+              "final_score": 1.757096,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_012",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -0.976544,
+              "scaled_risk_penalty": -0.976544,
+              "final_score": 2.240308,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_000",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.163151,
+              "scaled_risk_penalty": -1.163151,
+              "final_score": 2.703333,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_005",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.313425,
+              "scaled_risk_penalty": -1.313425,
+              "final_score": 3.144389,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            }
+          ]
+        },
+        {
+          "episode": 4,
+          "macro_bal": 0.582012,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 13,
+              "fp": 16,
+              "tn": 19,
+              "fn": 12,
+              "positive_recall": 0.52,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.531429,
+              "accuracy": 0.533333
+            },
+            "need_planks": {
+              "tp": 6,
+              "fp": 7,
+              "tn": 41,
+              "fn": 6,
+              "positive_recall": 0.5,
+              "negative_recall": 0.854167,
+              "balanced_accuracy": 0.677083,
+              "accuracy": 0.783333
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 49,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.960784,
+              "balanced_accuracy": 0.480392,
+              "accuracy": 0.816667
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.6875,
+              "accuracy": 0.85
+            }
+          },
+          "prior_violation_count": 0,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_000",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.437501,
+              "scaled_risk_penalty": -1.437501,
+              "final_score": 3.56197,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_001",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.541862,
+              "scaled_risk_penalty": -1.541862,
+              "final_score": 3.955625,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_005",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.630943,
+              "scaled_risk_penalty": -1.630943,
+              "final_score": 4.32572,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_008",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -1.707912,
+              "scaled_risk_penalty": -1.707912,
+              "final_score": 4.673147,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            }
+          ]
+        }
+      ]
+    },
+    "Offline_current": {
+      "variant": "Offline_current",
+      "total_prior_violations": 0,
+      "deceptive_object_prior_violations": 0,
+      "normal_object_prior_violations": 0,
+      "mean_macro_bal": 0.5787,
+      "macro_delta_vs_A": 0.0088,
+      "effective_probe_count": 20,
+      "avoided_effective_probe_count": 0,
+      "avoided_prior_violation_count": 9,
+      "avoided_nonviolation_count": 5,
+      "helpful_avoidance_count": 9,
+      "harmful_avoidance_count": 5,
+      "hard_exclusion_used": false,
+      "agg": {
+        "mean_macro_bal": 0.5787,
+        "total_prior_violations": 0,
+        "total_deceptive_prior_violations": 0,
+        "total_normal_prior_violations": 0,
+        "per_episode": [
+          {
+            "episode": 0,
+            "macro_bal": 0.577801,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 14,
+                "fp": 16,
+                "tn": 19,
+                "fn": 11,
+                "positive_recall": 0.56,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.551429,
+                "accuracy": 0.55
+              },
+              "need_planks": {
+                "tp": 5,
+                "fp": 7,
+                "tn": 41,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.854167,
+                "balanced_accuracy": 0.635417,
+                "accuracy": 0.766667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 48,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.470588,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 1,
+                "tn": 47,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.979167,
+                "balanced_accuracy": 0.697917,
+                "accuracy": 0.866667
+              }
+            },
+            "prior_violation_count": 0,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_012",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_001",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_008",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_000",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              }
+            ]
+          },
+          {
+            "episode": 1,
+            "macro_bal": 0.567262,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 14,
+                "fp": 16,
+                "tn": 19,
+                "fn": 11,
+                "positive_recall": 0.56,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.551429,
+                "accuracy": 0.55
+              },
+              "need_planks": {
+                "tp": 6,
+                "fp": 8,
+                "tn": 40,
+                "fn": 6,
+                "positive_recall": 0.5,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.666667,
+                "accuracy": 0.766667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 2,
+                "tn": 49,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.960784,
+                "balanced_accuracy": 0.480392,
+                "accuracy": 0.816667
+              },
+              "need_tool": {
+                "tp": 3,
+                "fp": 2,
+                "tn": 46,
+                "fn": 9,
+                "positive_recall": 0.25,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.604167,
+                "accuracy": 0.816667
+              }
+            },
+            "prior_violation_count": 0,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_005",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_008",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_000",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_012",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              }
+            ]
+          },
+          {
+            "episode": 2,
+            "macro_bal": 0.585968,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 15,
+                "fp": 16,
+                "tn": 19,
+                "fn": 10,
+                "positive_recall": 0.6,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.571429,
+                "accuracy": 0.566667
+              },
+              "need_planks": {
+                "tp": 6,
+                "fp": 8,
+                "tn": 40,
+                "fn": 6,
+                "positive_recall": 0.5,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.666667,
+                "accuracy": 0.766667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 48,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.470588,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 2,
+                "tn": 46,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.6875,
+                "accuracy": 0.85
+              }
+            },
+            "prior_violation_count": 0,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_001",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_008",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_000",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_005",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              }
+            ]
+          },
+          {
+            "episode": 3,
+            "macro_bal": 0.580491,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 15,
+                "fp": 15,
+                "tn": 20,
+                "fn": 10,
+                "positive_recall": 0.6,
+                "negative_recall": 0.571429,
+                "balanced_accuracy": 0.585714,
+                "accuracy": 0.583333
+              },
+              "need_planks": {
+                "tp": 6,
+                "fp": 8,
+                "tn": 40,
+                "fn": 6,
+                "positive_recall": 0.5,
+                "negative_recall": 0.833333,
+                "balanced_accuracy": 0.666667,
+                "accuracy": 0.766667
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 3,
+                "tn": 48,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.941176,
+                "balanced_accuracy": 0.470588,
+                "accuracy": 0.8
+              },
+              "need_tool": {
+                "tp": 4,
+                "fp": 2,
+                "tn": 46,
+                "fn": 8,
+                "positive_recall": 0.333333,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.645833,
+                "accuracy": 0.833333
+              }
+            },
+            "prior_violation_count": 0,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_008",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_012",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_000",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_005",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              }
+            ]
+          },
+          {
+            "episode": 4,
+            "macro_bal": 0.582012,
+            "per_query": {
+              "need_food": {
+                "tp": 1,
+                "fp": 3,
+                "tn": 49,
+                "fn": 7,
+                "positive_recall": 0.125,
+                "negative_recall": 0.942308,
+                "balanced_accuracy": 0.533654,
+                "accuracy": 0.833333
+              },
+              "need_fuel": {
+                "tp": 13,
+                "fp": 16,
+                "tn": 19,
+                "fn": 12,
+                "positive_recall": 0.52,
+                "negative_recall": 0.542857,
+                "balanced_accuracy": 0.531429,
+                "accuracy": 0.533333
+              },
+              "need_planks": {
+                "tp": 6,
+                "fp": 7,
+                "tn": 41,
+                "fn": 6,
+                "positive_recall": 0.5,
+                "negative_recall": 0.854167,
+                "balanced_accuracy": 0.677083,
+                "accuracy": 0.783333
+              },
+              "need_stone": {
+                "tp": 0,
+                "fp": 2,
+                "tn": 49,
+                "fn": 9,
+                "positive_recall": 0.0,
+                "negative_recall": 0.960784,
+                "balanced_accuracy": 0.480392,
+                "accuracy": 0.816667
+              },
+              "need_tool": {
+                "tp": 5,
+                "fp": 2,
+                "tn": 46,
+                "fn": 7,
+                "positive_recall": 0.416667,
+                "negative_recall": 0.958333,
+                "balanced_accuracy": 0.6875,
+                "accuracy": 0.85
+              }
+            },
+            "prior_violation_count": 0,
+            "deceptive_prior_violation_count": 0,
+            "normal_prior_violation_count": 0,
+            "prior_violation_repeated": 0,
+            "probe_details": [
+              {
+                "oid": "test_wood_log_000",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_001",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_005",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              },
+              {
+                "oid": "test_wood_log_008",
+                "action": "craft_plank",
+                "outcome": 1.0,
+                "family": "wood-like",
+                "query": "need_planks",
+                "soft_prior": 0.85,
+                "is_eligible": true,
+                "is_violation": false,
+                "is_nonviolation": true,
+                "probe_utility_signal": "effective",
+                "risk_penalty": -2.0,
+                "scaled_risk_penalty": -2.0,
+                "final_score": 6.264031,
+                "injected_deviation_present": [
+                  "treated_surface",
+                  "damp_texture"
+                ],
+                "is_deceptive": true
+              }
+            ]
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "episode": 0,
+          "macro_bal": 0.577801,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 14,
+              "fp": 16,
+              "tn": 19,
+              "fn": 11,
+              "positive_recall": 0.56,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.551429,
+              "accuracy": 0.55
+            },
+            "need_planks": {
+              "tp": 5,
+              "fp": 7,
+              "tn": 41,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.854167,
+              "balanced_accuracy": 0.635417,
+              "accuracy": 0.766667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 3,
+              "tn": 48,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.470588,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 1,
+              "tn": 47,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.979167,
+              "balanced_accuracy": 0.697917,
+              "accuracy": 0.866667
+            }
+          },
+          "prior_violation_count": 0,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_012",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_001",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_008",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_000",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            }
+          ]
+        },
+        {
+          "episode": 1,
+          "macro_bal": 0.567262,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 14,
+              "fp": 16,
+              "tn": 19,
+              "fn": 11,
+              "positive_recall": 0.56,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.551429,
+              "accuracy": 0.55
+            },
+            "need_planks": {
+              "tp": 6,
+              "fp": 8,
+              "tn": 40,
+              "fn": 6,
+              "positive_recall": 0.5,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.666667,
+              "accuracy": 0.766667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 49,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.960784,
+              "balanced_accuracy": 0.480392,
+              "accuracy": 0.816667
+            },
+            "need_tool": {
+              "tp": 3,
+              "fp": 2,
+              "tn": 46,
+              "fn": 9,
+              "positive_recall": 0.25,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.604167,
+              "accuracy": 0.816667
+            }
+          },
+          "prior_violation_count": 0,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_005",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_008",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_000",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_012",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            }
+          ]
+        },
+        {
+          "episode": 2,
+          "macro_bal": 0.585968,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 15,
+              "fp": 16,
+              "tn": 19,
+              "fn": 10,
+              "positive_recall": 0.6,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.571429,
+              "accuracy": 0.566667
+            },
+            "need_planks": {
+              "tp": 6,
+              "fp": 8,
+              "tn": 40,
+              "fn": 6,
+              "positive_recall": 0.5,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.666667,
+              "accuracy": 0.766667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 3,
+              "tn": 48,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.470588,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.6875,
+              "accuracy": 0.85
+            }
+          },
+          "prior_violation_count": 0,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_001",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_008",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_000",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_005",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            }
+          ]
+        },
+        {
+          "episode": 3,
+          "macro_bal": 0.580491,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 15,
+              "fp": 15,
+              "tn": 20,
+              "fn": 10,
+              "positive_recall": 0.6,
+              "negative_recall": 0.571429,
+              "balanced_accuracy": 0.585714,
+              "accuracy": 0.583333
+            },
+            "need_planks": {
+              "tp": 6,
+              "fp": 8,
+              "tn": 40,
+              "fn": 6,
+              "positive_recall": 0.5,
+              "negative_recall": 0.833333,
+              "balanced_accuracy": 0.666667,
+              "accuracy": 0.766667
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 3,
+              "tn": 48,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.941176,
+              "balanced_accuracy": 0.470588,
+              "accuracy": 0.8
+            },
+            "need_tool": {
+              "tp": 4,
+              "fp": 2,
+              "tn": 46,
+              "fn": 8,
+              "positive_recall": 0.333333,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.645833,
+              "accuracy": 0.833333
+            }
+          },
+          "prior_violation_count": 0,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_008",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_012",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_000",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_005",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            }
+          ]
+        },
+        {
+          "episode": 4,
+          "macro_bal": 0.582012,
+          "per_query": {
+            "need_food": {
+              "tp": 1,
+              "fp": 3,
+              "tn": 49,
+              "fn": 7,
+              "positive_recall": 0.125,
+              "negative_recall": 0.942308,
+              "balanced_accuracy": 0.533654,
+              "accuracy": 0.833333
+            },
+            "need_fuel": {
+              "tp": 13,
+              "fp": 16,
+              "tn": 19,
+              "fn": 12,
+              "positive_recall": 0.52,
+              "negative_recall": 0.542857,
+              "balanced_accuracy": 0.531429,
+              "accuracy": 0.533333
+            },
+            "need_planks": {
+              "tp": 6,
+              "fp": 7,
+              "tn": 41,
+              "fn": 6,
+              "positive_recall": 0.5,
+              "negative_recall": 0.854167,
+              "balanced_accuracy": 0.677083,
+              "accuracy": 0.783333
+            },
+            "need_stone": {
+              "tp": 0,
+              "fp": 2,
+              "tn": 49,
+              "fn": 9,
+              "positive_recall": 0.0,
+              "negative_recall": 0.960784,
+              "balanced_accuracy": 0.480392,
+              "accuracy": 0.816667
+            },
+            "need_tool": {
+              "tp": 5,
+              "fp": 2,
+              "tn": 46,
+              "fn": 7,
+              "positive_recall": 0.416667,
+              "negative_recall": 0.958333,
+              "balanced_accuracy": 0.6875,
+              "accuracy": 0.85
+            }
+          },
+          "prior_violation_count": 0,
+          "deceptive_prior_violation_count": 0,
+          "normal_prior_violation_count": 0,
+          "prior_violation_repeated": 0,
+          "probe_details": [
+            {
+              "oid": "test_wood_log_000",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_001",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_005",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            },
+            {
+              "oid": "test_wood_log_008",
+              "action": "craft_plank",
+              "outcome": 1.0,
+              "family": "wood-like",
+              "query": "need_planks",
+              "soft_prior": 0.85,
+              "is_eligible": true,
+              "is_violation": false,
+              "is_nonviolation": true,
+              "probe_utility_signal": "effective",
+              "risk_penalty": -2.0,
+              "scaled_risk_penalty": -2.0,
+              "final_score": 6.264031,
+              "injected_deviation_present": [
+                "treated_surface",
+                "damp_texture"
+              ],
+              "is_deceptive": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "raw_zero_diagnostics": {
+    "raw_zero_missed_cases_remaining": 4,
+    "raw_zero_cases_rescued": 1,
+    "family_only_avoided_cases_matched": 1,
+    "rank_changed_count": 6,
+    "selected_probe_set_changed": 6,
+    "rescued_cases": [
+      {
+        "oid": "test_stone_block_005",
+        "action": "mine_by_hand",
+        "family": "stone-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": true,
+        "avoided_by_family_only": true
+      }
+    ],
+    "still_missed_cases": [
+      {
+        "oid": "test_stone_block_000",
+        "action": "mine_by_hand",
+        "family": "stone-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": false,
+        "avoided_by_family_only": false
+      },
+      {
+        "oid": "test_wooden_pickaxe_013",
+        "action": "use_as_tool",
+        "family": "tool-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": false,
+        "avoided_by_family_only": false
+      },
+      {
+        "oid": "test_wood_log_011",
+        "action": "craft_plank",
+        "family": "wood-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": false,
+        "avoided_by_family_only": false
+      },
+      {
+        "oid": "test_stone_block_010",
+        "action": "craft_plank",
+        "family": "wood-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": false,
+        "avoided_by_family_only": false
+      }
+    ],
+    "details": [
+      {
+        "oid": "test_stone_block_000",
+        "action": "mine_by_hand",
+        "family": "stone-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": false,
+        "avoided_by_family_only": false
+      },
+      {
+        "oid": "test_wooden_pickaxe_013",
+        "action": "use_as_tool",
+        "family": "tool-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": false,
+        "avoided_by_family_only": false
+      },
+      {
+        "oid": "test_stone_block_005",
+        "action": "mine_by_hand",
+        "family": "stone-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": true,
+        "avoided_by_family_only": true
+      },
+      {
+        "oid": "test_wood_log_011",
+        "action": "craft_plank",
+        "family": "wood-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": false,
+        "avoided_by_family_only": false
+      },
+      {
+        "oid": "test_stone_block_010",
+        "action": "craft_plank",
+        "family": "wood-like",
+        "injected_deviation_present": [],
+        "dev_feats_present": [],
+        "risk_penalty": 0,
+        "is_deceptive": false,
+        "avoided_by_fallback": false,
+        "avoided_by_family_only": false
+      }
+    ]
+  },
+  "sanity_checks": {
+    "hidden_feature_leakage_detected": false,
+    "no_oracle_leakage_confirmed": true
+  }
+}

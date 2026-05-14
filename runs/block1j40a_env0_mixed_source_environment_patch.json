@@ -1,0 +1,156 @@
+{
+  "block_id": "1J40a-env0",
+  "seed": 109,
+  "elapsed_seconds": 2.8,
+  "new_condition": "C5_mixed_source_identifiability_v0",
+  "old_c4_preserved": true,
+  "total_objects": 60,
+  "total_events": 525,
+  "repeated_observe_token_count": 30,
+  "visible_state_feature_count": 5,
+  "mixed_source_types_present": [
+    "identity_split",
+    "irreducible_noise",
+    "observation_gap",
+    "state_condition"
+  ],
+  "mixed_rate_by_source_type": {
+    "identity_split": {
+      "count": 15,
+      "mean_mixed_rate": 0.7556,
+      "min": 0.6667,
+      "max": 1.0
+    },
+    "observation_gap": {
+      "count": 15,
+      "mean_mixed_rate": 0.6667,
+      "min": 0.3333,
+      "max": 1.0
+    },
+    "state_condition": {
+      "count": 15,
+      "mean_mixed_rate": 0.6815,
+      "min": 0.2222,
+      "max": 0.8889
+    },
+    "irreducible_noise": {
+      "count": 15,
+      "mean_mixed_rate": 0.7167,
+      "min": 0.5,
+      "max": 1.0
+    }
+  },
+  "state_in_feature_delta_count": 0,
+  "noise_same_features_state_for_repeats": true,
+  "config_c5_idempotent": true,
+  "audit_1_token_persistence": {
+    "unique_object_tokens": 60,
+    "tokens_in_multiple_episodes": 0,
+    "tokens_observed_more_than_once": 30,
+    "tokens_with_observe_and_try": 60,
+    "token_persistence_available": true
+  },
+  "audit_2_repeated_observation": {
+    "repeated_observe_token_count": 30,
+    "mean_observes_per_token": 1.5,
+    "max_repeated_observes_per_token": 2,
+    "tokens_with_observation_change_over_time": 15,
+    "tokens_with_state_change_over_time": 15,
+    "repeated_observation_available": true
+  },
+  "audit_3_state_observation": {
+    "visible_state_feature_count": 5,
+    "state_events_with_data": 267,
+    "state_features_list": [
+      "clean",
+      "damaged",
+      "fresh",
+      "open",
+      "wet"
+    ],
+    "state_distinct_from_identity_features": true,
+    "state_observation_available": true
+  },
+  "audit_4_multi_action_covariation": {
+    "total_objects_with_actions": 60,
+    "mixed_object_count": 60,
+    "objects_with_inconsistent_repeats": 23,
+    "multi_action_covariation_available": true
+  },
+  "audit_5_heldout_split": {
+    "episode_count": 5,
+    "episode_event_counts": {
+      "0": 104,
+      "1": 98,
+      "2": 102,
+      "3": 109,
+      "4": 112
+    },
+    "temporally_heldout_possible": true,
+    "heldout_split_available": true
+  },
+  "audit_6_irreducible_noise_control": {
+    "inconsistent_object_action_pairs": 26,
+    "repeated_object_action_try_count": 75,
+    "max_repeats_per_object_action": 2,
+    "irreducible_noise_control_available": true
+  },
+  "audit_7_surface_matched_mixed_rates": {
+    "objects_with_mixed_outcomes": 60,
+    "mean_object_mixed_rate": 0.7051,
+    "mixed_rate_by_source_type": {
+      "identity_split": {
+        "count": 15,
+        "mean_mixed_rate": 0.7556,
+        "min": 0.6667,
+        "max": 1.0
+      },
+      "observation_gap": {
+        "count": 15,
+        "mean_mixed_rate": 0.6667,
+        "min": 0.3333,
+        "max": 1.0
+      },
+      "state_condition": {
+        "count": 15,
+        "mean_mixed_rate": 0.6815,
+        "min": 0.2222,
+        "max": 0.8889
+      },
+      "irreducible_noise": {
+        "count": 15,
+        "mean_mixed_rate": 0.7167,
+        "min": 0.5,
+        "max": 1.0
+      }
+    },
+    "mixed_source_types_present": [
+      "identity_split",
+      "irreducible_noise",
+      "observation_gap",
+      "state_condition"
+    ],
+    "rates_approximately_matched": true,
+    "max_rate_gap": 0.0889,
+    "surface_matched_mixed_rates_available": true
+  },
+  "required_conditions": {
+    "token_persistence_available": true,
+    "repeated_observation_available": true,
+    "state_observation_available": true,
+    "multi_action_covariation_available": true,
+    "heldout_split_available": true
+  },
+  "all_required_pass": true,
+  "mixed_explanation_identifiable_now": true,
+  "all_four_mixed_source_types_present": true,
+  "audit_only_source_labels": true,
+  "surface_matched_mixed_rates_available": true,
+  "cannot_disambiguate_reasons": [],
+  "acceptance_passed": true,
+  "policy_decisions_changed": false,
+  "hidden_feature_leakage_detected": false,
+  "oracle_leakage_detected": false,
+  "implementation_status": "pass",
+  "failure_reason": "none"
+}

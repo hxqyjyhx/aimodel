@@ -1,0 +1,480 @@
+{
+  "block_id": "1J1",
+  "condition": "C4_instance_subtype_cued_v1",
+  "seed": 101,
+  "total_objects": 60,
+  "category_counts": {
+    "wood_log": 15,
+    "stone_block": 15,
+    "apple": 15,
+    "wooden_pickaxe": 15
+  },
+  "subtype_counts": {
+    "wood_log::craftable": 12,
+    "wood_log::rotten_or_brittle": 3,
+    "stone_block::hard": 12,
+    "stone_block::brittle": 3,
+    "apple::ripe": 12,
+    "apple::unripe_or_spoiled": 3,
+    "wooden_pickaxe::intact": 12,
+    "wooden_pickaxe::damaged": 3
+  },
+  "subtype_definitions": {
+    "wood_log": {
+      "subtypes": [
+        "craftable",
+        "rotten_or_brittle"
+      ],
+      "subtype_ratio": {
+        "craftable": 0.8,
+        "rotten_or_brittle": 0.2
+      },
+      "affordance_profiles": {
+        "craftable": {
+          "mine_by_hand": "success",
+          "mine_with_pickaxe": "success",
+          "craft_plank": "success",
+          "eat": "fail",
+          "use_as_tool": "fail",
+          "burn_as_fuel": "success"
+        },
+        "rotten_or_brittle": {
+          "mine_by_hand": "success",
+          "mine_with_pickaxe": "success",
+          "craft_plank": "fail",
+          "eat": "fail",
+          "use_as_tool": "fail",
+          "burn_as_fuel": "success"
+        }
+      },
+      "n_visible_cues": 9
+    },
+    "stone_block": {
+      "subtypes": [
+        "brittle",
+        "hard"
+      ],
+      "subtype_ratio": {
+        "brittle": 0.2,
+        "hard": 0.8
+      },
+      "affordance_profiles": {
+        "brittle": {
+          "mine_by_hand": "success",
+          "mine_with_pickaxe": "success",
+          "craft_plank": "fail",
+          "eat": "fail",
+          "use_as_tool": "fail",
+          "burn_as_fuel": "fail"
+        },
+        "hard": {
+          "mine_by_hand": "fail",
+          "mine_with_pickaxe": "success",
+          "craft_plank": "fail",
+          "eat": "fail",
+          "use_as_tool": "fail",
+          "burn_as_fuel": "fail"
+        }
+      },
+      "n_visible_cues": 7
+    },
+    "apple": {
+      "subtypes": [
+        "ripe",
+        "unripe_or_spoiled"
+      ],
+      "subtype_ratio": {
+        "ripe": 0.8,
+        "unripe_or_spoiled": 0.2
+      },
+      "affordance_profiles": {
+        "ripe": {
+          "mine_by_hand": "success",
+          "mine_with_pickaxe": "success",
+          "craft_plank": "fail",
+          "eat": "success",
+          "use_as_tool": "fail",
+          "burn_as_fuel": "fail"
+        },
+        "unripe_or_spoiled": {
+          "mine_by_hand": "success",
+          "mine_with_pickaxe": "success",
+          "craft_plank": "fail",
+          "eat": "fail",
+          "use_as_tool": "fail",
+          "burn_as_fuel": "fail"
+        }
+      },
+      "n_visible_cues": 7
+    },
+    "wooden_pickaxe": {
+      "subtypes": [
+        "intact",
+        "damaged"
+      ],
+      "subtype_ratio": {
+        "intact": 0.8,
+        "damaged": 0.2
+      },
+      "affordance_profiles": {
+        "intact": {
+          "mine_by_hand": "success",
+          "mine_with_pickaxe": "success",
+          "craft_plank": "fail",
+          "eat": "fail",
+          "use_as_tool": "success",
+          "burn_as_fuel": "success"
+        },
+        "damaged": {
+          "mine_by_hand": "success",
+          "mine_with_pickaxe": "success",
+          "craft_plank": "fail",
+          "eat": "fail",
+          "use_as_tool": "fail",
+          "burn_as_fuel": "success"
+        }
+      },
+      "n_visible_cues": 7
+    }
+  },
+  "per_query": {
+    "need_planks": {
+      "n_positive": 12,
+      "n_negative": 48,
+      "n_total": 60,
+      "positive_rate": 0.2,
+      "negative_rate": 0.8,
+      "has_both_classes": true,
+      "positive_rate_in_ideal_range": false
+    },
+    "need_stone": {
+      "n_positive": 12,
+      "n_negative": 48,
+      "n_total": 60,
+      "positive_rate": 0.2,
+      "negative_rate": 0.8,
+      "has_both_classes": true,
+      "positive_rate_in_ideal_range": false
+    },
+    "need_food": {
+      "n_positive": 12,
+      "n_negative": 48,
+      "n_total": 60,
+      "positive_rate": 0.2,
+      "negative_rate": 0.8,
+      "has_both_classes": true,
+      "positive_rate_in_ideal_range": false
+    },
+    "need_tool": {
+      "n_positive": 12,
+      "n_negative": 48,
+      "n_total": 60,
+      "positive_rate": 0.2,
+      "negative_rate": 0.8,
+      "has_both_classes": true,
+      "positive_rate_in_ideal_range": false
+    },
+    "need_fuel": {
+      "n_positive": 30,
+      "n_negative": 30,
+      "n_total": 60,
+      "positive_rate": 0.5,
+      "negative_rate": 0.5,
+      "has_both_classes": true,
+      "positive_rate_in_ideal_range": true
+    }
+  },
+  "all_false_expected_macro_bal": 0.5,
+  "category_majority_macro_bal": 0.975,
+  "category_majority_per_query": {
+    "need_planks": {
+      "pos_recall": 1.0,
+      "neg_recall": 0.9375,
+      "balanced_acc": 0.9688,
+      "majority_true_categories": [
+        "wood_log"
+      ]
+    },
+    "need_stone": {
+      "pos_recall": 1.0,
+      "neg_recall": 0.9375,
+      "balanced_acc": 0.9688,
+      "majority_true_categories": [
+        "stone_block"
+      ]
+    },
+    "need_food": {
+      "pos_recall": 1.0,
+      "neg_recall": 0.9375,
+      "balanced_acc": 0.9688,
+      "majority_true_categories": [
+        "apple"
+      ]
+    },
+    "need_tool": {
+      "pos_recall": 1.0,
+      "neg_recall": 0.9375,
+      "balanced_acc": 0.9688,
+      "majority_true_categories": [
+        "wooden_pickaxe"
+      ]
+    },
+    "need_fuel": {
+      "pos_recall": 1.0,
+      "neg_recall": 1.0,
+      "balanced_acc": 1.0,
+      "majority_true_categories": [
+        "wood_log",
+        "wooden_pickaxe"
+      ]
+    }
+  },
+  "affordance_differences": {
+    "wood_log": {
+      "differs_on": [
+        "craft_plank"
+      ],
+      "details": {
+        "craft_plank": {
+          "craftable": "success",
+          "rotten_or_brittle": "fail"
+        }
+      }
+    },
+    "stone_block": {
+      "differs_on": [
+        "mine_by_hand"
+      ],
+      "details": {
+        "mine_by_hand": {
+          "brittle": "success",
+          "hard": "fail"
+        }
+      }
+    },
+    "apple": {
+      "differs_on": [
+        "eat"
+      ],
+      "details": {
+        "eat": {
+          "ripe": "success",
+          "unripe_or_spoiled": "fail"
+        }
+      }
+    },
+    "wooden_pickaxe": {
+      "differs_on": [
+        "use_as_tool"
+      ],
+      "details": {
+        "use_as_tool": {
+          "intact": "success",
+          "damaged": "fail"
+        }
+      }
+    }
+  },
+  "visible_cue_summary": {
+    "wood_log": {
+      "subtypes": [
+        "craftable",
+        "rotten_or_brittle"
+      ],
+      "top_differentials": [
+        [
+          "has_wood_grain",
+          {
+            "craftable_p": 0.75,
+            "rotten_or_brittle_p": 0.38,
+            "abs_diff": 0.37
+          }
+        ],
+        [
+          "has_bark_texture",
+          {
+            "craftable_p": 0.72,
+            "rotten_or_brittle_p": 0.42,
+            "abs_diff": 0.3
+          }
+        ],
+        [
+          "solid",
+          {
+            "craftable_p": 0.85,
+            "rotten_or_brittle_p": 0.7,
+            "abs_diff": 0.15
+          }
+        ],
+        [
+          "rough_texture",
+          {
+            "craftable_p": 0.62,
+            "rotten_or_brittle_p": 0.48,
+            "abs_diff": 0.14
+          }
+        ],
+        [
+          "brownish",
+          {
+            "craftable_p": 0.58,
+            "rotten_or_brittle_p": 0.48,
+            "abs_diff": 0.1
+          }
+        ]
+      ]
+    },
+    "stone_block": {
+      "subtypes": [
+        "brittle",
+        "hard"
+      ],
+      "top_differentials": [
+        [
+          "has_crystal_flecks",
+          {
+            "brittle_p": 0.7,
+            "hard_p": 0.42,
+            "abs_diff": 0.28
+          }
+        ],
+        [
+          "has_granular_surface",
+          {
+            "brittle_p": 0.65,
+            "hard_p": 0.42,
+            "abs_diff": 0.23
+          }
+        ],
+        [
+          "solid",
+          {
+            "brittle_p": 0.78,
+            "hard_p": 0.9,
+            "abs_diff": 0.12
+          }
+        ],
+        [
+          "grayish",
+          {
+            "brittle_p": 0.6,
+            "hard_p": 0.52,
+            "abs_diff": 0.08
+          }
+        ],
+        [
+          "heavy_weight",
+          {
+            "brittle_p": 0.72,
+            "hard_p": 0.78,
+            "abs_diff": 0.06
+          }
+        ]
+      ]
+    },
+    "apple": {
+      "subtypes": [
+        "ripe",
+        "unripe_or_spoiled"
+      ],
+      "top_differentials": [
+        [
+          "has_stem_remnant",
+          {
+            "ripe_p": 0.72,
+            "unripe_or_spoiled_p": 0.4,
+            "abs_diff": 0.32
+          }
+        ],
+        [
+          "has_peel_texture",
+          {
+            "ripe_p": 0.7,
+            "unripe_or_spoiled_p": 0.42,
+            "abs_diff": 0.28
+          }
+        ],
+        [
+          "smooth_texture",
+          {
+            "ripe_p": 0.58,
+            "unripe_or_spoiled_p": 0.42,
+            "abs_diff": 0.16
+          }
+        ],
+        [
+          "greenish",
+          {
+            "ripe_p": 0.55,
+            "unripe_or_spoiled_p": 0.4,
+            "abs_diff": 0.15
+          }
+        ],
+        [
+          "round_small",
+          {
+            "ripe_p": 0.6,
+            "unripe_or_spoiled_p": 0.46,
+            "abs_diff": 0.14
+          }
+        ]
+      ]
+    },
+    "wooden_pickaxe": {
+      "subtypes": [
+        "intact",
+        "damaged"
+      ],
+      "top_differentials": [
+        [
+          "has_grip_area",
+          {
+            "intact_p": 0.75,
+            "damaged_p": 0.38,
+            "abs_diff": 0.37
+          }
+        ],
+        [
+          "has_shaft_shape",
+          {
+            "intact_p": 0.72,
+            "damaged_p": 0.42,
+            "abs_diff": 0.3
+          }
+        ],
+        [
+          "elongated_with_handle",
+          {
+            "intact_p": 0.65,
+            "damaged_p": 0.48,
+            "abs_diff": 0.17
+          }
+        ],
+        [
+          "solid",
+          {
+            "intact_p": 0.8,
+            "damaged_p": 0.65,
+            "abs_diff": 0.15
+          }
+        ],
+        [
+          "long_shape",
+          {
+            "intact_p": 0.6,
+            "damaged_p": 0.5,
+            "abs_diff": 0.1
+          }
+        ]
+      ]
+    }
+  },
+  "sanity_checks": {
+    "all_queries_have_both_classes": true,
+    "all_queries_in_0_20_to_0_80": true,
+    "any_query_in_0_35_to_0_65": true,
+    "static_sanity_passed": true
+  },
+  "failures": [],
+  "ready_for_1J2_marginal_audit": true
+}

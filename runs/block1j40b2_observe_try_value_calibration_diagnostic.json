@@ -1,0 +1,629 @@
+{
+  "block_id": "1J40b-2",
+  "condition": "C5_mixed_source_identifiability_v0",
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "elapsed_seconds": 30.0,
+  "total_records_used": 2625,
+  "observe_records_used": 450,
+  "try_records_used": 2175,
+  "switch_records_used": 0,
+  "proxy_records_used": 0,
+  "switch_q_values_created": false,
+  "diagnostic_1_action_distribution": {
+    "total_records": 2625,
+    "observe_record_count": 450,
+    "try_record_count": 2175,
+    "observe_try_ratio": 0.2069,
+    "per_try_action_counts": {
+      "try_burn_as_fuel": 300,
+      "try_craft_plank": 450,
+      "try_eat": 450,
+      "try_mine_by_hand": 300,
+      "try_mine_with_pickaxe": 300,
+      "try_use_as_tool": 375
+    },
+    "is_action_imbalanced": true,
+    "imbalance_note": "Observe = 450 (17.1%), Try = 2175 (82.9%). Observe is a minority class with 20.7% ratio.",
+    "per_seed_distribution": {
+      "seed_101": {
+        "observe": 90,
+        "try": 435
+      },
+      "seed_103": {
+        "observe": 90,
+        "try": 435
+      },
+      "seed_107": {
+        "observe": 90,
+        "try": 435
+      },
+      "seed_109": {
+        "observe": 90,
+        "try": 435
+      },
+      "seed_113": {
+        "observe": 90,
+        "try": 435
+      }
+    }
+  },
+  "diagnostic_2_value_scale": {
+    "observe": {
+      "count": 450,
+      "mean": 0.1012,
+      "std": 0.0763,
+      "min": -0.005,
+      "max": 0.325
+    },
+    "try": {
+      "count": 2175,
+      "mean": 0.1214,
+      "std": 0.2986,
+      "min": -0.15,
+      "max": 0.45
+    },
+    "per_try_action": {
+      "try_burn_as_fuel": {
+        "count": 300,
+        "mean": 0.136,
+        "std": 0.2997,
+        "min": -0.15,
+        "max": 0.45
+      },
+      "try_craft_plank": {
+        "count": 450,
+        "mean": 0.0193,
+        "std": 0.27,
+        "min": -0.15,
+        "max": 0.45
+      },
+      "try_eat": {
+        "count": 450,
+        "mean": 0.0127,
+        "std": 0.2667,
+        "min": -0.15,
+        "max": 0.45
+      },
+      "try_mine_by_hand": {
+        "count": 300,
+        "mean": 0.306,
+        "std": 0.2562,
+        "min": -0.15,
+        "max": 0.45
+      },
+      "try_mine_with_pickaxe": {
+        "count": 300,
+        "mean": 0.392,
+        "std": 0.1773,
+        "min": -0.15,
+        "max": 0.45
+      },
+      "try_use_as_tool": {
+        "count": 375,
+        "mean": -0.0012,
+        "std": 0.2591,
+        "min": -0.15,
+        "max": 0.45
+      }
+    },
+    "fraction_try_above_max_observe": 0.4524,
+    "fraction_observe_above_mean_try": 0.3489,
+    "note": "Try max (0.45 = success) substantially exceeds observe max (0.325). Only 34.9% of observe values exceed the mean try value (0.1214). This creates a structural bias toward try choices in argmax Q."
+  },
+  "diagnostic_3_model_predictions": {
+    "predicted_q_stats": {
+      "observe": {
+        "mean": 0.0304,
+        "std": 0.048,
+        "min": -0.0713,
+        "max": 0.2365
+      },
+      "try_burn_as_fuel": {
+        "mean": 0.0615,
+        "std": 0.1527,
+        "min": -0.516,
+        "max": 0.3389
+      },
+      "try_craft_plank": {
+        "mean": 0.0592,
+        "std": 0.12,
+        "min": -0.3058,
+        "max": 0.4045
+      },
+      "try_eat": {
+        "mean": 0.0789,
+        "std": 0.1241,
+        "min": -0.2467,
+        "max": 0.5085
+      },
+      "try_mine_by_hand": {
+        "mean": 0.2754,
+        "std": 0.133,
+        "min": -0.1497,
+        "max": 0.4653
+      },
+      "try_mine_with_pickaxe": {
+        "mean": 0.3523,
+        "std": 0.069,
+        "min": 0.1598,
+        "max": 0.5735
+      },
+      "try_use_as_tool": {
+        "mean": -0.013,
+        "std": 0.102,
+        "min": -0.3457,
+        "max": 0.2218
+      }
+    },
+    "observe_margin_to_best_try": {
+      "count": 560,
+      "mean": -0.3319,
+      "min": -0.4826,
+      "max": -0.136
+    },
+    "observe_wins_count": 0,
+    "observe_wins_rate": 0.0,
+    "note": "Observe Q beats best try Q in only 0/560 (0.0%) test situations. Mean observe margin to best try: -0.3319. Observe is systematically predicted lower than try."
+  },
+  "diagnostic_4_delayed_observe_value": {
+    "observe_then_try_count": 2175,
+    "post_observe_try_success_rate": 0.4524,
+    "post_observe_net_value_mean": 0.1214,
+    "no_recent_observe_try_count": 0,
+    "no_recent_observe_try_success_rate": null,
+    "no_recent_observe_net_value_mean": null,
+    "low_observe_1_2_try_count": 1098,
+    "low_observe_1_2_success_rate": 0.4636,
+    "low_observe_1_2_mean_net_value": 0.1281,
+    "high_observe_3plus_try_count": 1077,
+    "high_observe_3plus_success_rate": 0.441,
+    "high_observe_3plus_mean_net_value": 0.1146,
+    "delayed_observe_benefit_detected": false,
+    "benefit_note": "No zero-observe tries exist for comparison. Gradient check (3+ vs 1-2 prior observes): delta success rate: -0.0226, delta mean net_value: -0.0135. Low-observe (1-2) tries: n=1098, success=0.4636, mean_nv=0.1281. High-observe (3+) tries: n=1077, success=0.441, mean_nv=0.1146."
+  },
+  "diagnostic_5_explanation_ablation": {
+    "episode_heldout": {
+      "action_type_only": {
+        "mse": 0.061594,
+        "mae": 0.201793,
+        "n": 560,
+        "per_action": {
+          "observe": {
+            "count": 100,
+            "mse": 0.004439,
+            "mae": 0.058097,
+            "mean_true": 0.0898,
+            "mean_pred": 0.1045
+          },
+          "try_burn_as_fuel": {
+            "count": 60,
+            "mse": 0.089706,
+            "mae": 0.2995,
+            "mean_true": 0.09,
+            "mean_pred": 0.1475
+          },
+          "try_craft_plank": {
+            "count": 100,
+            "mse": 0.072579,
+            "mae": 0.242674,
+            "mean_true": 0.018,
+            "mean_pred": 0.0197
+          },
+          "try_eat": {
+            "count": 100,
+            "mse": 0.070957,
+            "mae": 0.236914,
+            "mean_true": 0.012,
+            "mean_pred": 0.0129
+          },
+          "try_mine_by_hand": {
+            "count": 60,
+            "mse": 0.096656,
+            "mae": 0.258583,
+            "mean_true": 0.22,
+            "mean_pred": 0.3275
+          },
+          "try_mine_with_pickaxe": {
+            "count": 60,
+            "mse": 0.042356,
+            "mae": 0.1185,
+            "mean_true": 0.37,
+            "mean_pred": 0.3975
+          },
+          "try_use_as_tool": {
+            "count": 80,
+            "mse": 0.074651,
+            "mae": 0.233008,
+            "mean_true": 0.0225,
+            "mean_pred": -0.0076
+          }
+        },
+        "shadow_observe_rate": 0.0,
+        "shadow_try_rate": 1.0,
+        "shadow_action_distribution": {
+          "observe": 0,
+          "try_burn_as_fuel": 0,
+          "try_craft_plank": 0,
+          "try_eat": 0,
+          "try_mine_by_hand": 0,
+          "try_mine_with_pickaxe": 560,
+          "try_use_as_tool": 0
+        }
+      },
+      "situation_without_explanation": {
+        "mse": 0.056284,
+        "mae": 0.181713,
+        "n": 560,
+        "per_action": {
+          "observe": {
+            "count": 100,
+            "mse": 0.000537,
+            "mae": 0.018281,
+            "mean_true": 0.0898,
+            "mean_pred": 0.087
+          },
+          "try_burn_as_fuel": {
+            "count": 60,
+            "mse": 0.09589,
+            "mae": 0.286241,
+            "mean_true": 0.09,
+            "mean_pred": 0.0841
+          },
+          "try_craft_plank": {
+            "count": 100,
+            "mse": 0.080655,
+            "mae": 0.23942,
+            "mean_true": 0.018,
+            "mean_pred": 0.0227
+          },
+          "try_eat": {
+            "count": 100,
+            "mse": 0.072572,
+            "mae": 0.234514,
+            "mean_true": 0.012,
+            "mean_pred": 0.0322
+          },
+          "try_mine_by_hand": {
+            "count": 60,
+            "mse": 0.049816,
+            "mae": 0.177168,
+            "mean_true": 0.22,
+            "mean_pred": 0.2744
+          },
+          "try_mine_with_pickaxe": {
+            "count": 60,
+            "mse": 0.034932,
+            "mae": 0.132415,
+            "mean_true": 0.37,
+            "mean_pred": 0.3565
+          },
+          "try_use_as_tool": {
+            "count": 80,
+            "mse": 0.066302,
+            "mae": 0.209852,
+            "mean_true": 0.0225,
+            "mean_pred": -0.0128
+          }
+        },
+        "shadow_observe_rate": 0.0,
+        "shadow_try_rate": 1.0,
+        "shadow_action_distribution": {
+          "observe": 0,
+          "try_burn_as_fuel": 12,
+          "try_craft_plank": 9,
+          "try_eat": 1,
+          "try_mine_by_hand": 152,
+          "try_mine_with_pickaxe": 386,
+          "try_use_as_tool": 0
+        }
+      },
+      "situation_with_explanation": {
+        "mse": 0.055253,
+        "mae": 0.179996,
+        "n": 560,
+        "per_action": {
+          "observe": {
+            "count": 100,
+            "mse": 0.000537,
+            "mae": 0.018281,
+            "mean_true": 0.0898,
+            "mean_pred": 0.087
+          },
+          "try_burn_as_fuel": {
+            "count": 60,
+            "mse": 0.098858,
+            "mae": 0.288552,
+            "mean_true": 0.09,
+            "mean_pred": 0.0869
+          },
+          "try_craft_plank": {
+            "count": 100,
+            "mse": 0.071523,
+            "mae": 0.229492,
+            "mean_true": 0.018,
+            "mean_pred": 0.0232
+          },
+          "try_eat": {
+            "count": 100,
+            "mse": 0.067076,
+            "mae": 0.222577,
+            "mean_true": 0.012,
+            "mean_pred": 0.0307
+          },
+          "try_mine_by_hand": {
+            "count": 60,
+            "mse": 0.056392,
+            "mae": 0.193003,
+            "mean_true": 0.22,
+            "mean_pred": 0.2718
+          },
+          "try_mine_with_pickaxe": {
+            "count": 60,
+            "mse": 0.029207,
+            "mae": 0.126128,
+            "mean_true": 0.37,
+            "mean_pred": 0.3406
+          },
+          "try_use_as_tool": {
+            "count": 80,
+            "mse": 0.074506,
+            "mae": 0.216274,
+            "mean_true": 0.0225,
+            "mean_pred": -0.0184
+          }
+        },
+        "shadow_observe_rate": 0.0,
+        "shadow_try_rate": 1.0,
+        "shadow_action_distribution": {
+          "observe": 0,
+          "try_burn_as_fuel": 25,
+          "try_craft_plank": 3,
+          "try_eat": 2,
+          "try_mine_by_hand": 148,
+          "try_mine_with_pickaxe": 340,
+          "try_use_as_tool": 42
+        }
+      },
+      "observe_specific_features": {
+        "mse": 0.062964,
+        "mae": 0.197768,
+        "n": 560,
+        "per_action": {
+          "observe": {
+            "count": 100,
+            "mse": 0.000627,
+            "mae": 0.020146,
+            "mean_true": 0.0898,
+            "mean_pred": 0.0809
+          },
+          "try_burn_as_fuel": {
+            "count": 60,
+            "mse": 0.108132,
+            "mae": 0.305804,
+            "mean_true": 0.09,
+            "mean_pred": 0.0868
+          },
+          "try_craft_plank": {
+            "count": 100,
+            "mse": 0.080236,
+            "mae": 0.248495,
+            "mean_true": 0.018,
+            "mean_pred": 0.0379
+          },
+          "try_eat": {
+            "count": 100,
+            "mse": 0.07648,
+            "mae": 0.248506,
+            "mean_true": 0.012,
+            "mean_pred": 0.0351
+          },
+          "try_mine_by_hand": {
+            "count": 60,
+            "mse": 0.08897,
+            "mae": 0.264047,
+            "mean_true": 0.22,
+            "mean_pred": 0.2828
+          },
+          "try_mine_with_pickaxe": {
+            "count": 60,
+            "mse": 0.036124,
+            "mae": 0.133193,
+            "mean_true": 0.37,
+            "mean_pred": 0.3607
+          },
+          "try_use_as_tool": {
+            "count": 80,
+            "mse": 0.069152,
+            "mae": 0.21066,
+            "mean_true": 0.0225,
+            "mean_pred": -0.0167
+          }
+        },
+        "shadow_observe_rate": 0.0,
+        "shadow_try_rate": 1.0,
+        "shadow_action_distribution": {
+          "observe": 0,
+          "try_burn_as_fuel": 0,
+          "try_craft_plank": 1,
+          "try_eat": 0,
+          "try_mine_by_hand": 100,
+          "try_mine_with_pickaxe": 459,
+          "try_use_as_tool": 0
+        }
+      },
+      "full_model": {
+        "mse": 0.055253,
+        "mae": 0.179996,
+        "n": 560,
+        "per_action": {
+          "observe": {
+            "count": 100,
+            "mse": 0.000537,
+            "mae": 0.018281,
+            "mean_true": 0.0898,
+            "mean_pred": 0.087
+          },
+          "try_burn_as_fuel": {
+            "count": 60,
+            "mse": 0.098858,
+            "mae": 0.288552,
+            "mean_true": 0.09,
+            "mean_pred": 0.0869
+          },
+          "try_craft_plank": {
+            "count": 100,
+            "mse": 0.071523,
+            "mae": 0.229492,
+            "mean_true": 0.018,
+            "mean_pred": 0.0232
+          },
+          "try_eat": {
+            "count": 100,
+            "mse": 0.067076,
+            "mae": 0.222577,
+            "mean_true": 0.012,
+            "mean_pred": 0.0307
+          },
+          "try_mine_by_hand": {
+            "count": 60,
+            "mse": 0.056392,
+            "mae": 0.193003,
+            "mean_true": 0.22,
+            "mean_pred": 0.2718
+          },
+          "try_mine_with_pickaxe": {
+            "count": 60,
+            "mse": 0.029207,
+            "mae": 0.126128,
+            "mean_true": 0.37,
+            "mean_pred": 0.3406
+          },
+          "try_use_as_tool": {
+            "count": 80,
+            "mse": 0.074506,
+            "mae": 0.216274,
+            "mean_true": 0.0225,
+            "mean_pred": -0.0184
+          }
+        },
+        "shadow_observe_rate": 0.0,
+        "shadow_try_rate": 1.0,
+        "shadow_action_distribution": {
+          "observe": 0,
+          "try_burn_as_fuel": 25,
+          "try_craft_plank": 3,
+          "try_eat": 2,
+          "try_mine_by_hand": 148,
+          "try_mine_with_pickaxe": 340,
+          "try_use_as_tool": 42
+        }
+      }
+    },
+    "loso": {
+      "action_type_only": {
+        "mse": 0.056856,
+        "mae": 0.196623,
+        "shadow_observe_rate": 0.0,
+        "folds": 5,
+        "total_n": 2625
+      },
+      "situation_without_explanation": {
+        "mse": 0.050761,
+        "mae": 0.171358,
+        "shadow_observe_rate": 0.0,
+        "folds": 5,
+        "total_n": 2625
+      },
+      "situation_with_explanation": {
+        "mse": 0.048209,
+        "mae": 0.166984,
+        "shadow_observe_rate": 0.0,
+        "folds": 5,
+        "total_n": 2625
+      },
+      "observe_specific_features": {
+        "mse": 0.054261,
+        "mae": 0.182162,
+        "shadow_observe_rate": 0.0,
+        "folds": 5,
+        "total_n": 2625
+      },
+      "full_model": {
+        "mse": 0.048209,
+        "mae": 0.166984,
+        "shadow_observe_rate": 0.0,
+        "folds": 5,
+        "total_n": 2625
+      }
+    },
+    "explanation_features_help_observe_prediction": false,
+    "note": "Observe MSE without explanation: 0.000537, with explanation: 0.000537. Explanation features do not help observe prediction."
+  },
+  "diagnostic_6_reweighting": {
+    "no_reweighting": {
+      "mse": 0.056262,
+      "mae": 0.181686,
+      "n": 560,
+      "shadow_observe_rate": 0.0,
+      "observe_mean_pred": 0.0871,
+      "observe_mean_true": 0.0898,
+      "try_mean_pred": 0.103,
+      "try_mean_true": 0.0991
+    },
+    "balanced_observe_try": {
+      "mse": 0.056171,
+      "mae": 0.18162,
+      "n": 560,
+      "shadow_observe_rate": 0.0,
+      "observe_mean_pred": 0.0874,
+      "observe_mean_true": 0.0898,
+      "try_mean_pred": 0.1031,
+      "try_mean_true": 0.0991
+    },
+    "per_action_balanced": {
+      "mse": 0.056265,
+      "mae": 0.181693,
+      "n": 560,
+      "shadow_observe_rate": 0.0,
+      "observe_mean_pred": 0.087,
+      "observe_mean_true": 0.0898,
+      "try_mean_pred": 0.103,
+      "try_mean_true": 0.0991
+    }
+  },
+  "diagnostic_7_action_set_availability": {
+    "total_situations": 203,
+    "complete_action_set_count": 0,
+    "partial_action_set_count": 203,
+    "top_action_match_available": false,
+    "action_set_size_distribution": {
+      "1": 203
+    },
+    "note": "Each situation has on average 1.0 action observations. Only 0 situations have all 7 actions observed. Top-action match is NOT available."
+  },
+  "audit": {
+    "checks": {
+      "hidden_feature_leakage_detected=false": true,
+      "oracle_leakage_detected=false": true,
+      "audit_label_used_as_input=false": true,
+      "preferred_explanation_used_as_hard_label=false": true,
+      "policy_decisions_changed=false": true,
+      "environment_changed=false": true,
+      "switch_proxy_created=false": true,
+      "switch_q_values_created=false": true,
+      "proxy_records_used=0": true,
+      "all_records_have_source_ids=true": true,
+      "no_seed_crashes": true
+    },
+    "all_pass": true,
+    "failure_reason": "none",
+    "implementation_status": "pass",
+    "forbidden_found": false
+  }
+}

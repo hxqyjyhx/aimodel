@@ -1,0 +1,899 @@
+{
+  "block_id": "1J19b",
+  "condition": "C4_instance_subtype_cued_v1",
+  "smoke_seed": 101,
+  "budget": 1.5,
+  "n_episodes": 5,
+  "risk_alpha": 5.0,
+  "max_risk": 2.0,
+  "min_failure_support": 2,
+  "feature_universe_size": 24,
+  "exploration_floor": 0.05,
+  "c15b_macro_bal": 0.5975,
+  "c15b_probed_n": 7,
+  "c0b_macro_bal": 0.5871,
+  "mode_original_safe": {
+    "mode_name": "original_safe",
+    "explore_fraction": 0.0,
+    "n_objects": 60,
+    "n_episodes": 5,
+    "A_mean_macro_bal": 0.5948,
+    "A_std_macro_bal": 0.006,
+    "A_final_macro_bal": 0.5958,
+    "A_learning_slope": 0.002667,
+    "B_mean_macro_bal": 0.5948,
+    "B_std_macro_bal": 0.006,
+    "B_final_macro_bal": 0.5958,
+    "B_learning_slope": 0.002667,
+    "C_mean_macro_bal": 0.5948,
+    "C_std_macro_bal": 0.006,
+    "C_final_macro_bal": 0.5958,
+    "C_learning_slope": 0.002667,
+    "delta_B_vs_A": 0.0,
+    "delta_C_vs_A": 0.0,
+    "delta_B_vs_C": 0.0,
+    "total_effective_B": 35,
+    "total_zero_B": 0,
+    "total_harmful_B": 0,
+    "failure_signal_count": 0,
+    "probe_count_B": 35,
+    "memory_update_nontrivial": false,
+    "memory_total_updates": 35,
+    "memory_failure_updates": 0,
+    "memory_success_updates": 35,
+    "risk_weights_nonzero_count": 0,
+    "max_risk_weight": 0.0,
+    "mean_risk_adjustment": 0.0,
+    "n_keys_with_data": 144,
+    "n_keys_from_failures": 0,
+    "n_keys_from_successes": 96,
+    "iom_isolated": true,
+    "absence_counts_valid": true,
+    "hard_exclusion_used": false,
+    "min_final_score_overall": 0.833333,
+    "success_only_bias_removed": true,
+    "B_minus_A_when_no_failures": 0.0,
+    "top_risk_features": [],
+    "per_episode_A": [
+      {
+        "episode": 0,
+        "macro_bal": 0.58875,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.592083,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.592917,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.604583,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.595833,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      }
+    ],
+    "per_episode_B": [
+      {
+        "episode": 0,
+        "macro_bal": 0.58875,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.592083,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.592917,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.604583,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.595833,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      }
+    ],
+    "per_episode_C": [
+      {
+        "episode": 0,
+        "macro_bal": 0.58875,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.592083,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.592917,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.604583,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.595833,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      }
+    ]
+  },
+  "mode_epsilon_boundary_explore": {
+    "mode_name": "epsilon_boundary_explore",
+    "explore_fraction": 0.3,
+    "n_objects": 60,
+    "n_episodes": 5,
+    "A_mean_macro_bal": 0.6024,
+    "A_std_macro_bal": 0.0056,
+    "A_final_macro_bal": 0.5962,
+    "A_learning_slope": -0.002083,
+    "B_mean_macro_bal": 0.5978,
+    "B_std_macro_bal": 0.0099,
+    "B_final_macro_bal": 0.5942,
+    "B_learning_slope": 0.0,
+    "C_mean_macro_bal": 0.6049,
+    "C_std_macro_bal": 0.0115,
+    "C_final_macro_bal": 0.6025,
+    "C_learning_slope": -0.000417,
+    "delta_B_vs_A": -0.0046,
+    "delta_C_vs_A": 0.0025,
+    "delta_B_vs_C": -0.0071,
+    "total_effective_B": 31,
+    "total_zero_B": 0,
+    "total_harmful_B": 0,
+    "failure_signal_count": 0,
+    "probe_count_B": 31,
+    "memory_update_nontrivial": false,
+    "memory_total_updates": 31,
+    "memory_failure_updates": 0,
+    "memory_success_updates": 31,
+    "risk_weights_nonzero_count": 0,
+    "max_risk_weight": 0.0,
+    "mean_risk_adjustment": 0.0,
+    "n_keys_with_data": 144,
+    "n_keys_from_failures": 0,
+    "n_keys_from_successes": 96,
+    "iom_isolated": true,
+    "absence_counts_valid": true,
+    "hard_exclusion_used": false,
+    "min_final_score_overall": 0.833333,
+    "success_only_bias_removed": true,
+    "B_minus_A_when_no_failures": -0.004583,
+    "top_risk_features": [],
+    "per_episode_A": [
+      {
+        "episode": 0,
+        "macro_bal": 0.607083,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.599167,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.609583,
+        "probed": 5,
+        "effective": 5,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.6,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.59625,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      }
+    ],
+    "per_episode_B": [
+      {
+        "episode": 0,
+        "macro_bal": 0.600833,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.584583,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.611667,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.597916,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.594167,
+        "probed": 6,
+        "effective": 6,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      }
+    ],
+    "per_episode_C": [
+      {
+        "episode": 0,
+        "macro_bal": 0.5925,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.622083,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.609583,
+        "probed": 5,
+        "effective": 5,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.597917,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.6025,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      }
+    ]
+  },
+  "mode_deceptive_high_prior_diagnostic": {
+    "mode_name": "deceptive_high_prior_diagnostic",
+    "explore_fraction": 0.0,
+    "n_objects": 60,
+    "n_episodes": 5,
+    "A_mean_macro_bal": 0.5791,
+    "A_std_macro_bal": 0.011,
+    "A_final_macro_bal": 0.588,
+    "A_learning_slope": 0.00555,
+    "B_mean_macro_bal": 0.5774,
+    "B_std_macro_bal": 0.0099,
+    "B_final_macro_bal": 0.5797,
+    "B_learning_slope": 0.003884,
+    "C_mean_macro_bal": 0.5739,
+    "C_std_macro_bal": 0.0084,
+    "C_final_macro_bal": 0.5769,
+    "C_learning_slope": 0.001853,
+    "delta_B_vs_A": -0.0017,
+    "delta_C_vs_A": -0.0052,
+    "delta_B_vs_C": 0.0035,
+    "total_effective_B": 33,
+    "total_zero_B": 2,
+    "total_harmful_B": 0,
+    "failure_signal_count": 2,
+    "probe_count_B": 35,
+    "memory_update_nontrivial": true,
+    "memory_total_updates": 35,
+    "memory_failure_updates": 2,
+    "memory_success_updates": 33,
+    "risk_weights_nonzero_count": 8,
+    "max_risk_weight": 0.61086,
+    "mean_risk_adjustment": 0.0,
+    "n_keys_with_data": 144,
+    "n_keys_from_failures": 24,
+    "n_keys_from_successes": 120,
+    "iom_isolated": true,
+    "absence_counts_valid": true,
+    "hard_exclusion_used": false,
+    "min_final_score_overall": 0.833333,
+    "success_only_bias_removed": false,
+    "B_minus_A_when_no_failures": null,
+    "top_risk_features": [
+      {
+        "feature": "grayish",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.61086,
+        "fail_with": 3.0,
+        "succ_with": 3.0,
+        "fail_without": 1.0,
+        "succ_without": 7.0,
+        "actual_failures": 2.0
+      },
+      {
+        "feature": "near_table",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.419072,
+        "fail_with": 3.0,
+        "succ_with": 4.0,
+        "fail_without": 1.0,
+        "succ_without": 6.0,
+        "actual_failures": 2.0
+      },
+      {
+        "feature": "brownish",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.419072,
+        "fail_with": 3.0,
+        "succ_with": 4.0,
+        "fail_without": 1.0,
+        "succ_without": 6.0,
+        "actual_failures": 2.0
+      },
+      {
+        "feature": "on_left_side",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.419072,
+        "fail_with": 3.0,
+        "succ_with": 4.0,
+        "fail_without": 1.0,
+        "succ_without": 6.0,
+        "actual_failures": 2.0
+      },
+      {
+        "feature": "light_weight",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.148762,
+        "fail_with": 1.0,
+        "succ_with": 2.0,
+        "fail_without": 3.0,
+        "succ_without": 8.0,
+        "actual_failures": 2.0
+      },
+      {
+        "feature": "movable",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.148762,
+        "fail_with": 3.0,
+        "succ_with": 6.0,
+        "fail_without": 1.0,
+        "succ_without": 4.0,
+        "actual_failures": 2.0
+      },
+      {
+        "feature": "has_grip_area",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.148762,
+        "fail_with": 1.0,
+        "succ_with": 2.0,
+        "fail_without": 3.0,
+        "succ_without": 8.0,
+        "actual_failures": 2.0
+      },
+      {
+        "feature": "heavy_weight",
+        "goal": "need_planks",
+        "action": "craft_plank",
+        "risk_weight": 0.148762,
+        "fail_with": 3.0,
+        "succ_with": 6.0,
+        "fail_without": 1.0,
+        "succ_without": 4.0,
+        "actual_failures": 2.0
+      }
+    ],
+    "per_episode_A": [
+      {
+        "episode": 0,
+        "macro_bal": 0.561299,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.584172,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.57576,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.586177,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.588049,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      }
+    ],
+    "per_episode_B": [
+      {
+        "episode": 0,
+        "macro_bal": 0.561299,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 1
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.584172,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.57576,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.586177,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 1
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.579716,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0,
+        "avg_abs_risk_adjustment": 0.0,
+        "new_failure_signals": 0
+      }
+    ],
+    "per_episode_C": [
+      {
+        "episode": 0,
+        "macro_bal": 0.561299,
+        "probed": 7,
+        "effective": 6,
+        "zero": 1,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 1,
+        "macro_bal": 0.584172,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 2,
+        "macro_bal": 0.57576,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 3,
+        "macro_bal": 0.571427,
+        "probed": 7,
+        "effective": 7,
+        "zero": 0,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      },
+      {
+        "episode": 4,
+        "macro_bal": 0.576938,
+        "probed": 7,
+        "effective": 5,
+        "zero": 2,
+        "harmful": 0,
+        "min_final_score": 0.833333,
+        "n_at_floor": 0
+      }
+    ],
+    "mode3_valid": true,
+    "n_deceptive_objects": 13,
+    "deceptive_modifications": [
+      {
+        "oid": "test_apple_014",
+        "category": "apple",
+        "flipped_action": "eat",
+        "deviation_features": [
+          "grayish",
+          "heavy_weight",
+          "rough_texture",
+          "smooth_texture",
+          "light_weight"
+        ]
+      },
+      {
+        "oid": "test_apple_010",
+        "category": "apple",
+        "flipped_action": "eat",
+        "deviation_features": [
+          "grayish",
+          "heavy_weight",
+          "rough_texture",
+          "smooth_texture",
+          "light_weight"
+        ]
+      },
+      {
+        "oid": "test_apple_004",
+        "category": "apple",
+        "flipped_action": "eat",
+        "deviation_features": [
+          "grayish",
+          "heavy_weight",
+          "rough_texture",
+          "smooth_texture",
+          "light_weight"
+        ]
+      },
+      {
+        "oid": "test_apple_002",
+        "category": "apple",
+        "flipped_action": "eat",
+        "deviation_features": [
+          "grayish",
+          "heavy_weight",
+          "rough_texture",
+          "smooth_texture",
+          "light_weight"
+        ]
+      },
+      {
+        "oid": "test_apple_006",
+        "category": "apple",
+        "flipped_action": "eat",
+        "deviation_features": [
+          "grayish",
+          "heavy_weight",
+          "rough_texture",
+          "smooth_texture",
+          "light_weight"
+        ]
+      },
+      {
+        "oid": "test_wood_log_000",
+        "category": "wood_log",
+        "flipped_action": "burn_as_fuel",
+        "deviation_features": [
+          "smooth_texture",
+          "heavy_weight",
+          "grayish",
+          "rough_texture",
+          "brownish"
+        ]
+      },
+      {
+        "oid": "test_wood_log_005",
+        "category": "wood_log",
+        "flipped_action": "burn_as_fuel",
+        "deviation_features": [
+          "smooth_texture",
+          "heavy_weight",
+          "grayish",
+          "rough_texture",
+          "brownish"
+        ]
+      },
+      {
+        "oid": "test_wood_log_008",
+        "category": "wood_log",
+        "flipped_action": "burn_as_fuel",
+        "deviation_features": [
+          "smooth_texture",
+          "heavy_weight",
+          "grayish",
+          "rough_texture",
+          "brownish"
+        ]
+      },
+      {
+        "oid": "test_wood_log_012",
+        "category": "wood_log",
+        "flipped_action": "burn_as_fuel",
+        "deviation_features": [
+          "smooth_texture",
+          "heavy_weight",
+          "grayish",
+          "rough_texture",
+          "brownish"
+        ]
+      },
+      {
+        "oid": "test_wood_log_001",
+        "category": "wood_log",
+        "flipped_action": "burn_as_fuel",
+        "deviation_features": [
+          "smooth_texture",
+          "heavy_weight",
+          "grayish",
+          "rough_texture",
+          "brownish"
+        ]
+      },
+      {
+        "oid": "test_stone_block_009",
+        "category": "stone_block",
+        "flipped_action": "mine_with_pickaxe",
+        "deviation_features": [
+          "smooth_texture",
+          "brownish",
+          "light_weight"
+        ]
+      },
+      {
+        "oid": "test_stone_block_002",
+        "category": "stone_block",
+        "flipped_action": "mine_with_pickaxe",
+        "deviation_features": [
+          "smooth_texture",
+          "brownish",
+          "light_weight"
+        ]
+      },
+      {
+        "oid": "test_stone_block_014",
+        "category": "stone_block",
+        "flipped_action": "mine_with_pickaxe",
+        "deviation_features": [
+          "smooth_texture",
+          "brownish",
+          "light_weight"
+        ]
+      }
+    ]
+  },
+  "mode_original_failure_signal_count": 0,
+  "mode_boundary_failure_signal_count": 0,
+  "mode_deceptive_failure_signal_count": 2,
+  "mode3_valid": true,
+  "mode3_has_observable_deviations": true,
+  "mode3_n_deceptive_objects": 13,
+  "patched_no_failure_B_matches_A": true,
+  "feature_risk_memory_supported": false,
+  "beats_permuted_control": false,
+  "hard_exclusion_used": false,
+  "success_only_bias_removed": false,
+  "ready_for_full_1j19": false,
+  "next_recommended_route": "inspect_feature_space_and_risk_update",
+  "elapsed_s": 38.7
+}

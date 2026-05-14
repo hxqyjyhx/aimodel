@@ -1,0 +1,408 @@
+{
+  "block_id": "1J40b-7a",
+  "elapsed_seconds": 12.4,
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "total_objects": 180,
+  "implementation_status": "pass",
+  "observe_cost_default": 0.005,
+  "three_world_separation": {
+    "agent_visible_pre_keys": [
+      "feat_block_like",
+      "feat_brownish",
+      "feat_coarse_texture",
+      "feat_cold_to_touch",
+      "feat_discolored",
+      "feat_elongated_with_handle",
+      "feat_fibrous",
+      "feat_flammable",
+      "feat_fruity_scent",
+      "feat_greenish",
+      "feat_has_bark_texture",
+      "feat_has_crystal_flecks",
+      "feat_has_granular_surface",
+      "feat_has_grip_area",
+      "feat_has_metal_head",
+      "feat_has_peel_texture",
+      "feat_has_shaft_shape",
+      "feat_has_stem_remnant",
+      "feat_has_veins",
+      "feat_heavy_weight",
+      "feat_jointed",
+      "feat_light_weight",
+      "feat_long_shape",
+      "feat_movable",
+      "feat_pitted",
+      "feat_porous_surface",
+      "feat_rough_texture",
+      "feat_round_small",
+      "feat_scratch_resistant",
+      "feat_smooth_texture",
+      "feat_spotted",
+      "feat_weathered"
+    ],
+    "agent_visible_state_keys": [
+      "state_fresh",
+      "state_wet",
+      "state_damaged",
+      "state_clean",
+      "state_hot",
+      "state_open"
+    ],
+    "agent_visible_numeric": [
+      "prior_observe_count"
+    ],
+    "forbidden_fields": [
+      "affordance_profile",
+      "ambient_group",
+      "audit_VOI",
+      "audit_computed_gain",
+      "audit_observe_value",
+      "audit_rationale_class",
+      "category",
+      "depth",
+      "depth_schedule",
+      "effective_affordance_profile",
+      "episode_id",
+      "episode_progress",
+      "group_role",
+      "hidden_affordance_profile",
+      "hidden_audit_rationale_class",
+      "hidden_category",
+      "hidden_features",
+      "hidden_subtype",
+      "n_features_known",
+      "n_states_known",
+      "object_id",
+      "oid",
+      "oracle_action",
+      "post_observe_features",
+      "post_observe_revealed",
+      "pre_observe_uncertainty",
+      "pre_surface_extra",
+      "seed_id",
+      "true_affordance_profile",
+      "voi_class",
+      "voi_rationale"
+    ],
+    "forbidden_in_agent_leaks": [],
+    "hidden_before_reveal_violations": 0,
+    "separation_ok": true
+  },
+  "voi_distribution": {
+    "total": 180,
+    "positive_net_count": 120,
+    "positive_net_rate": 0.6667,
+    "non_positive_net_count": 60,
+    "non_positive_net_rate": 0.3333,
+    "cost_only_count": 60,
+    "cost_only_rate": 0.3333,
+    "mean_voi": 0.195,
+    "n_unique_pre_surface_signatures": 8,
+    "sig_group_size_range": [
+      15,
+      30
+    ]
+  },
+  "audit_rationale_distribution": {
+    "positive_change": {
+      "count": 120,
+      "rate": 0.6667,
+      "mean_voi": 0.295
+    },
+    "confirmatory": {
+      "count": 0,
+      "rate": 0.0,
+      "mean_voi": 0.0
+    },
+    "wasteful_cost_only": {
+      "count": 60,
+      "rate": 0.3333,
+      "mean_voi": -0.005
+    }
+  },
+  "baselines": {
+    "no_observe_pre_only": 0.25,
+    "always_try": 0.25,
+    "always_observe_net": 0.445,
+    "random_observe": 0.3474,
+    "oracle_selective": 0.4467,
+    "oracle_selective_obs_rate": 0.6667,
+    "oracle_selective_gap_vs_always_observe": 0.0017,
+    "oracle_selective_gap_vs_always_try": 0.1967,
+    "oracle_selective_gap_vs_no_observe": 0.1967
+  },
+  "pre_observe_audit": {
+    "pre_mean": 0.25,
+    "oracle_mean": 0.45,
+    "pre_oracle_gap": 0.2
+  },
+  "cue_shortcut_audit": {
+    "max_single_feature_acc": 0.6667,
+    "top_single_features": [
+      [
+        "block_like",
+        0.6667
+      ],
+      [
+        "brownish",
+        0.6667
+      ],
+      [
+        "coarse_texture",
+        0.6667
+      ],
+      [
+        "cold_to_touch",
+        0.6667
+      ],
+      [
+        "discolored",
+        0.6667
+      ]
+    ],
+    "max_feature_pair_acc": 0.6667,
+    "top_feature_pairs": [
+      [
+        [
+          "block_like",
+          "brownish"
+        ],
+        0.6667
+      ],
+      [
+        [
+          "block_like",
+          "coarse_texture"
+        ],
+        0.6667
+      ],
+      [
+        [
+          "block_like",
+          "cold_to_touch"
+        ],
+        0.6667
+      ],
+      [
+        [
+          "block_like",
+          "discolored"
+        ],
+        0.6667
+      ],
+      [
+        [
+          "block_like",
+          "elongated_with_handle"
+        ],
+        0.6667
+      ]
+    ],
+    "nfeat_voi_acc": 0.6667,
+    "category_voi_acc": 0.6667,
+    "pre_signature_voi_acc": 0.6667,
+    "full_visible_voi_probe_acc": 0.6667,
+    "nfeat_voi_correlation": -0.686
+  },
+  "n_features_known_overlap": {
+    "positive_net_values": [
+      4,
+      5
+    ],
+    "non_positive_net_values": [
+      5,
+      6
+    ],
+    "overlap": [
+      5
+    ],
+    "overlap_count": 1
+  },
+  "counterfactual_slice_features": [
+    "brownish",
+    "discolored",
+    "greenish",
+    "heavy_weight",
+    "light_weight",
+    "long_shape",
+    "rough_texture",
+    "round_small",
+    "smooth_texture",
+    "spotted"
+  ],
+  "observe_cost_sweep": [
+    {
+      "observe_cost": 0.0,
+      "positive_net_rate": 0.666667,
+      "near_zero_rate": 0.333333,
+      "negative_net_rate": 0.0,
+      "always_observe_net": 0.45,
+      "always_try": 0.25,
+      "no_observe": 0.25,
+      "oracle_selective": 0.45,
+      "oracle_obs_rate": 0.666667,
+      "sel_vs_always_observe": 0.0,
+      "sel_vs_always_try": 0.2,
+      "sel_vs_no_observe": 0.2
+    },
+    {
+      "observe_cost": 0.001,
+      "positive_net_rate": 0.666667,
+      "near_zero_rate": 0.333333,
+      "negative_net_rate": 0.0,
+      "always_observe_net": 0.449,
+      "always_try": 0.25,
+      "no_observe": 0.25,
+      "oracle_selective": 0.449333,
+      "oracle_obs_rate": 0.666667,
+      "sel_vs_always_observe": 0.000333,
+      "sel_vs_always_try": 0.199333,
+      "sel_vs_no_observe": 0.199333
+    },
+    {
+      "observe_cost": 0.002,
+      "positive_net_rate": 0.666667,
+      "near_zero_rate": 0.0,
+      "negative_net_rate": 0.333333,
+      "always_observe_net": 0.448,
+      "always_try": 0.25,
+      "no_observe": 0.25,
+      "oracle_selective": 0.448667,
+      "oracle_obs_rate": 0.666667,
+      "sel_vs_always_observe": 0.000667,
+      "sel_vs_always_try": 0.198667,
+      "sel_vs_no_observe": 0.198667
+    },
+    {
+      "observe_cost": 0.005,
+      "positive_net_rate": 0.666667,
+      "near_zero_rate": 0.0,
+      "negative_net_rate": 0.333333,
+      "always_observe_net": 0.445,
+      "always_try": 0.25,
+      "no_observe": 0.25,
+      "oracle_selective": 0.446667,
+      "oracle_obs_rate": 0.666667,
+      "sel_vs_always_observe": 0.001667,
+      "sel_vs_always_try": 0.196667,
+      "sel_vs_no_observe": 0.196667
+    },
+    {
+      "observe_cost": 0.01,
+      "positive_net_rate": 0.666667,
+      "near_zero_rate": 0.0,
+      "negative_net_rate": 0.333333,
+      "always_observe_net": 0.44,
+      "always_try": 0.25,
+      "no_observe": 0.25,
+      "oracle_selective": 0.443333,
+      "oracle_obs_rate": 0.666667,
+      "sel_vs_always_observe": 0.003333,
+      "sel_vs_always_try": 0.193333,
+      "sel_vs_no_observe": 0.193333
+    },
+    {
+      "observe_cost": 0.02,
+      "positive_net_rate": 0.666667,
+      "near_zero_rate": 0.0,
+      "negative_net_rate": 0.333333,
+      "always_observe_net": 0.43,
+      "always_try": 0.25,
+      "no_observe": 0.25,
+      "oracle_selective": 0.436667,
+      "oracle_obs_rate": 0.666667,
+      "sel_vs_always_observe": 0.006667,
+      "sel_vs_always_try": 0.186667,
+      "sel_vs_no_observe": 0.186667
+    },
+    {
+      "observe_cost": 0.05,
+      "positive_net_rate": 0.666667,
+      "near_zero_rate": 0.0,
+      "negative_net_rate": 0.333333,
+      "always_observe_net": 0.4,
+      "always_try": 0.25,
+      "no_observe": 0.25,
+      "oracle_selective": 0.416667,
+      "oracle_obs_rate": 0.666667,
+      "sel_vs_always_observe": 0.016667,
+      "sel_vs_always_try": 0.166667,
+      "sel_vs_no_observe": 0.166667
+    },
+    {
+      "observe_cost": 0.1,
+      "positive_net_rate": 0.666667,
+      "near_zero_rate": 0.0,
+      "negative_net_rate": 0.333333,
+      "always_observe_net": 0.35,
+      "always_try": 0.25,
+      "no_observe": 0.25,
+      "oracle_selective": 0.383333,
+      "oracle_obs_rate": 0.666667,
+      "sel_vs_always_observe": 0.033333,
+      "sel_vs_always_try": 0.133333,
+      "sel_vs_no_observe": 0.133333
+    }
+  ],
+  "acceptance_checks": {
+    "three_world_separation": true,
+    "forbidden_fields_absent": true,
+    "hidden_before_reveal_clean": true,
+    "positive_net_exists": true,
+    "positive_net_not_universal": true,
+    "every_category_has_non_positive_net": true,
+    "each_category_has_mixed_rationale": true,
+    "oracle_selective_beats_always_observe": true,
+    "oracle_selective_beats_always_try": true,
+    "oracle_selective_is_selective": true,
+    "no_single_feature_shortcut": true,
+    "no_feature_pair_shortcut": true,
+    "n_features_known_overlap": true,
+    "shared_feature_in_both_voi_classes": true,
+    "category_not_determine_voi": true,
+    "feature_count_not_strongly_corr_voi": true,
+    "pre_oracle_uses_legal_signature_only": true,
+    "observe_cost_calibration_passed": true
+  },
+  "failure_reasons": [],
+  "per_category": {
+    "wood_log": {
+      "count": 45,
+      "positive_net": 30,
+      "non_positive_net": 15,
+      "mean_voi": 0.195,
+      "pre_mean": 0.25,
+      "oracle_mean": 0.45
+    },
+    "stone_block": {
+      "count": 45,
+      "positive_net": 30,
+      "non_positive_net": 15,
+      "mean_voi": 0.195,
+      "pre_mean": 0.25,
+      "oracle_mean": 0.45
+    },
+    "apple": {
+      "count": 45,
+      "positive_net": 30,
+      "non_positive_net": 15,
+      "mean_voi": 0.195,
+      "pre_mean": 0.25,
+      "oracle_mean": 0.45
+    },
+    "wooden_pickaxe": {
+      "count": 45,
+      "positive_net": 30,
+      "non_positive_net": 15,
+      "mean_voi": 0.195,
+      "pre_mean": 0.25,
+      "oracle_mean": 0.45
+    }
+  }
+}

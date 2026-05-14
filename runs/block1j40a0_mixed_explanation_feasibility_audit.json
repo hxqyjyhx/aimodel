@@ -1,0 +1,101 @@
+{
+  "block_id": "1J40a-0",
+  "seed": 109,
+  "elapsed_seconds": 2.7,
+  "audit_1_token_persistence": {
+    "unique_object_tokens": 60,
+    "tokens_in_multiple_episodes": 0,
+    "tokens_observed_more_than_once": 0,
+    "tokens_tried_more_than_once": 60,
+    "tokens_with_observe_and_try": 60,
+    "tokens_observe_before_try": 60,
+    "cross_episode_persistence": false,
+    "within_episode_persistence": true,
+    "token_persistence_available": true,
+    "note": "Tokens persist within a single episode (observe + 6 tries) but do NOT reappear across episodes. Token persistence available at within-episode level only."
+  },
+  "audit_2_repeated_observation": {
+    "repeated_observe_token_count": 0,
+    "mean_repeated_observes_per_token": 1.0,
+    "max_repeated_observes_per_token": 1,
+    "tokens_with_observation_change_over_time": 0,
+    "repeated_observation_available": false,
+    "note": "Each object is observed exactly once. No repeated observations exist. This is a structural limitation of the current environment design (round-robin episode assignment, one observe per object)."
+  },
+  "audit_3_state_observation": {
+    "visible_state_feature_count": 0,
+    "state_events_with_data": 0,
+    "total_events_with_state_tracking": 420,
+    "state_features_list": [],
+    "identity_like_state_features": [],
+    "state_distinct_from_identity_features": false,
+    "sample_visible_features_count": 24,
+    "sample_visible_state_count": 0,
+    "state_observation_available": false,
+    "note": "observed_state_delta is empty for all events. No agent-visible state features exist in the current environment. All tracked features are identity-like (object type indicators), not mutable state."
+  },
+  "audit_4_multi_action_covariation": {
+    "total_objects_with_actions": 60,
+    "mixed_object_count": 60,
+    "mixed_candidate_action_pair_count": 462,
+    "objects_with_mixed_outcomes_in_2plus_actions": 60,
+    "objects_stable_for_some_actions_but_mixed_for_others": 60,
+    "mixed_object_rate": 1.0,
+    "multi_action_covariation_available": true
+  },
+  "audit_5_heldout_split": {
+    "episode_count": 5,
+    "max_episode_id": 4,
+    "episode_event_counts": {
+      "0": 84,
+      "1": 84,
+      "2": 84,
+      "3": 84,
+      "4": 84
+    },
+    "time_order_available": true,
+    "temporally_heldout_possible": true,
+    "min_train_episodes": 4,
+    "min_test_episodes": 1,
+    "min_train_objects_last_ep_heldout": 48,
+    "min_test_objects_last_ep_heldout": 12,
+    "heldout_split_available": true,
+    "suggested_split": "train on episodes 0-3, test on episode 4 (time-ordered heldout)"
+  },
+  "audit_6_irreducible_noise_control": {
+    "inconsistent_object_action_pairs": 0,
+    "repeated_object_action_try_count": 0,
+    "max_repeats_per_object_action": 1,
+    "irreducible_noise_control_available": false,
+    "note": "Each (object, action) pair is tried exactly once. Outcomes are deterministic from hidden_affordance_profile. No genuine stochastic component exists. This is a structural limitation \u2014 irreducible noise control requires either: (a) repeated tries of same (object, action), (b) an explicit noise source in the environment, or (c) objects with probabilistic hidden affordances."
+  },
+  "audit_7_surface_matched_mixed_rates": {
+    "objects_with_mixed_outcomes": 60,
+    "mean_object_mixed_rate": 0.7,
+    "compound_type_mixed_rates": {},
+    "mixed_source_types_detectable": 1,
+    "surface_matched_mixed_rates_available": false,
+    "note": "Mixed outcomes arise from object-level action profile variation (e.g., stone is minable but not edible). Candidate grouping confounds object-level variation with group-level mixedness. Without stochastic noise or distinct mixed-generation mechanisms, different mixed sources cannot be separated by raw rate matching alone. Environment redesign would be needed for genuine rate-matching across mixed sources."
+  },
+  "required_conditions": {
+    "token_persistence_available": true,
+    "repeated_observation_available": false,
+    "state_observation_available": false,
+    "multi_action_covariation_available": true,
+    "heldout_split_available": true
+  },
+  "all_required_pass": false,
+  "mixed_explanation_identifiable_now": false,
+  "irreducible_noise_control_available": false,
+  "surface_matched_mixed_rates_available": false,
+  "cannot_disambiguate_reasons": [
+    "repeated_observation_available=false: each object observed exactly once",
+    "state_observation_available=false: no state features in events"
+  ],
+  "can_proceed_to_1J40a1": false,
+  "policy_decisions_changed": false,
+  "hidden_feature_leakage_detected": false,
+  "oracle_leakage_detected": false,
+  "implementation_status": "fail",
+  "failure_reason": "repeated_observation_available=false: each object observed exactly once; state_observation_available=false: no state features in events"
+}

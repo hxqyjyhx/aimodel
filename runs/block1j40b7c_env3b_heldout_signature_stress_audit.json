@@ -1,0 +1,416 @@
+{
+  "block_id": "1J40b-7c",
+  "elapsed_seconds": 4.4,
+  "implementation_status": "FAIL",
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "stress_test_design": {
+    "test_a": {
+      "description": "Held-out pre_surface signature split",
+      "n_variants": 4,
+      "variants": [
+        {
+          "id": "A1",
+          "description": "Hold out shared sig amb(brownish,heavy_weight)_only (30 obj, positive_net) + unique sig amb(brownish,heavy_weight)+discolored,has_bark_texture (15 obj, non_positive_net)",
+          "n_train": 135,
+          "n_test": 45,
+          "test_pos": 30,
+          "test_nonpos": 15
+        },
+        {
+          "id": "A2",
+          "description": "Hold out shared sig amb(brownish,heavy_weight)+spotted (30 obj, positive_net) + unique sig amb(brownish,heavy_weight)+has_crystal_flecks (15 obj, non_positive_net)",
+          "n_train": 135,
+          "n_test": 45,
+          "test_pos": 30,
+          "test_nonpos": 15
+        },
+        {
+          "id": "A3",
+          "description": "Hold out shared sig amb(greenish,light_weight)+discolored (30 obj, positive_net) + unique sig amb(greenish,light_weight)+has_grip_area (15 obj, non_positive_net)",
+          "n_train": 135,
+          "n_test": 45,
+          "test_pos": 30,
+          "test_nonpos": 15
+        },
+        {
+          "id": "A4",
+          "description": "Hold out shared sig amb(greenish,light_weight)_only (30 obj, positive_net) + unique sig amb(greenish,light_weight)+has_stem_remnant,spotted (15 obj, non_positive_net)",
+          "n_train": 135,
+          "n_test": 45,
+          "test_pos": 30,
+          "test_nonpos": 15
+        }
+      ]
+    },
+    "test_b": {
+      "description": "Held-out cue-combination split",
+      "n_variants": 2,
+      "variants": [
+        {
+          "id": "B1",
+          "description": "Hold out apple N (spotted in nonpos context) + ambient_B only (pos). Training has spotted only in positive contexts (wood_log Z, stone_block Z).",
+          "n_train": 135,
+          "n_test": 45,
+          "test_pos": 30,
+          "test_nonpos": 15
+        },
+        {
+          "id": "B2",
+          "description": "Hold out wood_log N (discolored in nonpos context) + ambient_A only (pos). Training has discolored only in positive contexts (apple Z, pickaxe Z).",
+          "n_train": 135,
+          "n_test": 45,
+          "test_pos": 30,
+          "test_nonpos": 15
+        }
+      ]
+    },
+    "test_c": {
+      "description": "Held-out seed split (LOSO)",
+      "n_variants": 5
+    }
+  },
+  "forbidden_field_audit": {
+    "forbidden_in_model_keys": 0,
+    "hidden_before_reveal_violations": 0
+  },
+  "primary": {
+    "cost": 0.03,
+    "evaluations": {
+      "test_a": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0
+        },
+        "checks": {
+          "learned_policy_net > always_observe_net": false,
+          "learned_policy_net > always_try": true,
+          "observe_rate between 0 and 1": false,
+          "pos_obs_rate > nonpos_obs_rate": false
+        }
+      },
+      "test_b": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.42,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0
+        },
+        "checks": {
+          "learned_policy_net > always_observe_net": false,
+          "learned_policy_net > always_try": true,
+          "observe_rate between 0 and 1": false,
+          "pos_obs_rate > nonpos_obs_rate": false
+        }
+      },
+      "test_c": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.43,
+          "always_obs_net": 0.42,
+          "always_try": 0.25,
+          "oracle_sel": 0.43,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0
+        },
+        "checks": {
+          "learned_policy_net > always_observe_net": true,
+          "learned_policy_net > always_try": true,
+          "observe_rate between 0 and 1": true,
+          "pos_obs_rate > nonpos_obs_rate": true
+        }
+      }
+    },
+    "test_a_variants": [
+      {
+        "variant_id": "A1",
+        "policy_net": 0.42,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      },
+      {
+        "variant_id": "A2",
+        "policy_net": 0.42,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      },
+      {
+        "variant_id": "A3",
+        "policy_net": 0.42,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      },
+      {
+        "variant_id": "A4",
+        "policy_net": 0.42,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      }
+    ],
+    "test_b_variants": [
+      {
+        "variant_id": "B1",
+        "policy_net": 0.42,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      },
+      {
+        "variant_id": "B2",
+        "policy_net": 0.42,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      }
+    ],
+    "test_c_variants": [
+      {
+        "variant_id": "C_seed101",
+        "policy_net": 0.43,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      },
+      {
+        "variant_id": "C_seed103",
+        "policy_net": 0.43,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      },
+      {
+        "variant_id": "C_seed107",
+        "policy_net": 0.43,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      },
+      {
+        "variant_id": "C_seed109",
+        "policy_net": 0.43,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      },
+      {
+        "variant_id": "C_seed113",
+        "policy_net": 0.43,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      }
+    ]
+  },
+  "robustness": {
+    "cost": 0.05,
+    "evaluations": {
+      "test_a": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0
+        },
+        "checks": {
+          "learned_policy_net > always_observe_net": false,
+          "learned_policy_net > always_try": true,
+          "observe_rate between 0 and 1": false,
+          "pos_obs_rate > nonpos_obs_rate": false
+        }
+      },
+      "test_b": {
+        "status": "FAIL",
+        "aggregate": {
+          "n_test": 90,
+          "policy_net": 0.4,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 1.0,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 1.0
+        },
+        "checks": {
+          "learned_policy_net > always_observe_net": false,
+          "learned_policy_net > always_try": true,
+          "observe_rate between 0 and 1": false,
+          "pos_obs_rate > nonpos_obs_rate": false
+        }
+      },
+      "test_c": {
+        "status": "PASS",
+        "aggregate": {
+          "n_test": 180,
+          "policy_net": 0.4167,
+          "always_obs_net": 0.4,
+          "always_try": 0.25,
+          "oracle_sel": 0.4167,
+          "obs_rate": 0.6667,
+          "pos_obs_rate": 1.0,
+          "nonpos_obs_rate": 0.0
+        },
+        "checks": {
+          "learned_policy_net > always_observe_net": true,
+          "learned_policy_net > always_try": true,
+          "observe_rate between 0 and 1": true,
+          "pos_obs_rate > nonpos_obs_rate": true
+        }
+      }
+    },
+    "test_a_variants": [
+      {
+        "variant_id": "A1",
+        "policy_net": 0.4,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      },
+      {
+        "variant_id": "A2",
+        "policy_net": 0.4,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      },
+      {
+        "variant_id": "A3",
+        "policy_net": 0.4,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      },
+      {
+        "variant_id": "A4",
+        "policy_net": 0.4,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      }
+    ],
+    "test_b_variants": [
+      {
+        "variant_id": "B1",
+        "policy_net": 0.4,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      },
+      {
+        "variant_id": "B2",
+        "policy_net": 0.4,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0
+      }
+    ],
+    "test_c_variants": [
+      {
+        "variant_id": "C_seed101",
+        "policy_net": 0.4167,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      },
+      {
+        "variant_id": "C_seed103",
+        "policy_net": 0.4167,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      },
+      {
+        "variant_id": "C_seed107",
+        "policy_net": 0.4167,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      },
+      {
+        "variant_id": "C_seed109",
+        "policy_net": 0.4167,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      },
+      {
+        "variant_id": "C_seed113",
+        "policy_net": 0.4167,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0
+      }
+    ]
+  }
+}

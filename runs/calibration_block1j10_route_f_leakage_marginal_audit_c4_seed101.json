@@ -1,0 +1,1084 @@
+{
+  "block_id": "1J10",
+  "condition": "C4_instance_subtype_cued_v1",
+  "seed": 101,
+  "budget": 1.5,
+  "desc": "Route F leakage and marginal-value audit. No C15F policy claim.",
+  "design_validation": {
+    "local_prevalence_predictor_removed": true,
+    "deployable_vs_diagnostic_separated": true,
+    "C0b_RouteF_uses_only_IOM_and_global_prior": true,
+    "peripheral_information_upper_bound_is_diagnostic_non_deployable": true,
+    "no_ad_hoc_blending": true
+  },
+  "blur_variants": {
+    "F_low": {
+      "d1": 1,
+      "d2": 2,
+      "description": "Minimal peripheral information — only immediate neighbors"
+    },
+    "F_mid": {
+      "d1": 2,
+      "d2": 4,
+      "description": "Moderate coarse local context — small neighborhood"
+    },
+    "F_high": {
+      "d1": 3,
+      "d2": 6,
+      "description": "Stronger local context — larger perceptual field, higher leakage risk"
+    }
+  },
+  "reference_baselines": {
+    "all_false_macro_bal": 0.5,
+    "C_minus_prior_only_macro_bal": 0.5,
+    "C0b_original_macro_bal": 0.5871,
+    "C15b_original_macro_bal": 0.6142,
+    "oracle_original_macro_bal": 1.0,
+    "hidden_category_majority_diagnostic": 0.975
+  },
+  "leakage_audit": {
+    "F_low": {
+      "A1_per_category_hidden_subtype_probe": {
+        "per_category": {
+          "wood_log": {
+            "test": "A1_wood_log",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.5333,
+            "shuffled_label_control": 0.6667,
+            "real_minus_shuffle_gap": -0.1333,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "stone_block": {
+            "test": "A1_stone_block",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.7333,
+            "shuffled_label_control": 0.6,
+            "real_minus_shuffle_gap": 0.1333,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": true,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "apple": {
+            "test": "A1_apple",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.6667,
+            "shuffled_label_control": 0.9333,
+            "real_minus_shuffle_gap": -0.2667,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "wooden_pickaxe": {
+            "test": "A1_wooden_pickaxe",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.4667,
+            "shuffled_label_control": 0.6,
+            "real_minus_shuffle_gap": -0.1333,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          }
+        },
+        "any_fail": false,
+        "failed_categories": []
+      },
+      "A2_global_majority_vs_minority_probe": {
+        "test": "A2_majority_vs_minority",
+        "n_samples": 60,
+        "base_rate_accuracy": 0.8,
+        "cross_validated_accuracy": 0.7333,
+        "shuffled_label_control": 0.7667,
+        "real_minus_shuffle_gap": -0.0333,
+        "exceeds_base_rate_plus_10": false,
+        "gap_is_nontrivial": false,
+        "verdict": "PASS",
+        "notes": "CV accuracy within base_rate + 0.10"
+      },
+      "B_true_affordance_probe": {
+        "per_affordance": {
+          "mine_by_hand_success": {
+            "test": "B_mine_by_hand_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.7,
+            "shuffled_label_control": 0.6833,
+            "real_minus_shuffle_gap": 0.0167,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "mine_with_pickaxe_success": {
+            "verdict": "INCONCLUSIVE_SMALL_SAMPLE"
+          },
+          "craft_plank_success": {
+            "test": "B_craft_plank_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.6667,
+            "shuffled_label_control": 0.7,
+            "real_minus_shuffle_gap": -0.0333,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "eat_success": {
+            "test": "B_eat_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.65,
+            "shuffled_label_control": 0.6833,
+            "real_minus_shuffle_gap": -0.0333,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "use_as_tool_success": {
+            "test": "B_use_as_tool_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.6833,
+            "shuffled_label_control": 0.7333,
+            "real_minus_shuffle_gap": -0.05,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "burn_as_fuel_success": {
+            "test": "B_burn_as_fuel_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.5,
+            "cross_validated_accuracy": 0.4,
+            "shuffled_label_control": 0.5333,
+            "real_minus_shuffle_gap": -0.1333,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          }
+        },
+        "any_fail": false,
+        "failed_affordances": []
+      },
+      "C_hidden_category_probe": {
+        "test": "C_category",
+        "n_samples": 60,
+        "base_rate_accuracy": 0.25,
+        "cross_validated_accuracy": 0.2167,
+        "shuffled_label_control": 0.2333,
+        "real_minus_shuffle_gap": -0.0167,
+        "exceeds_base_rate_plus_10": false,
+        "gap_is_nontrivial": false,
+        "verdict": "PASS",
+        "notes": "CV accuracy within base_rate + 0.10"
+      },
+      "D_public_category_like_recheck": {
+        "macro_bal": 0.5,
+        "per_query": {
+          "need_food": {
+            "tp": 12,
+            "fp": 48,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.2
+          },
+          "need_fuel": {
+            "tp": 30,
+            "fp": 30,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.5
+          },
+          "need_planks": {
+            "tp": 12,
+            "fp": 48,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.2
+          },
+          "need_stone": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 48,
+            "fn": 12,
+            "positive_recall": 0.0,
+            "negative_recall": 1.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.8
+          },
+          "need_tool": {
+            "tp": 12,
+            "fp": 48,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.2
+          }
+        },
+        "original_public_cat_mb_1J8": 0.5,
+        "delta_vs_original": 0.0,
+        "shortcut_deployable": false,
+        "shortcut_invalid": false
+      },
+      "overall_leakage_pass": true,
+      "hard_fail_count": 0,
+      "all_probe_verdicts": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "INCONCLUSIVE_SMALL_SAMPLE",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    "F_mid": {
+      "A1_per_category_hidden_subtype_probe": {
+        "per_category": {
+          "wood_log": {
+            "test": "A1_wood_log",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.7333,
+            "shuffled_label_control": 0.5333,
+            "real_minus_shuffle_gap": 0.2,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": true,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "stone_block": {
+            "test": "A1_stone_block",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.5333,
+            "shuffled_label_control": 0.5333,
+            "real_minus_shuffle_gap": 0.0,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "apple": {
+            "test": "A1_apple",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.8,
+            "shuffled_label_control": 0.7333,
+            "real_minus_shuffle_gap": 0.0667,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": true,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "wooden_pickaxe": {
+            "test": "A1_wooden_pickaxe",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.6667,
+            "shuffled_label_control": 0.5333,
+            "real_minus_shuffle_gap": 0.1333,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": true,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          }
+        },
+        "any_fail": false,
+        "failed_categories": []
+      },
+      "A2_global_majority_vs_minority_probe": {
+        "test": "A2_majority_vs_minority",
+        "n_samples": 60,
+        "base_rate_accuracy": 0.8,
+        "cross_validated_accuracy": 0.7167,
+        "shuffled_label_control": 0.8,
+        "real_minus_shuffle_gap": -0.0833,
+        "exceeds_base_rate_plus_10": false,
+        "gap_is_nontrivial": false,
+        "verdict": "PASS",
+        "notes": "CV accuracy within base_rate + 0.10"
+      },
+      "B_true_affordance_probe": {
+        "per_affordance": {
+          "mine_by_hand_success": {
+            "test": "B_mine_by_hand_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.7167,
+            "shuffled_label_control": 0.7667,
+            "real_minus_shuffle_gap": -0.05,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "mine_with_pickaxe_success": {
+            "verdict": "INCONCLUSIVE_SMALL_SAMPLE"
+          },
+          "craft_plank_success": {
+            "test": "B_craft_plank_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.75,
+            "shuffled_label_control": 0.7167,
+            "real_minus_shuffle_gap": 0.0333,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "eat_success": {
+            "test": "B_eat_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.6333,
+            "shuffled_label_control": 0.65,
+            "real_minus_shuffle_gap": -0.0167,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "use_as_tool_success": {
+            "test": "B_use_as_tool_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.75,
+            "shuffled_label_control": 0.7,
+            "real_minus_shuffle_gap": 0.05,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": true,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "burn_as_fuel_success": {
+            "test": "B_burn_as_fuel_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.5,
+            "cross_validated_accuracy": 0.5167,
+            "shuffled_label_control": 0.5333,
+            "real_minus_shuffle_gap": -0.0167,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          }
+        },
+        "any_fail": false,
+        "failed_affordances": []
+      },
+      "C_hidden_category_probe": {
+        "test": "C_category",
+        "n_samples": 60,
+        "base_rate_accuracy": 0.25,
+        "cross_validated_accuracy": 0.3,
+        "shuffled_label_control": 0.25,
+        "real_minus_shuffle_gap": 0.05,
+        "exceeds_base_rate_plus_10": false,
+        "gap_is_nontrivial": false,
+        "verdict": "PASS",
+        "notes": "CV accuracy within base_rate + 0.10"
+      },
+      "D_public_category_like_recheck": {
+        "macro_bal": 0.5,
+        "per_query": {
+          "need_food": {
+            "tp": 12,
+            "fp": 48,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.2
+          },
+          "need_fuel": {
+            "tp": 30,
+            "fp": 30,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.5
+          },
+          "need_planks": {
+            "tp": 12,
+            "fp": 48,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.2
+          },
+          "need_stone": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 48,
+            "fn": 12,
+            "positive_recall": 0.0,
+            "negative_recall": 1.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.8
+          },
+          "need_tool": {
+            "tp": 12,
+            "fp": 48,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.2
+          }
+        },
+        "original_public_cat_mb_1J8": 0.5,
+        "delta_vs_original": 0.0,
+        "shortcut_deployable": false,
+        "shortcut_invalid": false
+      },
+      "overall_leakage_pass": true,
+      "hard_fail_count": 0,
+      "all_probe_verdicts": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "INCONCLUSIVE_SMALL_SAMPLE",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    },
+    "F_high": {
+      "A1_per_category_hidden_subtype_probe": {
+        "per_category": {
+          "wood_log": {
+            "test": "A1_wood_log",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.6,
+            "shuffled_label_control": 1.0,
+            "real_minus_shuffle_gap": -0.4,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "stone_block": {
+            "test": "A1_stone_block",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.5333,
+            "shuffled_label_control": 0.9333,
+            "real_minus_shuffle_gap": -0.4,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "apple": {
+            "test": "A1_apple",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.6667,
+            "shuffled_label_control": 0.8667,
+            "real_minus_shuffle_gap": -0.2,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "wooden_pickaxe": {
+            "test": "A1_wooden_pickaxe",
+            "n_samples": 15,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.4667,
+            "shuffled_label_control": 0.6667,
+            "real_minus_shuffle_gap": -0.2,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          }
+        },
+        "any_fail": false,
+        "failed_categories": []
+      },
+      "A2_global_majority_vs_minority_probe": {
+        "test": "A2_majority_vs_minority",
+        "n_samples": 60,
+        "base_rate_accuracy": 0.8,
+        "cross_validated_accuracy": 0.8,
+        "shuffled_label_control": 0.6833,
+        "real_minus_shuffle_gap": 0.1167,
+        "exceeds_base_rate_plus_10": false,
+        "gap_is_nontrivial": true,
+        "verdict": "PASS",
+        "notes": "CV accuracy within base_rate + 0.10"
+      },
+      "B_true_affordance_probe": {
+        "per_affordance": {
+          "mine_by_hand_success": {
+            "test": "B_mine_by_hand_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.7167,
+            "shuffled_label_control": 0.65,
+            "real_minus_shuffle_gap": 0.0667,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": true,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "mine_with_pickaxe_success": {
+            "verdict": "INCONCLUSIVE_SMALL_SAMPLE"
+          },
+          "craft_plank_success": {
+            "test": "B_craft_plank_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.7167,
+            "shuffled_label_control": 0.8,
+            "real_minus_shuffle_gap": -0.0833,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "eat_success": {
+            "test": "B_eat_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.6333,
+            "shuffled_label_control": 0.75,
+            "real_minus_shuffle_gap": -0.1167,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "use_as_tool_success": {
+            "test": "B_use_as_tool_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.8,
+            "cross_validated_accuracy": 0.7,
+            "shuffled_label_control": 0.65,
+            "real_minus_shuffle_gap": 0.05,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          },
+          "burn_as_fuel_success": {
+            "test": "B_burn_as_fuel_success",
+            "n_samples": 60,
+            "base_rate_accuracy": 0.5,
+            "cross_validated_accuracy": 0.5333,
+            "shuffled_label_control": 0.6667,
+            "real_minus_shuffle_gap": -0.1333,
+            "exceeds_base_rate_plus_10": false,
+            "gap_is_nontrivial": false,
+            "verdict": "PASS",
+            "notes": "CV accuracy within base_rate + 0.10"
+          }
+        },
+        "any_fail": false,
+        "failed_affordances": []
+      },
+      "C_hidden_category_probe": {
+        "test": "C_category",
+        "n_samples": 60,
+        "base_rate_accuracy": 0.25,
+        "cross_validated_accuracy": 0.2833,
+        "shuffled_label_control": 0.2667,
+        "real_minus_shuffle_gap": 0.0167,
+        "exceeds_base_rate_plus_10": false,
+        "gap_is_nontrivial": false,
+        "verdict": "PASS",
+        "notes": "CV accuracy within base_rate + 0.10"
+      },
+      "D_public_category_like_recheck": {
+        "macro_bal": 0.5,
+        "per_query": {
+          "need_food": {
+            "tp": 12,
+            "fp": 48,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.2
+          },
+          "need_fuel": {
+            "tp": 30,
+            "fp": 30,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.5
+          },
+          "need_planks": {
+            "tp": 12,
+            "fp": 48,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.2
+          },
+          "need_stone": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 48,
+            "fn": 12,
+            "positive_recall": 0.0,
+            "negative_recall": 1.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.8
+          },
+          "need_tool": {
+            "tp": 12,
+            "fp": 48,
+            "tn": 0,
+            "fn": 0,
+            "positive_recall": 1.0,
+            "negative_recall": 0.0,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.2
+          }
+        },
+        "original_public_cat_mb_1J8": 0.5,
+        "delta_vs_original": 0.0,
+        "shortcut_deployable": false,
+        "shortcut_invalid": false
+      },
+      "overall_leakage_pass": true,
+      "hard_fail_count": 0,
+      "all_probe_verdicts": [
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "INCONCLUSIVE_SMALL_SAMPLE",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS",
+        "PASS"
+      ]
+    }
+  },
+  "marginal_value_audit": {
+    "F_low": {
+      "C0b_RouteF_deployable": {
+        "macro_bal": 0.587083,
+        "visit_count": 60,
+        "delta_vs_original_C0b": -0.0,
+        "identical_to_original_C0b": true,
+        "per_query": {
+          "need_food": {
+            "tp": 2,
+            "fp": 0,
+            "tn": 48,
+            "fn": 10,
+            "positive_recall": 0.166667,
+            "negative_recall": 1.0,
+            "balanced_accuracy": 0.583333,
+            "accuracy": 0.833333
+          },
+          "need_fuel": {
+            "tp": 19,
+            "fp": 11,
+            "tn": 19,
+            "fn": 11,
+            "positive_recall": 0.633333,
+            "negative_recall": 0.633333,
+            "balanced_accuracy": 0.633333,
+            "accuracy": 0.633333
+          },
+          "need_planks": {
+            "tp": 3,
+            "fp": 9,
+            "tn": 39,
+            "fn": 9,
+            "positive_recall": 0.25,
+            "negative_recall": 0.8125,
+            "balanced_accuracy": 0.53125,
+            "accuracy": 0.7
+          },
+          "need_stone": {
+            "tp": 1,
+            "fp": 3,
+            "tn": 45,
+            "fn": 11,
+            "positive_recall": 0.083333,
+            "negative_recall": 0.9375,
+            "balanced_accuracy": 0.510417,
+            "accuracy": 0.766667
+          },
+          "need_tool": {
+            "tp": 5,
+            "fp": 3,
+            "tn": 45,
+            "fn": 7,
+            "positive_recall": 0.416667,
+            "negative_recall": 0.9375,
+            "balanced_accuracy": 0.677083,
+            "accuracy": 0.833333
+          }
+        },
+        "label": "deployable",
+        "note": "Predictions identical to original C0b — peripheral signal is aggregate-only, cannot produce per-object predictions for unvisited objects. Route F value is in policy targeting / object selection, not direct classification."
+      },
+      "peripheral_information_upper_bound": {
+        "hard_fail_count": 0,
+        "contains_classifier_extractable_info": false,
+        "near_oracle": false,
+        "A2_majority_vs_minority_cv": 0.6333,
+        "A2_majority_vs_minority": {
+          "test": "UB_A2_majority_vs_minority",
+          "n_samples": 60,
+          "base_rate_accuracy": 0.8,
+          "cross_validated_accuracy": 0.6333,
+          "shuffled_label_control": 0.6833,
+          "real_minus_shuffle_gap": -0.05,
+          "exceeds_base_rate_plus_10": false,
+          "gap_is_nontrivial": false,
+          "verdict": "PASS",
+          "notes": "CV accuracy within base_rate + 0.10"
+        },
+        "C_hidden_category": {
+          "test": "UB_C_category",
+          "n_samples": 60,
+          "base_rate_accuracy": 0.25,
+          "cross_validated_accuracy": 0.1833,
+          "shuffled_label_control": 0.1833,
+          "real_minus_shuffle_gap": 0.0,
+          "exceeds_base_rate_plus_10": false,
+          "gap_is_nontrivial": false,
+          "verdict": "PASS",
+          "notes": "CV accuracy within base_rate + 0.10"
+        },
+        "label": "diagnostic_non_deployable",
+        "note": "Uses best-signal selection + 1-NN LOO classifier. Estimates information upper bound. NOT a deployable policy. Excluded from Pareto frontier."
+      },
+      "random_probe_RouteF_deployable": {
+        "macro_bal": 0.575,
+        "delta_vs_C0b_RouteF_deployable": -0.0121,
+        "label": "deployable",
+        "note": "Standard predictions (IOM for visited, global prior for unvisited). Random probing adds some probe outcomes."
+      },
+      "all_false_macro_bal": 0.5,
+      "C_minus_prior_only_macro_bal": 0.5,
+      "oracle_macro_bal": 1.0,
+      "oracle_minus_C0b_RouteF_deployable": 0.4129,
+      "public_category_like_macro_bal": 0.5,
+      "hidden_category_diagnostic_macro_bal": 0.975,
+      "saturation_status": "ok",
+      "C15b_original_reference": 0.6142,
+      "C0b_original_reference": 0.5871
+    },
+    "F_mid": {
+      "C0b_RouteF_deployable": {
+        "macro_bal": 0.587083,
+        "visit_count": 60,
+        "delta_vs_original_C0b": -0.0,
+        "identical_to_original_C0b": true,
+        "per_query": {
+          "need_food": {
+            "tp": 2,
+            "fp": 0,
+            "tn": 48,
+            "fn": 10,
+            "positive_recall": 0.166667,
+            "negative_recall": 1.0,
+            "balanced_accuracy": 0.583333,
+            "accuracy": 0.833333
+          },
+          "need_fuel": {
+            "tp": 19,
+            "fp": 11,
+            "tn": 19,
+            "fn": 11,
+            "positive_recall": 0.633333,
+            "negative_recall": 0.633333,
+            "balanced_accuracy": 0.633333,
+            "accuracy": 0.633333
+          },
+          "need_planks": {
+            "tp": 3,
+            "fp": 9,
+            "tn": 39,
+            "fn": 9,
+            "positive_recall": 0.25,
+            "negative_recall": 0.8125,
+            "balanced_accuracy": 0.53125,
+            "accuracy": 0.7
+          },
+          "need_stone": {
+            "tp": 1,
+            "fp": 3,
+            "tn": 45,
+            "fn": 11,
+            "positive_recall": 0.083333,
+            "negative_recall": 0.9375,
+            "balanced_accuracy": 0.510417,
+            "accuracy": 0.766667
+          },
+          "need_tool": {
+            "tp": 5,
+            "fp": 3,
+            "tn": 45,
+            "fn": 7,
+            "positive_recall": 0.416667,
+            "negative_recall": 0.9375,
+            "balanced_accuracy": 0.677083,
+            "accuracy": 0.833333
+          }
+        },
+        "label": "deployable",
+        "note": "Predictions identical to original C0b — peripheral signal is aggregate-only, cannot produce per-object predictions for unvisited objects. Route F value is in policy targeting / object selection, not direct classification."
+      },
+      "peripheral_information_upper_bound": {
+        "hard_fail_count": 0,
+        "contains_classifier_extractable_info": false,
+        "near_oracle": false,
+        "A2_majority_vs_minority_cv": 0.7333,
+        "A2_majority_vs_minority": {
+          "test": "UB_A2_majority_vs_minority",
+          "n_samples": 60,
+          "base_rate_accuracy": 0.8,
+          "cross_validated_accuracy": 0.7333,
+          "shuffled_label_control": 0.7333,
+          "real_minus_shuffle_gap": 0.0,
+          "exceeds_base_rate_plus_10": false,
+          "gap_is_nontrivial": false,
+          "verdict": "PASS",
+          "notes": "CV accuracy within base_rate + 0.10"
+        },
+        "C_hidden_category": {
+          "test": "UB_C_category",
+          "n_samples": 60,
+          "base_rate_accuracy": 0.25,
+          "cross_validated_accuracy": 0.2,
+          "shuffled_label_control": 0.3833,
+          "real_minus_shuffle_gap": -0.1833,
+          "exceeds_base_rate_plus_10": false,
+          "gap_is_nontrivial": false,
+          "verdict": "PASS",
+          "notes": "CV accuracy within base_rate + 0.10"
+        },
+        "label": "diagnostic_non_deployable",
+        "note": "Uses best-signal selection + 1-NN LOO classifier. Estimates information upper bound. NOT a deployable policy. Excluded from Pareto frontier."
+      },
+      "random_probe_RouteF_deployable": {
+        "macro_bal": 0.575,
+        "delta_vs_C0b_RouteF_deployable": -0.0121,
+        "label": "deployable",
+        "note": "Standard predictions (IOM for visited, global prior for unvisited). Random probing adds some probe outcomes."
+      },
+      "all_false_macro_bal": 0.5,
+      "C_minus_prior_only_macro_bal": 0.5,
+      "oracle_macro_bal": 1.0,
+      "oracle_minus_C0b_RouteF_deployable": 0.4129,
+      "public_category_like_macro_bal": 0.5,
+      "hidden_category_diagnostic_macro_bal": 0.975,
+      "saturation_status": "ok",
+      "C15b_original_reference": 0.6142,
+      "C0b_original_reference": 0.5871
+    },
+    "F_high": {
+      "C0b_RouteF_deployable": {
+        "macro_bal": 0.587083,
+        "visit_count": 60,
+        "delta_vs_original_C0b": -0.0,
+        "identical_to_original_C0b": true,
+        "per_query": {
+          "need_food": {
+            "tp": 2,
+            "fp": 0,
+            "tn": 48,
+            "fn": 10,
+            "positive_recall": 0.166667,
+            "negative_recall": 1.0,
+            "balanced_accuracy": 0.583333,
+            "accuracy": 0.833333
+          },
+          "need_fuel": {
+            "tp": 19,
+            "fp": 11,
+            "tn": 19,
+            "fn": 11,
+            "positive_recall": 0.633333,
+            "negative_recall": 0.633333,
+            "balanced_accuracy": 0.633333,
+            "accuracy": 0.633333
+          },
+          "need_planks": {
+            "tp": 3,
+            "fp": 9,
+            "tn": 39,
+            "fn": 9,
+            "positive_recall": 0.25,
+            "negative_recall": 0.8125,
+            "balanced_accuracy": 0.53125,
+            "accuracy": 0.7
+          },
+          "need_stone": {
+            "tp": 1,
+            "fp": 3,
+            "tn": 45,
+            "fn": 11,
+            "positive_recall": 0.083333,
+            "negative_recall": 0.9375,
+            "balanced_accuracy": 0.510417,
+            "accuracy": 0.766667
+          },
+          "need_tool": {
+            "tp": 5,
+            "fp": 3,
+            "tn": 45,
+            "fn": 7,
+            "positive_recall": 0.416667,
+            "negative_recall": 0.9375,
+            "balanced_accuracy": 0.677083,
+            "accuracy": 0.833333
+          }
+        },
+        "label": "deployable",
+        "note": "Predictions identical to original C0b — peripheral signal is aggregate-only, cannot produce per-object predictions for unvisited objects. Route F value is in policy targeting / object selection, not direct classification."
+      },
+      "peripheral_information_upper_bound": {
+        "hard_fail_count": 0,
+        "contains_classifier_extractable_info": false,
+        "near_oracle": false,
+        "A2_majority_vs_minority_cv": 0.7667,
+        "A2_majority_vs_minority": {
+          "test": "UB_A2_majority_vs_minority",
+          "n_samples": 60,
+          "base_rate_accuracy": 0.8,
+          "cross_validated_accuracy": 0.7667,
+          "shuffled_label_control": 0.5333,
+          "real_minus_shuffle_gap": 0.2333,
+          "exceeds_base_rate_plus_10": false,
+          "gap_is_nontrivial": true,
+          "verdict": "PASS",
+          "notes": "CV accuracy within base_rate + 0.10"
+        },
+        "C_hidden_category": {
+          "test": "UB_C_category",
+          "n_samples": 60,
+          "base_rate_accuracy": 0.25,
+          "cross_validated_accuracy": 0.2333,
+          "shuffled_label_control": 0.2833,
+          "real_minus_shuffle_gap": -0.05,
+          "exceeds_base_rate_plus_10": false,
+          "gap_is_nontrivial": false,
+          "verdict": "PASS",
+          "notes": "CV accuracy within base_rate + 0.10"
+        },
+        "label": "diagnostic_non_deployable",
+        "note": "Uses best-signal selection + 1-NN LOO classifier. Estimates information upper bound. NOT a deployable policy. Excluded from Pareto frontier."
+      },
+      "random_probe_RouteF_deployable": {
+        "macro_bal": 0.575,
+        "delta_vs_C0b_RouteF_deployable": -0.0121,
+        "label": "deployable",
+        "note": "Standard predictions (IOM for visited, global prior for unvisited). Random probing adds some probe outcomes."
+      },
+      "all_false_macro_bal": 0.5,
+      "C_minus_prior_only_macro_bal": 0.5,
+      "oracle_macro_bal": 1.0,
+      "oracle_minus_C0b_RouteF_deployable": 0.4129,
+      "public_category_like_macro_bal": 0.5,
+      "hidden_category_diagnostic_macro_bal": 0.975,
+      "saturation_status": "ok",
+      "C15b_original_reference": 0.6142,
+      "C0b_original_reference": 0.5871
+    }
+  },
+  "variant_assessment": {
+    "F_low": {
+      "leakage_pass": true,
+      "marginal_value_pass": true,
+      "C0b_RouteF_deployable_macro_bal": 0.587083,
+      "C0b_RouteF_identical_to_original_C0b": true,
+      "oracle_gap": 0.4129,
+      "public_cat_mb": 0.5,
+      "saturation": "ok",
+      "peripheral_ub_near_oracle": false,
+      "peripheral_ub_hard_fails": 0
+    },
+    "F_mid": {
+      "leakage_pass": true,
+      "marginal_value_pass": true,
+      "C0b_RouteF_deployable_macro_bal": 0.587083,
+      "C0b_RouteF_identical_to_original_C0b": true,
+      "oracle_gap": 0.4129,
+      "public_cat_mb": 0.5,
+      "saturation": "ok",
+      "peripheral_ub_near_oracle": false,
+      "peripheral_ub_hard_fails": 0
+    },
+    "F_high": {
+      "leakage_pass": true,
+      "marginal_value_pass": true,
+      "C0b_RouteF_deployable_macro_bal": 0.587083,
+      "C0b_RouteF_identical_to_original_C0b": true,
+      "oracle_gap": 0.4129,
+      "public_cat_mb": 0.5,
+      "saturation": "ok",
+      "peripheral_ub_near_oracle": false,
+      "peripheral_ub_hard_fails": 0
+    }
+  },
+  "recommendation": {
+    "recommended_route_f_variant": "F_mid",
+    "route_f_audit_passed": true,
+    "proceed_to_1J11_c15f_policy_eval": true,
+    "no_c15f_policy_claim_in_block_1J10": true,
+    "ready_for_multiseed": false
+  }
+}

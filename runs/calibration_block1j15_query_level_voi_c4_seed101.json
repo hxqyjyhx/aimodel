@@ -1,0 +1,1275 @@
+{
+  "block_id": "1J15",
+  "condition": "C4_instance_subtype_cued_v1",
+  "seed": 101,
+  "budget": 1.5,
+  "cost_weight": 0.5,
+  "desc": "Query-Level VOI Probe Selection Diagnostic. Tests query-relevant direct probe ranking with three variants: C18a (ablation, VOI-gated), C18b (primary, fixed budget), C18c (net VOI gate).",
+  "iom_architecture": {
+    "no_cross_test_object_propagation": true,
+    "global_recompute_equivalent_to_local": true
+  },
+  "diagnostic_caveats": {
+    "test_object_probes_do_not_propagate": true,
+    "local_query_confidence_nearly_monotonic_with_affordance_utility": true,
+    "c18_not_full_query_level_VOI": true,
+    "c18_primarily_tests_cost_stop_calibration_not_value_model": true
+  },
+  "c15b_c18b_pair_overlap": {
+    "c15b_probe_pairs": "[('test_wooden_pickaxe_006', 'burn_as_fuel'), ('test_wooden_pickaxe_003', 'burn_as_fuel'), ('test_stone_block_001', 'mine_by_hand'), ('test_apple_007', 'eat'), ('test_wood_log_002', 'craft_plank'), ('test_stone_block_009', 'mine_by_hand'), ('test_apple_010', 'eat'), ('test_stone_block_000', 'mine_by_hand')]",
+    "c18b_probe_pairs": "[('test_wood_log_011', 'mine_by_hand'), ('test_stone_block_010', 'burn_as_fuel'), ('test_wooden_pickaxe_007', 'burn_as_fuel'), ('test_apple_013', 'burn_as_fuel'), ('test_wooden_pickaxe_010', 'use_as_tool'), ('test_stone_block_000', 'mine_by_hand')]",
+    "overlap_pairs": "[('test_stone_block_000', 'mine_by_hand')]",
+    "overlap_count": 1,
+    "overlap_pct": 16.7,
+    "unique_to_c18b": "[('test_apple_013', 'burn_as_fuel'), ('test_stone_block_010', 'burn_as_fuel'), ('test_wood_log_011', 'mine_by_hand'), ('test_wooden_pickaxe_007', 'burn_as_fuel'), ('test_wooden_pickaxe_010', 'use_as_tool')]",
+    "unique_to_c18b_count": 5,
+    "unique_to_c15b": "[('test_apple_007', 'eat'), ('test_apple_010', 'eat'), ('test_stone_block_001', 'mine_by_hand'), ('test_stone_block_009', 'mine_by_hand'), ('test_wood_log_002', 'craft_plank'), ('test_wooden_pickaxe_003', 'burn_as_fuel'), ('test_wooden_pickaxe_006', 'burn_as_fuel')]",
+    "unique_to_c15b_count": 7,
+    "ranking_differs_mainly_due_to_cost_penalty_removal": true
+  },
+  "design_validation": {
+    "no_environment_change": true,
+    "no_budget_cost_change": true,
+    "no_multi_seed": true,
+    "no_hidden_labels_in_policy": true,
+    "no_oracle_probe_outcomes": true,
+    "no_IOM_update_change": true,
+    "no_Route_F_F2_global_coarse_map": true
+  },
+  "baselines": {
+    "all_false": {
+      "macro_query_balanced_accuracy": 0.5,
+      "macro_query_accuracy": 0.74,
+      "mean_positive_recall": 0.0,
+      "mean_negative_recall": 1.0,
+      "per_query": {
+        "need_food": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_fuel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 30,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.5
+        },
+        "need_planks": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_stone": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        }
+      },
+      "visit_count": 0,
+      "observe_count": 0,
+      "probe_count": 0,
+      "total_cost": 0.0,
+      "normalized_cost": 0.0,
+      "policy_type": "floor"
+    },
+    "C_minus_prior_only": {
+      "macro_query_balanced_accuracy": 0.5,
+      "macro_query_accuracy": 0.38,
+      "mean_positive_recall": 0.8,
+      "mean_negative_recall": 0.2,
+      "per_query": {
+        "need_food": {
+          "tp": 12,
+          "fp": 48,
+          "tn": 0,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.2
+        },
+        "need_fuel": {
+          "tp": 30,
+          "fp": 30,
+          "tn": 0,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.5
+        },
+        "need_planks": {
+          "tp": 12,
+          "fp": 48,
+          "tn": 0,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.2
+        },
+        "need_stone": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 12,
+          "fp": 48,
+          "tn": 0,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.2
+        }
+      },
+      "visit_count": 0,
+      "observe_count": 0,
+      "probe_count": 0,
+      "total_cost": 0.0,
+      "normalized_cost": 0.0,
+      "policy_type": "no_interaction"
+    },
+    "C0b_original": {
+      "macro_query_balanced_accuracy": 0.587083,
+      "macro_query_accuracy": 0.753333,
+      "mean_positive_recall": 0.31,
+      "mean_negative_recall": 0.864167,
+      "per_query": {
+        "need_food": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 3,
+          "fp": 9,
+          "tn": 39,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.7
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 3,
+          "tn": 45,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.766667
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 3,
+          "tn": 45,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.677083,
+          "accuracy": 0.833333
+        }
+      },
+      "visit_count": 60,
+      "observe_count": 60,
+      "probe_count": 0,
+      "total_cost": 1.13,
+      "normalized_cost": 0.7533,
+      "policy_type": "observe_only"
+    },
+    "C13_instance_VOI_original": {
+      "macro_query_balanced_accuracy": 0.573333,
+      "macro_query_accuracy": 0.753333,
+      "mean_positive_recall": 0.2,
+      "mean_negative_recall": 0.946667,
+      "per_query": {
+        "need_food": {
+          "tp": 5,
+          "fp": 0,
+          "tn": 48,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.708333,
+          "accuracy": 0.883333
+        },
+        "need_fuel": {
+          "tp": 5,
+          "fp": 3,
+          "tn": 27,
+          "fn": 25,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.9,
+          "balanced_accuracy": 0.533333,
+          "accuracy": 0.533333
+        },
+        "need_planks": {
+          "tp": 2,
+          "fp": 7,
+          "tn": 41,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.854167,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.716667
+        },
+        "need_stone": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_tool": {
+          "tp": 1,
+          "fp": 1,
+          "tn": 47,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.979167,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.8
+        }
+      },
+      "visit_count": 22,
+      "observe_count": 22,
+      "probe_count": 22,
+      "total_cost": 1.45,
+      "normalized_cost": 0.9667,
+      "policy_type": "instance_VOI"
+    },
+    "C15b_probe_reserve_original": {
+      "macro_query_balanced_accuracy": 0.614167,
+      "macro_query_accuracy": 0.766667,
+      "mean_positive_recall": 0.36,
+      "mean_negative_recall": 0.868333,
+      "per_query": {
+        "need_food": {
+          "tp": 3,
+          "fp": 0,
+          "tn": 48,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.625,
+          "accuracy": 0.85
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 4,
+          "fp": 9,
+          "tn": 39,
+          "fn": 8,
+          "positive_recall": 0.333333,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.572917,
+          "accuracy": 0.716667
+        },
+        "need_stone": {
+          "tp": 2,
+          "fp": 3,
+          "tn": 45,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.552083,
+          "accuracy": 0.783333
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 2,
+          "tn": 46,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.958333,
+          "balanced_accuracy": 0.6875,
+          "accuracy": 0.85
+        }
+      },
+      "visit_count": 57,
+      "observe_count": 57,
+      "probe_count": 8,
+      "total_cost": 1.485,
+      "normalized_cost": 0.99,
+      "policy_type": "two_pass_VOI"
+    },
+    "C18a_local_query_confidence_VOI": {
+      "macro_query_balanced_accuracy": 0.614167,
+      "macro_query_accuracy": 0.766667,
+      "mean_positive_recall": 0.36,
+      "mean_negative_recall": 0.868333,
+      "per_query": {
+        "need_food": {
+          "tp": 3,
+          "fp": 0,
+          "tn": 48,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.625,
+          "accuracy": 0.85
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 4,
+          "fp": 9,
+          "tn": 39,
+          "fn": 8,
+          "positive_recall": 0.333333,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.572917,
+          "accuracy": 0.716667
+        },
+        "need_stone": {
+          "tp": 2,
+          "fp": 3,
+          "tn": 45,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.552083,
+          "accuracy": 0.783333
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 2,
+          "tn": 46,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.958333,
+          "balanced_accuracy": 0.6875,
+          "accuracy": 0.85
+        }
+      },
+      "visit_count": 57,
+      "observe_count": 57,
+      "probe_count": 8,
+      "total_cost": 1.485,
+      "normalized_cost": 0.99,
+      "policy_type": "local_query_confidence_VOI_ablation"
+    },
+    "C18b_query_relevant_fixed_probe_budget": {
+      "macro_query_balanced_accuracy": 0.5975,
+      "macro_query_accuracy": 0.76,
+      "mean_positive_recall": 0.326667,
+      "mean_negative_recall": 0.868333,
+      "per_query": {
+        "need_food": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 3,
+          "fp": 9,
+          "tn": 39,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.7
+        },
+        "need_stone": {
+          "tp": 2,
+          "fp": 3,
+          "tn": 45,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.552083,
+          "accuracy": 0.783333
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 2,
+          "tn": 46,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.958333,
+          "balanced_accuracy": 0.6875,
+          "accuracy": 0.85
+        }
+      },
+      "visit_count": 57,
+      "observe_count": 57,
+      "probe_count": 6,
+      "total_cost": 1.495,
+      "normalized_cost": 0.9967,
+      "policy_type": "query_relevant_fixed_budget_primary"
+    },
+    "C18c_query_relevant_netVOI": {
+      "macro_query_balanced_accuracy": 0.604167,
+      "macro_query_accuracy": 0.766667,
+      "mean_positive_recall": 0.333333,
+      "mean_negative_recall": 0.875,
+      "per_query": {
+        "need_food": {
+          "tp": 3,
+          "fp": 0,
+          "tn": 48,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.625,
+          "accuracy": 0.85
+        },
+        "need_fuel": {
+          "tp": 20,
+          "fp": 10,
+          "tn": 20,
+          "fn": 10,
+          "positive_recall": 0.666667,
+          "negative_recall": 0.666667,
+          "balanced_accuracy": 0.666667,
+          "accuracy": 0.666667
+        },
+        "need_planks": {
+          "tp": 3,
+          "fp": 9,
+          "tn": 39,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.7
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 3,
+          "tn": 45,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.766667
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 2,
+          "tn": 46,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.958333,
+          "balanced_accuracy": 0.6875,
+          "accuracy": 0.85
+        }
+      },
+      "visit_count": 57,
+      "observe_count": 57,
+      "probe_count": 7,
+      "total_cost": 1.46,
+      "normalized_cost": 0.9733,
+      "policy_type": "query_relevant_netVOI"
+    },
+    "C_oracle_full_information": {
+      "macro_query_balanced_accuracy": 1.0,
+      "macro_query_accuracy": 1.0,
+      "mean_positive_recall": 1.0,
+      "mean_negative_recall": 1.0,
+      "per_query": {
+        "need_food": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_fuel": {
+          "tp": 30,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_planks": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_stone": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_tool": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        }
+      },
+      "visit_count": 0,
+      "observe_count": 0,
+      "probe_count": 0,
+      "total_cost": 0.0,
+      "normalized_cost": 0.0,
+      "policy_type": "oracle"
+    }
+  },
+  "C18a_details": {
+    "variant": "ablation",
+    "scoring": "local_query_confidence_VOI_gated",
+    "macro_query_balanced_accuracy": 0.614167,
+    "mean_positive_recall": 0.36,
+    "mean_negative_recall": 0.868333,
+    "per_query": {
+      "need_food": {
+        "tp": 3,
+        "fp": 0,
+        "tn": 48,
+        "fn": 9,
+        "positive_recall": 0.25,
+        "negative_recall": 1.0,
+        "balanced_accuracy": 0.625,
+        "accuracy": 0.85
+      },
+      "need_fuel": {
+        "tp": 19,
+        "fp": 11,
+        "tn": 19,
+        "fn": 11,
+        "positive_recall": 0.633333,
+        "negative_recall": 0.633333,
+        "balanced_accuracy": 0.633333,
+        "accuracy": 0.633333
+      },
+      "need_planks": {
+        "tp": 4,
+        "fp": 9,
+        "tn": 39,
+        "fn": 8,
+        "positive_recall": 0.333333,
+        "negative_recall": 0.8125,
+        "balanced_accuracy": 0.572917,
+        "accuracy": 0.716667
+      },
+      "need_stone": {
+        "tp": 2,
+        "fp": 3,
+        "tn": 45,
+        "fn": 10,
+        "positive_recall": 0.166667,
+        "negative_recall": 0.9375,
+        "balanced_accuracy": 0.552083,
+        "accuracy": 0.783333
+      },
+      "need_tool": {
+        "tp": 5,
+        "fp": 2,
+        "tn": 46,
+        "fn": 7,
+        "positive_recall": 0.416667,
+        "negative_recall": 0.958333,
+        "balanced_accuracy": 0.6875,
+        "accuracy": 0.85
+      }
+    },
+    "visit_count": 57,
+    "probe_count": 8,
+    "total_cost": 1.485,
+    "normalized_cost": 0.99,
+    "selected_probe_objects": [
+      "test_wooden_pickaxe_006",
+      "test_wooden_pickaxe_003",
+      "test_stone_block_001",
+      "test_apple_007",
+      "test_wood_log_002",
+      "test_stone_block_009",
+      "test_apple_010",
+      "test_stone_block_000"
+    ],
+    "selected_probe_actions": [
+      "burn_as_fuel",
+      "burn_as_fuel",
+      "mine_by_hand",
+      "eat",
+      "craft_plank",
+      "mine_by_hand",
+      "eat",
+      "mine_by_hand"
+    ],
+    "selected_probe_action_summary": {
+      "burn_as_fuel": 2,
+      "mine_by_hand": 3,
+      "eat": 2,
+      "craft_plank": 1
+    },
+    "effective_probe_count": 0,
+    "zero_gain_probe_count": 0,
+    "harmful_probe_count": 8,
+    "probe_effects": [
+      {
+        "oid": "test_wooden_pickaxe_006",
+        "action": "burn_as_fuel",
+        "outcome": 1.0,
+        "pre_query_gain": 0.492458,
+        "post_query_gain": 0.001,
+        "delta": -0.491458,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_wooden_pickaxe_003",
+        "action": "burn_as_fuel",
+        "outcome": 1.0,
+        "pre_query_gain": 0.49889,
+        "post_query_gain": 0.001,
+        "delta": -0.49789,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_stone_block_001",
+        "action": "mine_by_hand",
+        "outcome": 1.0,
+        "pre_query_gain": 0.493056,
+        "post_query_gain": 0.001,
+        "delta": -0.492056,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_apple_007",
+        "action": "eat",
+        "outcome": 1.0,
+        "pre_query_gain": 0.497696,
+        "post_query_gain": 0.001,
+        "delta": -0.496696,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_wood_log_002",
+        "action": "craft_plank",
+        "outcome": 1.0,
+        "pre_query_gain": 0.487846,
+        "post_query_gain": 0.001,
+        "delta": -0.486846,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_stone_block_009",
+        "action": "mine_by_hand",
+        "outcome": 0.0,
+        "pre_query_gain": 0.492194,
+        "post_query_gain": 0.001,
+        "delta": -0.491194,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_apple_010",
+        "action": "eat",
+        "outcome": 1.0,
+        "pre_query_gain": 0.495421,
+        "post_query_gain": 0.001,
+        "delta": -0.494421,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_stone_block_000",
+        "action": "mine_by_hand",
+        "outcome": 0.0,
+        "pre_query_gain": 0.49739,
+        "post_query_gain": 0.001,
+        "delta": -0.49639,
+        "is_zero_gain": false,
+        "is_harmful": true
+      }
+    ],
+    "delta_vs_C15b": 0.0,
+    "runtime_seconds": 2.1
+  },
+  "C18b_details": {
+    "variant": "primary",
+    "scoring": "query_relevant_fixed_probe_budget",
+    "stop_rule": "fixed_k_equal_C15b_probe_count",
+    "target_probe_count": 8,
+    "macro_query_balanced_accuracy": 0.5975,
+    "mean_positive_recall": 0.326667,
+    "mean_negative_recall": 0.868333,
+    "per_query": {
+      "need_food": {
+        "tp": 2,
+        "fp": 0,
+        "tn": 48,
+        "fn": 10,
+        "positive_recall": 0.166667,
+        "negative_recall": 1.0,
+        "balanced_accuracy": 0.583333,
+        "accuracy": 0.833333
+      },
+      "need_fuel": {
+        "tp": 19,
+        "fp": 11,
+        "tn": 19,
+        "fn": 11,
+        "positive_recall": 0.633333,
+        "negative_recall": 0.633333,
+        "balanced_accuracy": 0.633333,
+        "accuracy": 0.633333
+      },
+      "need_planks": {
+        "tp": 3,
+        "fp": 9,
+        "tn": 39,
+        "fn": 9,
+        "positive_recall": 0.25,
+        "negative_recall": 0.8125,
+        "balanced_accuracy": 0.53125,
+        "accuracy": 0.7
+      },
+      "need_stone": {
+        "tp": 2,
+        "fp": 3,
+        "tn": 45,
+        "fn": 10,
+        "positive_recall": 0.166667,
+        "negative_recall": 0.9375,
+        "balanced_accuracy": 0.552083,
+        "accuracy": 0.783333
+      },
+      "need_tool": {
+        "tp": 5,
+        "fp": 2,
+        "tn": 46,
+        "fn": 7,
+        "positive_recall": 0.416667,
+        "negative_recall": 0.958333,
+        "balanced_accuracy": 0.6875,
+        "accuracy": 0.85
+      }
+    },
+    "visit_count": 57,
+    "probe_count": 6,
+    "total_cost": 1.495,
+    "normalized_cost": 0.9967,
+    "selected_probe_objects": [
+      "test_wood_log_011",
+      "test_stone_block_010",
+      "test_wooden_pickaxe_007",
+      "test_apple_013",
+      "test_wooden_pickaxe_010",
+      "test_stone_block_000"
+    ],
+    "selected_probe_actions": [
+      "mine_by_hand",
+      "burn_as_fuel",
+      "burn_as_fuel",
+      "burn_as_fuel",
+      "use_as_tool",
+      "mine_by_hand"
+    ],
+    "selected_probe_action_summary": {
+      "mine_by_hand": 2,
+      "burn_as_fuel": 3,
+      "use_as_tool": 1
+    },
+    "effective_probe_count": 0,
+    "zero_gain_probe_count": 0,
+    "harmful_probe_count": 6,
+    "probe_effects": [
+      {
+        "oid": "test_wood_log_011",
+        "action": "mine_by_hand",
+        "outcome": 1.0,
+        "pre_query_score": 0.499951,
+        "post_query_score": 0.001,
+        "delta": -0.498951,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_stone_block_010",
+        "action": "burn_as_fuel",
+        "outcome": 0.0,
+        "pre_query_score": 0.499776,
+        "post_query_score": 0.001,
+        "delta": -0.498776,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_wooden_pickaxe_007",
+        "action": "burn_as_fuel",
+        "outcome": 1.0,
+        "pre_query_score": 0.499768,
+        "post_query_score": 0.001,
+        "delta": -0.498768,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_apple_013",
+        "action": "burn_as_fuel",
+        "outcome": 0.0,
+        "pre_query_score": 0.499632,
+        "post_query_score": 0.001,
+        "delta": -0.498632,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_wooden_pickaxe_010",
+        "action": "use_as_tool",
+        "outcome": 1.0,
+        "pre_query_score": 0.49952,
+        "post_query_score": 0.001,
+        "delta": -0.49852,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_stone_block_000",
+        "action": "mine_by_hand",
+        "outcome": 0.0,
+        "pre_query_score": 0.49739,
+        "post_query_score": 0.001,
+        "delta": -0.49639,
+        "is_zero_gain": false,
+        "is_harmful": true
+      }
+    ],
+    "delta_vs_C15b": -0.016667,
+    "runtime_seconds": 0.5
+  },
+  "C18c_details": {
+    "variant": "netVOI",
+    "scoring": "query_relevant_netVOI_gated",
+    "stop_rule": "positive_net_VOI_with_cost_penalty",
+    "macro_query_balanced_accuracy": 0.604167,
+    "mean_positive_recall": 0.333333,
+    "mean_negative_recall": 0.875,
+    "per_query": {
+      "need_food": {
+        "tp": 3,
+        "fp": 0,
+        "tn": 48,
+        "fn": 9,
+        "positive_recall": 0.25,
+        "negative_recall": 1.0,
+        "balanced_accuracy": 0.625,
+        "accuracy": 0.85
+      },
+      "need_fuel": {
+        "tp": 20,
+        "fp": 10,
+        "tn": 20,
+        "fn": 10,
+        "positive_recall": 0.666667,
+        "negative_recall": 0.666667,
+        "balanced_accuracy": 0.666667,
+        "accuracy": 0.666667
+      },
+      "need_planks": {
+        "tp": 3,
+        "fp": 9,
+        "tn": 39,
+        "fn": 9,
+        "positive_recall": 0.25,
+        "negative_recall": 0.8125,
+        "balanced_accuracy": 0.53125,
+        "accuracy": 0.7
+      },
+      "need_stone": {
+        "tp": 1,
+        "fp": 3,
+        "tn": 45,
+        "fn": 11,
+        "positive_recall": 0.083333,
+        "negative_recall": 0.9375,
+        "balanced_accuracy": 0.510417,
+        "accuracy": 0.766667
+      },
+      "need_tool": {
+        "tp": 5,
+        "fp": 2,
+        "tn": 46,
+        "fn": 7,
+        "positive_recall": 0.416667,
+        "negative_recall": 0.958333,
+        "balanced_accuracy": 0.6875,
+        "accuracy": 0.85
+      }
+    },
+    "visit_count": 57,
+    "probe_count": 7,
+    "total_cost": 1.46,
+    "normalized_cost": 0.9733,
+    "selected_probe_objects": [
+      "test_wooden_pickaxe_003",
+      "test_apple_007",
+      "test_wood_log_011",
+      "test_apple_001",
+      "test_wooden_pickaxe_007",
+      "test_stone_block_010",
+      "test_stone_block_013"
+    ],
+    "selected_probe_actions": [
+      "burn_as_fuel",
+      "eat",
+      "mine_by_hand",
+      "burn_as_fuel",
+      "burn_as_fuel",
+      "burn_as_fuel",
+      "burn_as_fuel"
+    ],
+    "selected_probe_action_summary": {
+      "burn_as_fuel": 5,
+      "eat": 1,
+      "mine_by_hand": 1
+    },
+    "effective_probe_count": 0,
+    "zero_gain_probe_count": 0,
+    "harmful_probe_count": 7,
+    "probe_effects": [
+      {
+        "oid": "test_wooden_pickaxe_003",
+        "action": "burn_as_fuel",
+        "outcome": 1.0,
+        "pre_query_score": 0.49889,
+        "post_query_score": 0.001,
+        "delta": -0.49789,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_apple_007",
+        "action": "eat",
+        "outcome": 1.0,
+        "pre_query_score": 0.497696,
+        "post_query_score": 0.001,
+        "delta": -0.496696,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_wood_log_011",
+        "action": "mine_by_hand",
+        "outcome": 1.0,
+        "pre_query_score": 0.499951,
+        "post_query_score": 0.001,
+        "delta": -0.498951,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_apple_001",
+        "action": "burn_as_fuel",
+        "outcome": 0.0,
+        "pre_query_score": 0.499092,
+        "post_query_score": 0.001,
+        "delta": -0.498092,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_wooden_pickaxe_007",
+        "action": "burn_as_fuel",
+        "outcome": 1.0,
+        "pre_query_score": 0.499768,
+        "post_query_score": 0.001,
+        "delta": -0.498768,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_stone_block_010",
+        "action": "burn_as_fuel",
+        "outcome": 0.0,
+        "pre_query_score": 0.499776,
+        "post_query_score": 0.001,
+        "delta": -0.498776,
+        "is_zero_gain": false,
+        "is_harmful": true
+      },
+      {
+        "oid": "test_stone_block_013",
+        "action": "burn_as_fuel",
+        "outcome": 0.0,
+        "pre_query_score": 0.497415,
+        "post_query_score": 0.001,
+        "delta": -0.496415,
+        "is_zero_gain": false,
+        "is_harmful": true
+      }
+    ],
+    "delta_vs_C15b": -0.01,
+    "runtime_seconds": 1.9
+  },
+  "comparisons": {
+    "C18b_vs_C15b_primary": {
+      "delta_macro_bal": -0.016667,
+      "delta_positive_recall": -0.033333,
+      "delta_negative_recall": 0.0,
+      "delta_visit_count": 0,
+      "delta_probe_count": -2,
+      "C18b_hits_10pct_target": false,
+      "C18b_gap_capture_pct": 2.52
+    },
+    "C18a_vs_C15b_ablation": {
+      "delta_macro_bal": 0.0,
+      "delta_visit_count": 0,
+      "delta_probe_count": 0
+    },
+    "C18c_vs_C15b": {
+      "delta_macro_bal": -0.01,
+      "delta_probe_count": -1
+    },
+    "C18b_vs_C18c_stop_rule": {
+      "C18b_macro_bal": 0.5975,
+      "C18c_macro_bal": 0.604167,
+      "delta": -0.006667,
+      "C18b_probe_count": 6,
+      "C18c_probe_count": 7,
+      "fixed_budget_beats_netVOI": false,
+      "interpretation": "Net VOI matches or beats fixed budget → stop rule is adequate."
+    },
+    "gap_capture": {
+      "C0b_base": 0.587083,
+      "oracle_ceiling": 1.0,
+      "oracle_c0b_gap": 0.412917,
+      "target_10pct_threshold": 0.6284,
+      "C15b_gap_capture_pct": 6.56,
+      "C18a_gap_capture_pct": 6.56,
+      "C18b_gap_capture_pct": 2.52,
+      "C18c_gap_capture_pct": 4.14
+    },
+    "per_query_breakdown": {
+      "need_food": {
+        "C15b_bal_acc": 0.625,
+        "C15b_pos_recall": 0.25,
+        "C15b_neg_recall": 1.0,
+        "C18b_bal_acc": 0.583333,
+        "C18b_pos_recall": 0.166667,
+        "C18b_neg_recall": 1.0,
+        "C18b_delta_vs_C15b": -0.041667
+      },
+      "need_fuel": {
+        "C15b_bal_acc": 0.633333,
+        "C15b_pos_recall": 0.633333,
+        "C15b_neg_recall": 0.633333,
+        "C18b_bal_acc": 0.633333,
+        "C18b_pos_recall": 0.633333,
+        "C18b_neg_recall": 0.633333,
+        "C18b_delta_vs_C15b": 0.0
+      },
+      "need_planks": {
+        "C15b_bal_acc": 0.572917,
+        "C15b_pos_recall": 0.333333,
+        "C15b_neg_recall": 0.8125,
+        "C18b_bal_acc": 0.53125,
+        "C18b_pos_recall": 0.25,
+        "C18b_neg_recall": 0.8125,
+        "C18b_delta_vs_C15b": -0.041667
+      },
+      "need_stone": {
+        "C15b_bal_acc": 0.552083,
+        "C15b_pos_recall": 0.166667,
+        "C15b_neg_recall": 0.9375,
+        "C18b_bal_acc": 0.552083,
+        "C18b_pos_recall": 0.166667,
+        "C18b_neg_recall": 0.9375,
+        "C18b_delta_vs_C15b": 0.0
+      },
+      "need_tool": {
+        "C15b_bal_acc": 0.6875,
+        "C15b_pos_recall": 0.416667,
+        "C15b_neg_recall": 0.958333,
+        "C18b_bal_acc": 0.6875,
+        "C18b_pos_recall": 0.416667,
+        "C18b_neg_recall": 0.958333,
+        "C18b_delta_vs_C15b": 0.0
+      }
+    },
+    "probe_selection": {
+      "C15b_probe_count": 8,
+      "C15b_probe_pairs": "[('test_wooden_pickaxe_006', 'burn_as_fuel'), ('test_wooden_pickaxe_003', 'burn_as_fuel'), ('test_stone_block_001', 'mine_by_hand'), ('test_apple_007', 'eat'), ('test_wood_log_002', 'craft_plank'), ('test_stone_block_009', 'mine_by_hand'), ('test_apple_010', 'eat'), ('test_stone_block_000', 'mine_by_hand')]",
+      "C15b_action_distribution": {
+        "burn_as_fuel": 2,
+        "mine_by_hand": 3,
+        "eat": 2,
+        "craft_plank": 1
+      },
+      "C18a_probe_count": 8,
+      "C18a_action_distribution": {
+        "burn_as_fuel": 2,
+        "mine_by_hand": 3,
+        "eat": 2,
+        "craft_plank": 1
+      },
+      "C18b_probe_count": 6,
+      "C18b_probe_pairs": "[('test_wood_log_011', 'mine_by_hand'), ('test_stone_block_010', 'burn_as_fuel'), ('test_wooden_pickaxe_007', 'burn_as_fuel'), ('test_apple_013', 'burn_as_fuel'), ('test_wooden_pickaxe_010', 'use_as_tool'), ('test_stone_block_000', 'mine_by_hand')]",
+      "C18b_action_distribution": {
+        "mine_by_hand": 2,
+        "burn_as_fuel": 3,
+        "use_as_tool": 1
+      },
+      "C18b_target_count": 8,
+      "C18c_probe_count": 7,
+      "C18c_action_distribution": {
+        "burn_as_fuel": 5,
+        "eat": 1,
+        "mine_by_hand": 1
+      },
+      "c18b_c15b_pair_overlap": {
+        "C15b_probe_pairs": "[('test_apple_007', 'eat'), ('test_apple_010', 'eat'), ('test_stone_block_000', 'mine_by_hand'), ('test_stone_block_001', 'mine_by_hand'), ('test_stone_block_009', 'mine_by_hand'), ('test_wood_log_002', 'craft_plank'), ('test_wooden_pickaxe_003', 'burn_as_fuel'), ('test_wooden_pickaxe_006', 'burn_as_fuel')]",
+        "C18b_probe_pairs": "[('test_apple_013', 'burn_as_fuel'), ('test_stone_block_000', 'mine_by_hand'), ('test_stone_block_010', 'burn_as_fuel'), ('test_wood_log_011', 'mine_by_hand'), ('test_wooden_pickaxe_007', 'burn_as_fuel'), ('test_wooden_pickaxe_010', 'use_as_tool')]",
+        "overlap_pairs": "[('test_stone_block_000', 'mine_by_hand')]",
+        "overlap_count": 1,
+        "overlap_pct_of_c18b": 16.7,
+        "unique_to_C18b": "[('test_apple_013', 'burn_as_fuel'), ('test_stone_block_010', 'burn_as_fuel'), ('test_wood_log_011', 'mine_by_hand'), ('test_wooden_pickaxe_007', 'burn_as_fuel'), ('test_wooden_pickaxe_010', 'use_as_tool')]",
+        "unique_to_C18b_count": 5,
+        "unique_to_C15b": "[('test_apple_007', 'eat'), ('test_apple_010', 'eat'), ('test_stone_block_001', 'mine_by_hand'), ('test_stone_block_009', 'mine_by_hand'), ('test_wood_log_002', 'craft_plank'), ('test_wooden_pickaxe_003', 'burn_as_fuel'), ('test_wooden_pickaxe_006', 'burn_as_fuel')]",
+        "unique_to_C15b_count": 7,
+        "ranking_differs_mainly_due_to_cost_penalty_removal": true
+      }
+    },
+    "iom_architecture_notes": {
+      "no_cross_test_object_propagation": true,
+      "global_recompute_equivalent_to_local": true,
+      "note": "IOM._direct_outcomes only affects the probed test object. Test objects are not in _train_oids, so k-NN retrieval for other test objects does not include probed test objects. Cross-object propagation requires a different IOM architecture."
+    },
+    "1J14_oracle_UB_reference": {
+      "C15b_UB_macro_bal": 0.8546,
+      "C15b_UB_delta_vs_C15b": 0.2404,
+      "IOM_k8_macro_bal": 0.6488,
+      "IOM_k8_delta_vs_C15b": 0.0346,
+      "note": "Non-deployable oracle upper bounds from 1J14."
+    }
+  },
+  "interpretation": {
+    "primary_variant": "C18b_query_relevant_fixed_probe_budget",
+    "ablation_variant": "C18a_local_query_confidence_VOI",
+    "netVOI_variant": "C18c_query_relevant_netVOI",
+    "c18b_macro_bal": 0.5975,
+    "c18b_delta_vs_c15b": -0.016667,
+    "c18b_gap_capture_vs_c0b": 0.025228,
+    "c18b_hits_10pct_target": false,
+    "query_relevant_ranking_supported": false,
+    "candidate_ready_for_small_multiseed": false,
+    "ready_for_multiseed": false,
+    "no_cross_test_object_propagation": true,
+    "c18_global_recompute_equivalent_to_local": true,
+    "c18b_interpretation": "C18b reaches 0.5975 (-0.0167 vs C15b), below C15b. C15b–C18b (object, action) pair overlap: 1/6 = 16.7%. Overlap pairs: [('test_stone_block_000', 'mine_by_hand')]. Unique to C18b: [('test_apple_013', 'burn_as_fuel'), ('test_stone_block_010', 'burn_as_fuel'), ('test_wood_log_011', 'mine_by_hand'), ('test_wooden_pickaxe_007', 'burn_as_fuel'), ('test_wooden_pickaxe_010', 'use_as_tool')]. Unique to C15b: [('test_apple_007', 'eat'), ('test_apple_010', 'eat'), ('test_stone_block_001', 'mine_by_hand'), ('test_stone_block_009', 'mine_by_hand'), ('test_wood_log_002', 'craft_plank'), ('test_wooden_pickaxe_003', 'burn_as_fuel'), ('test_wooden_pickaxe_006', 'burn_as_fuel')]. Query-relevant ranking DEGRADES performance. Under current IOM architecture, test-object probes do not propagate to other objects, and local query-confidence gain min(p,1-p) is nearly monotonic with C15b's affordance-utility gain. The fixed budget forces probes that the VOI cost gate would have skipped, resulting in budget wasted on low-value probes. The missing ingredient is likely confident-error detection / calibration-aware probe value, not simple uncertainty. Do not claim C18 is full query-level VOI.",
+    "c18a_interpretation": "C18a at 0.6142 (delta vs C15b: +0.0000). See per-query breakdown for differences.",
+    "stop_rule_interpretation": "C18c (net VOI, 7 probes) outperforms C18b (fixed budget, 6 probes) by +0.0067. The net VOI stop rule effectively filters out low-value probes.",
+    "per_query_interpretation": {
+      "need_food": "degraded (-0.0417)",
+      "need_fuel": "unchanged (0.0000)",
+      "need_planks": "degraded (-0.0417)",
+      "need_stone": "unchanged (0.0000)",
+      "need_tool": "unchanged (0.0000)"
+    }
+  }
+}

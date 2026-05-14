@@ -1,0 +1,1596 @@
+{
+  "block_id": "1J19d",
+  "condition": "C4_instance_subtype_cued_v1",
+  "smoke_seed": 101,
+  "budget": 1.5,
+  "n_episodes": 5,
+  "risk_alpha": 5.0,
+  "max_risk": 2.0,
+  "prior_violation_threshold": 0.6,
+  "min_violation_support": 2,
+  "macro_drop_tolerance": -0.01,
+  "injected_deviation_features": [
+    "brittle_surface",
+    "damp_texture",
+    "hollow_sound",
+    "treated_surface"
+  ],
+  "n_deceptive_objects": 13,
+  "c15b_macro_bal": 0.5975,
+  "c15b_probed_n": 7,
+  "selection_diffs_B_vs_A": [
+    {
+      "avoided_count": 0,
+      "avoided_true_violations": 0,
+      "avoided_effective_probes": 0,
+      "new_count": 0,
+      "new_violations": 0,
+      "new_effective_probes": 0,
+      "avoided_details": [],
+      "new_details": []
+    },
+    {
+      "avoided_count": 5,
+      "avoided_true_violations": 2,
+      "avoided_effective_probes": 5,
+      "new_count": 5,
+      "new_violations": 2,
+      "new_effective_probes": 5,
+      "avoided_details": [
+        {
+          "oid": "test_stone_block_005",
+          "action": "mine_by_hand",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_003",
+          "action": "eat",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wood_log_000",
+          "action": "craft_plank",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_planks",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "damp_texture",
+            "treated_surface"
+          ]
+        },
+        {
+          "oid": "test_apple_005",
+          "action": "eat",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_002",
+          "action": "mine_by_hand",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "brittle_surface",
+            "hollow_sound"
+          ]
+        }
+      ],
+      "new_details": [
+        {
+          "oid": "test_wood_log_006",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_005",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_004",
+          "action": "mine_by_hand",
+          "was_violation_in_var": true,
+          "was_effective_in_var": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_007",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": true,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wood_log_002",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        }
+      ]
+    },
+    {
+      "avoided_count": 7,
+      "avoided_true_violations": 5,
+      "avoided_effective_probes": 7,
+      "new_count": 7,
+      "new_violations": 2,
+      "new_effective_probes": 5,
+      "avoided_details": [
+        {
+          "oid": "test_stone_block_003",
+          "action": "craft_plank",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_planks",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_005",
+          "action": "mine_by_hand",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wood_log_006",
+          "action": "craft_plank",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_planks",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wood_log_011",
+          "action": "craft_plank",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_planks",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_012",
+          "action": "eat",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wooden_pickaxe_011",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_008",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        }
+      ],
+      "new_details": [
+        {
+          "oid": "test_wood_log_006",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wood_log_011",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_013",
+          "action": "use_as_tool",
+          "was_violation_in_var": true,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wood_log_014",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_003",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": true,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wood_log_004",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_005",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        }
+      ]
+    },
+    {
+      "avoided_count": 7,
+      "avoided_true_violations": 4,
+      "avoided_effective_probes": 7,
+      "new_count": 7,
+      "new_violations": 2,
+      "new_effective_probes": 2,
+      "avoided_details": [
+        {
+          "oid": "test_wooden_pickaxe_008",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_007",
+          "action": "eat",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_004",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "brittle_surface",
+            "damp_texture"
+          ]
+        },
+        {
+          "oid": "test_stone_block_005",
+          "action": "mine_by_hand",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_009",
+          "action": "craft_plank",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_planks",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_012",
+          "action": "eat",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wood_log_010",
+          "action": "craft_plank",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_planks",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        }
+      ],
+      "new_details": [
+        {
+          "oid": "test_stone_block_004",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_000",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_001",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_001",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_000",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_002",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": true,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "brittle_surface",
+            "hollow_sound"
+          ],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_009",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": true,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "brittle_surface",
+            "hollow_sound"
+          ],
+          "risk_penalty": 0.0
+        }
+      ]
+    },
+    {
+      "avoided_count": 7,
+      "avoided_true_violations": 3,
+      "avoided_effective_probes": 7,
+      "new_count": 6,
+      "new_violations": 1,
+      "new_effective_probes": 6,
+      "avoided_details": [
+        {
+          "oid": "test_wood_log_002",
+          "action": "craft_plank",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_planks",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wood_log_001",
+          "action": "craft_plank",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_planks",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "damp_texture",
+            "treated_surface"
+          ]
+        },
+        {
+          "oid": "test_apple_011",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_000",
+          "action": "eat",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wooden_pickaxe_011",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_005",
+          "action": "eat",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_000",
+          "action": "mine_by_hand",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        }
+      ],
+      "new_details": [
+        {
+          "oid": "test_wood_log_006",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_000",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_012",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_013",
+          "action": "use_as_tool",
+          "was_violation_in_var": true,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_001",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_004",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        }
+      ]
+    }
+  ],
+  "selection_diffs_B_vs_C": [
+    {
+      "avoided_count": 0,
+      "avoided_true_violations": 0,
+      "avoided_effective_probes": 0,
+      "new_count": 0,
+      "new_violations": 0,
+      "new_effective_probes": 0,
+      "avoided_details": [],
+      "new_details": []
+    },
+    {
+      "avoided_count": 5,
+      "avoided_true_violations": 2,
+      "avoided_effective_probes": 2,
+      "new_count": 5,
+      "new_violations": 1,
+      "new_effective_probes": 5,
+      "avoided_details": [
+        {
+          "oid": "test_wood_log_013",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_A": false,
+          "was_effective_in_A": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_006",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "brittle_surface",
+            "damp_texture"
+          ]
+        },
+        {
+          "oid": "test_stone_block_011",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_A": false,
+          "was_effective_in_A": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_001",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_A": false,
+          "was_effective_in_A": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_010",
+          "action": "burn_as_fuel",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        }
+      ],
+      "new_details": [
+        {
+          "oid": "test_wood_log_006",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_005",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wood_log_013",
+          "action": "mine_by_hand",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_004",
+          "action": "mine_by_hand",
+          "was_violation_in_var": true,
+          "was_effective_in_var": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_001",
+          "action": "mine_by_hand",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        }
+      ]
+    },
+    {
+      "avoided_count": 6,
+      "avoided_true_violations": 2,
+      "avoided_effective_probes": 3,
+      "new_count": 7,
+      "new_violations": 2,
+      "new_effective_probes": 5,
+      "avoided_details": [
+        {
+          "oid": "test_wood_log_013",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_A": false,
+          "was_effective_in_A": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_005",
+          "action": "mine_by_hand",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_003",
+          "action": "eat",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_001",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_A": false,
+          "was_effective_in_A": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_000",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_A": false,
+          "was_effective_in_A": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_008",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        }
+      ],
+      "new_details": [
+        {
+          "oid": "test_wood_log_006",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wood_log_011",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_013",
+          "action": "use_as_tool",
+          "was_violation_in_var": true,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wood_log_014",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_003",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": true,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wood_log_004",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_005",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        }
+      ]
+    },
+    {
+      "avoided_count": 5,
+      "avoided_true_violations": 3,
+      "avoided_effective_probes": 5,
+      "new_count": 7,
+      "new_violations": 2,
+      "new_effective_probes": 2,
+      "avoided_details": [
+        {
+          "oid": "test_stone_block_010",
+          "action": "craft_plank",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_planks",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wood_log_011",
+          "action": "burn_as_fuel",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_005",
+          "action": "mine_by_hand",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_012",
+          "action": "eat",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wooden_pickaxe_011",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        }
+      ],
+      "new_details": [
+        {
+          "oid": "test_stone_block_004",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_000",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_001",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_001",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_000",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": false,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_002",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": true,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "brittle_surface",
+            "hollow_sound"
+          ],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_stone_block_009",
+          "action": "mine_with_pickaxe",
+          "was_violation_in_var": true,
+          "was_effective_in_var": false,
+          "query": "need_stone",
+          "family": "stone-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "brittle_surface",
+            "hollow_sound"
+          ],
+          "risk_penalty": 0.0
+        }
+      ]
+    },
+    {
+      "avoided_count": 7,
+      "avoided_true_violations": 6,
+      "avoided_effective_probes": 7,
+      "new_count": 6,
+      "new_violations": 1,
+      "new_effective_probes": 6,
+      "avoided_details": [
+        {
+          "oid": "test_wooden_pickaxe_008",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_008",
+          "action": "burn_as_fuel",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_stone_block_007",
+          "action": "burn_as_fuel",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wood_log_003",
+          "action": "burn_as_fuel",
+          "was_violation_in_A": false,
+          "was_effective_in_A": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_wood_log_000",
+          "action": "burn_as_fuel",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": true,
+          "injected_deviation_present": [
+            "damp_texture",
+            "treated_surface"
+          ]
+        },
+        {
+          "oid": "test_apple_013",
+          "action": "burn_as_fuel",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        },
+        {
+          "oid": "test_apple_008",
+          "action": "eat",
+          "was_violation_in_A": true,
+          "was_effective_in_A": true,
+          "query": "need_food",
+          "family": "apple-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": []
+        }
+      ],
+      "new_details": [
+        {
+          "oid": "test_wood_log_006",
+          "action": "burn_as_fuel",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_fuel",
+          "family": "wood-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_000",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_012",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_013",
+          "action": "use_as_tool",
+          "was_violation_in_var": true,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_001",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        },
+        {
+          "oid": "test_wooden_pickaxe_004",
+          "action": "use_as_tool",
+          "was_violation_in_var": false,
+          "was_effective_in_var": true,
+          "query": "need_tool",
+          "family": "tool-like",
+          "soft_prior": 0.85,
+          "is_deceptive": false,
+          "injected_deviation_present": [],
+          "risk_penalty": 0.0
+        }
+      ]
+    }
+  ],
+  "total_avoided_effective_probes_by_B": 26,
+  "total_avoided_violations_by_B": 14,
+  "risk_weight_groups_B_full": {
+    "A_injected_deviation": {
+      "count_nonzero": 14,
+      "total_abs_risk_weight": 7.06208,
+      "max_risk_weight": 0.9673,
+      "average_risk_weight": 0.504434,
+      "percentage_of_total_risk_mass": 25.52
+    },
+    "B_type_family": {
+      "count_nonzero": 56,
+      "total_abs_risk_weight": 18.854963,
+      "max_risk_weight": 0.966907,
+      "average_risk_weight": 0.336696,
+      "percentage_of_total_risk_mass": 68.13
+    },
+    "C_positional_or_context": {
+      "count_nonzero": 6,
+      "total_abs_risk_weight": 1.386823,
+      "max_risk_weight": 0.488272,
+      "average_risk_weight": 0.231137,
+      "percentage_of_total_risk_mass": 5.01
+    },
+    "D_other": {
+      "count_nonzero": 2,
+      "total_abs_risk_weight": 0.373131,
+      "max_risk_weight": 0.192924,
+      "average_risk_weight": 0.186565,
+      "percentage_of_total_risk_mass": 1.35
+    }
+  },
+  "risk_memory_diffusion_detected": true,
+  "top_risk_features_B_full": [
+    {
+      "feature": "brittle_surface",
+      "goal": "need_stone",
+      "action": "mine_with_pickaxe",
+      "risk_weight": 0.9673,
+      "feature_group": "A_injected_deviation"
+    },
+    {
+      "feature": "hollow_sound",
+      "goal": "need_stone",
+      "action": "mine_with_pickaxe",
+      "risk_weight": 0.9673,
+      "feature_group": "A_injected_deviation"
+    },
+    {
+      "feature": "has_peel_texture",
+      "goal": "need_fuel",
+      "action": "burn_as_fuel",
+      "risk_weight": 0.966907,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "has_stem_remnant",
+      "goal": "need_fuel",
+      "action": "burn_as_fuel",
+      "risk_weight": 0.966907,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "block_like",
+      "goal": "need_tool",
+      "action": "use_as_tool",
+      "risk_weight": 0.781968,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "grayish",
+      "goal": "need_tool",
+      "action": "use_as_tool",
+      "risk_weight": 0.781968,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "has_granular_surface",
+      "goal": "need_fuel",
+      "action": "burn_as_fuel",
+      "risk_weight": 0.781968,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "has_bark_texture",
+      "goal": "need_fuel",
+      "action": "burn_as_fuel",
+      "risk_weight": 0.781968,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "has_stem_remnant",
+      "goal": "need_stone",
+      "action": "mine_with_pickaxe",
+      "risk_weight": 0.730778,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "greenish",
+      "goal": "need_tool",
+      "action": "use_as_tool",
+      "risk_weight": 0.521312,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "has_peel_texture",
+      "goal": "need_tool",
+      "action": "use_as_tool",
+      "risk_weight": 0.521312,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "has_stem_remnant",
+      "goal": "need_tool",
+      "action": "use_as_tool",
+      "risk_weight": 0.521312,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "round_small",
+      "goal": "need_tool",
+      "action": "use_as_tool",
+      "risk_weight": 0.521312,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "light_weight",
+      "goal": "need_fuel",
+      "action": "burn_as_fuel",
+      "risk_weight": 0.521312,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "round_small",
+      "goal": "need_fuel",
+      "action": "burn_as_fuel",
+      "risk_weight": 0.521312,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "brittle_surface",
+      "goal": "need_tool",
+      "action": "use_as_tool",
+      "risk_weight": 0.521312,
+      "feature_group": "A_injected_deviation"
+    },
+    {
+      "feature": "damp_texture",
+      "goal": "need_tool",
+      "action": "use_as_tool",
+      "risk_weight": 0.521312,
+      "feature_group": "A_injected_deviation"
+    },
+    {
+      "feature": "long_shape",
+      "goal": "need_tool",
+      "action": "use_as_tool",
+      "risk_weight": 0.521312,
+      "feature_group": "B_type_family"
+    },
+    {
+      "feature": "brittle_surface",
+      "goal": "need_fuel",
+      "action": "burn_as_fuel",
+      "risk_weight": 0.521312,
+      "feature_group": "A_injected_deviation"
+    },
+    {
+      "feature": "damp_texture",
+      "goal": "need_fuel",
+      "action": "burn_as_fuel",
+      "risk_weight": 0.521312,
+      "feature_group": "A_injected_deviation"
+    }
+  ],
+  "macro_drop_primary_query": "need_food",
+  "macro_drop_primary_family": "mixed",
+  "avoided_effective_probe_count": 26,
+  "avoided_true_positive_probe_count": 26,
+  "conservative_underprobing_detected": true,
+  "query_drops_final_episode": [
+    {
+      "query": "need_food",
+      "A_bal": 0.596154,
+      "B_bal": 0.533654,
+      "delta": -0.0625
+    },
+    {
+      "query": "need_stone",
+      "A_bal": 0.526144,
+      "B_bal": 0.470588,
+      "delta": -0.0556
+    },
+    {
+      "query": "need_planks",
+      "A_bal": 0.59375,
+      "B_bal": 0.552083,
+      "delta": -0.0417
+    },
+    {
+      "query": "need_fuel",
+      "A_bal": 0.571429,
+      "B_bal": 0.591429,
+      "delta": 0.02
+    },
+    {
+      "query": "need_tool",
+      "A_bal": 0.697917,
+      "B_bal": 0.75,
+      "delta": 0.0521
+    }
+  ],
+  "B_dev_only": {
+    "mean_macro_bal": 0.5843,
+    "total_prior_violations": 20,
+    "total_repeated_prior_violations": 6,
+    "delta_pv_vs_A": 1,
+    "macro_delta_vs_A": -0.0046,
+    "beats_C_dev_only": true
+  },
+  "C_dev_only_total_pv": 21,
+  "risk_penalty_scale_grid": {
+    "0.25": {
+      "B_full": {
+        "total_prior_violations": 12,
+        "repeated_prior_violations": 1,
+        "mean_macro_bal": 0.5662,
+        "delta_pv_vs_A": -7,
+        "macro_delta_vs_A": -0.0227
+      },
+      "B_dev_only": {
+        "total_prior_violations": 20,
+        "repeated_prior_violations": 6,
+        "mean_macro_bal": 0.5843,
+        "delta_pv_vs_A": 1,
+        "macro_delta_vs_A": -0.0046
+      }
+    },
+    "0.5": {
+      "B_full": {
+        "total_prior_violations": 12,
+        "repeated_prior_violations": 1,
+        "mean_macro_bal": 0.5662,
+        "delta_pv_vs_A": -7,
+        "macro_delta_vs_A": -0.0227
+      },
+      "B_dev_only": {
+        "total_prior_violations": 20,
+        "repeated_prior_violations": 6,
+        "mean_macro_bal": 0.5843,
+        "delta_pv_vs_A": 1,
+        "macro_delta_vs_A": -0.0046
+      }
+    },
+    "1.0": {
+      "B_full": {
+        "total_prior_violations": 12,
+        "repeated_prior_violations": 1,
+        "mean_macro_bal": 0.5662,
+        "delta_pv_vs_A": -7,
+        "macro_delta_vs_A": -0.0227
+      },
+      "B_dev_only": {
+        "total_prior_violations": 20,
+        "repeated_prior_violations": 6,
+        "mean_macro_bal": 0.5843,
+        "delta_pv_vs_A": 1,
+        "macro_delta_vs_A": -0.0046
+      }
+    }
+  },
+  "diagnostic_result": "ready_for_small_multiseed",
+  "best_risk_penalty_scale": 0.25,
+  "best_variant": "B_full",
+  "penalty_too_strong_detected": false,
+  "insufficient_sample_problem": false,
+  "macro_tradeoff_acceptable_best": false,
+  "feature_risk_memory_supported": false,
+  "ready_for_small_multiseed": true,
+  "B_full_total_pv": 12,
+  "C_full_total_pv": 19,
+  "B_dev_only_total_pv": 20,
+  "B_full_macro_delta_vs_A": -0.0227,
+  "B_dev_only_macro_delta_vs_A": -0.0046,
+  "recommended_next_route": "run_small_multiseed_1j19d",
+  "elapsed_s": 50.3
+}

@@ -1,0 +1,362 @@
+{
+  "block_id": "1J40a-2",
+  "condition": "C5_mixed_source_identifiability_v0",
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "elapsed_seconds": 28.4,
+  "configuration": {
+    "confidence_threshold": 0.1,
+    "margin_threshold": 0.04,
+    "min_support": 3,
+    "min_disagreeing_actions_for_split": 2,
+    "min_repeat_pairs_for_noise": 1
+  },
+  "aggregate": {
+    "total_mixed_cases": 308,
+    "predicted_counts": {
+      "observation_gap": 46,
+      "state_condition": 127,
+      "irreducible_noise": 59,
+      "unresolved": 69,
+      "identity_split": 7
+    },
+    "confusion_matrix": {
+      "identity_split": {
+        "observation_gap": 7,
+        "state_condition": 21,
+        "unresolved": 24,
+        "irreducible_noise": 6,
+        "identity_split": 7
+      },
+      "observation_gap": {
+        "state_condition": 17,
+        "irreducible_noise": 17,
+        "observation_gap": 31,
+        "unresolved": 12
+      },
+      "state_condition": {
+        "unresolved": 11,
+        "state_condition": 53,
+        "irreducible_noise": 6
+      },
+      "irreducible_noise": {
+        "unresolved": 22,
+        "irreducible_noise": 30,
+        "state_condition": 36,
+        "observation_gap": 8
+      }
+    },
+    "macro_accuracy": 0.395,
+    "per_class_recall": {
+      "observation_gap": 0.4026,
+      "state_condition": 0.7571,
+      "identity_split": 0.1077,
+      "irreducible_noise": 0.3125
+    },
+    "unresolved_rate": 0.224,
+    "over_split_rate": 0.0,
+    "noise_overfit_rate": 0.4915,
+    "heldout_prediction_available": true,
+    "all_records_have_source_ids": true,
+    "hidden_feature_leakage_detected_any": false,
+    "oracle_leakage_detected_any": false,
+    "policy_decisions_changed": false,
+    "candidate_split_performed": false,
+    "state_condition_created": false,
+    "over_split_decreased": true,
+    "noise_overfit_decreased": true,
+    "unresolved_increased": true,
+    "state_condition_recall_ok": true,
+    "preferred_over_split_met": true,
+    "preferred_noise_overfit_met": false,
+    "preferred_unresolved_met": true,
+    "implementation_status": "pass",
+    "failure_reason": "none"
+  },
+  "calibration_curve": {
+    "sweep_confidence_thresholds": [
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ],
+    "sweep_margin_thresholds": [
+      0.0,
+      0.04,
+      0.08,
+      0.12,
+      0.16
+    ],
+    "num_configs_tested": 25,
+    "best_safety_config": {
+      "confidence_threshold": 0.1,
+      "margin_threshold": 0.04,
+      "metrics": {
+        "total_mixed_cases": 308,
+        "predicted_counts": {
+          "observation_gap": 46,
+          "state_condition": 127,
+          "irreducible_noise": 59,
+          "unresolved": 69,
+          "identity_split": 7
+        },
+        "confusion_matrix": {
+          "identity_split": {
+            "observation_gap": 7,
+            "state_condition": 21,
+            "unresolved": 24,
+            "irreducible_noise": 6,
+            "identity_split": 7
+          },
+          "observation_gap": {
+            "state_condition": 17,
+            "irreducible_noise": 17,
+            "observation_gap": 31,
+            "unresolved": 12
+          },
+          "state_condition": {
+            "unresolved": 11,
+            "state_condition": 53,
+            "irreducible_noise": 6
+          },
+          "irreducible_noise": {
+            "unresolved": 22,
+            "irreducible_noise": 30,
+            "state_condition": 36,
+            "observation_gap": 8
+          }
+        },
+        "macro_accuracy": 0.395,
+        "per_class_recall": {
+          "observation_gap": 0.4026,
+          "state_condition": 0.7571,
+          "identity_split": 0.1077,
+          "irreducible_noise": 0.3125
+        },
+        "unresolved_rate": 0.224,
+        "over_split_rate": 0.0,
+        "noise_overfit_rate": 0.4915,
+        "per_class_total": {
+          "observation_gap": 77,
+          "state_condition": 70,
+          "identity_split": 65,
+          "irreducible_noise": 96
+        },
+        "per_class_correct": {
+          "observation_gap": 31,
+          "state_condition": 53,
+          "identity_split": 7,
+          "irreducible_noise": 30
+        }
+      }
+    },
+    "best_accuracy_config": {
+      "confidence_threshold": 0.1,
+      "margin_threshold": 0.0,
+      "metrics": {
+        "total_mixed_cases": 308,
+        "predicted_counts": {
+          "observation_gap": 46,
+          "state_condition": 129,
+          "irreducible_noise": 59,
+          "unresolved": 56,
+          "identity_split": 18
+        },
+        "confusion_matrix": {
+          "identity_split": {
+            "observation_gap": 7,
+            "state_condition": 21,
+            "unresolved": 20,
+            "irreducible_noise": 6,
+            "identity_split": 11
+          },
+          "observation_gap": {
+            "state_condition": 17,
+            "irreducible_noise": 17,
+            "observation_gap": 31,
+            "unresolved": 12
+          },
+          "state_condition": {
+            "unresolved": 11,
+            "state_condition": 53,
+            "irreducible_noise": 6
+          },
+          "irreducible_noise": {
+            "state_condition": 38,
+            "irreducible_noise": 30,
+            "unresolved": 13,
+            "observation_gap": 8,
+            "identity_split": 7
+          }
+        },
+        "macro_accuracy": 0.4104,
+        "per_class_recall": {
+          "observation_gap": 0.4026,
+          "state_condition": 0.7571,
+          "identity_split": 0.1692,
+          "irreducible_noise": 0.3125
+        },
+        "unresolved_rate": 0.1818,
+        "over_split_rate": 0.3889,
+        "noise_overfit_rate": 0.4915,
+        "per_class_total": {
+          "observation_gap": 77,
+          "state_condition": 70,
+          "identity_split": 65,
+          "irreducible_noise": 96
+        },
+        "per_class_correct": {
+          "observation_gap": 31,
+          "state_condition": 53,
+          "identity_split": 11,
+          "irreducible_noise": 30
+        }
+      }
+    },
+    "selected_config": {
+      "confidence_threshold": 0.1,
+      "margin_threshold": 0.04,
+      "selection_rule": "prefer_safety"
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 101,
+      "total_mixed_cases": 59,
+      "predicted_counts": {
+        "observation_gap": 13,
+        "state_condition": 24,
+        "irreducible_noise": 11,
+        "unresolved": 11
+      },
+      "macro_accuracy": 0.3552,
+      "per_class_recall": {
+        "observation_gap": 0.4762,
+        "state_condition": 0.6667,
+        "identity_split": 0.0,
+        "irreducible_noise": 0.2778
+      },
+      "unresolved_rate": 0.1864,
+      "over_split_rate": 0.0,
+      "noise_overfit_rate": 0.5455,
+      "heldout_prediction_available": true,
+      "all_records_have_source_ids": true,
+      "hidden_feature_leakage_detected": false,
+      "oracle_leakage_detected": false,
+      "candidate_split_performed": false,
+      "state_condition_created": false
+    },
+    {
+      "seed": 103,
+      "total_mixed_cases": 68,
+      "predicted_counts": {
+        "state_condition": 33,
+        "irreducible_noise": 12,
+        "unresolved": 10,
+        "observation_gap": 13
+      },
+      "macro_accuracy": 0.4023,
+      "per_class_recall": {
+        "observation_gap": 0.4167,
+        "state_condition": 0.9333,
+        "identity_split": 0.0,
+        "irreducible_noise": 0.2593
+      },
+      "unresolved_rate": 0.1471,
+      "over_split_rate": 0.0,
+      "noise_overfit_rate": 0.4167,
+      "heldout_prediction_available": true,
+      "all_records_have_source_ids": true,
+      "hidden_feature_leakage_detected": false,
+      "oracle_leakage_detected": false,
+      "candidate_split_performed": false,
+      "state_condition_created": false
+    },
+    {
+      "seed": 107,
+      "total_mixed_cases": 56,
+      "predicted_counts": {
+        "state_condition": 27,
+        "irreducible_noise": 13,
+        "unresolved": 12,
+        "observation_gap": 4
+      },
+      "macro_accuracy": 0.3708,
+      "per_class_recall": {
+        "observation_gap": 0.3333,
+        "state_condition": 0.75,
+        "identity_split": 0.0,
+        "irreducible_noise": 0.4
+      },
+      "unresolved_rate": 0.2143,
+      "over_split_rate": 0.0,
+      "noise_overfit_rate": 0.3846,
+      "heldout_prediction_available": true,
+      "all_records_have_source_ids": true,
+      "hidden_feature_leakage_detected": false,
+      "oracle_leakage_detected": false,
+      "candidate_split_performed": false,
+      "state_condition_created": false
+    },
+    {
+      "seed": 109,
+      "total_mixed_cases": 55,
+      "predicted_counts": {
+        "identity_split": 3,
+        "unresolved": 17,
+        "state_condition": 19,
+        "irreducible_noise": 10,
+        "observation_gap": 6
+      },
+      "macro_accuracy": 0.4581,
+      "per_class_recall": {
+        "observation_gap": 0.4,
+        "state_condition": 0.7895,
+        "identity_split": 0.2143,
+        "irreducible_noise": 0.4286
+      },
+      "unresolved_rate": 0.3091,
+      "over_split_rate": 0.0,
+      "noise_overfit_rate": 0.7,
+      "heldout_prediction_available": true,
+      "all_records_have_source_ids": true,
+      "hidden_feature_leakage_detected": false,
+      "oracle_leakage_detected": false,
+      "candidate_split_performed": false,
+      "state_condition_created": false
+    },
+    {
+      "seed": 113,
+      "total_mixed_cases": 70,
+      "predicted_counts": {
+        "identity_split": 4,
+        "unresolved": 19,
+        "observation_gap": 10,
+        "irreducible_noise": 13,
+        "state_condition": 24
+      },
+      "macro_accuracy": 0.3826,
+      "per_class_recall": {
+        "observation_gap": 0.3529,
+        "state_condition": 0.6,
+        "identity_split": 0.2857,
+        "irreducible_noise": 0.2917
+      },
+      "unresolved_rate": 0.2714,
+      "over_split_rate": 0.0,
+      "noise_overfit_rate": 0.4615,
+      "heldout_prediction_available": true,
+      "all_records_have_source_ids": true,
+      "hidden_feature_leakage_detected": false,
+      "oracle_leakage_detected": false,
+      "candidate_split_performed": false,
+      "state_condition_created": false
+    }
+  ]
+}

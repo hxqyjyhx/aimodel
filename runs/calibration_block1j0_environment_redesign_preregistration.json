@@ -1,0 +1,161 @@
+{
+  "block_id": "1J0",
+  "date": "2026-05-10",
+  "status": "pre-registration — no simulations run",
+  "simulations_run": false,
+  "accepted_findings": [
+    "raw_composite_accuracy_is_majority_class_dominated",
+    "macro_query_balanced_accuracy_is_primary_task_metric",
+    "pareto_reporting_is_primary_evaluation_framework",
+    "c13_has_weak_real_signal_macro_bal_0_5578_vs_c0b_0_5444",
+    "c13_not_cost_effective_and_does_not_improve_positive_recall_over_c0b",
+    "main_diagnosis_mixed_posterior_nonseparation_plus_aggregation_bias",
+    "posterior_nonseparation_supported_true",
+    "aggregation_bias_supported_true",
+    "negative_evidence_skew_supported_false",
+    "threshold_fix_promising_false",
+    "environment_redesign_still_needed_true",
+    "oracle_ceiling_macro_bal_1_0000_positive_recall_1_0000_negative_recall_1_0000",
+    "environment_not_structurally_impossible_signal_recoverable_under_oracle",
+    "current_realizable_c13_posterior_cannot_recover_signal_reliably"
+  ],
+  "redesign_principles": {
+    "A": "category_prior_must_be_insufficient",
+    "B": "structure_must_be_recoverable_oracle_macro_bal_ge_0_70",
+    "C": "both_observation_and_probing_must_have_value",
+    "D": "support_both_positive_and_negative_evidence",
+    "E": "no_policy_favoring_benchmark_tuning"
+  },
+  "candidate_redesign_directions": [
+    {
+      "id": "A",
+      "name": "instance_level_affordance_variation",
+      "description": "Objects within same category vary in affordance profiles. Visible features partially indicate affordance. Probing confirms.",
+      "example": "Some apples are ripe (edible), some are unripe (inedible). Visible color partially indicates ripeness."
+    },
+    {
+      "id": "B",
+      "name": "hidden_subtypes_within_categories",
+      "description": "Each category contains hidden subtypes with different affordance profiles. Visible features shared within category.",
+      "example": "Wood_log subtype A crafts planks well but burns poorly. Subtype B burns well but crafts poorly."
+    },
+    {
+      "id": "C",
+      "name": "query_suite_expansion",
+      "description": "Add query templates requiring positive evidence, negative evidence, and positive+negative conjunctions.",
+      "templates": [
+        "positive_discovery",
+        "negative_discovery",
+        "positive_conjunction",
+        "negative_conjunction",
+        "mixed_conjunction"
+      ]
+    },
+    {
+      "id": "D",
+      "name": "observation_noise_or_partial_observability",
+      "description": "Observation gives useful features but not full affordance-relevant feature set. Some features only revealed by probing."
+    },
+    {
+      "id": "E",
+      "name": "balanced_query_construction",
+      "description": "Ensure each query has both positive and negative examples. Evaluated primarily with macro_query_balanced_accuracy."
+    }
+  ],
+  "marginal_value_audit": {
+    "required_baselines": [
+      "all_false",
+      "C_minus_prior_only",
+      "C0b_observe_only",
+      "C_oracle_full_information",
+      "random_probe_budgeted",
+      "category_majority_if_applicable"
+    ],
+    "required_metrics": [
+      "raw_comp",
+      "macro_query_balanced_accuracy",
+      "positive_recall_per_query",
+      "negative_recall_per_query",
+      "normalized_cost",
+      "probe_count",
+      "visit_count"
+    ]
+  },
+  "acceptance_criteria": {
+    "mandatory": [
+      {"id": 1, "criterion": "all_false_macro_bal_approx_0_50", "threshold": "≈ 0.5000"},
+      {"id": 2, "criterion": "oracle_macro_bal", "threshold": ">= 0.7000"},
+      {"id": 3, "criterion": "oracle_minus_c0b_macro_bal", "threshold": ">= +0.1000"},
+      {"id": 4, "criterion": "c0b_minus_cminus_macro_bal", "threshold": ">= +0.0500"},
+      {"id": 5, "criterion": "oracle_pos_recall_minus_c0b_pos_recall", "threshold": ">= +0.1000"},
+      {"id": 6, "criterion": "oracle_neg_recall_minus_c0b_neg_recall", "threshold": ">= +0.1000"}
+    ],
+    "recommended": [
+      {"id": 7, "criterion": "c0b_macro_bal_range", "threshold": "0.55–0.65 ideally, < 0.70"},
+      {"id": 8, "criterion": "oracle_improves_both_pos_and_neg_recall", "threshold": "both sides, not only one"},
+      {"id": 9, "criterion": "random_probe_reported_as_baseline", "threshold": "always reported"}
+    ],
+    "max_audit_attempts": 3
+  },
+  "pareto_policy_comparison_criteria": {
+    "primary_fields": [
+      "macro_query_balanced_accuracy",
+      "normalized_cost",
+      "probe_count",
+      "positive_recall_per_query",
+      "negative_recall_per_query"
+    ],
+    "secondary_fields": [
+      "raw_comp",
+      "scalar_utility"
+    ],
+    "dominance_rule": {
+      "condition": "macro_bal_A >= macro_bal_B AND normalized_cost_A <= normalized_cost_B AND at_least_one_strict",
+      "no_dominance_action": "report_trade_off_explicitly"
+    },
+    "meaningful_improvement_over_c0b": {
+      "statistical": "macro_bal gain > 2 standard errors across seeds",
+      "practical": "macro_bal gain >= 10% of C0b-to-oracle gap",
+      "cost": "outperform random_probe_budgeted or proportional oracle-mixing at comparable cost"
+    }
+  },
+  "anti_tuning_safeguards": [
+    "environment_criteria_written_before_policy_runs",
+    "environment_evaluated_by_marginal_value_baselines_not_c13",
+    "do_not_iterate_indefinitely_until_c13_wins",
+    "max_3_audit_attempts",
+    "keep_design_log_for_every_change",
+    "report_negative_results_if_environment_passes_audit_but_c13_fails",
+    "do_not_change_cost_or_beta_to_make_c13_win",
+    "do_not_tune_probe_actions_to_match_c13_information_preferences",
+    "pre_register_all_query_templates_before_seeing_policy_results"
+  ],
+  "next_blocks": {
+    "1J1": {
+      "description": "Implement one minimal redesigned environment candidate.",
+      "prerequisite": "Block 1J0"
+    },
+    "1J2": {
+      "description": "Run marginal-value audit on redesigned environment.",
+      "prerequisite": "Block 1J1"
+    },
+    "1J3": {
+      "description": "If 1J2 passes: run C0b/C13/random_probe/oracle policy comparison under Pareto reporting.",
+      "prerequisite": "Block 1J2 (pass)",
+      "gated": true
+    },
+    "1J4": {
+      "description": "Multi-seed sweep (5 seeds x N policies).",
+      "prerequisite": "Block 1J3 (promising)",
+      "gated": true
+    }
+  },
+  "final_decision": {
+    "balanced_metric_ready": true,
+    "pareto_reporting_ready": true,
+    "scalar_utility_ready": false,
+    "current_policy_comparison_ready": false,
+    "environment_redesign_preregistered": true,
+    "ready_to_implement_environment_candidate": true
+  }
+}

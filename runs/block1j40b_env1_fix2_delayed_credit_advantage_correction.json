@@ -1,0 +1,566 @@
+{
+  "block_id": "1J40b-env1-fix2",
+  "new_condition": "C6_observe_try_counterfactual_v0",
+  "elapsed_seconds": 0.0,
+  "total_objects": 36,
+  "total_events": 264,
+  "observe_events": 48,
+  "try_events": 216,
+  "schedule_label_removed_from_agent_visible": true,
+  "recursive_leakage_check_passed": true,
+  "leakage_violations": [],
+  "no_observe_try_count": 72,
+  "one_observe_try_count": 72,
+  "repeated_observe_try_count": 72,
+  "matched_schedule_group_count": 12,
+  "comparable_observe_try_set_count": 24,
+  "complete_action_set_count": 36,
+  "partial_action_set_count": 0,
+  "delayed_credit_available": true,
+  "delayed_observe_benefit_detectable": true,
+  "delayed_credit_overattribution_risk": false,
+  "overattribution_note": "Matched advantage is consistent with per-try returns. No overattribution detected.",
+  "overattribution_reasons": [],
+  "delayed_credit_total_records": 36,
+  "matched_advantage_available": true,
+  "matched_advantage_role_breakdown": {
+    "observe_helps": {
+      "count": 12,
+      "mean_immediate": 0.25,
+      "mean_delayed_raw": 1.05,
+      "mean_delayed_discounted": 0.7944,
+      "mean_delayed_per_try": 0.175,
+      "mean_matched_advantage": 0.1
+    },
+    "observe_neutral": {
+      "count": 12,
+      "mean_immediate": 0.25,
+      "mean_delayed_raw": 0.45,
+      "mean_delayed_discounted": 0.4138,
+      "mean_delayed_per_try": 0.075,
+      "mean_matched_advantage": 0.0
+    },
+    "observe_wasteful": {
+      "count": 12,
+      "mean_immediate": 0.25,
+      "mean_delayed_raw": 0.45,
+      "mean_delayed_discounted": 0.4138,
+      "mean_delayed_per_try": 0.075,
+      "mean_matched_advantage": 0.0
+    }
+  },
+  "observe_helps_advantage": 0.1,
+  "observe_neutral_advantage": 0.0,
+  "observe_wasteful_advantage": 0.0,
+  "role_sanity_pass": true,
+  "role_sanity_thresholds": {
+    "helps_min": 0.05,
+    "neutral_max_abs": 0.05,
+    "wasteful_max": 0.05
+  },
+  "group_advantages": {
+    "apple_g0": {
+      "role": "observe_helps",
+      "no_observe_baseline": 0.15,
+      "one_observe_return": 0.25,
+      "repeated_observe_return": 0.25,
+      "one_observe_advantage": 0.1,
+      "repeated_observe_advantage": 0.1,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.9,
+          "mean_net_value": 0.15,
+          "successes": 3,
+          "failures": 3
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": 1.5,
+          "mean_net_value": 0.25,
+          "successes": 4,
+          "failures": 2
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": 1.5,
+          "mean_net_value": 0.25,
+          "successes": 4,
+          "failures": 2
+        }
+      }
+    },
+    "apple_g1": {
+      "role": "observe_neutral",
+      "no_observe_baseline": 0.15,
+      "one_observe_return": 0.15,
+      "repeated_observe_return": 0.15,
+      "one_observe_advantage": 0.0,
+      "repeated_observe_advantage": 0.0,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.9,
+          "mean_net_value": 0.15,
+          "successes": 3,
+          "failures": 3
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.9,
+          "mean_net_value": 0.15,
+          "successes": 3,
+          "failures": 3
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.9,
+          "mean_net_value": 0.15,
+          "successes": 3,
+          "failures": 3
+        }
+      }
+    },
+    "apple_g2": {
+      "role": "observe_wasteful",
+      "no_observe_baseline": 0.15,
+      "one_observe_return": 0.15,
+      "repeated_observe_return": 0.15,
+      "one_observe_advantage": 0.0,
+      "repeated_observe_advantage": 0.0,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.9,
+          "mean_net_value": 0.15,
+          "successes": 3,
+          "failures": 3
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.9,
+          "mean_net_value": 0.15,
+          "successes": 3,
+          "failures": 3
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.9,
+          "mean_net_value": 0.15,
+          "successes": 3,
+          "failures": 3
+        }
+      }
+    },
+    "stone_block_g0": {
+      "role": "observe_helps",
+      "no_observe_baseline": -0.05,
+      "one_observe_return": 0.05,
+      "repeated_observe_return": 0.05,
+      "one_observe_advantage": 0.1,
+      "repeated_observe_advantage": 0.1,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.3,
+          "mean_net_value": 0.05,
+          "successes": 2,
+          "failures": 4
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.3,
+          "mean_net_value": 0.05,
+          "successes": 2,
+          "failures": 4
+        }
+      }
+    },
+    "stone_block_g1": {
+      "role": "observe_neutral",
+      "no_observe_baseline": -0.05,
+      "one_observe_return": -0.05,
+      "repeated_observe_return": -0.05,
+      "one_observe_advantage": 0.0,
+      "repeated_observe_advantage": 0.0,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        }
+      }
+    },
+    "stone_block_g2": {
+      "role": "observe_wasteful",
+      "no_observe_baseline": -0.05,
+      "one_observe_return": -0.05,
+      "repeated_observe_return": -0.05,
+      "one_observe_advantage": 0.0,
+      "repeated_observe_advantage": 0.0,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        }
+      }
+    },
+    "wood_log_g0": {
+      "role": "observe_helps",
+      "no_observe_baseline": 0.25,
+      "one_observe_return": 0.35,
+      "repeated_observe_return": 0.35,
+      "one_observe_advantage": 0.1,
+      "repeated_observe_advantage": 0.1,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": 1.5,
+          "mean_net_value": 0.25,
+          "successes": 4,
+          "failures": 2
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": 2.1,
+          "mean_net_value": 0.35,
+          "successes": 5,
+          "failures": 1
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": 2.1,
+          "mean_net_value": 0.35,
+          "successes": 5,
+          "failures": 1
+        }
+      }
+    },
+    "wood_log_g1": {
+      "role": "observe_neutral",
+      "no_observe_baseline": 0.25,
+      "one_observe_return": 0.25,
+      "repeated_observe_return": 0.25,
+      "one_observe_advantage": 0.0,
+      "repeated_observe_advantage": 0.0,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": 1.5,
+          "mean_net_value": 0.25,
+          "successes": 4,
+          "failures": 2
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": 1.5,
+          "mean_net_value": 0.25,
+          "successes": 4,
+          "failures": 2
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": 1.5,
+          "mean_net_value": 0.25,
+          "successes": 4,
+          "failures": 2
+        }
+      }
+    },
+    "wood_log_g2": {
+      "role": "observe_wasteful",
+      "no_observe_baseline": 0.25,
+      "one_observe_return": 0.25,
+      "repeated_observe_return": 0.25,
+      "one_observe_advantage": 0.0,
+      "repeated_observe_advantage": 0.0,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": 1.5,
+          "mean_net_value": 0.25,
+          "successes": 4,
+          "failures": 2
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": 1.5,
+          "mean_net_value": 0.25,
+          "successes": 4,
+          "failures": 2
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": 1.5,
+          "mean_net_value": 0.25,
+          "successes": 4,
+          "failures": 2
+        }
+      }
+    },
+    "wooden_pickaxe_g0": {
+      "role": "observe_helps",
+      "no_observe_baseline": -0.05,
+      "one_observe_return": 0.05,
+      "repeated_observe_return": 0.05,
+      "one_observe_advantage": 0.1,
+      "repeated_observe_advantage": 0.1,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.3,
+          "mean_net_value": 0.05,
+          "successes": 2,
+          "failures": 4
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": 0.3,
+          "mean_net_value": 0.05,
+          "successes": 2,
+          "failures": 4
+        }
+      }
+    },
+    "wooden_pickaxe_g1": {
+      "role": "observe_neutral",
+      "no_observe_baseline": -0.05,
+      "one_observe_return": -0.05,
+      "repeated_observe_return": -0.05,
+      "one_observe_advantage": 0.0,
+      "repeated_observe_advantage": 0.0,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        }
+      }
+    },
+    "wooden_pickaxe_g2": {
+      "role": "observe_wasteful",
+      "no_observe_baseline": -0.05,
+      "one_observe_return": -0.05,
+      "repeated_observe_return": -0.05,
+      "one_observe_advantage": 0.0,
+      "repeated_observe_advantage": 0.0,
+      "repeated_vs_one_advantage": 0.0,
+      "depth_returns": {
+        "no_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "one_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        },
+        "repeated_observe": {
+          "n_tries": 6,
+          "total_net_value": -0.3,
+          "mean_net_value": -0.05,
+          "successes": 1,
+          "failures": 5
+        }
+      }
+    }
+  },
+  "mean_immediate_observe_value": 0.25,
+  "mean_matched_advantage": 0.0333,
+  "mean_delayed_per_try": 0.1083,
+  "value_scale_report": {
+    "observe_immediate": {
+      "min": 0.225,
+      "max": 0.305,
+      "mean": 0.25
+    },
+    "delayed_return_raw": {
+      "min": -0.3,
+      "max": 2.1,
+      "mean": 0.65
+    },
+    "delayed_return_discounted": {
+      "min": -0.0926,
+      "max": 1.5788,
+      "mean": 0.5406
+    },
+    "delayed_return_normalized_per_try": {
+      "min": -0.05,
+      "max": 0.35,
+      "mean": 0.1083
+    },
+    "matched_advantage": {
+      "min": 0.0,
+      "max": 0.1,
+      "mean": 0.0333
+    },
+    "try_value": {
+      "min": -0.15,
+      "max": 0.45,
+      "mean": 0.0972
+    }
+  },
+  "try_success_by_observe_depth": {
+    "no_observe": {
+      "success_rate": 0.375,
+      "n": 72
+    },
+    "one_observe": {
+      "success_rate": 0.4306,
+      "n": 72
+    },
+    "repeated_observe": {
+      "success_rate": 0.4306,
+      "n": 72
+    }
+  },
+  "try_success_by_depth_and_role": {
+    "no_observe": {
+      "observe_helps": {
+        "n": 24,
+        "success_rate": 0.375
+      },
+      "observe_neutral": {
+        "n": 24,
+        "success_rate": 0.375
+      },
+      "observe_wasteful": {
+        "n": 24,
+        "success_rate": 0.375
+      }
+    },
+    "one_observe": {
+      "observe_helps": {
+        "n": 24,
+        "success_rate": 0.5417
+      },
+      "observe_neutral": {
+        "n": 24,
+        "success_rate": 0.375
+      },
+      "observe_wasteful": {
+        "n": 24,
+        "success_rate": 0.375
+      }
+    },
+    "repeated_observe": {
+      "observe_helps": {
+        "n": 24,
+        "success_rate": 0.5417
+      },
+      "observe_neutral": {
+        "n": 24,
+        "success_rate": 0.375
+      },
+      "observe_wasteful": {
+        "n": 24,
+        "success_rate": 0.375
+      }
+    }
+  },
+  "audit_label_leakage_detected": false,
+  "old_c4_preserved": true,
+  "old_c5_preserved": true,
+  "policy_decisions_changed": false,
+  "implementation_status": "pass",
+  "failure_reason": "none",
+  "acceptance_checks": {
+    "schedule_label_removed_from_agent_visible": true,
+    "recursive_leakage_check_passed": true,
+    "no_observe_try_count > 0": true,
+    "one_observe_try_count > 0": true,
+    "repeated_observe_try_count > 0": true,
+    "matched_schedule_group_count > 0": true,
+    "matched_advantage_available": true,
+    "comparable_observe_try_set_count > 0": true,
+    "delayed_credit_available = true": true,
+    "observe_helps_advantage >= +0.05": true,
+    "abs(observe_neutral_advantage) <= 0.05": true,
+    "observe_wasteful_advantage <= 0.05": true,
+    "role_sanity (all three thresholds)": true,
+    "delayed_credit_overattribution_risk = false": true,
+    "old C4 preserved": true,
+    "old C5 preserved": true,
+    "no policy decisions change": true,
+    "no_seed_crashes": true
+  }
+}

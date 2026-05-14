@@ -1,0 +1,221 @@
+{
+  "block_id": "1J40b-6",
+  "elapsed_seconds": 6.7,
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "total_objects": 180,
+  "implementation_status": "pass",
+  "feature_audit": {
+    "feature_names_used_by_pre_model": [
+      "feat_brownish",
+      "feat_greenish",
+      "feat_heavy_weight",
+      "feat_light_weight",
+      "feat_long_shape",
+      "feat_rough_texture",
+      "feat_round_small",
+      "feat_smooth_texture"
+    ],
+    "n_pre_features": 8,
+    "feature_names_used_by_post_model_count": 47,
+    "n_post_visible": 40,
+    "n_state": 6,
+    "n_numeric": 1,
+    "hidden_features_absent_from_normal_pre_eval": true,
+    "hidden_features_absent_from_normal_post_eval": true,
+    "forbidden_fields_confirmed_absent": [
+      "ambient_group",
+      "audit_computed_gain",
+      "category",
+      "depth",
+      "effective_affordance_profile",
+      "episode_id",
+      "episode_progress",
+      "group_role",
+      "n_features_known",
+      "n_states_known",
+      "object_id",
+      "oracle_action",
+      "seed_id",
+      "true_affordance_profile"
+    ],
+    "forbidden_learner_fields_found": []
+  },
+  "leakage": {
+    "recursive_leakage_ok": true,
+    "leakage_violations_count": 0,
+    "full_role_probe_accuracy": 0.3333,
+    "mean_seed_role_probe": 0.3333,
+    "max_seed_role_probe": 0.3333
+  },
+  "aggregate_results": {
+    "pre_mean_return": 0.1633,
+    "random_mean_return": 0.31,
+    "always_observe_gross": 0.45,
+    "always_observe_net": 0.445,
+    "oracle_mean_return": 0.45,
+    "policy_mean_return_gross": 0.45,
+    "policy_mean_return_net": 0.445,
+    "policy_pre_gain_net": 0.2817,
+    "policy_oracle_gap": 0.005,
+    "policy_always_gap": 0.0,
+    "observe_rate": 1.0,
+    "direct_try_rate": 0.0,
+    "harmful_observe_rate": 0.5556,
+    "zero_gain_observe_rate": 0.0,
+    "positive_gain_observe_rate": 0.4444,
+    "mean_q_error": 0.0005,
+    "n_high_conf_wrong": 0
+  },
+  "action_distributions": {
+    "pre": {
+      "try_burn_as_fuel": 54,
+      "try_craft_plank": 36,
+      "try_mine_by_hand": 90
+    },
+    "always_observe": {
+      "try_burn_as_fuel": 27,
+      "try_craft_plank": 18,
+      "try_mine_by_hand": 45,
+      "try_mine_with_pickaxe": 45,
+      "try_use_as_tool": 45
+    },
+    "policy": {
+      "try_burn_as_fuel": 27,
+      "try_craft_plank": 18,
+      "try_mine_by_hand": 45,
+      "try_mine_with_pickaxe": 45,
+      "try_use_as_tool": 45
+    },
+    "oracle": {
+      "try_burn_as_fuel": 53,
+      "try_craft_plank": 8,
+      "try_eat": 41,
+      "try_mine_by_hand": 8,
+      "try_mine_with_pickaxe": 35,
+      "try_use_as_tool": 35
+    }
+  },
+  "per_seed_results": {
+    "101": {
+      "pre_mean_return": 0.1833,
+      "random_mean_return": 0.25,
+      "post_mean_return_gross": 0.45,
+      "post_mean_return_net": 0.445,
+      "oracle_mean_return": 0.45,
+      "policy_mean_return_gross": 0.45,
+      "policy_mean_return_net": 0.445,
+      "policy_obs_rate": 1.0,
+      "policy_direct_try_rate": 0.0,
+      "harmful_observe_rate": 0.5556,
+      "zero_gain_observe_rate": 0.0,
+      "positive_gain_observe_rate": 0.4444,
+      "mean_q_error": 0.0005
+    },
+    "103": {
+      "pre_mean_return": 0.15,
+      "random_mean_return": 0.3167,
+      "post_mean_return_gross": 0.45,
+      "post_mean_return_net": 0.445,
+      "oracle_mean_return": 0.45,
+      "policy_mean_return_gross": 0.45,
+      "policy_mean_return_net": 0.445,
+      "policy_obs_rate": 1.0,
+      "policy_direct_try_rate": 0.0,
+      "harmful_observe_rate": 0.5,
+      "zero_gain_observe_rate": 0.0,
+      "positive_gain_observe_rate": 0.5,
+      "mean_q_error": 0.0005
+    },
+    "107": {
+      "pre_mean_return": 0.15,
+      "random_mean_return": 0.3667,
+      "post_mean_return_gross": 0.45,
+      "post_mean_return_net": 0.445,
+      "oracle_mean_return": 0.45,
+      "policy_mean_return_gross": 0.45,
+      "policy_mean_return_net": 0.445,
+      "policy_obs_rate": 1.0,
+      "policy_direct_try_rate": 0.0,
+      "harmful_observe_rate": 0.5,
+      "zero_gain_observe_rate": 0.0,
+      "positive_gain_observe_rate": 0.5,
+      "mean_q_error": 0.0005
+    },
+    "109": {
+      "pre_mean_return": 0.1833,
+      "random_mean_return": 0.2833,
+      "post_mean_return_gross": 0.45,
+      "post_mean_return_net": 0.445,
+      "oracle_mean_return": 0.45,
+      "policy_mean_return_gross": 0.45,
+      "policy_mean_return_net": 0.445,
+      "policy_obs_rate": 1.0,
+      "policy_direct_try_rate": 0.0,
+      "harmful_observe_rate": 0.5556,
+      "zero_gain_observe_rate": 0.0,
+      "positive_gain_observe_rate": 0.4444,
+      "mean_q_error": 0.0005
+    },
+    "113": {
+      "pre_mean_return": 0.15,
+      "random_mean_return": 0.3333,
+      "post_mean_return_gross": 0.45,
+      "post_mean_return_net": 0.445,
+      "oracle_mean_return": 0.45,
+      "policy_mean_return_gross": 0.45,
+      "policy_mean_return_net": 0.445,
+      "policy_obs_rate": 1.0,
+      "policy_direct_try_rate": 0.0,
+      "harmful_observe_rate": 0.5,
+      "zero_gain_observe_rate": 0.0,
+      "positive_gain_observe_rate": 0.5,
+      "mean_q_error": 0.0005
+    }
+  },
+  "per_category_results": {
+    "wood_log": {
+      "count": 45,
+      "policy_mean_net": 0.445,
+      "oracle_mean": 0.45,
+      "obs_rate": 1.0
+    },
+    "stone_block": {
+      "count": 45,
+      "policy_mean_net": 0.445,
+      "oracle_mean": 0.45,
+      "obs_rate": 1.0
+    },
+    "apple": {
+      "count": 45,
+      "policy_mean_net": 0.445,
+      "oracle_mean": 0.45,
+      "obs_rate": 1.0
+    },
+    "wooden_pickaxe": {
+      "count": 45,
+      "policy_mean_net": 0.445,
+      "oracle_mean": 0.45,
+      "obs_rate": 1.0
+    }
+  },
+  "acceptance_checks": {
+    "role_probe_pass": true,
+    "leakage_pass": true,
+    "policy_net > pre": true,
+    "policy_net > random": true,
+    "policy-pre gain > 0": true,
+    "policy approaches oracle": true,
+    "harmful_observe_rate_low": true,
+    "hidden_features_absent_from_pre": true,
+    "hidden_features_absent_from_post": true,
+    "forbidden_fields_absent": true,
+    "true_return_improves_not_only_Q": true
+  },
+  "failure_reasons": []
+}

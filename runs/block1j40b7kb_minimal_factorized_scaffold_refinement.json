@@ -1,0 +1,3251 @@
+{
+  "metadata": {
+    "block_id": "1J40b-7k-b",
+    "script_name": "_block1j40b7kb_minimal_factorized_scaffold_refinement.py",
+    "timestamp": "2026-05-14T08:45:48.268171",
+    "primary_cost": 0.03,
+    "observe_costs": [
+      0.03,
+      0.05,
+      0.07,
+      0.1
+    ],
+    "search_configs": [
+      {
+        "config_id": "baseline_q_current",
+        "generator_mode": "baseline_q",
+        "diag_alpha": 0.8,
+        "level3_rule": "m0",
+        "mix": 1.0,
+        "description": "7k-style q=(xor,xor) baseline for reference only."
+      },
+      {
+        "config_id": "factorized_base_a075_m1",
+        "generator_mode": "factorized_base",
+        "diag_alpha": 0.75,
+        "level3_rule": "m1",
+        "mix": 1.0,
+        "description": "Actual pair-value scaffold with shared_all>=3 Level 3 rule."
+      },
+      {
+        "config_id": "factorized_base_a075_m3",
+        "generator_mode": "factorized_base",
+        "diag_alpha": 0.75,
+        "level3_rule": "m3",
+        "mix": 1.0,
+        "description": "Actual pair-value scaffold with shared_all>=4 candidate-set rule."
+      },
+      {
+        "config_id": "factorized_base_a075_m4",
+        "generator_mode": "factorized_base",
+        "diag_alpha": 0.75,
+        "level3_rule": "m4",
+        "mix": 1.0,
+        "description": "Actual pair-value scaffold with informative-pair plus all-pair weighting."
+      },
+      {
+        "config_id": "factorized_base_a080_m3",
+        "generator_mode": "factorized_base",
+        "diag_alpha": 0.8,
+        "level3_rule": "m3",
+        "mix": 1.0,
+        "description": "Higher diagnostic accuracy variant."
+      },
+      {
+        "config_id": "factorized_base_mix095_a075_m3",
+        "generator_mode": "factorized_base",
+        "diag_alpha": 0.75,
+        "level3_rule": "m3",
+        "mix": 0.95,
+        "description": "Mildly smoothed factorized scaffold."
+      },
+      {
+        "config_id": "factorized_soft_a075_m3",
+        "generator_mode": "factorized_soft",
+        "diag_alpha": 0.75,
+        "level3_rule": "m3",
+        "mix": 1.0,
+        "description": "Softer pair-value scaffold."
+      }
+    ],
+    "total_signatures": 16,
+    "validation_note": "Split was selected by exhaustive design-search over pair-covered A/B assignments. Treat PASS as design-search PASS, not final validation PASS."
+  },
+  "split_audit": {
+    "pair_covered_split_count": 5388,
+    "selected_split_idx": 3985,
+    "selected_train_signatures": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "selected_test_A_signatures": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "selected_test_B_signatures": [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "all_2way_pairs_covered": true
+  },
+  "search_results": [
+    {
+      "config_id": "baseline_q_current",
+      "generator_mode": "baseline_q",
+      "diag_alpha": 0.8,
+      "level3_rule": "m0",
+      "mix": 1.0,
+      "split_idx": 4467,
+      "split": {
+        "train": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "test_A": [
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "test_B": [
+          [
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "structured_test_A": {
+        "level1": 0.0,
+        "level2": 0.01880000000000015,
+        "level3": 0.01880000000000015
+      },
+      "structured_test_B": {
+        "level1": 0.0,
+        "level2": 0.01880000000000015,
+        "level3": 0.01880000000000015
+      },
+      "null_test_A": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "null_test_B": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "best_structured_delta_test_A": 0.01880000000000015,
+      "best_structured_delta_test_B": 0.01880000000000015,
+      "level1_best_delta": 0.0,
+      "null_best_delta": 0.0,
+      "keeps_level3": false,
+      "validity": {
+        "exact_signature_determinism_rate": 0.25,
+        "single_cue_max_predictiveness": 0.546,
+        "cue_pair_max_predictiveness": 0.8465,
+        "hidden_h_probe_from_pre_surface_accuracy": 0.715,
+        "train_pair_coverage_rate": 1.0
+      },
+      "pass_flag": false
+    },
+    {
+      "config_id": "factorized_base_a075_m1",
+      "generator_mode": "factorized_base",
+      "diag_alpha": 0.75,
+      "level3_rule": "m1",
+      "mix": 1.0,
+      "split_idx": 3940,
+      "split": {
+        "train": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "test_A": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "test_B": [
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "structured_test_A": {
+        "level1": 0.0,
+        "level2": 0.05544358358374368,
+        "level3": 0.0
+      },
+      "structured_test_B": {
+        "level1": 0.0,
+        "level2": 0.03563995967600442,
+        "level3": -0.028263753627442822
+      },
+      "null_test_A": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "null_test_B": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "best_structured_delta_test_A": 0.05544358358374368,
+      "best_structured_delta_test_B": 0.03563995967600442,
+      "level1_best_delta": 0.0,
+      "null_best_delta": 0.0,
+      "keeps_level3": false,
+      "validity": {
+        "exact_signature_determinism_rate": 0.0,
+        "single_cue_max_predictiveness": 0.6174649255833793,
+        "cue_pair_max_predictiveness": 0.742017801214395,
+        "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+        "train_pair_coverage_rate": 1.0
+      },
+      "pass_flag": false
+    },
+    {
+      "config_id": "factorized_base_a075_m3",
+      "generator_mode": "factorized_base",
+      "diag_alpha": 0.75,
+      "level3_rule": "m3",
+      "mix": 1.0,
+      "split_idx": 3940,
+      "split": {
+        "train": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "test_A": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "test_B": [
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "structured_test_A": {
+        "level1": 0.0,
+        "level2": 0.05544358358374368,
+        "level3": 0.0
+      },
+      "structured_test_B": {
+        "level1": 0.0,
+        "level2": 0.03563995967600442,
+        "level3": 0.0
+      },
+      "null_test_A": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "null_test_B": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "best_structured_delta_test_A": 0.05544358358374368,
+      "best_structured_delta_test_B": 0.03563995967600442,
+      "level1_best_delta": 0.0,
+      "null_best_delta": 0.0,
+      "keeps_level3": false,
+      "validity": {
+        "exact_signature_determinism_rate": 0.0,
+        "single_cue_max_predictiveness": 0.6174649255833793,
+        "cue_pair_max_predictiveness": 0.742017801214395,
+        "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+        "train_pair_coverage_rate": 1.0
+      },
+      "pass_flag": false
+    },
+    {
+      "config_id": "factorized_base_a075_m4",
+      "generator_mode": "factorized_base",
+      "diag_alpha": 0.75,
+      "level3_rule": "m4",
+      "mix": 1.0,
+      "split_idx": 3940,
+      "split": {
+        "train": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "test_A": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "test_B": [
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "structured_test_A": {
+        "level1": 0.0,
+        "level2": 0.05544358358374368,
+        "level3": 0.0
+      },
+      "structured_test_B": {
+        "level1": 0.0,
+        "level2": 0.03563995967600442,
+        "level3": 0.03563995967600442
+      },
+      "null_test_A": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "null_test_B": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "best_structured_delta_test_A": 0.05544358358374368,
+      "best_structured_delta_test_B": 0.03563995967600442,
+      "level1_best_delta": 0.0,
+      "null_best_delta": 0.0,
+      "keeps_level3": false,
+      "validity": {
+        "exact_signature_determinism_rate": 0.0,
+        "single_cue_max_predictiveness": 0.6174649255833793,
+        "cue_pair_max_predictiveness": 0.742017801214395,
+        "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+        "train_pair_coverage_rate": 1.0
+      },
+      "pass_flag": false
+    },
+    {
+      "config_id": "factorized_base_a080_m3",
+      "generator_mode": "factorized_base",
+      "diag_alpha": 0.8,
+      "level3_rule": "m3",
+      "mix": 1.0,
+      "split_idx": 0,
+      "split": {
+        "train": [
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "test_A": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "test_B": [
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      "structured_test_A": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "structured_test_B": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "null_test_A": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "null_test_B": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "best_structured_delta_test_A": 0.0,
+      "best_structured_delta_test_B": 0.0,
+      "level1_best_delta": 0.0,
+      "null_best_delta": 0.0,
+      "keeps_level3": false,
+      "validity": {
+        "exact_signature_determinism_rate": 0.0,
+        "single_cue_max_predictiveness": 0.6418738614066547,
+        "cue_pair_max_predictiveness": 0.7742812893085015,
+        "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+        "train_pair_coverage_rate": 1.0
+      },
+      "pass_flag": false
+    },
+    {
+      "config_id": "factorized_base_mix095_a075_m3",
+      "generator_mode": "factorized_base",
+      "diag_alpha": 0.75,
+      "level3_rule": "m3",
+      "mix": 0.95,
+      "split_idx": 3985,
+      "split": {
+        "train": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "test_A": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "test_B": [
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "structured_test_A": {
+        "level1": 0.0,
+        "level2": 0.02957632876873184,
+        "level3": 0.0
+      },
+      "structured_test_B": {
+        "level1": 0.0,
+        "level2": 0.027024628358870872,
+        "level3": 0.0
+      },
+      "null_test_A": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "null_test_B": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "best_structured_delta_test_A": 0.02957632876873184,
+      "best_structured_delta_test_B": 0.027024628358870872,
+      "level1_best_delta": 0.0,
+      "null_best_delta": 0.0,
+      "keeps_level3": false,
+      "validity": {
+        "exact_signature_determinism_rate": 0.0,
+        "single_cue_max_predictiveness": 0.6136750126375436,
+        "cue_pair_max_predictiveness": 0.7320002444870086,
+        "hidden_h_probe_from_pre_surface_accuracy": 0.5847077487643542,
+        "train_pair_coverage_rate": 1.0
+      },
+      "pass_flag": false
+    },
+    {
+      "config_id": "factorized_soft_a075_m3",
+      "generator_mode": "factorized_soft",
+      "diag_alpha": 0.75,
+      "level3_rule": "m3",
+      "mix": 1.0,
+      "split_idx": 2624,
+      "split": {
+        "train": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "test_A": [
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "test_B": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "structured_test_A": {
+        "level1": 0.0,
+        "level2": 0.01921925481751563,
+        "level3": 0.0
+      },
+      "structured_test_B": {
+        "level1": 0.0,
+        "level2": 0.012461797809321107,
+        "level3": 0.0
+      },
+      "null_test_A": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "null_test_B": {
+        "level1": 0.0,
+        "level2": 0.0,
+        "level3": 0.0
+      },
+      "best_structured_delta_test_A": 0.01921925481751563,
+      "best_structured_delta_test_B": 0.012461797809321107,
+      "level1_best_delta": 0.0,
+      "null_best_delta": 0.0,
+      "keeps_level3": false,
+      "validity": {
+        "exact_signature_determinism_rate": 0.0,
+        "single_cue_max_predictiveness": 0.6140905607744884,
+        "cue_pair_max_predictiveness": 0.7420192303870314,
+        "hidden_h_probe_from_pre_surface_accuracy": 0.5584299225404734,
+        "train_pair_coverage_rate": 1.0
+      },
+      "pass_flag": false
+    }
+  ],
+  "selected_candidate": {
+    "config_id": "factorized_base_a075_m1",
+    "generator_mode": "factorized_base",
+    "diag_alpha": 0.75,
+    "level3_rule": "m1",
+    "mix": 1.0,
+    "split_idx": 3985,
+    "split": {
+      "train": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "test_A": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "test_B": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "structured_test_A": {
+      "level1": 0.0,
+      "level2": 0.034729468879366676,
+      "level3": 0.034729468879366676
+    },
+    "structured_test_B": {
+      "level1": 0.0,
+      "level2": 0.03563995967600442,
+      "level3": 0.03563995967600442
+    },
+    "null_test_A": {
+      "level1": 0.0,
+      "level2": 0.0,
+      "level3": 0.0
+    },
+    "null_test_B": {
+      "level1": 0.0,
+      "level2": 0.0,
+      "level3": 0.0
+    },
+    "best_structured_delta_test_A": 0.034729468879366676,
+    "best_structured_delta_test_B": 0.03563995967600442,
+    "level1_best_delta": 0.0,
+    "null_best_delta": 0.0,
+    "keeps_level3": true,
+    "validity": {
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    "pass_flag": true
+  },
+  "final_results": [
+    {
+      "version": "structured",
+      "observe_cost": 0.03,
+      "test_type": "A",
+      "level": "level1",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.7157640990852664,
+      "oracle_selective_net": 0.7504935679646331,
+      "oracle_minus_always_observe": 0.034729468879366676,
+      "always_observe_minus_always_try": -0.011185625441643032,
+      "oracle_minus_always_try": 0.023543843437723644,
+      "policy_net": 0.7157640990852664,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": -0.011185625441643032,
+      "gap_to_oracle": 0.034729468879366676,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.4773163930596971,
+      "false_observe_rate": 0.5226836069403029,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.013176643755287126,
+      "estimated_E_min": 0.00994986178580858,
+      "estimated_E_max": 0.016403425724765674,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.00994986178580858,
+        "(1, 0, 0, 0)": 0.016403425724765674
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.04708768687544718,
+      "mean_true_E_nonpositive": -0.06945893775873335,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.03,
+      "test_type": "A",
+      "level": "level2",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.7157640990852664,
+      "oracle_selective_net": 0.7504935679646331,
+      "oracle_minus_always_observe": 0.034729468879366676,
+      "always_observe_minus_always_try": -0.011185625441643032,
+      "oracle_minus_always_try": 0.023543843437723644,
+      "policy_net": 0.7504935679646331,
+      "delta_vs_always_observe": 0.034729468879366676,
+      "delta_vs_always_try": 0.023543843437723644,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 0.5,
+      "positive_net_observe_rate": 0.4008792419679996,
+      "nonpositive_net_observe_rate": 0.5905174030196456,
+      "sign_correct_rate": 0.40537607459764524,
+      "false_observe_rate": 0.3086537661713289,
+      "false_direct_rate": 0.2859701592310259,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.003912430408201079,
+      "estimated_E_min": -0.013592776316636718,
+      "estimated_E_max": 0.0057679155002345606,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.013592776316636718,
+        "(1, 0, 0, 0)": 0.0057679155002345606
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.04708768687544718,
+      "mean_true_E_nonpositive": -0.06945893775873335,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.03,
+      "test_type": "A",
+      "level": "level3",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.7157640990852664,
+      "oracle_selective_net": 0.7504935679646331,
+      "oracle_minus_always_observe": 0.034729468879366676,
+      "always_observe_minus_always_try": -0.011185625441643032,
+      "oracle_minus_always_try": 0.023543843437723644,
+      "policy_net": 0.7504935679646331,
+      "delta_vs_always_observe": 0.034729468879366676,
+      "delta_vs_always_try": 0.023543843437723644,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 0.5,
+      "positive_net_observe_rate": 0.4008792419679996,
+      "nonpositive_net_observe_rate": 0.5905174030196456,
+      "sign_correct_rate": 0.40537607459764524,
+      "false_observe_rate": 0.3086537661713289,
+      "false_direct_rate": 0.2859701592310259,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.0037384790133842927,
+      "estimated_E_min": -0.00021100878874739357,
+      "estimated_E_max": 0.007687966815515979,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.00021100878874739357,
+        "(1, 0, 0, 0)": 0.007687966815515979
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.04708768687544718,
+      "mean_true_E_nonpositive": -0.06945893775873335,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.03,
+      "test_type": "B",
+      "level": "level1",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.691309764850905,
+      "oracle_selective_net": 0.7552134781543522,
+      "oracle_minus_always_observe": 0.06390371330344724,
+      "always_observe_minus_always_try": -0.03563995967600442,
+      "oracle_minus_always_try": 0.028263753627442822,
+      "policy_net": 0.691309764850905,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": -0.03563995967600442,
+      "gap_to_oracle": 0.06390371330344724,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.4467484752667453,
+      "false_observe_rate": 0.5532515247332548,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.013047741934944332,
+      "estimated_E_min": 0.009820959965465786,
+      "estimated_E_max": 0.01627452390442288,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.009820959965465786,
+        "(1, 0, 0, 1)": 0.01627452390442288
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.056527507254885645,
+      "mean_true_E_nonpositive": -0.12780742660689448,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.03,
+      "test_type": "B",
+      "level": "level2",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.691309764850905,
+      "oracle_selective_net": 0.7552134781543522,
+      "oracle_minus_always_observe": 0.06390371330344724,
+      "always_observe_minus_always_try": -0.03563995967600442,
+      "oracle_minus_always_try": 0.028263753627442822,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.03563995967600442,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.028263753627442822,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.025728368787535122,
+      "estimated_E_min": -0.03540871469597076,
+      "estimated_E_max": -0.016048022879099483,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.03540871469597076,
+        "(1, 0, 0, 1)": -0.016048022879099483
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.056527507254885645,
+      "mean_true_E_nonpositive": -0.12780742660689448,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.03,
+      "test_type": "B",
+      "level": "level3",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.691309764850905,
+      "oracle_selective_net": 0.7552134781543522,
+      "oracle_minus_always_observe": 0.06390371330344724,
+      "always_observe_minus_always_try": -0.03563995967600442,
+      "oracle_minus_always_try": 0.028263753627442822,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.03563995967600442,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.028263753627442822,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.024444569715927175,
+      "estimated_E_min": -0.03340220979170967,
+      "estimated_E_max": -0.015486929640144679,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.03340220979170967,
+        "(1, 0, 0, 1)": -0.015486929640144679
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.056527507254885645,
+      "mean_true_E_nonpositive": -0.12780742660689448,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.05,
+      "test_type": "A",
+      "level": "level1",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6957640990852665,
+      "oracle_selective_net": 0.7404935679646332,
+      "oracle_minus_always_observe": 0.044729468879366685,
+      "always_observe_minus_always_try": -0.03118562544164294,
+      "oracle_minus_always_try": 0.013543843437723746,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.03118562544164294,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.013543843437723746,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5226836069403029,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4773163930596971,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.006823356244712905,
+      "estimated_E_min": -0.010050138214191451,
+      "estimated_E_max": -0.0035965742752343587,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.010050138214191451,
+        "(1, 0, 0, 0)": -0.0035965742752343587
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.02708768687544727,
+      "mean_true_E_nonpositive": -0.08945893775873315,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.05,
+      "test_type": "A",
+      "level": "level2",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6957640990852665,
+      "oracle_selective_net": 0.7404935679646332,
+      "oracle_minus_always_observe": 0.044729468879366685,
+      "always_observe_minus_always_try": -0.03118562544164294,
+      "oracle_minus_always_try": 0.013543843437723746,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.03118562544164294,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.013543843437723746,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5226836069403029,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4773163930596971,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.023912430408201124,
+      "estimated_E_min": -0.03359277631663676,
+      "estimated_E_max": -0.014232084499765485,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.03359277631663676,
+        "(1, 0, 0, 0)": -0.014232084499765485
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.02708768687544727,
+      "mean_true_E_nonpositive": -0.08945893775873315,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.05,
+      "test_type": "A",
+      "level": "level3",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6957640990852665,
+      "oracle_selective_net": 0.7404935679646332,
+      "oracle_minus_always_observe": 0.044729468879366685,
+      "always_observe_minus_always_try": -0.03118562544164294,
+      "oracle_minus_always_try": 0.013543843437723746,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.03118562544164294,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.013543843437723746,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5226836069403029,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4773163930596971,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.01626152098661578,
+      "estimated_E_min": -0.020211008788747487,
+      "estimated_E_max": -0.012312033184484076,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.020211008788747487,
+        "(1, 0, 0, 0)": -0.012312033184484076
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.02708768687544727,
+      "mean_true_E_nonpositive": -0.08945893775873315,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.05,
+      "test_type": "B",
+      "level": "level1",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6713097648509051,
+      "oracle_selective_net": 0.7452134781543523,
+      "oracle_minus_always_observe": 0.07390371330344725,
+      "always_observe_minus_always_try": -0.055639959676004325,
+      "oracle_minus_always_try": 0.018263753627442925,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.055639959676004325,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.018263753627442925,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.006952258065055714,
+      "estimated_E_min": -0.01017904003453426,
+      "estimated_E_max": -0.003725476095577167,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.01017904003453426,
+        "(1, 0, 0, 1)": -0.003725476095577167
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.03652750725488574,
+      "mean_true_E_nonpositive": -0.1478074266068945,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.05,
+      "test_type": "B",
+      "level": "level2",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6713097648509051,
+      "oracle_selective_net": 0.7452134781543523,
+      "oracle_minus_always_observe": 0.07390371330344725,
+      "always_observe_minus_always_try": -0.055639959676004325,
+      "oracle_minus_always_try": 0.018263753627442925,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.055639959676004325,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.018263753627442925,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.04572836878753511,
+      "estimated_E_min": -0.05540871469597075,
+      "estimated_E_max": -0.03604802287909947,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.05540871469597075,
+        "(1, 0, 0, 1)": -0.03604802287909947
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.03652750725488574,
+      "mean_true_E_nonpositive": -0.1478074266068945,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.05,
+      "test_type": "B",
+      "level": "level3",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6713097648509051,
+      "oracle_selective_net": 0.7452134781543523,
+      "oracle_minus_always_observe": 0.07390371330344725,
+      "always_observe_minus_always_try": -0.055639959676004325,
+      "oracle_minus_always_try": 0.018263753627442925,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.055639959676004325,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.018263753627442925,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.044444569715927175,
+      "estimated_E_min": -0.053402209791709655,
+      "estimated_E_max": -0.035486929640144695,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.053402209791709655,
+        "(1, 0, 0, 1)": -0.035486929640144695
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.03652750725488574,
+      "mean_true_E_nonpositive": -0.1478074266068945,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.07,
+      "test_type": "A",
+      "level": "level1",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6757640990852665,
+      "oracle_selective_net": 0.7304935679646332,
+      "oracle_minus_always_observe": 0.054729468879366694,
+      "always_observe_minus_always_try": -0.05118562544164296,
+      "oracle_minus_always_try": 0.003543843437723737,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.05118562544164296,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.003543843437723737,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5226836069403029,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4773163930596971,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.026823356244712854,
+      "estimated_E_min": -0.030050138214191405,
+      "estimated_E_max": -0.0235965742752343,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.030050138214191405,
+        "(1, 0, 0, 0)": -0.0235965742752343
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.007087686875447252,
+      "mean_true_E_nonpositive": -0.10945893775873339,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.07,
+      "test_type": "A",
+      "level": "level2",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6757640990852665,
+      "oracle_selective_net": 0.7304935679646332,
+      "oracle_minus_always_observe": 0.054729468879366694,
+      "always_observe_minus_always_try": -0.05118562544164296,
+      "oracle_minus_always_try": 0.003543843437723737,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.05118562544164296,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.003543843437723737,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5226836069403029,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4773163930596971,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.0439124304082011,
+      "estimated_E_min": -0.05359277631663675,
+      "estimated_E_max": -0.03423208449976545,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.05359277631663675,
+        "(1, 0, 0, 0)": -0.03423208449976545
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.007087686875447252,
+      "mean_true_E_nonpositive": -0.10945893775873339,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.07,
+      "test_type": "A",
+      "level": "level3",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6757640990852665,
+      "oracle_selective_net": 0.7304935679646332,
+      "oracle_minus_always_observe": 0.054729468879366694,
+      "always_observe_minus_always_try": -0.05118562544164296,
+      "oracle_minus_always_try": 0.003543843437723737,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.05118562544164296,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.003543843437723737,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5226836069403029,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4773163930596971,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.036261520986615725,
+      "estimated_E_min": -0.04021100878874743,
+      "estimated_E_max": -0.03231203318448402,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.04021100878874743,
+        "(1, 0, 0, 0)": -0.03231203318448402
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.007087686875447252,
+      "mean_true_E_nonpositive": -0.10945893775873339,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.07,
+      "test_type": "B",
+      "level": "level1",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6513097648509051,
+      "oracle_selective_net": 0.7352134781543523,
+      "oracle_minus_always_observe": 0.08390371330344726,
+      "always_observe_minus_always_try": -0.07563995967600434,
+      "oracle_minus_always_try": 0.008263753627442916,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.07563995967600434,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.008263753627442916,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.02695225806505565,
+      "estimated_E_min": -0.030179040034534203,
+      "estimated_E_max": -0.0237254760955771,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.030179040034534203,
+        "(1, 0, 0, 1)": -0.0237254760955771
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.01652750725488572,
+      "mean_true_E_nonpositive": -0.16780742660689452,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.07,
+      "test_type": "B",
+      "level": "level2",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6513097648509051,
+      "oracle_selective_net": 0.7352134781543523,
+      "oracle_minus_always_observe": 0.08390371330344726,
+      "always_observe_minus_always_try": -0.07563995967600434,
+      "oracle_minus_always_try": 0.008263753627442916,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.07563995967600434,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.008263753627442916,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.06572836878753506,
+      "estimated_E_min": -0.07540871469597071,
+      "estimated_E_max": -0.05604802287909941,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.07540871469597071,
+        "(1, 0, 0, 1)": -0.05604802287909941
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.01652750725488572,
+      "mean_true_E_nonpositive": -0.16780742660689452,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.07,
+      "test_type": "B",
+      "level": "level3",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6513097648509051,
+      "oracle_selective_net": 0.7352134781543523,
+      "oracle_minus_always_observe": 0.08390371330344726,
+      "always_observe_minus_always_try": -0.07563995967600434,
+      "oracle_minus_always_try": 0.008263753627442916,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.07563995967600434,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.008263753627442916,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.06444456971592713,
+      "estimated_E_min": -0.07340220979170964,
+      "estimated_E_max": -0.055486929640144636,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.07340220979170964,
+        "(1, 0, 0, 1)": -0.055486929640144636
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.01652750725488572,
+      "mean_true_E_nonpositive": -0.16780742660689452,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.1,
+      "test_type": "A",
+      "level": "level1",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6457640990852664,
+      "oracle_selective_net": 0.7269497245269094,
+      "oracle_minus_always_observe": 0.08118562544164298,
+      "always_observe_minus_always_try": -0.08118562544164298,
+      "oracle_minus_always_try": 0.0,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.08118562544164298,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5226836069403029,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4773163930596971,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.0568233562447128,
+      "estimated_E_min": -0.06005013821419135,
+      "estimated_E_max": -0.05359657427523424,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.06005013821419135,
+        "(1, 0, 0, 0)": -0.05359657427523424
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.0,
+      "mean_true_E_nonpositive": -0.08118562544164304,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.1,
+      "test_type": "A",
+      "level": "level2",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6457640990852664,
+      "oracle_selective_net": 0.7269497245269094,
+      "oracle_minus_always_observe": 0.08118562544164298,
+      "always_observe_minus_always_try": -0.08118562544164298,
+      "oracle_minus_always_try": 0.0,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.08118562544164298,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5226836069403029,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4773163930596971,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.073912430408201,
+      "estimated_E_min": -0.08359277631663667,
+      "estimated_E_max": -0.06423208449976534,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.08359277631663667,
+        "(1, 0, 0, 0)": -0.06423208449976534
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.0,
+      "mean_true_E_nonpositive": -0.08118562544164304,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.1,
+      "test_type": "A",
+      "level": "level3",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6457640990852664,
+      "oracle_selective_net": 0.7269497245269094,
+      "oracle_minus_always_observe": 0.08118562544164298,
+      "always_observe_minus_always_try": -0.08118562544164298,
+      "oracle_minus_always_try": 0.0,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.08118562544164298,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5226836069403029,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4773163930596971,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.06626152098661561,
+      "estimated_E_min": -0.07021100878874734,
+      "estimated_E_max": -0.062312033184483896,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": -0.07021100878874734,
+        "(1, 0, 0, 0)": -0.062312033184483896
+      },
+      "positive_net_rate": 0.4773163930596971,
+      "mean_true_E_positive": 0.0,
+      "mean_true_E_nonpositive": -0.08118562544164304,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.1,
+      "test_type": "B",
+      "level": "level1",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6213097648509052,
+      "oracle_selective_net": 0.7269497245269094,
+      "oracle_minus_always_observe": 0.10563995967600426,
+      "always_observe_minus_always_try": -0.10563995967600426,
+      "oracle_minus_always_try": 0.0,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.10563995967600426,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.05695225806505559,
+      "estimated_E_min": -0.06017904003453415,
+      "estimated_E_max": -0.05372547609557704,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.06017904003453415,
+        "(1, 0, 0, 1)": -0.05372547609557704
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.0,
+      "mean_true_E_nonpositive": -0.10563995967600437,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.1,
+      "test_type": "B",
+      "level": "level2",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6213097648509052,
+      "oracle_selective_net": 0.7269497245269094,
+      "oracle_minus_always_observe": 0.10563995967600426,
+      "always_observe_minus_always_try": -0.10563995967600426,
+      "oracle_minus_always_try": 0.0,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.10563995967600426,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.09572836878753502,
+      "estimated_E_min": -0.10540871469597068,
+      "estimated_E_max": -0.08604802287909935,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.10540871469597068,
+        "(1, 0, 0, 1)": -0.08604802287909935
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.0,
+      "mean_true_E_nonpositive": -0.10563995967600437,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "structured",
+      "observe_cost": 0.1,
+      "test_type": "B",
+      "level": "level3",
+      "always_try_net": 0.7269497245269094,
+      "always_observe_net": 0.6213097648509052,
+      "oracle_selective_net": 0.7269497245269094,
+      "oracle_minus_always_observe": 0.10563995967600426,
+      "always_observe_minus_always_try": -0.10563995967600426,
+      "oracle_minus_always_try": 0.0,
+      "policy_net": 0.7269497245269094,
+      "delta_vs_always_observe": 0.10563995967600426,
+      "delta_vs_always_try": 0.0,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 0.0,
+      "positive_net_observe_rate": 0.0,
+      "nonpositive_net_observe_rate": 0.0,
+      "sign_correct_rate": 0.5532515247332548,
+      "false_observe_rate": 0.0,
+      "false_direct_rate": 0.4467484752667453,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": -0.09444456971592705,
+      "estimated_E_min": -0.10340220979170954,
+      "estimated_E_max": -0.08548692964014457,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": -0.10340220979170954,
+        "(1, 0, 0, 1)": -0.08548692964014457
+      },
+      "positive_net_rate": 0.4467484752667453,
+      "mean_true_E_positive": 0.0,
+      "mean_true_E_nonpositive": -0.10563995967600437,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.6174649255833793,
+      "cue_pair_max_predictiveness": 0.742017801214395,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.03,
+      "test_type": "A",
+      "level": "level1",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7358672426569153,
+      "oracle_selective_net": 0.7358672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.10837140719967087,
+      "oracle_minus_always_try": 0.10837140719967087,
+      "policy_net": 0.7358672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.10837140719967087,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.10837140719967087,
+      "estimated_E_min": 0.10837140719967087,
+      "estimated_E_max": 0.10837140719967087,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.10837140719967087,
+        "(1, 0, 0, 0)": 0.10837140719967087
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.10837140719967087,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.03,
+      "test_type": "A",
+      "level": "level2",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7358672426569153,
+      "oracle_selective_net": 0.7358672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.10837140719967087,
+      "oracle_minus_always_try": 0.10837140719967087,
+      "policy_net": 0.7358672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.10837140719967087,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.10837140719967087,
+      "estimated_E_min": 0.10837140719967087,
+      "estimated_E_max": 0.10837140719967087,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.10837140719967087,
+        "(1, 0, 0, 0)": 0.10837140719967087
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.10837140719967087,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.03,
+      "test_type": "A",
+      "level": "level3",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7358672426569153,
+      "oracle_selective_net": 0.7358672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.10837140719967087,
+      "oracle_minus_always_try": 0.10837140719967087,
+      "policy_net": 0.7358672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.10837140719967087,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.10837140719967088,
+      "estimated_E_min": 0.10837140719967088,
+      "estimated_E_max": 0.10837140719967088,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.10837140719967088,
+        "(1, 0, 0, 0)": 0.10837140719967088
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.10837140719967087,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.03,
+      "test_type": "B",
+      "level": "level1",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7358672426569153,
+      "oracle_selective_net": 0.7358672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.10837140719967087,
+      "oracle_minus_always_try": 0.10837140719967087,
+      "policy_net": 0.7358672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.10837140719967087,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.10837140719967087,
+      "estimated_E_min": 0.10837140719967087,
+      "estimated_E_max": 0.10837140719967087,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.10837140719967087,
+        "(1, 0, 0, 1)": 0.10837140719967087
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.10837140719967087,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.03,
+      "test_type": "B",
+      "level": "level2",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7358672426569153,
+      "oracle_selective_net": 0.7358672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.10837140719967087,
+      "oracle_minus_always_try": 0.10837140719967087,
+      "policy_net": 0.7358672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.10837140719967087,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.10837140719967087,
+      "estimated_E_min": 0.10837140719967087,
+      "estimated_E_max": 0.10837140719967087,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.10837140719967087,
+        "(1, 0, 0, 1)": 0.10837140719967087
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.10837140719967087,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.03,
+      "test_type": "B",
+      "level": "level3",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7358672426569153,
+      "oracle_selective_net": 0.7358672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.10837140719967087,
+      "oracle_minus_always_try": 0.10837140719967087,
+      "policy_net": 0.7358672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.10837140719967087,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.10837140719967088,
+      "estimated_E_min": 0.10837140719967088,
+      "estimated_E_max": 0.10837140719967088,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.10837140719967088,
+        "(1, 0, 0, 1)": 0.10837140719967088
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.10837140719967087,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.05,
+      "test_type": "A",
+      "level": "level1",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7158672426569153,
+      "oracle_selective_net": 0.7158672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.08837140719967085,
+      "oracle_minus_always_try": 0.08837140719967085,
+      "policy_net": 0.7158672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.08837140719967085,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.08837140719967085,
+      "estimated_E_min": 0.08837140719967085,
+      "estimated_E_max": 0.08837140719967085,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.08837140719967085,
+        "(1, 0, 0, 0)": 0.08837140719967085
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.08837140719967085,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.05,
+      "test_type": "A",
+      "level": "level2",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7158672426569153,
+      "oracle_selective_net": 0.7158672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.08837140719967085,
+      "oracle_minus_always_try": 0.08837140719967085,
+      "policy_net": 0.7158672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.08837140719967085,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.08837140719967085,
+      "estimated_E_min": 0.08837140719967085,
+      "estimated_E_max": 0.08837140719967085,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.08837140719967085,
+        "(1, 0, 0, 0)": 0.08837140719967085
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.08837140719967085,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.05,
+      "test_type": "A",
+      "level": "level3",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7158672426569153,
+      "oracle_selective_net": 0.7158672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.08837140719967085,
+      "oracle_minus_always_try": 0.08837140719967085,
+      "policy_net": 0.7158672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.08837140719967085,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.08837140719967085,
+      "estimated_E_min": 0.08837140719967085,
+      "estimated_E_max": 0.08837140719967085,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.08837140719967085,
+        "(1, 0, 0, 0)": 0.08837140719967085
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.08837140719967085,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.05,
+      "test_type": "B",
+      "level": "level1",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7158672426569153,
+      "oracle_selective_net": 0.7158672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.08837140719967085,
+      "oracle_minus_always_try": 0.08837140719967085,
+      "policy_net": 0.7158672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.08837140719967085,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.08837140719967085,
+      "estimated_E_min": 0.08837140719967085,
+      "estimated_E_max": 0.08837140719967085,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.08837140719967085,
+        "(1, 0, 0, 1)": 0.08837140719967085
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.08837140719967085,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.05,
+      "test_type": "B",
+      "level": "level2",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7158672426569153,
+      "oracle_selective_net": 0.7158672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.08837140719967085,
+      "oracle_minus_always_try": 0.08837140719967085,
+      "policy_net": 0.7158672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.08837140719967085,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.08837140719967085,
+      "estimated_E_min": 0.08837140719967085,
+      "estimated_E_max": 0.08837140719967085,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.08837140719967085,
+        "(1, 0, 0, 1)": 0.08837140719967085
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.08837140719967085,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.05,
+      "test_type": "B",
+      "level": "level3",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.7158672426569153,
+      "oracle_selective_net": 0.7158672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.08837140719967085,
+      "oracle_minus_always_try": 0.08837140719967085,
+      "policy_net": 0.7158672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.08837140719967085,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.08837140719967085,
+      "estimated_E_min": 0.08837140719967085,
+      "estimated_E_max": 0.08837140719967085,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.08837140719967085,
+        "(1, 0, 0, 1)": 0.08837140719967085
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.08837140719967085,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.07,
+      "test_type": "A",
+      "level": "level1",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6958672426569152,
+      "oracle_selective_net": 0.6958672426569152,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.06837140719967083,
+      "oracle_minus_always_try": 0.06837140719967083,
+      "policy_net": 0.6958672426569152,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.06837140719967083,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.06837140719967083,
+      "estimated_E_min": 0.06837140719967083,
+      "estimated_E_max": 0.06837140719967083,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.06837140719967083,
+        "(1, 0, 0, 0)": 0.06837140719967083
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.06837140719967083,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.07,
+      "test_type": "A",
+      "level": "level2",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6958672426569152,
+      "oracle_selective_net": 0.6958672426569152,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.06837140719967083,
+      "oracle_minus_always_try": 0.06837140719967083,
+      "policy_net": 0.6958672426569152,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.06837140719967083,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.06837140719967083,
+      "estimated_E_min": 0.06837140719967083,
+      "estimated_E_max": 0.06837140719967083,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.06837140719967083,
+        "(1, 0, 0, 0)": 0.06837140719967083
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.06837140719967083,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.07,
+      "test_type": "A",
+      "level": "level3",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6958672426569152,
+      "oracle_selective_net": 0.6958672426569152,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.06837140719967083,
+      "oracle_minus_always_try": 0.06837140719967083,
+      "policy_net": 0.6958672426569152,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.06837140719967083,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.06837140719967082,
+      "estimated_E_min": 0.06837140719967082,
+      "estimated_E_max": 0.06837140719967082,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.06837140719967082,
+        "(1, 0, 0, 0)": 0.06837140719967082
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.06837140719967083,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.07,
+      "test_type": "B",
+      "level": "level1",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6958672426569152,
+      "oracle_selective_net": 0.6958672426569152,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.06837140719967083,
+      "oracle_minus_always_try": 0.06837140719967083,
+      "policy_net": 0.6958672426569152,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.06837140719967083,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.06837140719967083,
+      "estimated_E_min": 0.06837140719967083,
+      "estimated_E_max": 0.06837140719967083,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.06837140719967083,
+        "(1, 0, 0, 1)": 0.06837140719967083
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.06837140719967083,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.07,
+      "test_type": "B",
+      "level": "level2",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6958672426569152,
+      "oracle_selective_net": 0.6958672426569152,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.06837140719967083,
+      "oracle_minus_always_try": 0.06837140719967083,
+      "policy_net": 0.6958672426569152,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.06837140719967083,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.06837140719967083,
+      "estimated_E_min": 0.06837140719967083,
+      "estimated_E_max": 0.06837140719967083,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.06837140719967083,
+        "(1, 0, 0, 1)": 0.06837140719967083
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.06837140719967083,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.07,
+      "test_type": "B",
+      "level": "level3",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6958672426569152,
+      "oracle_selective_net": 0.6958672426569152,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.06837140719967083,
+      "oracle_minus_always_try": 0.06837140719967083,
+      "policy_net": 0.6958672426569152,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.06837140719967083,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.06837140719967082,
+      "estimated_E_min": 0.06837140719967082,
+      "estimated_E_max": 0.06837140719967082,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.06837140719967082,
+        "(1, 0, 0, 1)": 0.06837140719967082
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.06837140719967083,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.1,
+      "test_type": "A",
+      "level": "level1",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6658672426569153,
+      "oracle_selective_net": 0.6658672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.038371407199670915,
+      "oracle_minus_always_try": 0.038371407199670915,
+      "policy_net": 0.6658672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.038371407199670915,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.038371407199670915,
+      "estimated_E_min": 0.038371407199670915,
+      "estimated_E_max": 0.038371407199670915,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.038371407199670915,
+        "(1, 0, 0, 0)": 0.038371407199670915
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.038371407199670915,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.1,
+      "test_type": "A",
+      "level": "level2",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6658672426569153,
+      "oracle_selective_net": 0.6658672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.038371407199670915,
+      "oracle_minus_always_try": 0.038371407199670915,
+      "policy_net": 0.6658672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.038371407199670915,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.038371407199670915,
+      "estimated_E_min": 0.038371407199670915,
+      "estimated_E_max": 0.038371407199670915,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.038371407199670915,
+        "(1, 0, 0, 0)": 0.038371407199670915
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.038371407199670915,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.1,
+      "test_type": "A",
+      "level": "level3",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6658672426569153,
+      "oracle_selective_net": 0.6658672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.038371407199670915,
+      "oracle_minus_always_try": 0.038371407199670915,
+      "policy_net": 0.6658672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.038371407199670915,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.038371407199670915,
+      "estimated_E_min": 0.038371407199670915,
+      "estimated_E_max": 0.038371407199670915,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 0)": 0.038371407199670915,
+        "(1, 0, 0, 0)": 0.038371407199670915
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.038371407199670915,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.1,
+      "test_type": "B",
+      "level": "level1",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6658672426569153,
+      "oracle_selective_net": 0.6658672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.038371407199670915,
+      "oracle_minus_always_try": 0.038371407199670915,
+      "policy_net": 0.6658672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.038371407199670915,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.038371407199670915,
+      "estimated_E_min": 0.038371407199670915,
+      "estimated_E_max": 0.038371407199670915,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.038371407199670915,
+        "(1, 0, 0, 1)": 0.038371407199670915
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.038371407199670915,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.1,
+      "test_type": "B",
+      "level": "level2",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6658672426569153,
+      "oracle_selective_net": 0.6658672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.038371407199670915,
+      "oracle_minus_always_try": 0.038371407199670915,
+      "policy_net": 0.6658672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.038371407199670915,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.038371407199670915,
+      "estimated_E_min": 0.038371407199670915,
+      "estimated_E_max": 0.038371407199670915,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.038371407199670915,
+        "(1, 0, 0, 1)": 0.038371407199670915
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.038371407199670915,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    },
+    {
+      "version": "null",
+      "observe_cost": 0.1,
+      "test_type": "B",
+      "level": "level3",
+      "always_try_net": 0.6274958354572444,
+      "always_observe_net": 0.6658672426569153,
+      "oracle_selective_net": 0.6658672426569153,
+      "oracle_minus_always_observe": 0.0,
+      "always_observe_minus_always_try": 0.038371407199670915,
+      "oracle_minus_always_try": 0.038371407199670915,
+      "policy_net": 0.6658672426569153,
+      "delta_vs_always_observe": 0.0,
+      "delta_vs_always_try": 0.038371407199670915,
+      "gap_to_oracle": 0.0,
+      "observe_rate": 1.0,
+      "positive_net_observe_rate": 1.0,
+      "nonpositive_net_observe_rate": 1.0,
+      "sign_correct_rate": 0.5518363898884744,
+      "false_observe_rate": 0.4481636101115256,
+      "false_direct_rate": 0.0,
+      "fallback_rate": 0.0,
+      "non_global_rate": 1.0,
+      "estimated_E_mean": 0.038371407199670915,
+      "estimated_E_min": 0.038371407199670915,
+      "estimated_E_max": 0.038371407199670915,
+      "per_signature_estimated_E": {
+        "(0, 1, 0, 1)": 0.038371407199670915,
+        "(1, 0, 0, 1)": 0.038371407199670915
+      },
+      "positive_net_rate": 0.5518363898884744,
+      "mean_true_E_positive": 0.038371407199670915,
+      "mean_true_E_nonpositive": 0.0,
+      "exact_signature_determinism_rate": 0.0,
+      "single_cue_max_predictiveness": 0.5518363898884744,
+      "cue_pair_max_predictiveness": 0.5518363898884744,
+      "hidden_h_probe_from_pre_surface_accuracy": 0.3788721308888858,
+      "train_pair_coverage_rate": 1.0
+    }
+  ],
+  "structured_null_comparison": {
+    "positive_net_rate_delta": -1.1102230246251565e-16,
+    "always_observe_delta": -1.1102230246251565e-16,
+    "always_try_delta": 0.10075782827974145
+  },
+  "acceptance_summary": {
+    "status": "PASS",
+    "validation_mode": "design_search",
+    "decision": "7kb_DESIGN_SEARCH_PASS_NOT_FINAL_VALIDATION",
+    "split_search_used": true,
+    "split_search_space_size": 5388,
+    "selected_config_id": "factorized_base_a075_m1",
+    "selected_split_idx": 3985,
+    "structured_A_best_level": "level3",
+    "structured_B_best_level": "level3",
+    "structured_A_best_delta_vs_always_observe": 0.034729468879366676,
+    "structured_B_best_delta_vs_always_observe": 0.03563995967600442,
+    "structured_A_level3_delta_vs_always_observe": 0.034729468879366676,
+    "structured_B_level3_delta_vs_always_observe": 0.03563995967600442,
+    "level1_too_strong": false,
+    "null_invalid": false,
+    "keep_level3_passed": true,
+    "exact_signature_determinism_rate": 0.0,
+    "single_cue_max_predictiveness": 0.6174649255833793,
+    "hidden_h_probe_from_pre_surface_accuracy": 0.5979379811554606,
+    "train_pair_coverage_rate": 1.0
+  },
+  "validity_audit": {
+    "no_learner_training": true,
+    "no_1j40b8": true,
+    "no_full_env3c": true,
+    "forbidden_test_keys_absent": true,
+    "split_selected_by_design_search": true
+  }
+}

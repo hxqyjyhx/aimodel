@@ -1,0 +1,430 @@
+{
+  "block_id": "1J27",
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "n_permutation_repeats": 20,
+  "per_seed": {
+    "101": {
+      "seed": 101,
+      "A_total_pv": 23,
+      "B_sum_positive_online_total_pv": 21,
+      "B_signed_sum_online_total_pv": 9,
+      "B_signed_max_abs_online_total_pv": 9,
+      "Family_only_online_control_total_pv": 15,
+      "Offline_signed_sum_upper_bound_total_pv": 1,
+      "signed_sum_permuted_median_pv": 21,
+      "signed_max_abs_permuted_median_pv": 21,
+      "signed_sum_real_percentile_against_permuted": 0.05,
+      "signed_max_abs_real_percentile_against_permuted": 0.05,
+      "B_signed_sum_online_macro_delta_vs_A": -0.0053,
+      "B_signed_max_abs_online_macro_delta_vs_A": -0.0053,
+      "shared_positions_used": true,
+      "permuted_control_mode": "online_stepwise",
+      "final_memory_permutation_used": false,
+      "deterministic_permutation_seed_used": true,
+      "no_oracle_leakage_confirmed": true,
+      "hard_exclusion_used": false,
+      "deceptive_family_preservation_valid": true,
+      "implementation_status": "pass",
+      "failure_reason": "none",
+      "signed_sum_pv_reduction_vs_A": 14,
+      "signed_max_abs_pv_reduction_vs_A": 14,
+      "offline_improvement_room": 22,
+      "online_gap_to_offline": 8,
+      "signed_sum_beats_A": true,
+      "signed_sum_beats_permuted_median": true,
+      "signed_sum_ties_permuted_median": false,
+      "signed_sum_loses_to_permuted_median": false,
+      "high_ceiling_seed": true,
+      "medium_ceiling_seed": false,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": true,
+      "mapping_advantage_absent": false,
+      "online_learning_gap_large": true
+    },
+    "103": {
+      "seed": 103,
+      "A_total_pv": 19,
+      "B_sum_positive_online_total_pv": 18,
+      "B_signed_sum_online_total_pv": 18,
+      "B_signed_max_abs_online_total_pv": 19,
+      "Family_only_online_control_total_pv": 17,
+      "Offline_signed_sum_upper_bound_total_pv": 10,
+      "signed_sum_permuted_median_pv": 18,
+      "signed_max_abs_permuted_median_pv": 18,
+      "signed_sum_real_percentile_against_permuted": 0.95,
+      "signed_max_abs_real_percentile_against_permuted": 1.0,
+      "B_signed_sum_online_macro_delta_vs_A": -0.012,
+      "B_signed_max_abs_online_macro_delta_vs_A": -0.0128,
+      "shared_positions_used": true,
+      "permuted_control_mode": "online_stepwise",
+      "final_memory_permutation_used": false,
+      "deterministic_permutation_seed_used": true,
+      "no_oracle_leakage_confirmed": true,
+      "hard_exclusion_used": false,
+      "deceptive_family_preservation_valid": true,
+      "implementation_status": "partial",
+      "failure_reason": "signed_beats_A_but_not_permuted_median",
+      "signed_sum_pv_reduction_vs_A": 1,
+      "signed_max_abs_pv_reduction_vs_A": 0,
+      "offline_improvement_room": 9,
+      "online_gap_to_offline": 8,
+      "signed_sum_beats_A": true,
+      "signed_sum_beats_permuted_median": false,
+      "signed_sum_ties_permuted_median": true,
+      "signed_sum_loses_to_permuted_median": false,
+      "high_ceiling_seed": false,
+      "medium_ceiling_seed": true,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": false,
+      "mapping_advantage_absent": true,
+      "online_learning_gap_large": true
+    },
+    "107": {
+      "seed": 107,
+      "A_total_pv": 18,
+      "B_sum_positive_online_total_pv": 19,
+      "B_signed_sum_online_total_pv": 12,
+      "B_signed_max_abs_online_total_pv": 12,
+      "Family_only_online_control_total_pv": 17,
+      "Offline_signed_sum_upper_bound_total_pv": 5,
+      "signed_sum_permuted_median_pv": 26,
+      "signed_max_abs_permuted_median_pv": 26,
+      "signed_sum_real_percentile_against_permuted": 0.05,
+      "signed_max_abs_real_percentile_against_permuted": 0.05,
+      "B_signed_sum_online_macro_delta_vs_A": 0.0003,
+      "B_signed_max_abs_online_macro_delta_vs_A": 0.0003,
+      "shared_positions_used": true,
+      "permuted_control_mode": "online_stepwise",
+      "final_memory_permutation_used": false,
+      "deterministic_permutation_seed_used": true,
+      "no_oracle_leakage_confirmed": true,
+      "hard_exclusion_used": false,
+      "deceptive_family_preservation_valid": true,
+      "implementation_status": "pass",
+      "failure_reason": "none",
+      "signed_sum_pv_reduction_vs_A": 6,
+      "signed_max_abs_pv_reduction_vs_A": 6,
+      "offline_improvement_room": 13,
+      "online_gap_to_offline": 7,
+      "signed_sum_beats_A": true,
+      "signed_sum_beats_permuted_median": true,
+      "signed_sum_ties_permuted_median": false,
+      "signed_sum_loses_to_permuted_median": false,
+      "high_ceiling_seed": true,
+      "medium_ceiling_seed": false,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": true,
+      "mapping_advantage_absent": false,
+      "online_learning_gap_large": true
+    },
+    "109": {
+      "seed": 109,
+      "A_total_pv": 29,
+      "B_sum_positive_online_total_pv": 28,
+      "B_signed_sum_online_total_pv": 27,
+      "B_signed_max_abs_online_total_pv": 27,
+      "Family_only_online_control_total_pv": 24,
+      "Offline_signed_sum_upper_bound_total_pv": 6,
+      "signed_sum_permuted_median_pv": 26,
+      "signed_max_abs_permuted_median_pv": 26,
+      "signed_sum_real_percentile_against_permuted": 1.0,
+      "signed_max_abs_real_percentile_against_permuted": 1.0,
+      "B_signed_sum_online_macro_delta_vs_A": 0.006,
+      "B_signed_max_abs_online_macro_delta_vs_A": 0.006,
+      "shared_positions_used": true,
+      "permuted_control_mode": "online_stepwise",
+      "final_memory_permutation_used": false,
+      "deterministic_permutation_seed_used": true,
+      "no_oracle_leakage_confirmed": true,
+      "hard_exclusion_used": false,
+      "deceptive_family_preservation_valid": true,
+      "implementation_status": "partial",
+      "failure_reason": "signed_beats_A_but_not_permuted_median",
+      "signed_sum_pv_reduction_vs_A": 2,
+      "signed_max_abs_pv_reduction_vs_A": 2,
+      "offline_improvement_room": 23,
+      "online_gap_to_offline": 21,
+      "signed_sum_beats_A": true,
+      "signed_sum_beats_permuted_median": false,
+      "signed_sum_ties_permuted_median": false,
+      "signed_sum_loses_to_permuted_median": true,
+      "high_ceiling_seed": true,
+      "medium_ceiling_seed": false,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": false,
+      "mapping_advantage_absent": true,
+      "online_learning_gap_large": true
+    },
+    "113": {
+      "seed": 113,
+      "A_total_pv": 26,
+      "B_sum_positive_online_total_pv": 23,
+      "B_signed_sum_online_total_pv": 8,
+      "B_signed_max_abs_online_total_pv": 8,
+      "Family_only_online_control_total_pv": 24,
+      "Offline_signed_sum_upper_bound_total_pv": 3,
+      "signed_sum_permuted_median_pv": 10,
+      "signed_max_abs_permuted_median_pv": 9,
+      "signed_sum_real_percentile_against_permuted": 0.15,
+      "signed_max_abs_real_percentile_against_permuted": 0.15,
+      "B_signed_sum_online_macro_delta_vs_A": -0.005,
+      "B_signed_max_abs_online_macro_delta_vs_A": -0.005,
+      "shared_positions_used": true,
+      "permuted_control_mode": "online_stepwise",
+      "final_memory_permutation_used": false,
+      "deterministic_permutation_seed_used": true,
+      "no_oracle_leakage_confirmed": true,
+      "hard_exclusion_used": false,
+      "deceptive_family_preservation_valid": true,
+      "implementation_status": "pass",
+      "failure_reason": "none",
+      "signed_sum_pv_reduction_vs_A": 18,
+      "signed_max_abs_pv_reduction_vs_A": 18,
+      "offline_improvement_room": 23,
+      "online_gap_to_offline": 5,
+      "signed_sum_beats_A": true,
+      "signed_sum_beats_permuted_median": true,
+      "signed_sum_ties_permuted_median": false,
+      "signed_sum_loses_to_permuted_median": false,
+      "high_ceiling_seed": true,
+      "medium_ceiling_seed": false,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": true,
+      "mapping_advantage_absent": false,
+      "online_learning_gap_large": true
+    }
+  },
+  "seed_stratification": {
+    "101": {
+      "high_ceiling_seed": true,
+      "medium_ceiling_seed": false,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": true,
+      "mapping_advantage_absent": false,
+      "online_learning_gap_large": true,
+      "offline_improvement_room": 22,
+      "online_gap_to_offline": 8
+    },
+    "103": {
+      "high_ceiling_seed": false,
+      "medium_ceiling_seed": true,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": false,
+      "mapping_advantage_absent": true,
+      "online_learning_gap_large": true,
+      "offline_improvement_room": 9,
+      "online_gap_to_offline": 8
+    },
+    "107": {
+      "high_ceiling_seed": true,
+      "medium_ceiling_seed": false,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": true,
+      "mapping_advantage_absent": false,
+      "online_learning_gap_large": true,
+      "offline_improvement_room": 13,
+      "online_gap_to_offline": 7
+    },
+    "109": {
+      "high_ceiling_seed": true,
+      "medium_ceiling_seed": false,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": false,
+      "mapping_advantage_absent": true,
+      "online_learning_gap_large": true,
+      "offline_improvement_room": 23,
+      "online_gap_to_offline": 21
+    },
+    "113": {
+      "high_ceiling_seed": true,
+      "medium_ceiling_seed": false,
+      "low_ceiling_seed": false,
+      "mapping_advantage_present": true,
+      "mapping_advantage_absent": false,
+      "online_learning_gap_large": true,
+      "offline_improvement_room": 23,
+      "online_gap_to_offline": 5
+    }
+  },
+  "aggregate": {
+    "seeds": [
+      101,
+      103,
+      107,
+      109,
+      113
+    ],
+    "n_permutation_repeats": 20,
+    "n_valid_seeds": 5,
+    "all_seeds_completed": true,
+    "mean_A_total_pv": 23.0,
+    "mean_B_sum_positive_online_total_pv": 21.8,
+    "mean_B_signed_sum_online_total_pv": 14.8,
+    "mean_B_signed_max_abs_online_total_pv": 15.0,
+    "mean_Family_only_online_control_total_pv": 19.4,
+    "mean_Offline_signed_sum_upper_bound_total_pv": 5.0,
+    "mean_signed_sum_pv_reduction_vs_A": 8.2,
+    "mean_signed_max_abs_pv_reduction_vs_A": 8.0,
+    "mean_offline_improvement_room": 18.0,
+    "mean_online_gap_to_offline": 9.8,
+    "mean_signed_sum_macro_delta_vs_A": -0.0032,
+    "mean_signed_max_abs_macro_delta_vs_A": -0.0034,
+    "seeds_where_signed_sum_beats_A": 5,
+    "seeds_where_signed_max_abs_beats_A": 4,
+    "seeds_where_signed_sum_beats_positive_sum": 4,
+    "seeds_where_signed_sum_beats_family_only": 3,
+    "seeds_where_signed_sum_beats_permuted_median": 3,
+    "seeds_where_signed_sum_ties_permuted_median": 1,
+    "seeds_where_signed_sum_loses_to_permuted_median": 1,
+    "seeds_where_signed_max_abs_beats_permuted_median": 3,
+    "seeds_with_no_oracle_leakage_confirmed": 5,
+    "seeds_with_shared_positions_used": 5,
+    "seeds_with_hard_exclusion_false": 5,
+    "seeds_with_deceptive_family_preservation_valid": 5,
+    "high_ceiling_seed_count": 4,
+    "medium_ceiling_seed_count": 1,
+    "low_ceiling_seed_count": 0,
+    "high_ceiling_seeds_where_signed_sum_beats_permuted_median": 3,
+    "medium_ceiling_seeds_where_signed_sum_beats_permuted_median": 0,
+    "low_ceiling_seeds_where_signed_sum_beats_permuted_median": 0
+  },
+  "boolean_flags": {
+    "all_seeds_completed": {
+      "value": true,
+      "rule": "all 5 seeds completed successfully",
+      "supporting_values": {
+        "n_valid": 5,
+        "n_expected": 5
+      }
+    },
+    "all_seeds_shared_positions_used": {
+      "value": true,
+      "rule": "all valid seeds used shared episode positions",
+      "supporting_values": {
+        "count": 5,
+        "total": 5
+      }
+    },
+    "all_seeds_online_stepwise_permuted": {
+      "value": true,
+      "rule": "all valid seeds used online_stepwise permuted control",
+      "supporting_values": {}
+    },
+    "all_seeds_no_final_memory_permutation": {
+      "value": true,
+      "rule": "no seed used frozen-final-memory permutation",
+      "supporting_values": {}
+    },
+    "all_seeds_no_oracle_leakage": {
+      "value": true,
+      "rule": "all valid seeds confirmed no oracle leakage",
+      "supporting_values": {
+        "count": 5,
+        "total": 5
+      }
+    },
+    "all_seeds_hard_exclusion_false": {
+      "value": true,
+      "rule": "no seed used hard exclusion",
+      "supporting_values": {
+        "count": 5,
+        "total": 5
+      }
+    },
+    "all_seeds_family_preservation_valid": {
+      "value": true,
+      "rule": "all valid seeds preserved deceptive family identity",
+      "supporting_values": {
+        "count": 5,
+        "total": 5
+      }
+    },
+    "signed_sum_beats_A_all_seeds": {
+      "value": true,
+      "rule": "B_signed_sum_online PV < A PV in all seeds",
+      "supporting_values": {
+        "count": 5,
+        "total": 5
+      }
+    },
+    "signed_sum_beats_permuted_median_majority": {
+      "value": true,
+      "rule": "signed_sum beats permuted median in at least 3/5 seeds",
+      "supporting_values": {
+        "count": 3,
+        "total": 5,
+        "threshold": 3
+      }
+    },
+    "signed_sum_beats_permuted_median_high_ceiling_seeds": {
+      "value": false,
+      "rule": "among high_ceiling seeds, signed_sum beats permuted median in all such seeds",
+      "supporting_values": {
+        "high_ceiling_seeds": [
+          101,
+          107,
+          109,
+          113
+        ],
+        "n_high_ceiling": 4,
+        "n_beat_perm": 3
+      }
+    },
+    "signed_sum_macro_tradeoff_acceptable": {
+      "value": true,
+      "rule": "mean_macro_delta >= -0.01 and no seed < -0.02",
+      "supporting_values": {
+        "mean_delta": -0.0032,
+        "min_delta": -0.012
+      }
+    },
+    "weak_seed_pattern_detected": {
+      "value": true,
+      "rule": "at least one seed has mapping_advantage_absent=true and online_learning_gap_large=true",
+      "supporting_values": {
+        "seeds_with_pattern": [
+          103,
+          109
+        ]
+      }
+    },
+    "online_offline_gap_detected": {
+      "value": true,
+      "rule": "mean_online_gap_to_offline >= 5",
+      "supporting_values": {
+        "mean_online_gap_to_offline": 9.8
+      }
+    },
+    "stratified_robustness_criteria_met": {
+      "value": true,
+      "rule": "all_seeds_completed and no_leakage and online_stepwise and no_hard_excl and family_ok and signed_sum_beats_A_all and beats_permuted_median_majority and macro_tradeoff_acceptable",
+      "supporting_values": {
+        "all_completed": true,
+        "no_leakage": true,
+        "online_stepwise": true,
+        "no_hard_excl": true,
+        "family_ok": true,
+        "ss_beats_A_all": true,
+        "ss_beats_perm_majority": true,
+        "ss_macro_tradeoff_ok": true
+      }
+    },
+    "implementation_status": {
+      "value": "pass",
+      "rule": "pass if all stratified criteria met, partial otherwise",
+      "supporting_values": {}
+    },
+    "failure_reason": {
+      "value": "none",
+      "rule": "derived from stratified multiseed validation results",
+      "supporting_values": {}
+    }
+  },
+  "elapsed_seconds": 478.6
+}

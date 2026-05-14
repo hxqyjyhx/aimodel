@@ -1,0 +1,1036 @@
+{
+  "block_id": "1J4",
+  "condition": "C4_instance_subtype_cued_v1",
+  "seed": 101,
+  "budget": 1.5,
+  "cost_weight": 0.5,
+  "c13_metrics": {
+    "macro_query_balanced_accuracy": 0.573333,
+    "mean_positive_recall": 0.2,
+    "mean_negative_recall": 0.946667,
+    "per_query": {
+      "need_food": {
+        "tp": 5,
+        "fp": 0,
+        "tn": 48,
+        "fn": 7,
+        "positive_recall": 0.416667,
+        "negative_recall": 1.0,
+        "balanced_accuracy": 0.708333,
+        "accuracy": 0.883333
+      },
+      "need_fuel": {
+        "tp": 5,
+        "fp": 3,
+        "tn": 27,
+        "fn": 25,
+        "positive_recall": 0.166667,
+        "negative_recall": 0.9,
+        "balanced_accuracy": 0.533333,
+        "accuracy": 0.533333
+      },
+      "need_planks": {
+        "tp": 2,
+        "fp": 7,
+        "tn": 41,
+        "fn": 10,
+        "positive_recall": 0.166667,
+        "negative_recall": 0.854167,
+        "balanced_accuracy": 0.510417,
+        "accuracy": 0.716667
+      },
+      "need_stone": {
+        "tp": 2,
+        "fp": 0,
+        "tn": 48,
+        "fn": 10,
+        "positive_recall": 0.166667,
+        "negative_recall": 1.0,
+        "balanced_accuracy": 0.583333,
+        "accuracy": 0.833333
+      },
+      "need_tool": {
+        "tp": 1,
+        "fp": 1,
+        "tn": 47,
+        "fn": 11,
+        "positive_recall": 0.083333,
+        "negative_recall": 0.979167,
+        "balanced_accuracy": 0.53125,
+        "accuracy": 0.8
+      }
+    }
+  },
+  "c0b_metrics": {
+    "macro_query_balanced_accuracy": 0.587083,
+    "mean_positive_recall": 0.31,
+    "mean_negative_recall": 0.864167,
+    "per_query": {
+      "need_food": {
+        "tp": 2,
+        "fp": 0,
+        "tn": 48,
+        "fn": 10,
+        "positive_recall": 0.166667,
+        "negative_recall": 1.0,
+        "balanced_accuracy": 0.583333,
+        "accuracy": 0.833333
+      },
+      "need_fuel": {
+        "tp": 19,
+        "fp": 11,
+        "tn": 19,
+        "fn": 11,
+        "positive_recall": 0.633333,
+        "negative_recall": 0.633333,
+        "balanced_accuracy": 0.633333,
+        "accuracy": 0.633333
+      },
+      "need_planks": {
+        "tp": 3,
+        "fp": 9,
+        "tn": 39,
+        "fn": 9,
+        "positive_recall": 0.25,
+        "negative_recall": 0.8125,
+        "balanced_accuracy": 0.53125,
+        "accuracy": 0.7
+      },
+      "need_stone": {
+        "tp": 1,
+        "fp": 3,
+        "tn": 45,
+        "fn": 11,
+        "positive_recall": 0.083333,
+        "negative_recall": 0.9375,
+        "balanced_accuracy": 0.510417,
+        "accuracy": 0.766667
+      },
+      "need_tool": {
+        "tp": 5,
+        "fp": 3,
+        "tn": 45,
+        "fn": 7,
+        "positive_recall": 0.416667,
+        "negative_recall": 0.9375,
+        "balanced_accuracy": 0.677083,
+        "accuracy": 0.833333
+      }
+    }
+  },
+  "c13_cost": {
+    "visit_count": 22,
+    "observe_count": 22,
+    "probe_count": 22,
+    "total_cost": 1.4500000000000002,
+    "normalized_cost": 0.9666666666666668,
+    "total_reach_cost": 0.24,
+    "total_observe_cost": 0.11,
+    "total_probe_cost": 1.1,
+    "budget_remaining": 0.049999999999999975,
+    "budget_spent": 1.4500000000000002,
+    "initial_budget": 1.5
+  },
+  "c0b_cost": {
+    "visit_count": 60,
+    "observe_count": 60,
+    "probe_count": 0,
+    "total_cost": 1.1300000000000001,
+    "normalized_cost": 0.7533333333333334,
+    "total_reach_cost": 0.8300000000000001,
+    "total_observe_cost": 0.3,
+    "total_probe_cost": 0,
+    "budget_remaining": 0.37000000000000255,
+    "budget_spent": 1.1300000000000006,
+    "initial_budget": 1.5
+  },
+  "diagnostics": {
+    "1_visit_breadth_loss": {
+      "summary": {
+        "c13_visit_count": 22,
+        "c0b_visit_count": 60,
+        "c13_unvisited_count": 38,
+        "total_positive_across_queries": 78,
+        "c13_max_possible_pos_recall_from_visits": 0.3333,
+        "c0b_actual_pos_recall": 0.31,
+        "pos_recall_loss_from_missed_visits": -0.0233,
+        "per_query": {
+          "need_food": {
+            "total_positive": 12,
+            "total_negative": 48,
+            "c13_visited_positive": 9,
+            "c13_visited_negative": 13,
+            "c13_missed_positive": 3,
+            "c13_missed_negative": 35,
+            "positive_coverage_rate": 0.75,
+            "negative_coverage_rate": 0.2708
+          },
+          "need_fuel": {
+            "total_positive": 30,
+            "total_negative": 30,
+            "c13_visited_positive": 6,
+            "c13_visited_negative": 16,
+            "c13_missed_positive": 24,
+            "c13_missed_negative": 14,
+            "positive_coverage_rate": 0.2,
+            "negative_coverage_rate": 0.5333
+          },
+          "need_planks": {
+            "total_positive": 12,
+            "total_negative": 48,
+            "c13_visited_positive": 4,
+            "c13_visited_negative": 18,
+            "c13_missed_positive": 8,
+            "c13_missed_negative": 30,
+            "positive_coverage_rate": 0.3333,
+            "negative_coverage_rate": 0.375
+          },
+          "need_stone": {
+            "total_positive": 12,
+            "total_negative": 48,
+            "c13_visited_positive": 5,
+            "c13_visited_negative": 17,
+            "c13_missed_positive": 7,
+            "c13_missed_negative": 31,
+            "positive_coverage_rate": 0.4167,
+            "negative_coverage_rate": 0.3542
+          },
+          "need_tool": {
+            "total_positive": 12,
+            "total_negative": 48,
+            "c13_visited_positive": 2,
+            "c13_visited_negative": 20,
+            "c13_missed_positive": 10,
+            "c13_missed_negative": 28,
+            "positive_coverage_rate": 0.1667,
+            "negative_coverage_rate": 0.4167
+          }
+        }
+      }
+    },
+    "2_visited_object_prediction": {
+      "summary": {
+        "c13_macro_bal_on_visited": 0.7163,
+        "c0b_macro_bal_on_same_subset": 0.557,
+        "random_probe_macro_bal_on_same_subset": 0.6522,
+        "c13_mean_pos_recall_on_visited": 0.5578,
+        "c0b_mean_pos_recall_on_same_subset": 0.3011,
+        "c13_performs_better_on_visited": true,
+        "per_query": {
+          "need_food": {
+            "c13_visited_subset": {
+              "c13_predictions": {
+                "tp": 5,
+                "fp": 0,
+                "tn": 13,
+                "fn": 4,
+                "positive_recall": 0.5556,
+                "negative_recall": 1.0,
+                "balanced_accuracy": 0.7778,
+                "n_objects": 22
+              },
+              "c0b_predictions": {
+                "tp": 2,
+                "fp": 0,
+                "tn": 13,
+                "fn": 7,
+                "positive_recall": 0.2222,
+                "negative_recall": 1.0,
+                "balanced_accuracy": 0.6111,
+                "n_objects": 22
+              },
+              "random_probe_predictions": {
+                "tp": 4,
+                "fp": 0,
+                "tn": 13,
+                "fn": 5,
+                "positive_recall": 0.4444,
+                "negative_recall": 1.0,
+                "balanced_accuracy": 0.7222,
+                "n_objects": 22
+              }
+            },
+            "n_c13_visited": 22,
+            "n_c13_visited_positive": 9,
+            "n_c13_visited_negative": 13
+          },
+          "need_fuel": {
+            "c13_visited_subset": {
+              "c13_predictions": {
+                "tp": 5,
+                "fp": 3,
+                "tn": 13,
+                "fn": 1,
+                "positive_recall": 0.8333,
+                "negative_recall": 0.8125,
+                "balanced_accuracy": 0.8229,
+                "n_objects": 22
+              },
+              "c0b_predictions": {
+                "tp": 5,
+                "fp": 7,
+                "tn": 9,
+                "fn": 1,
+                "positive_recall": 0.8333,
+                "negative_recall": 0.5625,
+                "balanced_accuracy": 0.6979,
+                "n_objects": 22
+              },
+              "random_probe_predictions": {
+                "tp": 5,
+                "fp": 6,
+                "tn": 10,
+                "fn": 1,
+                "positive_recall": 0.8333,
+                "negative_recall": 0.625,
+                "balanced_accuracy": 0.7292,
+                "n_objects": 22
+              }
+            },
+            "n_c13_visited": 22,
+            "n_c13_visited_positive": 6,
+            "n_c13_visited_negative": 16
+          },
+          "need_planks": {
+            "c13_visited_subset": {
+              "c13_predictions": {
+                "tp": 2,
+                "fp": 7,
+                "tn": 11,
+                "fn": 2,
+                "positive_recall": 0.5,
+                "negative_recall": 0.6111,
+                "balanced_accuracy": 0.5556,
+                "n_objects": 22
+              },
+              "c0b_predictions": {
+                "tp": 1,
+                "fp": 7,
+                "tn": 11,
+                "fn": 3,
+                "positive_recall": 0.25,
+                "negative_recall": 0.6111,
+                "balanced_accuracy": 0.4306,
+                "n_objects": 22
+              },
+              "random_probe_predictions": {
+                "tp": 1,
+                "fp": 4,
+                "tn": 14,
+                "fn": 3,
+                "positive_recall": 0.25,
+                "negative_recall": 0.7778,
+                "balanced_accuracy": 0.5139,
+                "n_objects": 22
+              }
+            },
+            "n_c13_visited": 22,
+            "n_c13_visited_positive": 4,
+            "n_c13_visited_negative": 18
+          },
+          "need_stone": {
+            "c13_visited_subset": {
+              "c13_predictions": {
+                "tp": 2,
+                "fp": 0,
+                "tn": 17,
+                "fn": 3,
+                "positive_recall": 0.4,
+                "negative_recall": 1.0,
+                "balanced_accuracy": 0.7,
+                "n_objects": 22
+              },
+              "c0b_predictions": {
+                "tp": 1,
+                "fp": 1,
+                "tn": 16,
+                "fn": 4,
+                "positive_recall": 0.2,
+                "negative_recall": 0.9412,
+                "balanced_accuracy": 0.5706,
+                "n_objects": 22
+              },
+              "random_probe_predictions": {
+                "tp": 1,
+                "fp": 1,
+                "tn": 16,
+                "fn": 4,
+                "positive_recall": 0.2,
+                "negative_recall": 0.9412,
+                "balanced_accuracy": 0.5706,
+                "n_objects": 22
+              }
+            },
+            "n_c13_visited": 22,
+            "n_c13_visited_positive": 5,
+            "n_c13_visited_negative": 17
+          },
+          "need_tool": {
+            "c13_visited_subset": {
+              "c13_predictions": {
+                "tp": 1,
+                "fp": 1,
+                "tn": 19,
+                "fn": 1,
+                "positive_recall": 0.5,
+                "negative_recall": 0.95,
+                "balanced_accuracy": 0.725,
+                "n_objects": 22
+              },
+              "c0b_predictions": {
+                "tp": 0,
+                "fp": 1,
+                "tn": 19,
+                "fn": 2,
+                "positive_recall": 0.0,
+                "negative_recall": 0.95,
+                "balanced_accuracy": 0.475,
+                "n_objects": 22
+              },
+              "random_probe_predictions": {
+                "tp": 1,
+                "fp": 1,
+                "tn": 19,
+                "fn": 1,
+                "positive_recall": 0.5,
+                "negative_recall": 0.95,
+                "balanced_accuracy": 0.725,
+                "n_objects": 22
+              }
+            },
+            "n_c13_visited": 22,
+            "n_c13_visited_positive": 2,
+            "n_c13_visited_negative": 20
+          }
+        }
+      }
+    },
+    "3_probe_action_relevance": {
+      "summary": {
+        "n_probes": 22,
+        "n_differentiating_action_probes": 9,
+        "n_non_differentiating_action_probes": 13,
+        "differentiating_action_probe_rate": 0.4091,
+        "differentiating_action_probes": {
+          "n_effective": 6,
+          "n_zero_gain": 3,
+          "n_harmful": 0,
+          "effective_rate": 0.6667,
+          "zero_gain_rate": 0.3333,
+          "harmful_rate": 0.0
+        },
+        "non_differentiating_action_probes": {
+          "n_effective": 5,
+          "n_zero_gain": 8,
+          "n_harmful": 0,
+          "effective_rate": 0.3846,
+          "zero_gain_rate": 0.6154,
+          "harmful_rate": 0.0
+        }
+      },
+      "per_probe": [
+        {
+          "oid": "test_apple_006",
+          "category": "apple",
+          "subtype": "ripe",
+          "is_majority": true,
+          "action": "burn_as_fuel",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_fuel"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_apple_009",
+          "category": "apple",
+          "subtype": "ripe",
+          "is_majority": true,
+          "action": "burn_as_fuel",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_fuel"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_apple_005",
+          "category": "apple",
+          "subtype": "ripe",
+          "is_majority": true,
+          "action": "eat",
+          "is_differentiating": true,
+          "affected_queries": [
+            "need_food"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_apple_002",
+          "category": "apple",
+          "subtype": "ripe",
+          "is_majority": true,
+          "action": "eat",
+          "is_differentiating": true,
+          "affected_queries": [
+            "need_food"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_stone_block_003",
+          "category": "stone_block",
+          "subtype": "hard",
+          "is_majority": true,
+          "action": "burn_as_fuel",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_fuel"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_apple_011",
+          "category": "apple",
+          "subtype": "unripe_or_spoiled",
+          "is_majority": false,
+          "action": "eat",
+          "is_differentiating": true,
+          "affected_queries": [
+            "need_food"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_apple_000",
+          "category": "apple",
+          "subtype": "ripe",
+          "is_majority": true,
+          "action": "mine_by_hand",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_stone"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_apple_001",
+          "category": "apple",
+          "subtype": "ripe",
+          "is_majority": true,
+          "action": "burn_as_fuel",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_fuel"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_apple_014",
+          "category": "apple",
+          "subtype": "ripe",
+          "is_majority": true,
+          "action": "burn_as_fuel",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_fuel"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_stone_block_008",
+          "category": "stone_block",
+          "subtype": "brittle",
+          "is_majority": false,
+          "action": "use_as_tool",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_tool"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_wooden_pickaxe_005",
+          "category": "wooden_pickaxe",
+          "subtype": "intact",
+          "is_majority": true,
+          "action": "mine_by_hand",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_stone"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_wood_log_006",
+          "category": "wood_log",
+          "subtype": "craftable",
+          "is_majority": true,
+          "action": "eat",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_food"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_stone_block_000",
+          "category": "stone_block",
+          "subtype": "hard",
+          "is_majority": true,
+          "action": "mine_by_hand",
+          "is_differentiating": true,
+          "affected_queries": [
+            "need_stone"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_apple_010",
+          "category": "apple",
+          "subtype": "ripe",
+          "is_majority": true,
+          "action": "eat",
+          "is_differentiating": true,
+          "affected_queries": [
+            "need_food"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_stone_block_009",
+          "category": "stone_block",
+          "subtype": "hard",
+          "is_majority": true,
+          "action": "mine_by_hand",
+          "is_differentiating": true,
+          "affected_queries": [
+            "need_stone"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_stone_block_014",
+          "category": "stone_block",
+          "subtype": "hard",
+          "is_majority": true,
+          "action": "burn_as_fuel",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_fuel"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_wood_log_008",
+          "category": "wood_log",
+          "subtype": "craftable",
+          "is_majority": true,
+          "action": "craft_plank",
+          "is_differentiating": true,
+          "affected_queries": [
+            "need_planks"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_wood_log_001",
+          "category": "wood_log",
+          "subtype": "craftable",
+          "is_majority": true,
+          "action": "burn_as_fuel",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_fuel"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_stone_block_007",
+          "category": "stone_block",
+          "subtype": "hard",
+          "is_majority": true,
+          "action": "burn_as_fuel",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_fuel"
+          ],
+          "outcome": 0.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_apple_003",
+          "category": "apple",
+          "subtype": "ripe",
+          "is_majority": true,
+          "action": "eat",
+          "is_differentiating": true,
+          "affected_queries": [
+            "need_food"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        },
+        {
+          "oid": "test_wood_log_000",
+          "category": "wood_log",
+          "subtype": "craftable",
+          "is_majority": true,
+          "action": "burn_as_fuel",
+          "is_differentiating": false,
+          "affected_queries": [
+            "need_fuel"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 0,
+          "efficiency": "zero_gain"
+        },
+        {
+          "oid": "test_wooden_pickaxe_009",
+          "category": "wooden_pickaxe",
+          "subtype": "intact",
+          "is_majority": true,
+          "action": "use_as_tool",
+          "is_differentiating": true,
+          "affected_queries": [
+            "need_tool"
+          ],
+          "outcome": 1.0,
+          "delta_correct": 1,
+          "efficiency": "effective"
+        }
+      ]
+    },
+    "4_minority_subtype_targeting": {
+      "total_objects": 60,
+      "n_majority": 48,
+      "n_minority": 12,
+      "c13_visited_majority": 20,
+      "c13_visited_minority": 2,
+      "c13_probed_majority": 20,
+      "c13_probed_minority": 2,
+      "majority_visit_rate": 0.4167,
+      "minority_visit_rate": 0.1667,
+      "majority_probe_rate": 1.0,
+      "minority_probe_rate": 1.0,
+      "minority_enrichment_ratio": 1.0,
+      "c13_preferentially_targets_minority": false,
+      "per_category": {
+        "wood_log": {
+          "n_majority": 12,
+          "n_minority": 3,
+          "c13_visited_majority": 4,
+          "c13_visited_minority": 0,
+          "c13_probed_majority": 4,
+          "c13_probed_minority": 0,
+          "majority_visit_rate": 0.3333,
+          "minority_visit_rate": 0.0,
+          "majority_probe_rate": 1.0,
+          "minority_probe_rate": 0.0,
+          "minority_enrichment_ratio": 0.0
+        },
+        "stone_block": {
+          "n_majority": 12,
+          "n_minority": 3,
+          "c13_visited_majority": 5,
+          "c13_visited_minority": 1,
+          "c13_probed_majority": 5,
+          "c13_probed_minority": 1,
+          "majority_visit_rate": 0.4167,
+          "minority_visit_rate": 0.3333,
+          "majority_probe_rate": 1.0,
+          "minority_probe_rate": 1.0,
+          "minority_enrichment_ratio": 1.0
+        },
+        "apple": {
+          "n_majority": 12,
+          "n_minority": 3,
+          "c13_visited_majority": 9,
+          "c13_visited_minority": 1,
+          "c13_probed_majority": 9,
+          "c13_probed_minority": 1,
+          "majority_visit_rate": 0.75,
+          "minority_visit_rate": 0.3333,
+          "majority_probe_rate": 1.0,
+          "minority_probe_rate": 1.0,
+          "minority_enrichment_ratio": 1.0
+        },
+        "wooden_pickaxe": {
+          "n_majority": 12,
+          "n_minority": 3,
+          "c13_visited_majority": 2,
+          "c13_visited_minority": 0,
+          "c13_probed_majority": 2,
+          "c13_probed_minority": 0,
+          "majority_visit_rate": 0.1667,
+          "minority_visit_rate": 0.0,
+          "majority_probe_rate": 1.0,
+          "minority_probe_rate": 0.0,
+          "minority_enrichment_ratio": 0.0
+        }
+      }
+    },
+    "5_probe_value_by_subtype": {
+      "majority_subtype_objects": {
+        "n_probes": 20,
+        "n_effective": 11,
+        "n_zero_gain": 9,
+        "n_harmful": 0,
+        "effective_rate": 0.55,
+        "zero_gain_rate": 0.45,
+        "harmful_rate": 0.0
+      },
+      "minority_subtype_objects": {
+        "n_probes": 2,
+        "n_effective": 0,
+        "n_zero_gain": 2,
+        "n_harmful": 0,
+        "effective_rate": 0.0,
+        "zero_gain_rate": 1.0,
+        "harmful_rate": 0.0
+      },
+      "minority_probes_more_effective": false
+    },
+    "6_positive_recall_loss_decomposition": {
+      "summary": {
+        "total_fn_across_queries": 63,
+        "total_A_unvisited": 52,
+        "total_B_visited_not_probed_wrong": 0,
+        "total_C_probed_but_wrong": 2,
+        "total_D_probe_changed_to_false": 9,
+        "A_pct_of_fn": 0.8254,
+        "B_pct_of_fn": 0.0,
+        "C_pct_of_fn": 0.0317,
+        "D_pct_of_fn": 0.1429,
+        "per_query": {
+          "need_food": {
+            "total_positive": 12,
+            "c13_fn_total": 7,
+            "A_unvisited": 3,
+            "B_visited_not_probed_wrong": 0,
+            "C_probed_but_wrong": 0,
+            "D_probe_changed_to_false": 4,
+            "A_pct": 0.4286,
+            "B_pct": 0.0,
+            "C_pct": 0.0,
+            "D_pct": 0.5714
+          },
+          "need_fuel": {
+            "total_positive": 30,
+            "c13_fn_total": 25,
+            "A_unvisited": 24,
+            "B_visited_not_probed_wrong": 0,
+            "C_probed_but_wrong": 0,
+            "D_probe_changed_to_false": 1,
+            "A_pct": 0.96,
+            "B_pct": 0.0,
+            "C_pct": 0.0,
+            "D_pct": 0.04
+          },
+          "need_planks": {
+            "total_positive": 12,
+            "c13_fn_total": 10,
+            "A_unvisited": 8,
+            "B_visited_not_probed_wrong": 0,
+            "C_probed_but_wrong": 1,
+            "D_probe_changed_to_false": 1,
+            "A_pct": 0.8,
+            "B_pct": 0.0,
+            "C_pct": 0.1,
+            "D_pct": 0.1
+          },
+          "need_stone": {
+            "total_positive": 12,
+            "c13_fn_total": 10,
+            "A_unvisited": 7,
+            "B_visited_not_probed_wrong": 0,
+            "C_probed_but_wrong": 0,
+            "D_probe_changed_to_false": 3,
+            "A_pct": 0.7,
+            "B_pct": 0.0,
+            "C_pct": 0.0,
+            "D_pct": 0.3
+          },
+          "need_tool": {
+            "total_positive": 12,
+            "c13_fn_total": 11,
+            "A_unvisited": 10,
+            "B_visited_not_probed_wrong": 0,
+            "C_probed_but_wrong": 1,
+            "D_probe_changed_to_false": 0,
+            "A_pct": 0.9091,
+            "B_pct": 0.0,
+            "C_pct": 0.0909,
+            "D_pct": 0.0
+          }
+        }
+      }
+    },
+    "7_c13_vs_random_probe": {
+      "summary": {
+        "c13_vs_random_macro_bal_delta": 0.0308,
+        "both_visit_same_count": true,
+        "c13_visit_count": 22,
+        "random_visit_count": 22,
+        "overlap_visited_objects": 22,
+        "c13_only_visited": 0,
+        "random_only_visited": 0,
+        "c13_differentiating_action_probe_rate": 0.4091,
+        "random_differentiating_action_probe_rate": 0.2273,
+        "c13_minority_probe_rate": 1.0,
+        "random_minority_probe_rate": 1.0,
+        "c13_effective_probe_rate": 0.5,
+        "random_effective_probe_rate": 0.3182,
+        "c13_advantage_from_better_action_selection": true,
+        "per_query": {
+          "need_food": {
+            "c13_macro_bal": 0.708333,
+            "random_macro_bal": 0.666667,
+            "c13_positive_coverage": 0.75,
+            "random_positive_coverage": 0.75,
+            "c13_better": true
+          },
+          "need_fuel": {
+            "c13_macro_bal": 0.533333,
+            "random_macro_bal": 0.483333,
+            "c13_positive_coverage": 0.2,
+            "random_positive_coverage": 0.2,
+            "c13_better": true
+          },
+          "need_planks": {
+            "c13_macro_bal": 0.510417,
+            "random_macro_bal": 0.5,
+            "c13_positive_coverage": 0.3333,
+            "random_positive_coverage": 0.3333,
+            "c13_better": true
+          },
+          "need_stone": {
+            "c13_macro_bal": 0.583333,
+            "random_macro_bal": 0.53125,
+            "c13_positive_coverage": 0.4167,
+            "random_positive_coverage": 0.4167,
+            "c13_better": true
+          },
+          "need_tool": {
+            "c13_macro_bal": 0.53125,
+            "random_macro_bal": 0.53125,
+            "c13_positive_coverage": 0.1667,
+            "random_positive_coverage": 0.1667,
+            "c13_better": false
+          }
+        }
+      },
+      "random_probe_metrics": {
+        "macro_query_balanced_accuracy": 0.5425,
+        "per_query": {
+          "need_food": {
+            "tp": 4,
+            "fp": 0,
+            "tn": 48,
+            "fn": 8,
+            "positive_recall": 0.333333,
+            "negative_recall": 1.0,
+            "balanced_accuracy": 0.666667,
+            "accuracy": 0.866667
+          },
+          "need_fuel": {
+            "tp": 5,
+            "fp": 6,
+            "tn": 24,
+            "fn": 25,
+            "positive_recall": 0.166667,
+            "negative_recall": 0.8,
+            "balanced_accuracy": 0.483333,
+            "accuracy": 0.483333
+          },
+          "need_planks": {
+            "tp": 1,
+            "fp": 4,
+            "tn": 44,
+            "fn": 11,
+            "positive_recall": 0.083333,
+            "negative_recall": 0.916667,
+            "balanced_accuracy": 0.5,
+            "accuracy": 0.75
+          },
+          "need_stone": {
+            "tp": 1,
+            "fp": 1,
+            "tn": 47,
+            "fn": 11,
+            "positive_recall": 0.083333,
+            "negative_recall": 0.979167,
+            "balanced_accuracy": 0.53125,
+            "accuracy": 0.8
+          },
+          "need_tool": {
+            "tp": 1,
+            "fp": 1,
+            "tn": 47,
+            "fn": 11,
+            "positive_recall": 0.083333,
+            "negative_recall": 0.979167,
+            "balanced_accuracy": 0.53125,
+            "accuracy": 0.8
+          }
+        }
+      }
+    },
+    "8_category_shortcut_risk_note": {
+      "category_majority_macro_bal": 0.975,
+      "c_minus_macro_bal": 0.5,
+      "category_shortcut_risk": "strong",
+      "agent_exploits_shortcut": false,
+      "interpretation": "category_majority = 0.9750 shows strong category-level shortcut risk. However, C_minus_prior_only = 0.5000 confirms the current zero-interaction agent does NOT exploit this shortcut. The shortcut is latent, not active."
+    }
+  },
+  "final_diagnosis": {
+    "main_diagnosis": "visit_breadth_loss+poor_differentiating_action_selection+poor_minority_subtype_targeting+persistent_negative_only_tradeoff+environment_category_shortcut_risk",
+    "visit_breadth_loss_supported": true,
+    "poor_differentiating_action_selection_supported": true,
+    "poor_minority_subtype_targeting_supported": true,
+    "posterior_prediction_bias_supported": false,
+    "persistent_negative_only_tradeoff_supported": true,
+    "c13_fix_ready": false,
+    "environment_change_ready": false,
+    "ready_for_multiseed": false
+  }
+}

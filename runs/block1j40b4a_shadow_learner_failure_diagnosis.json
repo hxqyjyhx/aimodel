@@ -1,0 +1,48 @@
+{
+  "block_id": "1J40b-4a",
+  "type": "failure_diagnosis",
+  "elapsed_seconds": 2.4,
+  "diagnostics": {
+    "d1_pre_observe_ceiling": {
+      "pre_mean_true_return": 0.45,
+      "post_mean_true_return": 0.4066666666666667,
+      "oracle_mean_true_return": 0.45,
+      "pre_oracle_gap": 0.0,
+      "post_oracle_gap": 0.043333333333333335,
+      "ceiling_reached": true
+    },
+    "d2_category_identifiability": {
+      "category_probe_accuracy": 1.0,
+      "best_base_action_probe_accuracy": 1.0,
+      "base_affordance_profile_probe_accuracy": 1.0,
+      "too_informative": true
+    },
+    "d3_best_action_change": {
+      "change_rate": 0.21666666666666667,
+      "mean_true_value_gain": -0.043333333333333335,
+      "positive_gain_rate": 0.0,
+      "no_room_for_improvement": false
+    },
+    "d4_env2_metric_comparison": {
+      "env2_best_action_success_rate_pre": 1.0,
+      "env2_best_action_success_rate_post": 1.0,
+      "env2_mean_try_return_pre": 0.07499999999999998,
+      "env2_mean_try_return_post": 0.10833333333333334,
+      "env2_improvement": 0.033333333333333354,
+      "shadow_best_action_return_pre": 0.45,
+      "shadow_best_action_return_post": 0.4066666666666667,
+      "env2_measures_mean_try_return_not_best_action": true
+    },
+    "d5_separate_models": {
+      "avg_pre_return": 0.45,
+      "avg_post_return": 0.445,
+      "avg_shadow_return": 0.449,
+      "avg_shadow_delta": -0.0010000000000000009,
+      "avg_obs_rate": 0.2,
+      "improves_selected_return": false,
+      "changes_core_conclusion": false
+    }
+  },
+  "raw_conclusion": "PARTIAL",
+  "reason": "Pre-observe ambient features identify category and base affordance. Post-observe diagnostic features are deconfounded from role. Best-action selection cannot improve via observation."
+}

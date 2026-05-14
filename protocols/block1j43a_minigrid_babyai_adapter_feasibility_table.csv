@@ -1,0 +1,13 @@
+seed,env_id,reset_success_rate,step_success_rate,observation_conversion_success_rate,action_conversion_success_rate,outcome_conversion_success_rate,mission_parse_success_rate,unsupported_mission_count,unsupported_action_count,event_memory_count,object_memory_count,outcome_memory_count,common_sense_record_count,experience_record_count,goal_context_coverage,strategy_candidate_count,experience_trigger_count,confidence_update_available,boundary_rule_available,explicit_observe_action,passive_observation_available,random_return,simple_experience_probe_return,delta_vs_random,success_proxy_rate,hidden_leakage,audit_only_fields_absent,legal_observation_only,three_world_separation
+101,BabyAI-GoToObj-v0,1.0,1.0,1.0,1.0,1.0,1.0,0,0,768,18,282,5,5,1.0,5,5,True,True,False,True,0.0,0.0,0.0,0.0,False,True,True,True
+101,BabyAI-GoToRedBall-v0,1.0,1.0,1.0,1.0,1.0,1.0,0,0,706,50,370,8,8,1.0,8,8,True,True,False,True,0.08098958333333334,0.0,-0.08098958333333334,0.0,False,True,True,True
+101,BabyAI-Pickup-v0,1.0,1.0,1.0,1.0,1.0,1.0,0,0,5576,128,1270,11,11,1.0,11,11,True,True,False,True,0.20729166666666665,0.0,-0.20729166666666665,0.0,False,True,True,True
+101,BabyAI-OpenDoor-v0,1.0,1.0,1.0,1.0,1.0,0.75,3,0,6366,17,890,12,12,1.0,12,12,True,True,False,True,0.10442708333333334,0.0,-0.10442708333333334,0.0,False,True,True,True
+207,BabyAI-GoToObj-v0,1.0,1.0,1.0,1.0,1.0,1.0,0,0,638,21,278,5,5,1.0,5,5,True,True,False,True,0.18567708333333333,0.0,-0.18567708333333333,0.0,False,True,True,True
+207,BabyAI-GoToRedBall-v0,1.0,1.0,1.0,1.0,1.0,1.0,0,0,590,48,313,10,10,1.0,10,10,True,True,False,True,0.24192708333333335,0.0,-0.24192708333333335,0.0,False,True,True,True
+207,BabyAI-Pickup-v0,1.0,1.0,1.0,1.0,1.0,1.0,0,0,5995,94,1102,14,14,1.0,14,14,True,True,False,True,0.13606770833333334,0.0,-0.13606770833333334,0.0,False,True,True,True
+207,BabyAI-OpenDoor-v0,1.0,1.0,1.0,1.0,1.0,0.75,3,0,4794,17,784,12,12,1.0,12,12,True,True,False,True,0.3341145833333334,0.0,-0.3341145833333334,0.0,False,True,True,True
+404,BabyAI-GoToObj-v0,1.0,1.0,1.0,1.0,1.0,1.0,0,0,683,18,286,7,7,1.0,7,7,True,True,False,True,0.11627604166666666,0.0,-0.11627604166666666,0.0,False,True,True,True
+404,BabyAI-GoToRedBall-v0,1.0,1.0,1.0,1.0,1.0,1.0,0,0,708,56,439,8,8,1.0,8,8,True,True,False,True,0.08697916666666666,0.0,-0.08697916666666666,0.0,False,True,True,True
+404,BabyAI-Pickup-v0,1.0,1.0,1.0,1.0,1.0,1.0,0,0,6101,126,1448,12,12,1.0,12,12,True,True,False,True,0.122265625,0.0,-0.122265625,0.0,False,True,True,True
+404,BabyAI-OpenDoor-v0,1.0,1.0,1.0,1.0,1.0,0.5833333333333334,5,0,5550,17,901,12,12,1.0,12,12,True,True,False,True,0.22734374999999998,0.0,-0.22734374999999998,0.0,False,True,True,True

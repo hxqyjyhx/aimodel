@@ -1,0 +1,71 @@
+{
+  "block_id": "1D",
+  "elapsed_s": 0.005487203598022461,
+  "cue": "C3_P060_O040",
+  "budget": 1.5,
+  "cw": 0.5,
+  "seed": 101,
+  "C0b": {
+    "comp": 0.7033,
+    "total_cost": 1.1300000000000001,
+    "normalized_cost": 0.7533333333333334,
+    "utility_beta0.25": 0.5149666666666667
+  },
+  "current_C13": {
+    "comp": 0.7266333333333334,
+    "total_cost": 1.4500000000000002,
+    "normalized_cost": 0.9666666666666668,
+    "utility_beta0.25": 0.48496666666666666,
+    "n_probe": 22,
+    "n_effective_probe": 11,
+    "n_zero_gain_probe": 11
+  },
+  "oracle_skip_zero_gain": {
+    "adjusted_comp": 0.7266333333333334,
+    "adjusted_probe_cost": 0.55,
+    "adjusted_total_cost": 0.9000000000000001,
+    "adjusted_normalized_cost": 0.6000000000000001,
+    "adjusted_utility_beta0.25": 0.5766333333333333,
+    "utility_gain_over_C0b": 0.06166666666666665,
+    "cost_wasted": 0.55
+  },
+  "effective_probe_rate": {
+    "effective": 0.5,
+    "wasted": 0.5,
+    "cost_wasted_on_zero_gain": 0.55,
+    "cost_wasted_ratio": 0.3793103448275862
+  },
+  "per_action_waste": {
+    "burn_as_fuel": {
+      "n_total": 4,
+      "n_eff": 2,
+      "n_zero": 2,
+      "eff_rate": 0.5
+    },
+    "craft_plank": {
+      "n_total": 3,
+      "n_eff": 2,
+      "n_zero": 1,
+      "eff_rate": 0.6666666666666666
+    },
+    "eat": {
+      "n_total": 3,
+      "n_eff": 1,
+      "n_zero": 2,
+      "eff_rate": 0.3333333333333333
+    },
+    "mine_by_hand": {
+      "n_total": 4,
+      "n_eff": 3,
+      "n_zero": 1,
+      "eff_rate": 0.75
+    },
+    "use_as_tool": {
+      "n_total": 8,
+      "n_eff": 3,
+      "n_zero": 5,
+      "eff_rate": 0.375
+    }
+  },
+  "oracle_beats_C0b": true
+}

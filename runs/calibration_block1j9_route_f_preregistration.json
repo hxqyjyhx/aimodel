@@ -1,0 +1,282 @@
+{
+  "block_id": "1J9",
+  "block_type": "preregistration",
+  "condition": "C4_instance_subtype_cued_v1",
+  "seed": 101,
+  "budget": 1.5,
+  "cost_weight": 0.5,
+  "desc": "Route F blurred peripheral observation interface preregistration — no implementation, no simulation",
+  "patch": "1J9_patch — clarified 1J10 audit vs 1J11 policy gating, added leakage probe controls (base_rate, CV, shuffle, real-minus-shuffle gap), split hidden_subtype probe into A1 (per-category) and A2 (majority/minority), softened MCTS wording from prerequisite to likely useful substrate",
+  "accepted_findings_from_1J8": {
+    "C15b_macro_bal": 0.6142,
+    "C15B_cross_action_diag_VOI_macro_bal": 0.6142,
+    "Route_B_marginal_gain": 0.0,
+    "oracle_object_selection_macro_bal": 0.6442,
+    "oracle_object_selection_delta_vs_C15b": 0.03,
+    "oracle_object_selection_exceeds_10pct_gap_threshold": true,
+    "full_oracle_macro_bal": 1.0,
+    "environment_ceiling_bottleneck": false,
+    "object_selection_bottleneck_supported": true,
+    "budget_binding_supported": true,
+    "probe_informativeness_bottleneck": true
+  },
+  "shortcut_context": {
+    "hidden_category_majority_macro_bal": 0.975,
+    "hidden_category_majority_source": "1J2/1J3",
+    "hidden_category_shortcut_risk": "structural — if category-level information becomes available, simple majority-subtype prediction captures nearly entire oracle gap",
+    "public_category_like_macro_bal": 0.5,
+    "public_category_like_source": "1J8 Diagnostic 3B",
+    "public_category_shortcut_assessment": "not deployable under current visible features",
+    "route_f_implication": "Route F must not convert the hidden-category diagnostic risk into a deployable public shortcut"
+  },
+  "design_principle": {
+    "rule": "peripheral_signal = f(public_visible_state, geometry, distance, blur_level)",
+    "deterministic": true,
+    "lossy": true,
+    "source_data": ["public_visible_features", "grid_positions", "agent_position"],
+    "forbidden_sources": ["hidden_subtype", "true_affordance_labels", "probe_outcomes", "hidden_category", "aggregated_hidden_state"]
+  },
+  "observation_layers": {
+    "layer_0_focal": {
+      "description": "Full public visible features of the focal object. Existing interface, unchanged.",
+      "information": "full public visible features",
+      "cost": "OBSERVE_COST (0.005) — unchanged",
+      "hidden_access": "none"
+    },
+    "layer_1_near_peripheral": {
+      "description": "Coarse information about unvisited objects within distance d1 of focal object",
+      "signals": [
+        "nearby_object_count",
+        "coarse_public_visible_cue_histogram",
+        "relative_distance_binned",
+        "relative_bearing_binned",
+        "blurred_surface_category_like_cue_from_public_features_only"
+      ],
+      "no_per_object_exact_features": true
+    },
+    "layer_2_mid_peripheral": {
+      "description": "Lower-resolution information about objects between d1 and d2",
+      "signals": [
+        "lower_resolution_count_density",
+        "coarser_visible_cue_histogram",
+        "stronger_blur_binning"
+      ],
+      "no_individual_object_level_features": true
+    },
+    "layer_3_background": {
+      "description": "Aggregate distribution across all remaining unvisited objects beyond d2",
+      "signals": [
+        "aggregate_public_visible_cue_distribution",
+        "local_density_sparsity"
+      ],
+      "no_individual_hidden_states": true,
+      "no_object_identities": true
+    }
+  },
+  "preregistered_blur_variants": {
+    "F_low": {
+      "d1_near": 1,
+      "d2_mid": 2,
+      "description": "Minimal peripheral information — only immediate neighbors",
+      "near_bin_resolution": "{0, 1, 2+}",
+      "mid_bin_resolution": "presence only",
+      "background_detail": "density only",
+      "bearing_resolution": "quadrant",
+      "distance_binning": "{adjacent, near}"
+    },
+    "F_mid": {
+      "d1_near": 2,
+      "d2_mid": 4,
+      "description": "Moderate coarse local context — small neighborhood",
+      "near_bin_resolution": "{0, 1, 2-3, 4+}",
+      "mid_bin_resolution": "presence only",
+      "background_detail": "density + feature prevalence",
+      "bearing_resolution": "quadrant",
+      "distance_binning": "{adjacent, near, edge}"
+    },
+    "F_high": {
+      "d1_near": 3,
+      "d2_mid": 6,
+      "description": "Stronger local context — larger perceptual field, higher leakage risk",
+      "near_bin_resolution": "{0, 1, 2-3, 4-6, 7+}",
+      "mid_bin_resolution": "{0, 1, 2+}",
+      "background_detail": "density + feature prevalence",
+      "bearing_resolution": "octant",
+      "distance_binning": "{adjacent, near, mid, edge}"
+    },
+    "note": "These variants are preregistered, not performance-tuned. They represent different points on the information/leakage tradeoff curve."
+  },
+  "allowed_signals": [
+    "distance_decayed_public_visible_cue_histograms",
+    "coarse_nearby_object_counts",
+    "public_surface_category_like_cues_if_derivable_from_visible_features",
+    "relative_distance_binned",
+    "relative_bearing_binned",
+    "local_object_density_sparsity",
+    "uncertainty_preserving_coarse_bins"
+  ],
+  "forbidden_signals": [
+    "hidden_subtype_labels",
+    "true_affordance_labels",
+    "probe_outcomes_for_non_focal_objects",
+    "hidden_category_if_not_publicly_observable",
+    "noised_subtype_label",
+    "noised_affordance_label",
+    "aggregated_hidden_state_statistics",
+    "hand_coded_minority_flags",
+    "action_success_priors_computed_from_hidden_state",
+    "any_function_of_the_above_even_if_binned_or_aggregated"
+  ],
+  "blur_rules": {
+    "distance_decayed": true,
+    "monotonic": "farther objects receive monotonically less information",
+    "lossy": "cannot reconstruct exact hidden or true labels from peripheral signals",
+    "fixed_before_evaluation": true,
+    "not_tuned_based_on_policy_performance": true,
+    "layer_consistent": "same blur function applies to all policies using Route F interface"
+  },
+  "leakage_audit_plan": {
+    "timing": "Block 1J10 (audit block — implements peripheral_signal, runs leakage tests, makes no C15F policy claim)",
+    "leakage_probe_controls": {
+      "required_for_every_leakage_test": [
+        "base_rate_accuracy",
+        "cross_validated_accuracy",
+        "shuffled_label_control",
+        "real_minus_shuffle_gap"
+      ],
+      "fail_condition": "cross_validated_accuracy > base_rate + 0.10 AND real_minus_shuffle_gap ≥ 0.05",
+      "overfitting_note": "If accuracy exceeds base_rate+0.10 but real_minus_shuffle_gap < 0.05, classifier is overfitting not detecting genuine leakage — treat as PASS with note",
+      "reporting_template": {
+        "test": "[name]",
+        "base_rate_accuracy": "[value]",
+        "cross_validated_accuracy": "[value]",
+        "shuffled_label_control": "[value]",
+        "real_minus_shuffle_gap": "[value]",
+        "exceeds_base_rate_plus_10": "[true/false]",
+        "gap_is_nontrivial": "[true/false]",
+        "verdict": "[PASS / FAIL / PASS-WITH-NOTE]"
+      }
+    },
+    "tests": {
+      "A1_per_category_hidden_subtype_probe": {
+        "description": "Within each public/visible category group, train classifier to predict hidden_subtype from peripheral signal alone. Avoids confounding subtype leakage with category-level signal — global subtype labels are category-specific.",
+        "threshold": "within-group accuracy ≤ within-group base_rate + 0.10, AND real_minus_shuffle_gap < 0.05 for fail",
+        "controls": ["base_rate_accuracy", "cross_validated_accuracy", "shuffled_label_control", "real_minus_shuffle_gap"],
+        "fail_implication": "Peripheral leaks subtype within category — redesign blur"
+      },
+      "A2_global_majority_vs_minority_probe": {
+        "description": "Train classifier to predict majority-subtype vs minority-subtype (binary) from peripheral signal alone, across all objects regardless of category. Tests subtype typicality leakage without category-specific labels.",
+        "threshold": "accuracy ≤ base_rate + 0.10, AND real_minus_shuffle_gap < 0.05 for fail",
+        "controls": ["base_rate_accuracy", "cross_validated_accuracy", "shuffled_label_control", "real_minus_shuffle_gap"],
+        "fail_implication": "Peripheral encodes subtype typicality — if A2 fails but A1 passes for all categories, peripheral may encode coarse category structure (allowed) rather than true subtype (forbidden)",
+        "A2_fail_A1_pass_note": "Investigate whether signal is category-level (allowed) or subtype-level (forbidden) before deciding"
+      },
+      "B_true_affordance_probe": {
+        "description": "Train classifier to predict any true affordance label from peripheral signal alone",
+        "threshold": "per-affordance accuracy ≤ base_rate + 0.10, AND real_minus_shuffle_gap < 0.05 for fail",
+        "controls": ["base_rate_accuracy", "cross_validated_accuracy", "shuffled_label_control", "real_minus_shuffle_gap"],
+        "fail_implication": "Peripheral leaks affordance — redesign blur"
+      },
+      "C_hidden_category_probe": {
+        "description": "Train classifier to predict hidden_category from peripheral signal alone",
+        "threshold": "accuracy ≤ 0.35 (chance 0.25 + 0.10), AND real_minus_shuffle_gap < 0.05 for fail",
+        "controls": ["base_rate_accuracy", "cross_validated_accuracy", "shuffled_label_control", "real_minus_shuffle_gap"],
+        "fail_implication": "Peripheral leaks category — redesign blur"
+      },
+      "D_public_category_like_recheck": {
+        "description": "Recompute public-category-like baseline with peripheral information",
+        "threshold": "macro_bal ≤ 0.60 (original 0.5000 + 0.10 margin)",
+        "hard_fail_threshold": "macro_bal ≥ 0.70 = Route F invalid",
+        "fail_implication": "Shortcut became deployable — redesign or reject"
+      },
+      "E_C0b_saturation": {
+        "description": "Run C0b observe-only under Route F interface",
+        "threshold": "macro_bal ≤ 0.70",
+        "fail_implication": "Observation too informative — increase blur"
+      },
+      "F_oracle_gap": {
+        "description": "Compute oracle-C0b gap under Route F",
+        "threshold": "oracle - C0b_RouteF ≥ 0.10",
+        "fail_implication": "Probing has no room to matter — reject Route F"
+      }
+    },
+    "all_tests_must_pass": true
+  },
+  "marginal_value_audit": {
+    "timing": "Block 1J10 Part 2 — after leakage audit passes. C15F policy evaluation only in Block 1J11 if both parts pass.",
+    "required_baselines": [
+      "all_false",
+      "C_minus_prior_only",
+      "C0b_observe_only_RouteF",
+      "random_probe_budgeted_RouteF",
+      "C_oracle_full_information"
+    ],
+    "success_conditions": {
+      "C0b_RouteF_improves_over_original": "C0b_RouteF > 0.5871",
+      "C0b_RouteF_does_not_saturate": "C0b_RouteF ≤ 0.70",
+      "oracle_gap_remains_meaningful": "oracle - C0b_RouteF ≥ 0.10",
+      "random_probe_not_trivially_oracle": "random_probe_mb ≤ oracle_mb - 0.15",
+      "public_category_shortcut_controlled": "public_cat_mb ≤ 0.60",
+      "peripheral_helps_but_probing_still_valuable": "C0b_RouteF < oracle - 0.10"
+    }
+  },
+  "policy_evaluation_plan": {
+    "condition": "Only if Block 1J10 leakage audit AND marginal-value audit both pass. Block 1J10 is the audit block — it implements peripheral_signal and runs audits but makes no C15F policy claim. C15F policy evaluation happens in Block 1J11.",
+    "block_1J10_role": "audit only — implement peripheral_signal, run leakage audit, run marginal-value audit, no C15F policy claim",
+    "block_1J11_role": "C15F policy evaluation — only if 1J10 audits pass",
+    "policy_to_evaluate": "C15F_two_pass_with_blurred_peripheral_observation",
+    "comparison_baselines": {
+      "C0b_RouteF": {"interface": "Route F", "description": "Observe-only with peripheral info"},
+      "C15b_original_interface": {"interface": "Original", "description": "C15b from 1J7 — reference point"},
+      "C15B_original_interface": {"interface": "Original", "description": "C15B from 1J7 — null result vs C15b"},
+      "random_probe_RouteF": {"interface": "Route F", "description": "Random probe with peripheral info"},
+      "C_oracle_full_information": {"interface": "N/A", "description": "Full oracle ceiling"}
+    },
+    "labeling_rule": "Baselines must be clearly labeled with _RouteF or _original_interface suffix. Never mix interfaces without explicit labeling.",
+    "required_comparisons": [
+      "C15F_RouteF vs C0b_RouteF",
+      "C15F_RouteF vs C15b_original_interface",
+      "C15F_RouteF vs C15B_original_interface",
+      "C15F_RouteF vs random_probe_RouteF",
+      "C15F_RouteF vs oracle"
+    ]
+  },
+  "decision_rules": {
+    "proceed_to_C15F_policy_evaluation_in_1J11_if": [
+      "all leakage audit tests pass (A1, A2, B, C, D, E, F)",
+      "oracle-C0b gap under Route F ≥ 0.10",
+      "C0b_RouteF does not saturate (≤ 0.70)",
+      "public category shortcut remains controlled (≤ 0.60)",
+      "clear preregistered hypothesis tied to object selection and probe targeting",
+      "blur parameters fixed before evaluation (not post-hoc tuned)"
+    ],
+    "reject_or_redesign_if": [
+      "any leakage audit test fails",
+      "C0b_RouteF approaches oracle (gap < 0.10)",
+      "public category-like shortcut ≥ 0.70",
+      "blur parameters selected post-hoc based on C15F performance",
+      "peripheral signal quality depends on hidden state access"
+    ],
+    "fallback_options_if_rejected": [
+      "Simpler observation enhancement (visit-count-based heuristics without peripheral features)",
+      "Budget/cost redesign (Routes D/E)",
+      "Interleaved breadth-depth without peripheral information",
+      "Accept C15b as practical ceiling under current constraints"
+    ]
+  },
+  "mcts_relation": {
+    "route_f_is_not_mcts": true,
+    "route_f_provides": "richer low-cost local observations that may support later search-tree-like policies",
+    "breadth_expansion_analogue": "peripheral local context (Layers 1-3) — cheap, lossy information about many objects",
+    "depth_expansion_analogue": "focal observe/probe (Layer 0) — expensive, precise information about one object",
+    "route_f_is_likely_useful_substrate_not_strict_prerequisite": true,
+    "future_interleaved_policies": "may be considered after Route F passes audits (richest substrate), OR if Route F is rejected — an interleaved-only diagnostic (without peripheral information) may still be tested using focal observations alone to guide breadth-vs-depth decisions"
+  },
+  "final_recommendation": {
+    "implement_route_f_now": false,
+    "route_f_preregistered": true,
+    "next_block": "1J10",
+    "next_block_description": "Route F leakage audit + marginal-value audit on seed=101",
+    "ready_for_multiseed": false
+  }
+}

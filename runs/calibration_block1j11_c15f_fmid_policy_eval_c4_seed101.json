@@ -1,0 +1,1070 @@
+{
+  "block_id": "1J11",
+  "condition": "C4_instance_subtype_cued_v1",
+  "seed": 101,
+  "budget": 1.5,
+  "route_f_variant": "F_mid",
+  "F_mid_config": {
+    "d1": 2,
+    "d2": 4,
+    "bin_layer1_near": [
+      1,
+      3
+    ],
+    "bin_layer2_mid": [
+      0
+    ],
+    "bin_layer3_background": [
+      0
+    ],
+    "count_bins": [
+      1,
+      3,
+      6
+    ],
+    "description": "F_mid — moderate coarse local context"
+  },
+  "desc": "C15F policy evaluation using audited F_mid peripheral observation interface. Single seed.",
+  "design_validation": {
+    "local_prevalence_predictor_not_reintroduced": true,
+    "aggregate_histogram_not_converted_to_object_labels": true,
+    "F_mid_used_for_targeting_not_prediction": true,
+    "no_hidden_state_access": true,
+    "within_1J10_audited_constraints": true
+  },
+  "baselines": {
+    "all_false": {
+      "macro_query_balanced_accuracy": 0.5,
+      "macro_query_accuracy": 0.74,
+      "mean_positive_recall": 0.0,
+      "mean_negative_recall": 1.0,
+      "per_query": {
+        "need_food": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_fuel": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30,
+          "fn": 30,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.5
+        },
+        "need_planks": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_stone": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        }
+      },
+      "visit_count": 0,
+      "observe_count": 0,
+      "probe_count": 0,
+      "total_cost": 0.0,
+      "normalized_cost": 0.0,
+      "policy_type": "floor"
+    },
+    "C_minus_prior_only": {
+      "macro_query_balanced_accuracy": 0.5,
+      "macro_query_accuracy": 0.38,
+      "mean_positive_recall": 0.8,
+      "mean_negative_recall": 0.2,
+      "per_query": {
+        "need_food": {
+          "tp": 12,
+          "fp": 48,
+          "tn": 0,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.2
+        },
+        "need_fuel": {
+          "tp": 30,
+          "fp": 30,
+          "tn": 0,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.5
+        },
+        "need_planks": {
+          "tp": 12,
+          "fp": 48,
+          "tn": 0,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.2
+        },
+        "need_stone": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 48,
+          "fn": 12,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.8
+        },
+        "need_tool": {
+          "tp": 12,
+          "fp": 48,
+          "tn": 0,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "balanced_accuracy": 0.5,
+          "accuracy": 0.2
+        }
+      },
+      "visit_count": 0,
+      "observe_count": 0,
+      "probe_count": 0,
+      "total_cost": 0.0,
+      "normalized_cost": 0.0,
+      "policy_type": "no_interaction"
+    },
+    "C0b_original": {
+      "macro_query_balanced_accuracy": 0.587083,
+      "macro_query_accuracy": 0.753333,
+      "mean_positive_recall": 0.31,
+      "mean_negative_recall": 0.864167,
+      "per_query": {
+        "need_food": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 3,
+          "fp": 9,
+          "tn": 39,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.7
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 3,
+          "tn": 45,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.766667
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 3,
+          "tn": 45,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.677083,
+          "accuracy": 0.833333
+        }
+      },
+      "visit_count": 60,
+      "observe_count": 60,
+      "probe_count": 0,
+      "total_cost": 1.1300000000000001,
+      "normalized_cost": 0.7533333333333334,
+      "policy_type": "observe_only_no_peripheral"
+    },
+    "C0b_RouteF_Fmid_deployable": {
+      "macro_query_balanced_accuracy": 0.587083,
+      "macro_query_accuracy": 0.753333,
+      "mean_positive_recall": 0.31,
+      "mean_negative_recall": 0.864167,
+      "per_query": {
+        "need_food": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 3,
+          "fp": 9,
+          "tn": 39,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.7
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 3,
+          "tn": 45,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.766667
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 3,
+          "tn": 45,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.677083,
+          "accuracy": 0.833333
+        }
+      },
+      "visit_count": 60,
+      "observe_count": 60,
+      "probe_count": 0,
+      "total_cost": 1.1300000000000001,
+      "normalized_cost": 0.7533333333333334,
+      "policy_type": "observe_only_with_peripheral_aggregate_only"
+    },
+    "C13_instance_VOI_original": {
+      "macro_query_balanced_accuracy": 0.573333,
+      "macro_query_accuracy": 0.753333,
+      "mean_positive_recall": 0.2,
+      "mean_negative_recall": 0.946667,
+      "per_query": {
+        "need_food": {
+          "tp": 5,
+          "fp": 0,
+          "tn": 48,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.708333,
+          "accuracy": 0.883333
+        },
+        "need_fuel": {
+          "tp": 5,
+          "fp": 3,
+          "tn": 27,
+          "fn": 25,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.9,
+          "balanced_accuracy": 0.533333,
+          "accuracy": 0.533333
+        },
+        "need_planks": {
+          "tp": 2,
+          "fp": 7,
+          "tn": 41,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.854167,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.716667
+        },
+        "need_stone": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_tool": {
+          "tp": 1,
+          "fp": 1,
+          "tn": 47,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.979167,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.8
+        }
+      },
+      "visit_count": 22,
+      "observe_count": 22,
+      "probe_count": 22,
+      "total_cost": 1.4500000000000002,
+      "normalized_cost": 0.9666666666666668,
+      "policy_type": "instance_VOI_no_peripheral"
+    },
+    "random_probe_original": {
+      "macro_query_balanced_accuracy": 0.575,
+      "macro_query_accuracy": 0.68,
+      "mean_positive_recall": 0.426667,
+      "mean_negative_recall": 0.723333,
+      "per_query": {
+        "need_food": {
+          "tp": 2,
+          "fp": 12,
+          "tn": 36,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.75,
+          "balanced_accuracy": 0.458333,
+          "accuracy": 0.633333
+        },
+        "need_fuel": {
+          "tp": 24,
+          "fp": 14,
+          "tn": 16,
+          "fn": 6,
+          "positive_recall": 0.8,
+          "negative_recall": 0.533333,
+          "balanced_accuracy": 0.666667,
+          "accuracy": 0.666667
+        },
+        "need_planks": {
+          "tp": 4,
+          "fp": 20,
+          "tn": 28,
+          "fn": 8,
+          "positive_recall": 0.333333,
+          "negative_recall": 0.583333,
+          "balanced_accuracy": 0.458333,
+          "accuracy": 0.533333
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 3,
+          "tn": 45,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.766667
+        },
+        "need_tool": {
+          "tp": 9,
+          "fp": 9,
+          "tn": 39,
+          "fn": 3,
+          "positive_recall": 0.75,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.78125,
+          "accuracy": 0.8
+        }
+      },
+      "visit_count": 48,
+      "observe_count": 48,
+      "probe_count": 14,
+      "total_cost": 1.49,
+      "normalized_cost": 0.9933333333333333,
+      "policy_type": "random_probe_no_peripheral"
+    },
+    "random_probe_RouteF_Fmid_deployable": {
+      "macro_query_balanced_accuracy": 0.575,
+      "macro_query_accuracy": 0.68,
+      "mean_positive_recall": 0.426667,
+      "mean_negative_recall": 0.723333,
+      "per_query": {
+        "need_food": {
+          "tp": 2,
+          "fp": 12,
+          "tn": 36,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.75,
+          "balanced_accuracy": 0.458333,
+          "accuracy": 0.633333
+        },
+        "need_fuel": {
+          "tp": 24,
+          "fp": 14,
+          "tn": 16,
+          "fn": 6,
+          "positive_recall": 0.8,
+          "negative_recall": 0.533333,
+          "balanced_accuracy": 0.666667,
+          "accuracy": 0.666667
+        },
+        "need_planks": {
+          "tp": 4,
+          "fp": 20,
+          "tn": 28,
+          "fn": 8,
+          "positive_recall": 0.333333,
+          "negative_recall": 0.583333,
+          "balanced_accuracy": 0.458333,
+          "accuracy": 0.533333
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 3,
+          "tn": 45,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.766667
+        },
+        "need_tool": {
+          "tp": 9,
+          "fp": 9,
+          "tn": 39,
+          "fn": 3,
+          "positive_recall": 0.75,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.78125,
+          "accuracy": 0.8
+        }
+      },
+      "visit_count": 48,
+      "observe_count": 48,
+      "probe_count": 14,
+      "total_cost": 1.49,
+      "normalized_cost": 0.9933333333333333,
+      "policy_type": "random_probe_with_peripheral_aggregate_only"
+    },
+    "C15b_probe_reserve_original": {
+      "macro_query_balanced_accuracy": 0.614167,
+      "macro_query_accuracy": 0.766667,
+      "mean_positive_recall": 0.36,
+      "mean_negative_recall": 0.868333,
+      "per_query": {
+        "need_food": {
+          "tp": 3,
+          "fp": 0,
+          "tn": 48,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.625,
+          "accuracy": 0.85
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 4,
+          "fp": 9,
+          "tn": 39,
+          "fn": 8,
+          "positive_recall": 0.333333,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.572917,
+          "accuracy": 0.716667
+        },
+        "need_stone": {
+          "tp": 2,
+          "fp": 3,
+          "tn": 45,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.552083,
+          "accuracy": 0.783333
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 2,
+          "tn": 46,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.958333,
+          "balanced_accuracy": 0.6875,
+          "accuracy": 0.85
+        }
+      },
+      "visit_count": 57,
+      "observe_count": 57,
+      "probe_count": 8,
+      "total_cost": 1.485,
+      "normalized_cost": 0.9900000000000001,
+      "policy_type": "two_pass_VOI_probe_no_peripheral"
+    },
+    "C15B_cross_action_diag_VOI_original": {
+      "macro_query_balanced_accuracy": 0.614167,
+      "macro_query_accuracy": 0.766667,
+      "mean_positive_recall": 0.36,
+      "mean_negative_recall": 0.868333,
+      "per_query": {
+        "need_food": {
+          "tp": 3,
+          "fp": 0,
+          "tn": 48,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.625,
+          "accuracy": 0.85
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 4,
+          "fp": 9,
+          "tn": 39,
+          "fn": 8,
+          "positive_recall": 0.333333,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.572917,
+          "accuracy": 0.716667
+        },
+        "need_stone": {
+          "tp": 2,
+          "fp": 3,
+          "tn": 45,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.552083,
+          "accuracy": 0.783333
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 2,
+          "tn": 46,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.958333,
+          "balanced_accuracy": 0.6875,
+          "accuracy": 0.85
+        }
+      },
+      "visit_count": 57,
+      "observe_count": 57,
+      "probe_count": 8,
+      "total_cost": 1.485,
+      "normalized_cost": 0.9900000000000001,
+      "policy_type": "cross_action_VOI_no_peripheral"
+    },
+    "C_oracle_full_information": {
+      "macro_query_balanced_accuracy": 1.0,
+      "macro_query_accuracy": 1.0,
+      "mean_positive_recall": 1.0,
+      "mean_negative_recall": 1.0,
+      "per_query": {
+        "need_food": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_fuel": {
+          "tp": 30,
+          "fp": 0,
+          "tn": 30,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_planks": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_stone": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        },
+        "need_tool": {
+          "tp": 12,
+          "fp": 0,
+          "tn": 48,
+          "fn": 0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 1.0,
+          "accuracy": 1.0
+        }
+      },
+      "visit_count": 0,
+      "observe_count": 0,
+      "probe_count": 0,
+      "total_cost": 0.0,
+      "normalized_cost": 0.0,
+      "policy_type": "oracle"
+    }
+  },
+  "c15f_variants": {
+    "C15F_V2_context_guided_probe": {
+      "macro_query_balanced_accuracy": 0.614167,
+      "macro_query_accuracy": 0.766667,
+      "mean_positive_recall": 0.36,
+      "mean_negative_recall": 0.868333,
+      "per_query": {
+        "need_food": {
+          "tp": 3,
+          "fp": 0,
+          "tn": 48,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.625,
+          "accuracy": 0.85
+        },
+        "need_fuel": {
+          "tp": 19,
+          "fp": 11,
+          "tn": 19,
+          "fn": 11,
+          "positive_recall": 0.633333,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.633333,
+          "accuracy": 0.633333
+        },
+        "need_planks": {
+          "tp": 4,
+          "fp": 9,
+          "tn": 39,
+          "fn": 8,
+          "positive_recall": 0.333333,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.572917,
+          "accuracy": 0.716667
+        },
+        "need_stone": {
+          "tp": 2,
+          "fp": 3,
+          "tn": 45,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.552083,
+          "accuracy": 0.783333
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 2,
+          "tn": 46,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.958333,
+          "balanced_accuracy": 0.6875,
+          "accuracy": 0.85
+        }
+      },
+      "visit_count": 57,
+      "observe_count": 57,
+      "probe_count": 8,
+      "total_cost": 1.485,
+      "normalized_cost": 0.9900000000000001,
+      "policy_type": "C15F_context_guided_probe",
+      "F_mid_context_used": true,
+      "n_focal_with_peripheral_signal": 57,
+      "context_guided_decision_count": 8,
+      "context_score_mean_selected": 0.9956875000000001,
+      "context_score_mean_unselected": 0.9963685714285715,
+      "observe_pass_visit_count": 57,
+      "probe_pass_probe_count": 8,
+      "effective_probe_count": 8,
+      "zero_gain_probe_count": 0,
+      "harmful_probe_count": 0,
+      "effective_probe_rate": 1.0,
+      "differentiating_action_probe_rate": null,
+      "selected_probe_objects_majority": 6,
+      "selected_probe_objects_minority": 2,
+      "selected_probe_objects_per_query_positive": {
+        "need_planks": 1,
+        "need_stone": 2,
+        "need_food": 2,
+        "need_tool": 1,
+        "need_fuel": 3
+      },
+      "selected_probe_objects_per_query_negative": {
+        "need_planks": 7,
+        "need_stone": 6,
+        "need_food": 6,
+        "need_tool": 7,
+        "need_fuel": 5
+      },
+      "visited_positive_coverage_per_query": {
+        "need_planks": 12,
+        "need_stone": 11,
+        "need_food": 12,
+        "need_tool": 11,
+        "need_fuel": 28
+      },
+      "visited_negative_coverage_per_query": {
+        "need_planks": 45,
+        "need_stone": 46,
+        "need_food": 45,
+        "need_tool": 46,
+        "need_fuel": 29
+      }
+    },
+    "C15F_V1_context_guided_observe": {
+      "macro_query_balanced_accuracy": 0.5925,
+      "macro_query_accuracy": 0.76,
+      "mean_positive_recall": 0.316667,
+      "mean_negative_recall": 0.868333,
+      "per_query": {
+        "need_food": {
+          "tp": 2,
+          "fp": 0,
+          "tn": 48,
+          "fn": 10,
+          "positive_recall": 0.166667,
+          "negative_recall": 1.0,
+          "balanced_accuracy": 0.583333,
+          "accuracy": 0.833333
+        },
+        "need_fuel": {
+          "tp": 20,
+          "fp": 11,
+          "tn": 19,
+          "fn": 10,
+          "positive_recall": 0.666667,
+          "negative_recall": 0.633333,
+          "balanced_accuracy": 0.65,
+          "accuracy": 0.65
+        },
+        "need_planks": {
+          "tp": 3,
+          "fp": 9,
+          "tn": 39,
+          "fn": 9,
+          "positive_recall": 0.25,
+          "negative_recall": 0.8125,
+          "balanced_accuracy": 0.53125,
+          "accuracy": 0.7
+        },
+        "need_stone": {
+          "tp": 1,
+          "fp": 3,
+          "tn": 45,
+          "fn": 11,
+          "positive_recall": 0.083333,
+          "negative_recall": 0.9375,
+          "balanced_accuracy": 0.510417,
+          "accuracy": 0.766667
+        },
+        "need_tool": {
+          "tp": 5,
+          "fp": 2,
+          "tn": 46,
+          "fn": 7,
+          "positive_recall": 0.416667,
+          "negative_recall": 0.958333,
+          "balanced_accuracy": 0.6875,
+          "accuracy": 0.85
+        }
+      },
+      "visit_count": 57,
+      "observe_count": 57,
+      "probe_count": 5,
+      "total_cost": 1.44,
+      "normalized_cost": 0.96,
+      "policy_type": "C15F_context_guided_observe",
+      "F_mid_context_used": true,
+      "n_focal_with_peripheral_signal": 57,
+      "context_guided_decision_count": 57,
+      "context_score_mean_selected": 0.0,
+      "context_score_mean_unselected": 0.0,
+      "observe_pass_visit_count": 57,
+      "probe_pass_probe_count": 5,
+      "effective_probe_count": 5,
+      "zero_gain_probe_count": 0,
+      "harmful_probe_count": 0,
+      "effective_probe_rate": 1.0,
+      "differentiating_action_probe_rate": null,
+      "selected_probe_objects_majority": 3,
+      "selected_probe_objects_minority": 2,
+      "selected_probe_objects_per_query_positive": {
+        "need_planks": 0,
+        "need_stone": 0,
+        "need_food": 0,
+        "need_tool": 3,
+        "need_fuel": 5
+      },
+      "selected_probe_objects_per_query_negative": {
+        "need_planks": 5,
+        "need_stone": 5,
+        "need_food": 5,
+        "need_tool": 2,
+        "need_fuel": 0
+      },
+      "visited_positive_coverage_per_query": {
+        "need_planks": 12,
+        "need_stone": 11,
+        "need_food": 12,
+        "need_tool": 11,
+        "need_fuel": 29
+      },
+      "visited_negative_coverage_per_query": {
+        "need_planks": 45,
+        "need_stone": 46,
+        "need_food": 45,
+        "need_tool": 46,
+        "need_fuel": 28
+      }
+    }
+  },
+  "primary_variant": "C15F_V2_context_guided_probe",
+  "probe_efficiency_consistency": {
+    "probe_efficiency_definition_same": true,
+    "efficiency_method": "both_use__compute_utility_delta_gt_0.001",
+    "C15b_efficiency": {
+      "effective_probe_count": 8,
+      "zero_gain_probe_count": 0,
+      "harmful_probe_count": 0,
+      "total_probe_count": 8,
+      "effective_probe_rate": 1.0
+    },
+    "C15F_V2_efficiency": {
+      "effective_probe_count": 8,
+      "zero_gain_probe_count": 0,
+      "harmful_probe_count": 0,
+      "total_probe_count": 8,
+      "effective_probe_rate": 1.0
+    },
+    "C15b_probe_details": {
+      "probed_object_ids": [
+        "test_wooden_pickaxe_006",
+        "test_wooden_pickaxe_003",
+        "test_stone_block_001",
+        "test_apple_007",
+        "test_wood_log_002",
+        "test_stone_block_009",
+        "test_apple_010",
+        "test_stone_block_000"
+      ],
+      "probed_actions": {
+        "test_wooden_pickaxe_006": "burn_as_fuel",
+        "test_wooden_pickaxe_003": "burn_as_fuel",
+        "test_stone_block_001": "mine_by_hand",
+        "test_apple_007": "eat",
+        "test_wood_log_002": "craft_plank",
+        "test_stone_block_009": "mine_by_hand",
+        "test_apple_010": "eat",
+        "test_stone_block_000": "mine_by_hand"
+      },
+      "probe_outcomes": {
+        "test_wooden_pickaxe_006": 1.0,
+        "test_wooden_pickaxe_003": 1.0,
+        "test_stone_block_001": 1.0,
+        "test_apple_007": 1.0,
+        "test_wood_log_002": 1.0,
+        "test_stone_block_009": 0.0,
+        "test_apple_010": 1.0,
+        "test_stone_block_000": 0.0
+      }
+    },
+    "C15F_V2_probe_details": {
+      "probed_object_ids": [
+        "test_wooden_pickaxe_006",
+        "test_wooden_pickaxe_003",
+        "test_stone_block_001",
+        "test_apple_007",
+        "test_wood_log_002",
+        "test_stone_block_009",
+        "test_apple_010",
+        "test_stone_block_000"
+      ],
+      "probed_actions": {
+        "test_wooden_pickaxe_006": "burn_as_fuel",
+        "test_wooden_pickaxe_003": "burn_as_fuel",
+        "test_stone_block_001": "mine_by_hand",
+        "test_apple_007": "eat",
+        "test_wood_log_002": "craft_plank",
+        "test_stone_block_009": "mine_by_hand",
+        "test_apple_010": "eat",
+        "test_stone_block_000": "mine_by_hand"
+      },
+      "probe_outcomes": {
+        "test_wooden_pickaxe_006": 1.0,
+        "test_wooden_pickaxe_003": 1.0,
+        "test_stone_block_001": 1.0,
+        "test_apple_007": 1.0,
+        "test_wood_log_002": 1.0,
+        "test_stone_block_009": 0.0,
+        "test_apple_010": 1.0,
+        "test_stone_block_000": 0.0
+      }
+    },
+    "probes_identical_oids": true,
+    "probes_identical_actions_by_oid": {
+      "test_wood_log_002": true,
+      "test_wooden_pickaxe_003": true,
+      "test_apple_010": true,
+      "test_wooden_pickaxe_006": true,
+      "test_apple_007": true,
+      "test_stone_block_009": true,
+      "test_stone_block_001": true,
+      "test_stone_block_000": true
+    },
+    "probes_identical_outcomes_by_oid": {
+      "test_wood_log_002": true,
+      "test_wooden_pickaxe_003": true,
+      "test_apple_010": true,
+      "test_wooden_pickaxe_006": true,
+      "test_apple_007": true,
+      "test_stone_block_009": true,
+      "test_stone_block_001": true,
+      "test_stone_block_000": true
+    },
+    "probes_all_actions_same": true,
+    "probes_all_outcomes_same": true,
+    "probe_efficiency_comparison_consistent": true
+  },
+  "comparisons": {
+    "C15F_vs_C15b_original": {
+      "delta_macro_bal": 0.0,
+      "delta_mean_positive_recall": 0.0,
+      "delta_mean_negative_recall": 0.0,
+      "delta_visit_count": 0,
+      "delta_probe_count": 0,
+      "delta_effective_probe_rate": 0.5,
+      "delta_normalized_cost": 0.0
+    },
+    "C15F_vs_C0b_original": {
+      "delta_macro_bal": 0.027084,
+      "delta_normalized_cost": 0.236667,
+      "pareto_relation": "tradeoff"
+    },
+    "C15F_vs_C0b_RouteF_Fmid": {
+      "delta_macro_bal": 0.027084,
+      "delta_normalized_cost": 0.236667,
+      "policy_use_of_F_mid_adds_value": true
+    },
+    "C15F_vs_C15B_cross_action": {
+      "delta_macro_bal": 0.0,
+      "route_f_adds_value_after_route_b_null": false
+    },
+    "C15F_vs_random_probe_RouteF": {
+      "delta_macro_bal": 0.039167,
+      "delta_normalized_cost": -0.003333
+    },
+    "gap_capture": {
+      "c15f_gap_capture_vs_c0b": 0.065553,
+      "c15f_gap_capture_pct": 6.56,
+      "target_10pct_threshold": 0.6284,
+      "hits_10pct_threshold": false,
+      "C15B_gap_capture_pct": 6.56
+    },
+    "pareto": {
+      "frontier_policies": [
+        "C0b_RouteF_Fmid_deployable",
+        "C0b_original",
+        "C15B_cross_action_diag_VOI_original",
+        "C15F_V1_context_guided_observe",
+        "C15F_V2_context_guided_probe",
+        "C15b_probe_reserve_original"
+      ],
+      "C15F_V2_on_frontier": true,
+      "C15F_V1_on_frontier": true
+    }
+  },
+  "interpretation": {
+    "improves_over_c15b": false,
+    "improves_over_c0b": true,
+    "improves_pos_recall_over_c15b": false,
+    "improves_pos_recall_over_c0b": true,
+    "hits_10pct_threshold": false,
+    "not_pareto_dominated": true,
+    "neg_only_tradeoff": false,
+    "strongly_promising": false,
+    "candidate_ready_for_small_multiseed": false,
+    "interpretation": "Route F interface is safe but not yet useful under this policy. Consider interleaved breadth-depth or object-addressable RouteF redesign."
+  },
+  "pareto_frontier": {
+    "deployable_only": [
+      "C0b_RouteF_Fmid_deployable",
+      "C0b_original",
+      "C15B_cross_action_diag_VOI_original",
+      "C15F_V1_context_guided_observe",
+      "C15F_V2_context_guided_probe",
+      "C15b_probe_reserve_original"
+    ],
+    "C15F_V2_on_frontier": true,
+    "C15F_V1_on_frontier": true
+  }
+}

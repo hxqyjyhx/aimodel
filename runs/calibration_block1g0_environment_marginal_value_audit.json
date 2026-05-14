@@ -1,0 +1,68 @@
+{
+  "block_id": "1G0",
+  "elapsed_s": 17.63231348991394,
+  "cue": "C3_P060_O040",
+  "budget": 1.5,
+  "seed": 101,
+  "beta": 0.25,
+  "C_minus_prior_only": {
+    "comp": 0.7,
+    "ncost": 0.0,
+    "ub25": 0.7,
+    "visited_count": 0,
+    "observed_count": 0,
+    "probe_count": 0,
+    "total_cost": 0.0,
+    "budget_remaining": 1.5
+  },
+  "C_obs2": {
+    "comp": 0.6933333333333334,
+    "ncost": 0.02,
+    "ub25": 0.6883333333333334,
+    "visited_count": 2,
+    "observed_count": 2,
+    "probe_count": 0,
+    "total_cost": 0.03,
+    "budget_remaining": 1.4700000000000002
+  },
+  "C_obs_full": {
+    "comp": 0.7033333333333334,
+    "ncost": 0.7533333333333334,
+    "ub25": 0.515,
+    "visited_count": 60,
+    "observed_count": 60,
+    "probe_count": 0,
+    "total_cost": 1.1300000000000001,
+    "budget_remaining": 0.37000000000000266
+  },
+  "C_oracle_budgeted": {
+    "comp": 0.7166666666666667,
+    "ncost": 0.9933333333333333,
+    "ub25": 0.4683333333333334,
+    "visited_count": 6,
+    "observed_count": 6,
+    "probe_count": 5,
+    "total_cost": 1.49,
+    "budget_remaining": 0.009999999999999426,
+    "n_objects_fully_probed": 4
+  },
+  "C_oracle_unconstrained": {
+    "comp": 1.0,
+    "note": "All 60 objects, all 5 candidate actions probed with true outcomes, budget ignored"
+  },
+  "marginal_value_curve": {
+    "delta_Cminus_to_Cobs2": -0.006666666666666599,
+    "delta_Cobs2_to_CobsFull": 0.010000000000000009,
+    "delta_CobsFull_to_Coracle_budgeted": 0.013333333333333308,
+    "delta_CobsFull_to_Coracle": 0.29666666666666663,
+    "delta_Cminus_to_Coracle": 0.30000000000000004
+  },
+  "interpretation": {
+    "prior_dominated": true,
+    "observation_saturates_after_2": false,
+    "probe_marginal_value": 0.29666666666666663,
+    "environment_has_probe_value": true,
+    "environment_prior_dominated": true,
+    "note_full_to_budgeted": "+0.0133 of probe value is realizable under budget=1.5, +0.2833 is unconstrained only"
+  }
+}

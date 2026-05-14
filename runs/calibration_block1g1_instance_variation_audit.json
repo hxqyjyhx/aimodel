@@ -1,0 +1,83 @@
+{
+  "block_id": "1G1",
+  "elapsed_s": 17.326920986175537,
+  "condition": "C3v_instance_variation_v0",
+  "budget": 1.5,
+  "seed": 101,
+  "beta": 0.25,
+  "instance_variation": {
+    "wood_log": {
+      "craft_plank": 0.5
+    },
+    "apple": {
+      "eat": 0.5
+    },
+    "stone_block": {
+      "mine_with_pickaxe": 0.5
+    },
+    "wooden_pickaxe": {
+      "use_as_tool": 0.5
+    }
+  },
+  "C_minus_prior_only": {
+    "comp": 0.83,
+    "visited_count": 0,
+    "total_cost": 0.0,
+    "budget_remaining": 1.5
+  },
+  "C_obs2": {
+    "comp": 0.8233333333333334,
+    "visited_count": 2,
+    "total_cost": 0.03,
+    "budget_remaining": 1.4700000000000002
+  },
+  "C_obs_full": {
+    "comp": 0.83,
+    "visited_count": 60,
+    "total_cost": 1.1300000000000001,
+    "budget_remaining": 0.37000000000000266
+  },
+  "C_oracle_budgeted": {
+    "comp": 0.83,
+    "visited_count": 6,
+    "probe_count": 5,
+    "total_cost": 1.49,
+    "budget_remaining": 0.009999999999999426,
+    "n_objects_fully_probed": 4
+  },
+  "C_oracle_unconstrained": {
+    "comp": 1.0,
+    "note": "All objects, all 5 candidate actions probed with true outcomes, budget ignored"
+  },
+  "marginal_value_curve": {
+    "delta_Cminus_to_Cobs2": -0.006666666666666599,
+    "delta_Cobs2_to_CobsFull": 0.006666666666666599,
+    "delta_CobsFull_to_Coracle_budgeted": 0.0,
+    "delta_CobsFull_to_Coracle": 0.17000000000000004,
+    "delta_Cminus_to_Coracle": 0.17000000000000004
+  },
+  "diagnostic_targets": {
+    "prior_dominance": 0.0,
+    "prior_dominance_reduced": false,
+    "target_prior": ">= +0.05",
+    "budgeted_probe_value": 0.0,
+    "budgeted_probe_value_increased": false,
+    "target_budgeted": ">= +0.03",
+    "oracle_gap": 0.17000000000000004,
+    "oracle_gap_ok": true,
+    "target_oracle": ">= +0.15",
+    "ready_for_policy_rerun": false
+  },
+  "comparison_with_1G0": {
+    "C_minus_comp_1G0": 0.7,
+    "C_minus_comp_1G1": 0.83,
+    "C_obs_full_comp_1G0": 0.7033,
+    "C_obs_full_comp_1G1": 0.83,
+    "prior_dominance_1G0": 0.0033,
+    "prior_dominance_1G1": 0.0,
+    "oracle_unconstrained_1G0": 1.0,
+    "oracle_unconstrained_1G1": 1.0,
+    "oracle_budgeted_1G0": 0.7167,
+    "oracle_budgeted_1G1": 0.83
+  }
+}

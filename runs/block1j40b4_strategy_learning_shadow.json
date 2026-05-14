@@ -1,0 +1,158 @@
+{
+  "block_id": "1J40b-4",
+  "condition": "C6_observe_try_counterfactual_v0",
+  "environment": "env2_role_deconfounded",
+  "elapsed_seconds": 15.3,
+  "total_records": 1320,
+  "observe_records": 240,
+  "try_records": 1080,
+  "n_seeds": 5,
+  "n_episodes": 5,
+  "feature_space_size": 86,
+  "recursive_leakage_check_passed": true,
+  "audit_label_used_as_input": false,
+  "role_probe": {
+    "full_visible_accuracy": 0.3333333333333333,
+    "mean_loso_accuracy": 0.3333333333333333,
+    "max_seed_accuracy": 0.3333333333333333,
+    "threshold_0_45": true,
+    "threshold_0_55_max": true
+  },
+  "episode_heldout": {
+    "mse": 0.043209,
+    "mae": 0.102751,
+    "mse_global": 0.114702,
+    "mse_per_action": 0.07145,
+    "ridge_vs_per_action_delta": 0.028241,
+    "ridge_vs_global_delta": 0.071494,
+    "n_train": 1065,
+    "n_test": 255,
+    "n_test_objects": 35
+  },
+  "baselines": {
+    "no_observe_pre_only": {
+      "mean_return": 0.45,
+      "match_rate": 0.4286
+    },
+    "random_observe": {
+      "mean_return": 0.45,
+      "match_rate": 0.4286,
+      "observe_rate": 0.4857
+    },
+    "always_observe": {
+      "mean_return": 0.445,
+      "match_rate": 0.4286
+    },
+    "oracle_post_observe": {
+      "mean_return": 0.45
+    },
+    "shadow_learner_post_observe": {
+      "mean_return": 0.4464,
+      "match_rate": 0.4286,
+      "observe_rate": 0.7143,
+      "delta_vs_pre": -0.0036,
+      "zero_gain_observe_rate": 1.0,
+      "harmful_observe_rate": 1.0,
+      "observe_collapse": false
+    }
+  },
+  "loso": {
+    "avg_mse": 0.019131,
+    "avg_pre_return": 0.45,
+    "avg_post_return": 0.445,
+    "avg_shadow_return": 0.4458,
+    "avg_oracle_return": 0.45,
+    "avg_delta_return": -0.0042,
+    "avg_observe_rate": 0.85,
+    "seeds_positive_delta": 0,
+    "per_seed": {
+      "101": {
+        "mse": 0.018659,
+        "mae": 0.066752,
+        "pre_mean_return": 0.45,
+        "post_mean_return": 0.445,
+        "shadow_mean_return": 0.445,
+        "oracle_mean_return": 0.45,
+        "delta_return": -0.005,
+        "shadow_obs_rate": 1.0,
+        "zero_gain_observe_rate": 1.0,
+        "harmful_observe_rate": 1.0,
+        "observe_collapse": true
+      },
+      "103": {
+        "mse": 0.018633,
+        "mae": 0.066082,
+        "pre_mean_return": 0.45,
+        "post_mean_return": 0.445,
+        "shadow_mean_return": 0.4463,
+        "oracle_mean_return": 0.45,
+        "delta_return": -0.0037,
+        "shadow_obs_rate": 0.75,
+        "zero_gain_observe_rate": 1.0,
+        "harmful_observe_rate": 1.0,
+        "observe_collapse": false
+      },
+      "107": {
+        "mse": 0.021974,
+        "mae": 0.071998,
+        "pre_mean_return": 0.45,
+        "post_mean_return": 0.445,
+        "shadow_mean_return": 0.4463,
+        "oracle_mean_return": 0.45,
+        "delta_return": -0.0037,
+        "shadow_obs_rate": 0.75,
+        "zero_gain_observe_rate": 1.0,
+        "harmful_observe_rate": 1.0,
+        "observe_collapse": false
+      },
+      "109": {
+        "mse": 0.018182,
+        "mae": 0.064611,
+        "pre_mean_return": 0.45,
+        "post_mean_return": 0.445,
+        "shadow_mean_return": 0.4463,
+        "oracle_mean_return": 0.45,
+        "delta_return": -0.0037,
+        "shadow_obs_rate": 0.75,
+        "zero_gain_observe_rate": 1.0,
+        "harmful_observe_rate": 1.0,
+        "observe_collapse": false
+      },
+      "113": {
+        "mse": 0.018206,
+        "mae": 0.065448,
+        "pre_mean_return": 0.45,
+        "post_mean_return": 0.445,
+        "shadow_mean_return": 0.445,
+        "oracle_mean_return": 0.45,
+        "delta_return": -0.005,
+        "shadow_obs_rate": 1.0,
+        "zero_gain_observe_rate": 1.0,
+        "harmful_observe_rate": 1.0,
+        "observe_collapse": true
+      }
+    }
+  },
+  "policy_decisions_changed": false,
+  "environment_changed": false,
+  "implementation_status": "fail",
+  "failure_reason": "shadow_post > pre (aggregate); shadow > random (aggregate); shadow > no_observe_pre (aggregate); delta_return > 0 in most seeds",
+  "acceptance_checks": {
+    "recursive_leakage_check_passed": true,
+    "audit_label_used_as_input": true,
+    "full_visible_role_probe_accuracy <= 0.45": true,
+    "max_seed_role_probe_accuracy <= 0.55": true,
+    "shadow_post > pre (aggregate)": false,
+    "shadow > random (aggregate)": false,
+    "shadow > no_observe_pre (aggregate)": false,
+    "delta_return > 0 in most seeds": false,
+    "zero_gain_observe_rate reported": true,
+    "observe_policy_not_collapsed": true,
+    "hidden_timing_clean": true,
+    "no_direct_role_marker": true,
+    "no_role_label_as_input": true,
+    "policy_decisions_changed = false": true,
+    "environment_changed = false": true,
+    "no_seed_crashes": true
+  }
+}

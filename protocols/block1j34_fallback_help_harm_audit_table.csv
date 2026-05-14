@@ -1,0 +1,225 @@
+seed,episode,effect_type,change_type,oid,action,family,family_signal_ambiguous,has_dev_features,fallback_activated,fallback_used,soft_prior,positive_prior_evidence,ground_truth_outcome,is_violation,is_nonviolation,classification,rationale
+101,0,direct,,test_wooden_pickaxe_012,,tool-like,False,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+101,0,direct,,test_stone_block_000,,wood-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+101,0,direct,,test_stone_block_002,,stone-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+101,0,direct,,test_apple_004,,apple-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+101,0,direct,,test_apple_008,,apple-like,False,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+101,1,direct,,test_wooden_pickaxe_013,,tool-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+101,1,direct,,test_stone_block_005,,apple-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+101,1,direct,,test_stone_block_001,,stone-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+101,1,direct,,test_stone_block_006,,stone-like,True,False,True,True,,True,1,False,True,helpful,fallback switched from violation (mine_by_hand) to non-violation (mine_with_pickaxe)
+101,1,direct,,test_stone_block_008,,stone-like,True,False,True,True,,True,1,False,True,helpful,fallback switched from violation (mine_by_hand) to non-violation (mine_with_pickaxe)
+101,2,direct,,test_wood_log_001,,wood-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+101,2,direct,,test_apple_003,,wood-like,True,False,True,True,,True,0,True,False,neutral,both paths select violation actions
+101,2,direct,,test_stone_block_010,,stone-like,True,False,True,True,,True,1,False,True,helpful,fallback switched from violation (mine_by_hand) to non-violation (mine_with_pickaxe)
+101,2,direct,,test_stone_block_003,,stone-like,True,False,True,True,,True,1,False,True,helpful,fallback switched from violation (mine_by_hand) to non-violation (mine_with_pickaxe)
+101,2,direct,,test_wooden_pickaxe_012,,tool-like,False,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+101,3,direct,,test_wood_log_008,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+101,3,direct,,test_wood_log_012,,wood-like,True,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+101,3,direct,,test_wood_log_000,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+101,3,direct,,test_wood_log_005,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+101,3,direct,,test_wood_log_001,,wood-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+101,4,direct,,test_wood_log_000,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+101,4,direct,,test_wood_log_001,,wood-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+101,4,direct,,test_wood_log_005,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+101,4,direct,,test_wood_log_008,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+101,4,direct,,test_wood_log_012,,wood-like,True,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+101,1,trajectory,fb_avoided,test_wood_log_005,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+101,1,trajectory,fb_avoided,test_apple_005,eat,apple-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+101,1,trajectory,fb_avoided,test_stone_block_000,craft_plank,wood-like,True,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+101,1,trajectory,fb_added,test_stone_block_008,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+101,1,trajectory,fb_added,test_stone_block_001,mine_by_hand,stone-like,True,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+101,1,trajectory,fb_added,test_stone_block_006,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+101,2,trajectory,fb_avoided,test_wood_log_008,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+101,2,trajectory,fb_avoided,test_wood_log_005,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+101,2,trajectory,fb_avoided,test_wood_log_000,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+101,2,trajectory,fb_avoided,test_wood_log_012,craft_plank,wood-like,True,True,False,False,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+101,2,trajectory,fb_added,test_apple_003,burn_as_fuel,wood-like,True,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+101,2,trajectory,fb_added,test_stone_block_010,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+101,2,trajectory,fb_added,test_stone_block_003,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+101,2,trajectory,fb_added,test_wooden_pickaxe_012,use_as_tool,tool-like,False,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+103,0,direct,,test_wood_log_001,,wood-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+103,0,direct,,test_stone_block_002,,stone-like,False,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+103,0,direct,,test_apple_009,,apple-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+103,0,direct,,test_stone_block_011,,stone-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+103,0,direct,,test_apple_004,,apple-like,False,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+103,1,direct,,test_stone_block_000,,stone-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+103,1,direct,,test_stone_block_009,,stone-like,True,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+103,1,direct,,test_apple_012,,apple-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+103,1,direct,,test_stone_block_001,,stone-like,True,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+103,1,direct,,test_wooden_pickaxe_003,,tool-like,False,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+103,2,direct,,test_wooden_pickaxe_005,,stone-like,True,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+103,2,direct,,test_wood_log_014,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+103,2,direct,,test_stone_block_008,,stone-like,False,False,True,True,,True,1,False,True,helpful,fallback switched from violation (mine_by_hand) to non-violation (mine_with_pickaxe)
+103,2,direct,,test_wood_log_001,,wood-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+103,2,direct,,test_stone_block_003,,wood-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+103,3,direct,,test_wooden_pickaxe_013,,tool-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+103,3,direct,,test_apple_000,,wood-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+103,3,direct,,test_wood_log_012,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+103,3,direct,,test_wood_log_014,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+103,3,direct,,test_wood_log_013,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+103,4,direct,,test_wood_log_012,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+103,4,direct,,test_wood_log_013,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+103,4,direct,,test_wood_log_002,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+103,4,direct,,test_wood_log_014,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+103,1,trajectory,fb_avoided,test_apple_005,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+103,1,trajectory,fb_avoided,test_apple_004,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+103,1,trajectory,fb_added,test_stone_block_001,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+103,1,trajectory,fb_added,test_wooden_pickaxe_003,use_as_tool,tool-like,False,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+103,2,trajectory,fb_avoided,test_stone_block_008,mine_by_hand,stone-like,False,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+103,2,trajectory,fb_avoided,test_apple_011,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+103,2,trajectory,fb_avoided,test_wooden_pickaxe_005,mine_by_hand,stone-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+103,2,trajectory,fb_added,test_stone_block_008,mine_with_pickaxe,stone-like,False,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+103,2,trajectory,fb_added,test_wooden_pickaxe_005,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+103,2,trajectory,fb_added,test_stone_block_003,craft_plank,wood-like,True,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+103,3,trajectory,fb_avoided,test_apple_005,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+103,3,trajectory,fb_avoided,test_stone_block_003,craft_plank,wood-like,True,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+103,3,trajectory,fb_added,test_wood_log_014,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+103,3,trajectory,fb_added,test_wood_log_013,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,0,direct,,test_wood_log_002,,wood-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+107,0,direct,,test_wooden_pickaxe_001,,wood-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+107,0,direct,,test_apple_002,,apple-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+107,0,direct,,test_stone_block_002,,stone-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+107,0,direct,,test_stone_block_005,,apple-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+107,1,direct,,test_apple_009,,apple-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+107,1,direct,,test_stone_block_012,,stone-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+107,1,direct,,test_stone_block_001,,stone-like,True,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+107,1,direct,,test_stone_block_007,,stone-like,False,False,True,True,,True,1,False,True,helpful,fallback switched from violation (mine_by_hand) to non-violation (mine_with_pickaxe)
+107,1,direct,,test_wood_log_002,,wood-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+107,2,direct,,test_wood_log_003,,stone-like,False,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+107,2,direct,,test_stone_block_000,,wood-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+107,2,direct,,test_stone_block_010,,tool-like,False,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+107,2,direct,,test_wood_log_002,,wood-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+107,2,direct,,test_stone_block_012,,stone-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+107,3,direct,,test_stone_block_011,,wood-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+107,3,direct,,test_wooden_pickaxe_003,,tool-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+107,3,direct,,test_wooden_pickaxe_012,,wood-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+107,3,direct,,test_wood_log_004,,wood-like,True,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+107,3,direct,,test_wood_log_005,,wood-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+107,4,direct,,test_wood_log_009,,wood-like,True,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+107,4,direct,,test_wood_log_003,,stone-like,False,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+107,4,direct,,test_wooden_pickaxe_002,,tool-like,False,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+107,4,direct,,test_stone_block_008,,wood-like,True,False,True,True,,True,0,True,False,neutral,both paths select violation actions
+107,4,direct,,test_wooden_pickaxe_013,,wood-like,True,False,True,True,,True,1,False,True,helpful,fallback switched from violation (craft_plank) to non-violation (burn_as_fuel)
+107,1,trajectory,fb_avoided,test_stone_block_001,mine_by_hand,stone-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+107,1,trajectory,fb_avoided,test_stone_block_007,mine_by_hand,stone-like,False,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+107,1,trajectory,fb_avoided,test_wooden_pickaxe_004,eat,apple-like,False,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+107,1,trajectory,fb_added,test_stone_block_001,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,1,trajectory,fb_added,test_stone_block_007,mine_with_pickaxe,stone-like,False,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,1,trajectory,fb_added,test_wood_log_002,craft_plank,wood-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,2,trajectory,fb_avoided,test_wood_log_007,craft_plank,wood-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+107,2,trajectory,fb_avoided,test_wood_log_009,craft_plank,wood-like,True,True,False,False,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+107,2,trajectory,fb_avoided,test_wood_log_003,mine_by_hand,stone-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+107,2,trajectory,fb_avoided,test_apple_012,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+107,2,trajectory,fb_avoided,test_apple_014,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+107,2,trajectory,fb_added,test_wood_log_003,mine_with_pickaxe,stone-like,False,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,2,trajectory,fb_added,test_wood_log_002,craft_plank,wood-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,2,trajectory,fb_added,test_stone_block_010,use_as_tool,tool-like,False,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+107,2,trajectory,fb_added,test_stone_block_000,craft_plank,wood-like,True,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+107,2,trajectory,fb_added,test_stone_block_012,mine_by_hand,stone-like,False,True,False,False,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+107,3,trajectory,fb_avoided,test_wooden_pickaxe_007,use_as_tool,tool-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+107,3,trajectory,fb_avoided,test_apple_014,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+107,3,trajectory,fb_added,test_wood_log_005,craft_plank,wood-like,False,True,False,False,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+107,3,trajectory,fb_added,test_wood_log_004,craft_plank,wood-like,True,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,4,trajectory,fb_avoided,test_wood_log_011,eat,apple-like,True,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+107,4,trajectory,fb_avoided,test_stone_block_005,eat,apple-like,True,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+107,4,trajectory,fb_avoided,test_wooden_pickaxe_012,craft_plank,wood-like,True,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+107,4,trajectory,fb_avoided,test_stone_block_010,use_as_tool,tool-like,False,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+107,4,trajectory,fb_avoided,test_wood_log_000,burn_as_fuel,wood-like,True,True,False,False,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+107,4,trajectory,fb_added,test_wood_log_009,craft_plank,wood-like,True,True,False,False,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+107,4,trajectory,fb_added,test_wood_log_003,mine_with_pickaxe,stone-like,False,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,4,trajectory,fb_added,test_wooden_pickaxe_013,burn_as_fuel,wood-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,4,trajectory,fb_added,test_wooden_pickaxe_002,use_as_tool,tool-like,False,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+107,4,trajectory,fb_added,test_stone_block_008,burn_as_fuel,wood-like,True,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+109,0,direct,,test_wooden_pickaxe_007,,tool-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+109,0,direct,,test_apple_007,,apple-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+109,0,direct,,test_apple_012,,apple-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+109,0,direct,,test_wooden_pickaxe_004,,tool-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+109,0,direct,,test_stone_block_005,,stone-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+109,1,direct,,test_wooden_pickaxe_002,,stone-like,False,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+109,1,direct,,test_apple_011,,apple-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+109,1,direct,,test_stone_block_005,,stone-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+109,1,direct,,test_stone_block_013,,stone-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,1,direct,,test_stone_block_014,,stone-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,2,direct,,test_stone_block_013,,stone-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,2,direct,,test_stone_block_014,,stone-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,2,direct,,test_stone_block_000,,wood-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+109,2,direct,,test_wood_log_007,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,2,direct,,test_wood_log_004,,wood-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+109,3,direct,,test_stone_block_013,,stone-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,3,direct,,test_stone_block_014,,stone-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,3,direct,,test_wood_log_000,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,3,direct,,test_wood_log_007,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,3,direct,,test_wood_log_003,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,4,direct,,test_stone_block_014,,stone-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,4,direct,,test_stone_block_013,,stone-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,4,direct,,test_wood_log_007,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,4,direct,,test_wood_log_006,,wood-like,True,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,4,direct,,test_wood_log_000,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+109,0,trajectory,fb_avoided,test_apple_003,eat,apple-like,False,True,False,False,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+109,0,trajectory,fb_avoided,test_wood_log_005,eat,apple-like,True,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+109,0,trajectory,fb_added,test_wooden_pickaxe_004,use_as_tool,tool-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+109,0,trajectory,fb_added,test_stone_block_005,mine_by_hand,stone-like,True,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+109,1,trajectory,fb_avoided,test_apple_000,eat,apple-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+109,1,trajectory,fb_avoided,test_stone_block_003,eat,apple-like,True,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+109,1,trajectory,fb_avoided,test_apple_004,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+109,1,trajectory,fb_added,test_stone_block_005,mine_by_hand,stone-like,True,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+109,1,trajectory,fb_added,test_stone_block_014,mine_by_hand,stone-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+109,1,trajectory,fb_added,test_stone_block_013,mine_by_hand,stone-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+109,2,trajectory,fb_avoided,test_wood_log_000,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+109,2,trajectory,fb_avoided,test_apple_013,eat,apple-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+109,2,trajectory,fb_avoided,test_stone_block_004,craft_plank,wood-like,True,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+109,2,trajectory,fb_avoided,test_apple_005,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+109,2,trajectory,fb_avoided,test_wooden_pickaxe_014,use_as_tool,tool-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+109,2,trajectory,fb_added,test_wood_log_007,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+109,2,trajectory,fb_added,test_stone_block_013,mine_by_hand,stone-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+109,2,trajectory,fb_added,test_wood_log_004,craft_plank,wood-like,True,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+109,2,trajectory,fb_added,test_stone_block_000,craft_plank,wood-like,True,False,True,True,0.85,True,0,True,False,harmful,trajectory: FB probed violation B correctly avoided
+109,2,trajectory,fb_added,test_stone_block_014,mine_by_hand,stone-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+109,3,trajectory,fb_avoided,test_wood_log_012,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+109,3,trajectory,fb_avoided,test_wood_log_004,craft_plank,wood-like,True,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+109,3,trajectory,fb_added,test_stone_block_014,mine_by_hand,stone-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+109,3,trajectory,fb_added,test_stone_block_013,mine_by_hand,stone-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+109,4,trajectory,fb_avoided,test_wood_log_003,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+109,4,trajectory,fb_avoided,test_wood_log_012,craft_plank,wood-like,False,True,False,False,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+109,4,trajectory,fb_added,test_stone_block_014,mine_by_hand,stone-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+109,4,trajectory,fb_added,test_stone_block_013,mine_by_hand,stone-like,False,True,False,False,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+113,0,direct,,test_wooden_pickaxe_012,,apple-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+113,0,direct,,test_stone_block_009,,stone-like,False,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+113,0,direct,,test_apple_006,,apple-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+113,0,direct,,test_stone_block_001,,stone-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+113,0,direct,,test_apple_008,,apple-like,False,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+113,1,direct,,test_wood_log_013,,wood-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+113,1,direct,,test_stone_block_003,,stone-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+113,1,direct,,test_apple_012,,apple-like,False,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+113,1,direct,,test_wood_log_008,,wood-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+113,1,direct,,test_apple_000,,apple-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+113,2,direct,,test_wood_log_001,,wood-like,True,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+113,2,direct,,test_apple_003,,stone-like,True,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+113,2,direct,,test_stone_block_013,,stone-like,False,False,True,True,,True,1,False,True,helpful,fallback switched from violation (mine_by_hand) to non-violation (mine_with_pickaxe)
+113,2,direct,,test_wooden_pickaxe_002,,stone-like,True,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+113,2,direct,,test_stone_block_001,,stone-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+113,3,direct,,test_wood_log_011,,wood-like,False,True,False,False,,True,1,False,True,neutral,same action selected under both paths
+113,3,direct,,test_stone_block_002,,apple-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+113,3,direct,,test_stone_block_005,,stone-like,True,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+113,3,direct,,test_stone_block_010,,tool-like,True,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+113,3,direct,,test_stone_block_003,,stone-like,False,True,False,False,,True,0,True,False,neutral,same action selected under both paths
+113,4,direct,,test_wooden_pickaxe_011,,tool-like,False,False,True,True,,True,1,False,True,neutral,same action selected under both paths
+113,4,direct,,test_stone_block_008,,apple-like,False,False,True,True,,True,0,True,False,neutral,same action selected under both paths
+113,4,direct,,test_apple_003,,stone-like,True,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+113,4,direct,,test_stone_block_005,,stone-like,True,False,True,True,,True,1,False,True,neutral,both paths select different non-violation actions
+113,4,direct,,test_stone_block_013,,stone-like,False,False,True,True,,True,1,False,True,helpful,fallback switched from violation (mine_by_hand) to non-violation (mine_with_pickaxe)
+113,2,trajectory,fb_avoided,test_wooden_pickaxe_002,mine_by_hand,stone-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+113,2,trajectory,fb_avoided,test_apple_003,mine_by_hand,stone-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+113,2,trajectory,fb_avoided,test_stone_block_013,mine_by_hand,stone-like,False,False,True,True,0.85,True,0,True,False,helpful,trajectory: FB avoided violation B would have committed
+113,2,trajectory,fb_added,test_wooden_pickaxe_002,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+113,2,trajectory,fb_added,test_apple_003,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+113,2,trajectory,fb_added,test_stone_block_013,mine_with_pickaxe,stone-like,False,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+113,3,trajectory,fb_avoided,test_stone_block_005,mine_by_hand,stone-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+113,3,trajectory,fb_added,test_stone_block_005,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+113,4,trajectory,fb_avoided,test_stone_block_005,mine_by_hand,stone-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+113,4,trajectory,fb_avoided,test_apple_003,mine_by_hand,stone-like,True,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+113,4,trajectory,fb_avoided,test_apple_010,eat,apple-like,False,False,True,True,0.85,True,1,False,True,harmful,trajectory: FB avoided non-violation B correctly probed
+113,4,trajectory,fb_added,test_stone_block_005,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+113,4,trajectory,fb_added,test_apple_003,mine_with_pickaxe,stone-like,True,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed
+113,4,trajectory,fb_added,test_stone_block_013,mine_with_pickaxe,stone-like,False,False,True,True,0.85,True,1,False,True,helpful,trajectory: FB probed non-violation B missed

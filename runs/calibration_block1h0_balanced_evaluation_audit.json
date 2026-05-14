@@ -1,0 +1,755 @@
+{
+  "block_id": "1H0",
+  "elapsed_s": 17.74083113670349,
+  "budget": 1.5,
+  "seed": 101,
+  "query_names": [
+    "need_planks",
+    "need_stone",
+    "need_food",
+    "need_tool",
+    "need_fuel"
+  ],
+  "n_test_objects": 60,
+  "per_query_class_distribution": {
+    "need_planks": {
+      "n_pos": 15,
+      "n_neg": 45,
+      "pos_rate": 0.25,
+      "neg_rate": 0.75
+    },
+    "need_stone": {
+      "n_pos": 15,
+      "n_neg": 45,
+      "pos_rate": 0.25,
+      "neg_rate": 0.75
+    },
+    "need_food": {
+      "n_pos": 15,
+      "n_neg": 45,
+      "pos_rate": 0.25,
+      "neg_rate": 0.75
+    },
+    "need_tool": {
+      "n_pos": 15,
+      "n_neg": 45,
+      "pos_rate": 0.25,
+      "neg_rate": 0.75
+    },
+    "need_fuel": {
+      "n_pos": 30,
+      "n_neg": 30,
+      "pos_rate": 0.5,
+      "neg_rate": 0.5
+    }
+  },
+  "baselines": {
+    "all_false": {
+      "raw_comp_acc": 0.7,
+      "macro_query_acc": 0.7,
+      "macro_query_bal_acc": 0.5,
+      "macro_bal_subset_acc": 0.5,
+      "per_query": {
+        "need_planks": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_stone": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_food": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_tool": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_fuel": {
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 30,
+            "n_negative": 30,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        }
+      },
+      "bal_subset": {
+        "per_query_bal_subset_acc": {
+          "need_planks": 0.5,
+          "need_stone": 0.5,
+          "need_food": 0.5,
+          "need_tool": 0.5,
+          "need_fuel": 0.5
+        },
+        "per_query_bal_subset_std": {
+          "need_planks": 0.0,
+          "need_stone": 0.0,
+          "need_food": 0.0,
+          "need_tool": 0.0,
+          "need_fuel": 0.0
+        },
+        "macro_bal_subset_acc": 0.5,
+        "per_query_n_balanced": {
+          "need_planks": 15,
+          "need_stone": 15,
+          "need_food": 15,
+          "need_tool": 15,
+          "need_fuel": 30
+        }
+      }
+    },
+    "all_true": {
+      "raw_comp_acc": 0.3,
+      "macro_query_acc": 0.3,
+      "macro_query_bal_acc": 0.5,
+      "macro_bal_subset_acc": 0.5,
+      "per_query": {
+        "need_planks": {
+          "accuracy": 0.25,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_stone": {
+          "accuracy": 0.25,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_food": {
+          "accuracy": 0.25,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_tool": {
+          "accuracy": 0.25,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_fuel": {
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "class_coverage": {
+            "n_positive": 30,
+            "n_negative": 30,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        }
+      },
+      "bal_subset": {
+        "per_query_bal_subset_acc": {
+          "need_planks": 0.5,
+          "need_stone": 0.5,
+          "need_food": 0.5,
+          "need_tool": 0.5,
+          "need_fuel": 0.5
+        },
+        "per_query_bal_subset_std": {
+          "need_planks": 0.0,
+          "need_stone": 0.0,
+          "need_food": 0.0,
+          "need_tool": 0.0,
+          "need_fuel": 0.0
+        },
+        "macro_bal_subset_acc": 0.5,
+        "per_query_n_balanced": {
+          "need_planks": 15,
+          "need_stone": 15,
+          "need_food": 15,
+          "need_tool": 15,
+          "need_fuel": 30
+        }
+      }
+    },
+    "per_query_majority": {
+      "raw_comp_acc": 0.7,
+      "macro_query_acc": 0.7,
+      "macro_query_bal_acc": 0.5,
+      "macro_bal_subset_acc": 0.5,
+      "per_query": {
+        "need_planks": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_stone": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_food": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_tool": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_fuel": {
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 1.0,
+          "negative_recall": 0.0,
+          "class_coverage": {
+            "n_positive": 30,
+            "n_negative": 30,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        }
+      },
+      "bal_subset": {
+        "per_query_bal_subset_acc": {
+          "need_planks": 0.5,
+          "need_stone": 0.5,
+          "need_food": 0.5,
+          "need_tool": 0.5,
+          "need_fuel": 0.5
+        },
+        "per_query_bal_subset_std": {
+          "need_planks": 0.0,
+          "need_stone": 0.0,
+          "need_food": 0.0,
+          "need_tool": 0.0,
+          "need_fuel": 0.0
+        },
+        "macro_bal_subset_acc": 0.5,
+        "per_query_n_balanced": {
+          "need_planks": 15,
+          "need_stone": 15,
+          "need_food": 15,
+          "need_tool": 15,
+          "need_fuel": 30
+        }
+      }
+    },
+    "category_majority": {
+      "raw_comp_acc": 1.0,
+      "macro_query_acc": 1.0,
+      "macro_query_bal_acc": 1.0,
+      "macro_bal_subset_acc": 1.0,
+      "per_query": {
+        "need_planks": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_stone": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_food": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_tool": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_fuel": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 30,
+            "n_negative": 30,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        }
+      },
+      "bal_subset": {
+        "per_query_bal_subset_acc": {
+          "need_planks": 1.0,
+          "need_stone": 1.0,
+          "need_food": 1.0,
+          "need_tool": 1.0,
+          "need_fuel": 1.0
+        },
+        "per_query_bal_subset_std": {
+          "need_planks": 0.0,
+          "need_stone": 0.0,
+          "need_food": 0.0,
+          "need_tool": 0.0,
+          "need_fuel": 0.0
+        },
+        "macro_bal_subset_acc": 1.0,
+        "per_query_n_balanced": {
+          "need_planks": 15,
+          "need_stone": 15,
+          "need_food": 15,
+          "need_tool": 15,
+          "need_fuel": 30
+        }
+      }
+    },
+    "iom_prior": {
+      "raw_comp_acc": 0.7,
+      "macro_query_acc": 0.7,
+      "macro_query_bal_acc": 0.5,
+      "macro_bal_subset_acc": 0.5,
+      "per_query": {
+        "need_planks": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_stone": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_food": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_tool": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_fuel": {
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "positive_recall": 0.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 30,
+            "n_negative": 30,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        }
+      },
+      "bal_subset": {
+        "per_query_bal_subset_acc": {
+          "need_planks": 0.5,
+          "need_stone": 0.5,
+          "need_food": 0.5,
+          "need_tool": 0.5,
+          "need_fuel": 0.5
+        },
+        "per_query_bal_subset_std": {
+          "need_planks": 0.0,
+          "need_stone": 0.0,
+          "need_food": 0.0,
+          "need_tool": 0.0,
+          "need_fuel": 0.0
+        },
+        "macro_bal_subset_acc": 0.5,
+        "per_query_n_balanced": {
+          "need_planks": 15,
+          "need_stone": 15,
+          "need_food": 15,
+          "need_tool": 15,
+          "need_fuel": 30
+        }
+      }
+    },
+    "c_obs_full": {
+      "raw_comp_acc": 0.7033333333333334,
+      "macro_query_acc": 0.7033333333333334,
+      "macro_query_bal_acc": 0.5444444444444445,
+      "macro_bal_subset_acc": 0.5433333333333333,
+      "per_query": {
+        "need_planks": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5444444444444445,
+          "positive_recall": 0.13333333333333333,
+          "negative_recall": 0.9555555555555556,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_stone": {
+          "accuracy": 0.75,
+          "balanced_accuracy": 0.5444444444444445,
+          "positive_recall": 0.13333333333333333,
+          "negative_recall": 0.9555555555555556,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_food": {
+          "accuracy": 0.7833333333333333,
+          "balanced_accuracy": 0.6333333333333333,
+          "positive_recall": 0.3333333333333333,
+          "negative_recall": 0.9333333333333333,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_tool": {
+          "accuracy": 0.7,
+          "balanced_accuracy": 0.4666666666666667,
+          "positive_recall": 0.0,
+          "negative_recall": 0.9333333333333333,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_fuel": {
+          "accuracy": 0.5333333333333333,
+          "balanced_accuracy": 0.5333333333333333,
+          "positive_recall": 0.43333333333333335,
+          "negative_recall": 0.6333333333333333,
+          "class_coverage": {
+            "n_positive": 30,
+            "n_negative": 30,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        }
+      },
+      "bal_subset": {
+        "per_query_bal_subset_acc": {
+          "need_planks": 0.5416666666666667,
+          "need_stone": 0.5466666666666666,
+          "need_food": 0.635,
+          "need_tool": 0.45999999999999996,
+          "need_fuel": 0.5333333333333333
+        },
+        "per_query_bal_subset_std": {
+          "need_planks": 0.004100349435972014,
+          "need_stone": 0.0044590403603995896,
+          "need_food": 0.005115622214674853,
+          "need_tool": 0.005186577368103326,
+          "need_fuel": 0.0
+        },
+        "macro_bal_subset_acc": 0.5433333333333333,
+        "per_query_n_balanced": {
+          "need_planks": 15,
+          "need_stone": 15,
+          "need_food": 15,
+          "need_tool": 15,
+          "need_fuel": 30
+        }
+      }
+    },
+    "oracle_unconstrained": {
+      "raw_comp_acc": 1.0,
+      "macro_query_acc": 1.0,
+      "macro_query_bal_acc": 1.0,
+      "macro_bal_subset_acc": 1.0,
+      "per_query": {
+        "need_planks": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_stone": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_food": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_tool": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 15,
+            "n_negative": 45,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        },
+        "need_fuel": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "positive_recall": 1.0,
+          "negative_recall": 1.0,
+          "class_coverage": {
+            "n_positive": 30,
+            "n_negative": 30,
+            "has_both_classes": true,
+            "positive_only": false,
+            "negative_only": false
+          }
+        }
+      },
+      "bal_subset": {
+        "per_query_bal_subset_acc": {
+          "need_planks": 1.0,
+          "need_stone": 1.0,
+          "need_food": 1.0,
+          "need_tool": 1.0,
+          "need_fuel": 1.0
+        },
+        "per_query_bal_subset_std": {
+          "need_planks": 0.0,
+          "need_stone": 0.0,
+          "need_food": 0.0,
+          "need_tool": 0.0,
+          "need_fuel": 0.0
+        },
+        "macro_bal_subset_acc": 1.0,
+        "per_query_n_balanced": {
+          "need_planks": 15,
+          "need_stone": 15,
+          "need_food": 15,
+          "need_tool": 15,
+          "need_fuel": 30
+        }
+      }
+    }
+  },
+  "diagnostics": {
+    "all_false_macro_bal_near_0_5": true,
+    "iom_prior_not_strong_under_balanced": true,
+    "oracle_high_under_balanced": true,
+    "cobs_has_room_under_balanced": true,
+    "raw_composite_misleading": true,
+    "observation_adds_value_bal": true,
+    "balanced_metric_ready": true,
+    "ready_for_policy_rerun": true
+  },
+  "key_values": {
+    "raw_all_false_comp": 0.7,
+    "raw_iom_prior_comp": 0.7,
+    "raw_iom_prior_macro_bal_acc": 0.5,
+    "balanced_all_false_macro_bal_acc": 0.5,
+    "balanced_iom_prior_macro_bal_acc": 0.5,
+    "balanced_c_obs_full_macro_bal_acc": 0.5444444444444445,
+    "balanced_oracle_macro_bal_acc": 1.0,
+    "balanced_category_majority_macro_bal_acc": 1.0,
+    "observation_bal_gain": 0.04444444444444451,
+    "oracle_bal_gap": 0.4555555555555555,
+    "total_oracle_bal_gap": 0.5
+  },
+  "c_obs_full_cost": {
+    "objects_visited": 60,
+    "total_cost": 1.1300000000000001,
+    "budget_remaining": 0.37000000000000266
+  }
+}

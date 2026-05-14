@@ -1,0 +1,380 @@
+{
+  "block_id": "1J40b-1",
+  "condition": "C5_mixed_source_identifiability_v0",
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "elapsed_seconds": 17.1,
+  "total_records_used": 2625,
+  "observe_records_used": 450,
+  "try_records_used": 2175,
+  "switch_records_used": 0,
+  "proxy_records_used": 0,
+  "switch_q_values_created": false,
+  "episode_heldout": {
+    "method": "episode_heldout",
+    "train_count": 2065,
+    "test_count": 560,
+    "ridge_metrics": {
+      "mse": 0.057558,
+      "mae": 0.18809,
+      "n": 560,
+      "per_action": {
+        "observe": {
+          "count": 100,
+          "mse": 0.000614,
+          "mae": 0.019725,
+          "mean_true": 0.0829,
+          "mean_pred": 0.082
+        },
+        "try_burn_as_fuel": {
+          "count": 60,
+          "mse": 0.098017,
+          "mae": 0.293664,
+          "mean_true": 0.09,
+          "mean_pred": 0.0679
+        },
+        "try_craft_plank": {
+          "count": 100,
+          "mse": 0.078271,
+          "mae": 0.240903,
+          "mean_true": 0.018,
+          "mean_pred": 0.025
+        },
+        "try_eat": {
+          "count": 100,
+          "mse": 0.071807,
+          "mae": 0.235717,
+          "mean_true": 0.012,
+          "mean_pred": 0.0301
+        },
+        "try_mine_by_hand": {
+          "count": 60,
+          "mse": 0.052419,
+          "mae": 0.191715,
+          "mean_true": 0.22,
+          "mean_pred": 0.2348
+        },
+        "try_mine_with_pickaxe": {
+          "count": 60,
+          "mse": 0.037925,
+          "mae": 0.155584,
+          "mean_true": 0.37,
+          "mean_pred": 0.3276
+        },
+        "try_use_as_tool": {
+          "count": 80,
+          "mse": 0.073272,
+          "mae": 0.215476,
+          "mean_true": 0.0225,
+          "mean_pred": -0.0302
+        }
+      }
+    },
+    "global_baseline_mse": 0.073339,
+    "global_baseline_mae": 0.254931,
+    "global_baseline_mean": 0.1236,
+    "per_action_baseline_mse": 0.061636,
+    "per_action_baseline_mae": 0.202027,
+    "per_action_baseline_means": {
+      "observe": 0.1047,
+      "try_burn_as_fuel": 0.1475,
+      "try_craft_plank": 0.0197,
+      "try_eat": 0.0129,
+      "try_mine_by_hand": 0.3275,
+      "try_mine_with_pickaxe": 0.3975,
+      "try_use_as_tool": -0.0076
+    },
+    "action_type_only_baseline_mse": 0.061609,
+    "action_type_only_baseline_mae": 0.202224,
+    "ridge_vs_global_mean_delta_mse": 0.015781,
+    "ridge_vs_global_mean_delta_mae": 0.066841,
+    "ridge_vs_per_action_mean_delta_mse": 0.004078,
+    "ridge_vs_per_action_mean_delta_mae": 0.013937,
+    "ridge_vs_action_type_only_delta_mse": 0.004051,
+    "ridge_vs_action_type_only_delta_mae": 0.014134,
+    "rank_correlation_per_action": {
+      "observe": {
+        "rho": 0.888,
+        "n": 100
+      },
+      "try_burn_as_fuel": {
+        "rho": 0.0894,
+        "n": 60
+      },
+      "try_craft_plank": {
+        "rho": 0.1655,
+        "n": 100
+      },
+      "try_eat": {
+        "rho": 0.1366,
+        "n": 100
+      },
+      "try_mine_by_hand": {
+        "rho": 0.6483,
+        "n": 60
+      },
+      "try_mine_with_pickaxe": {
+        "rho": 0.3312,
+        "n": 60
+      },
+      "try_use_as_tool": {
+        "rho": 0.2422,
+        "n": 80
+      }
+    },
+    "action_value_margin": {
+      "count": 560,
+      "mean": 0.0797,
+      "min": 0.0001,
+      "max": 0.3198
+    },
+    "observe_calibration": {
+      "available": true,
+      "bins": [
+        {
+          "bin": 1,
+          "count": 20,
+          "pred_mean": 0.0078,
+          "true_mean": 0.0155,
+          "delta": -0.0077
+        },
+        {
+          "bin": 2,
+          "count": 20,
+          "pred_mean": 0.044,
+          "true_mean": 0.0495,
+          "delta": -0.0055
+        },
+        {
+          "bin": 3,
+          "count": 20,
+          "pred_mean": 0.0663,
+          "true_mean": 0.0605,
+          "delta": 0.0058
+        },
+        {
+          "bin": 4,
+          "count": 20,
+          "pred_mean": 0.101,
+          "true_mean": 0.1015,
+          "delta": -0.0005
+        },
+        {
+          "bin": 5,
+          "count": 20,
+          "pred_mean": 0.1909,
+          "true_mean": 0.1875,
+          "delta": 0.0034
+        }
+      ]
+    },
+    "try_calibration": {
+      "available": true,
+      "bins": [
+        {
+          "bin": 1,
+          "count": 92,
+          "pred_mean": -0.1365,
+          "true_mean": -0.0457,
+          "delta": -0.0908
+        },
+        {
+          "bin": 2,
+          "count": 92,
+          "pred_mean": 0.0052,
+          "true_mean": 0.0196,
+          "delta": -0.0144
+        },
+        {
+          "bin": 3,
+          "count": 92,
+          "pred_mean": 0.0708,
+          "true_mean": 0.0717,
+          "delta": -0.0009
+        },
+        {
+          "bin": 4,
+          "count": 92,
+          "pred_mean": 0.1671,
+          "true_mean": 0.0978,
+          "delta": 0.0693
+        },
+        {
+          "bin": 5,
+          "count": 92,
+          "pred_mean": 0.338,
+          "true_mean": 0.3522,
+          "delta": -0.0141
+        }
+      ]
+    },
+    "top_action_match_rate": {
+      "available": false,
+      "reason": "Each situation has only 1 observed action; cannot determine true argmax over all 7 actions"
+    },
+    "shadow_policy": {
+      "total_situations": 560,
+      "valid_shadow_choices": 560,
+      "shadow_observe_choice_rate": 0.0,
+      "shadow_try_choice_rate": 1.0,
+      "shadow_action_distribution": {
+        "observe": 0,
+        "try_burn_as_fuel": 1,
+        "try_craft_plank": 25,
+        "try_eat": 15,
+        "try_mine_by_hand": 109,
+        "try_mine_with_pickaxe": 410,
+        "try_use_as_tool": 0
+      },
+      "avg_predicted_value_of_chosen": 0.3378,
+      "avg_actual_value_of_chosen": 0.3656,
+      "counterfactual_choice_count": 496,
+      "counterfactual_choice_rate": 0.8857,
+      "counterfactual_value_available": true
+    },
+    "value_scale_report": {
+      "observe": {
+        "count": 350,
+        "mean": 0.1047,
+        "min": -0.005,
+        "max": 0.325
+      },
+      "try": {
+        "count": 1715,
+        "mean": 0.1274,
+        "min": -0.15,
+        "max": 0.45,
+        "unique_values": [
+          -0.15,
+          0.45
+        ]
+      },
+      "scales_comparable": true,
+      "note": "Observe and try net_values are computed from different reward functions. Observe: info_gain - 0.005. Try: success(0.5)/failure(-0.1) - 0.05. Q values are comparable as utilities on the same scale (net budget change), but observe values are bounded above by feature novelty while try values are dominated by binary success/failure."
+    },
+    "train_action_counts": {
+      "observe": 350,
+      "try_burn_as_fuel": 240,
+      "try_craft_plank": 350,
+      "try_eat": 350,
+      "try_mine_by_hand": 240,
+      "try_mine_with_pickaxe": 240,
+      "try_use_as_tool": 295
+    },
+    "test_action_counts": {
+      "observe": 100,
+      "try_burn_as_fuel": 60,
+      "try_craft_plank": 100,
+      "try_eat": 100,
+      "try_mine_by_hand": 60,
+      "try_mine_with_pickaxe": 60,
+      "try_use_as_tool": 80
+    },
+    "fitted_actions": [
+      "observe",
+      "try_burn_as_fuel",
+      "try_craft_plank",
+      "try_eat",
+      "try_mine_by_hand",
+      "try_mine_with_pickaxe",
+      "try_use_as_tool"
+    ]
+  },
+  "loso": {
+    "method": "loso",
+    "folds": 5,
+    "total_test_n": 2625,
+    "ridge_mse": 0.051866,
+    "ridge_mae": 0.173863,
+    "ridge_per_action": {
+      "observe": {
+        "count": 450,
+        "mse": 0.000636,
+        "mae": 0.019782,
+        "mean_true": 0.0999,
+        "mean_pred": 0.0999
+      },
+      "try_burn_as_fuel": {
+        "count": 300,
+        "mse": 0.086637,
+        "mae": 0.280735,
+        "mean_true": 0.136,
+        "mean_pred": 0.1355
+      },
+      "try_craft_plank": {
+        "count": 450,
+        "mse": 0.070191,
+        "mae": 0.226975,
+        "mean_true": 0.0193,
+        "mean_pred": 0.0175
+      },
+      "try_eat": {
+        "count": 450,
+        "mse": 0.069964,
+        "mae": 0.225113,
+        "mean_true": 0.0127,
+        "mean_pred": 0.0092
+      },
+      "try_mine_by_hand": {
+        "count": 300,
+        "mse": 0.048941,
+        "mae": 0.167361,
+        "mean_true": 0.306,
+        "mean_pred": 0.3055
+      },
+      "try_mine_with_pickaxe": {
+        "count": 300,
+        "mse": 0.029117,
+        "mae": 0.105956,
+        "mean_true": 0.392,
+        "mean_pred": 0.3922
+      },
+      "try_use_as_tool": {
+        "count": 375,
+        "mse": 0.062355,
+        "mae": 0.207554,
+        "mean_true": -0.0012,
+        "mean_pred": 0.0024
+      }
+    },
+    "global_baseline_mse": 0.07496,
+    "global_baseline_mae": 0.257631,
+    "per_action_baseline_mse": 0.056851,
+    "per_action_baseline_mae": 0.196564,
+    "action_type_only_baseline_mse": 0.05685,
+    "action_type_only_baseline_mae": 0.19679,
+    "ridge_vs_global_mean_delta_mse": 0.023095,
+    "ridge_vs_global_mean_delta_mae": 0.083768,
+    "ridge_vs_per_action_mean_delta_mse": 0.004985,
+    "ridge_vs_per_action_mean_delta_mae": 0.022702,
+    "ridge_vs_action_type_only_delta_mse": 0.004984,
+    "ridge_vs_action_type_only_delta_mae": 0.022927
+  },
+  "audit": {
+    "checks": {
+      "hidden_feature_leakage_detected=false": true,
+      "oracle_leakage_detected=false": true,
+      "audit_label_used_as_input=false": true,
+      "preferred_explanation_used_as_hard_label=false": true,
+      "policy_decisions_changed=false": true,
+      "environment_changed=false": true,
+      "switch_proxy_created=false": true,
+      "switch_q_values_created=false": true,
+      "proxy_records_used=0": true,
+      "all_records_have_source_ids=true": true,
+      "episode_heldout_available": true,
+      "loso_heldout_available": true,
+      "baseline_comparison_available": true,
+      "no_seed_crashes": true
+    },
+    "all_pass": true,
+    "failure_reason": "none",
+    "implementation_status": "pass",
+    "forbidden_found": false
+  }
+}

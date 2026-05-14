@@ -1,0 +1,6 @@
+seed,total_records,observe_records,try_records,switch_records,switch_available,valid_nv,source_ids,expl_feat_records,proxy_records,hidden_leak,oracle_leak,sit_forbidden,can_proceed
+101,525,90,435,0,False,525,525,435,0,False,False,False,True
+103,525,90,435,0,False,525,525,435,0,False,False,False,True
+107,525,90,435,0,False,525,525,435,0,False,False,False,True
+109,525,90,435,0,False,525,525,435,0,False,False,False,True
+113,525,90,435,0,False,525,525,435,0,False,False,False,True

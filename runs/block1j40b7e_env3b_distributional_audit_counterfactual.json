@@ -1,0 +1,2401 @@
+{
+  "block_id": "1J40b-7e",
+  "elapsed_seconds": 47.7,
+  "implementation_status": "COMPLETED",
+  "coverage_fractions": [
+    0.25,
+    0.5
+  ],
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "distributional_audit": {
+    "method": "TRUE/ORACLE VOI primary, Q-based sanity check",
+    "pre_oracle_method": "legal pre_signature groups only (not hidden category)",
+    "cost_003": {
+      "n_deterministic_true": 8,
+      "n_total": 8,
+      "fraction_deterministic": 1.0,
+      "per_signature": {
+        "('brownish', 'heavy_weight', 'long_shape', 'rough_texture')": {
+          "n_total": 30,
+          "n_true_positive": 30,
+          "n_true_nonpositive": 0,
+          "fraction_true_positive": 1.0,
+          "entropy": 0.0,
+          "is_deterministic": true,
+          "n_q_positive": 30,
+          "is_q_deterministic": true
+        },
+        "('brownish', 'heavy_weight', 'long_shape', 'rough_texture', 'spotted')": {
+          "n_total": 30,
+          "n_true_positive": 30,
+          "n_true_nonpositive": 0,
+          "fraction_true_positive": 1.0,
+          "entropy": 0.0,
+          "is_deterministic": true,
+          "n_q_positive": 30,
+          "is_q_deterministic": true
+        },
+        "('discolored', 'greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+          "n_total": 30,
+          "n_true_positive": 30,
+          "n_true_nonpositive": 0,
+          "fraction_true_positive": 1.0,
+          "entropy": 0.0,
+          "is_deterministic": true,
+          "n_q_positive": 30,
+          "is_q_deterministic": true
+        },
+        "('greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+          "n_total": 30,
+          "n_true_positive": 30,
+          "n_true_nonpositive": 0,
+          "fraction_true_positive": 1.0,
+          "entropy": 0.0,
+          "is_deterministic": true,
+          "n_q_positive": 30,
+          "is_q_deterministic": true
+        },
+        "('brownish', 'discolored', 'has_bark_texture', 'heavy_weight', 'long_shape', 'rough_texture')": {
+          "n_total": 15,
+          "n_true_positive": 0,
+          "n_true_nonpositive": 15,
+          "fraction_true_positive": 0.0,
+          "entropy": 0.0,
+          "is_deterministic": true,
+          "n_q_positive": 0,
+          "is_q_deterministic": true
+        },
+        "('brownish', 'has_crystal_flecks', 'heavy_weight', 'long_shape', 'rough_texture')": {
+          "n_total": 15,
+          "n_true_positive": 0,
+          "n_true_nonpositive": 15,
+          "fraction_true_positive": 0.0,
+          "entropy": 0.0,
+          "is_deterministic": true,
+          "n_q_positive": 0,
+          "is_q_deterministic": true
+        },
+        "('greenish', 'has_grip_area', 'light_weight', 'round_small', 'smooth_texture')": {
+          "n_total": 15,
+          "n_true_positive": 0,
+          "n_true_nonpositive": 15,
+          "fraction_true_positive": 0.0,
+          "entropy": 0.0,
+          "is_deterministic": true,
+          "n_q_positive": 0,
+          "is_q_deterministic": true
+        },
+        "('greenish', 'has_stem_remnant', 'light_weight', 'round_small', 'smooth_texture', 'spotted')": {
+          "n_total": 15,
+          "n_true_positive": 0,
+          "n_true_nonpositive": 15,
+          "fraction_true_positive": 0.0,
+          "entropy": 0.0,
+          "is_deterministic": true,
+          "n_q_positive": 0,
+          "is_q_deterministic": true
+        }
+      }
+    },
+    "cost_005": {
+      "n_deterministic_true": 8,
+      "per_signature": {
+        "('brownish', 'heavy_weight', 'long_shape', 'rough_texture')": {
+          "n_true_positive": 30,
+          "fraction_true_positive": 1.0,
+          "entropy": 0.0,
+          "is_deterministic": true
+        },
+        "('brownish', 'heavy_weight', 'long_shape', 'rough_texture', 'spotted')": {
+          "n_true_positive": 30,
+          "fraction_true_positive": 1.0,
+          "entropy": 0.0,
+          "is_deterministic": true
+        },
+        "('discolored', 'greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+          "n_true_positive": 30,
+          "fraction_true_positive": 1.0,
+          "entropy": 0.0,
+          "is_deterministic": true
+        },
+        "('greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+          "n_true_positive": 30,
+          "fraction_true_positive": 1.0,
+          "entropy": 0.0,
+          "is_deterministic": true
+        },
+        "('brownish', 'discolored', 'has_bark_texture', 'heavy_weight', 'long_shape', 'rough_texture')": {
+          "n_true_positive": 0,
+          "fraction_true_positive": 0.0,
+          "entropy": 0.0,
+          "is_deterministic": true
+        },
+        "('brownish', 'has_crystal_flecks', 'heavy_weight', 'long_shape', 'rough_texture')": {
+          "n_true_positive": 0,
+          "fraction_true_positive": 0.0,
+          "entropy": 0.0,
+          "is_deterministic": true
+        },
+        "('greenish', 'has_grip_area', 'light_weight', 'round_small', 'smooth_texture')": {
+          "n_true_positive": 0,
+          "fraction_true_positive": 0.0,
+          "entropy": 0.0,
+          "is_deterministic": true
+        },
+        "('greenish', 'has_stem_remnant', 'light_weight', 'round_small', 'smooth_texture', 'spotted')": {
+          "n_true_positive": 0,
+          "fraction_true_positive": 0.0,
+          "entropy": 0.0,
+          "is_deterministic": true
+        }
+      }
+    }
+  },
+  "counterfactual_coverage": {
+    "label": "EXPLICIT INTERVENTION on training distribution, NOT natural env3b redesign",
+    "shared_signature_intervention": {
+      "mechanism": "Flat affordance (all try actions have same outcome)",
+      "effect": "Observation decision-irrelevant (pre_best == post_best, VOI = -cost)",
+      "label": "decision_irrelevant_flat"
+    },
+    "unique_signature_intervention": {
+      "mechanism": "Swap to other category's affordance in same ambient group",
+      "effect": "Lookalike/deceptive/exception: pre-surface diagnostic feature misleading, post-observe corrective",
+      "label": "lookalike_deceptive_exception",
+      "note": "Hidden category/profile/audit labels NOT exposed to model"
+    },
+    "coverage_audits": {
+      "cost_0.03_cov_0.25": {
+        "coverage_fraction": 0.25,
+        "observe_cost": 0.03,
+        "deterministic_count": 4,
+        "total_signatures": 8,
+        "fraction_deterministic": 0.5,
+        "per_signature": {
+          "('brownish', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 30,
+            "n_true_positive": 29,
+            "fraction_positive": 0.9667,
+            "entropy": 0.2108,
+            "is_deterministic": false
+          },
+          "('brownish', 'heavy_weight', 'long_shape', 'rough_texture', 'spotted')": {
+            "n_total": 30,
+            "n_true_positive": 28,
+            "fraction_positive": 0.9333,
+            "entropy": 0.3534,
+            "is_deterministic": false
+          },
+          "('discolored', 'greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 30,
+            "n_true_positive": 24,
+            "fraction_positive": 0.8,
+            "entropy": 0.7219,
+            "is_deterministic": false
+          },
+          "('greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 30,
+            "n_true_positive": 25,
+            "fraction_positive": 0.8333,
+            "entropy": 0.65,
+            "is_deterministic": false
+          },
+          "('brownish', 'discolored', 'has_bark_texture', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('brownish', 'has_crystal_flecks', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('greenish', 'has_grip_area', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('greenish', 'has_stem_remnant', 'light_weight', 'round_small', 'smooth_texture', 'spotted')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          }
+        }
+      },
+      "cost_0.03_cov_0.5": {
+        "coverage_fraction": 0.5,
+        "observe_cost": 0.03,
+        "deterministic_count": 4,
+        "total_signatures": 8,
+        "fraction_deterministic": 0.5,
+        "per_signature": {
+          "('brownish', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 30,
+            "n_true_positive": 21,
+            "fraction_positive": 0.7,
+            "entropy": 0.8813,
+            "is_deterministic": false
+          },
+          "('brownish', 'heavy_weight', 'long_shape', 'rough_texture', 'spotted')": {
+            "n_total": 30,
+            "n_true_positive": 22,
+            "fraction_positive": 0.7333,
+            "entropy": 0.8366,
+            "is_deterministic": false
+          },
+          "('discolored', 'greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 30,
+            "n_true_positive": 21,
+            "fraction_positive": 0.7,
+            "entropy": 0.8813,
+            "is_deterministic": false
+          },
+          "('greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 30,
+            "n_true_positive": 21,
+            "fraction_positive": 0.7,
+            "entropy": 0.8813,
+            "is_deterministic": false
+          },
+          "('brownish', 'discolored', 'has_bark_texture', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('brownish', 'has_crystal_flecks', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('greenish', 'has_grip_area', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('greenish', 'has_stem_remnant', 'light_weight', 'round_small', 'smooth_texture', 'spotted')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          }
+        }
+      },
+      "cost_0.05_cov_0.25": {
+        "coverage_fraction": 0.25,
+        "observe_cost": 0.05,
+        "deterministic_count": 4,
+        "total_signatures": 8,
+        "fraction_deterministic": 0.5,
+        "per_signature": {
+          "('brownish', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 30,
+            "n_true_positive": 29,
+            "fraction_positive": 0.9667,
+            "entropy": 0.2108,
+            "is_deterministic": false
+          },
+          "('brownish', 'heavy_weight', 'long_shape', 'rough_texture', 'spotted')": {
+            "n_total": 30,
+            "n_true_positive": 28,
+            "fraction_positive": 0.9333,
+            "entropy": 0.3534,
+            "is_deterministic": false
+          },
+          "('discolored', 'greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 30,
+            "n_true_positive": 24,
+            "fraction_positive": 0.8,
+            "entropy": 0.7219,
+            "is_deterministic": false
+          },
+          "('greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 30,
+            "n_true_positive": 25,
+            "fraction_positive": 0.8333,
+            "entropy": 0.65,
+            "is_deterministic": false
+          },
+          "('brownish', 'discolored', 'has_bark_texture', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('brownish', 'has_crystal_flecks', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('greenish', 'has_grip_area', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('greenish', 'has_stem_remnant', 'light_weight', 'round_small', 'smooth_texture', 'spotted')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          }
+        }
+      },
+      "cost_0.05_cov_0.5": {
+        "coverage_fraction": 0.5,
+        "observe_cost": 0.05,
+        "deterministic_count": 4,
+        "total_signatures": 8,
+        "fraction_deterministic": 0.5,
+        "per_signature": {
+          "('brownish', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 30,
+            "n_true_positive": 21,
+            "fraction_positive": 0.7,
+            "entropy": 0.8813,
+            "is_deterministic": false
+          },
+          "('brownish', 'heavy_weight', 'long_shape', 'rough_texture', 'spotted')": {
+            "n_total": 30,
+            "n_true_positive": 22,
+            "fraction_positive": 0.7333,
+            "entropy": 0.8366,
+            "is_deterministic": false
+          },
+          "('discolored', 'greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 30,
+            "n_true_positive": 21,
+            "fraction_positive": 0.7,
+            "entropy": 0.8813,
+            "is_deterministic": false
+          },
+          "('greenish', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 30,
+            "n_true_positive": 21,
+            "fraction_positive": 0.7,
+            "entropy": 0.8813,
+            "is_deterministic": false
+          },
+          "('brownish', 'discolored', 'has_bark_texture', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('brownish', 'has_crystal_flecks', 'heavy_weight', 'long_shape', 'rough_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('greenish', 'has_grip_area', 'light_weight', 'round_small', 'smooth_texture')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          },
+          "('greenish', 'has_stem_remnant', 'light_weight', 'round_small', 'smooth_texture', 'spotted')": {
+            "n_total": 15,
+            "n_true_positive": 15,
+            "fraction_positive": 1.0,
+            "entropy": 0.0,
+            "is_deterministic": true
+          }
+        }
+      }
+    },
+    "corrective_post_evidence_audit": {
+      "cov_0.25": {
+        "n_lookalike_counterfactuals": 12,
+        "n_with_corrective_post_evidence": 12,
+        "n_without_corrective_post_evidence": 0,
+        "corrective_post_evidence_pass_rate": 1.0,
+        "design_valid": true,
+        "detail": [
+          {
+            "seed": 103,
+            "oid": "env3b_obj_0008",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 107,
+            "oid": "env3b_obj_0009",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0009",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0018",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 113,
+            "oid": "env3b_obj_0016",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 109,
+            "oid": "env3b_obj_0017",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0034",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 103,
+            "oid": "env3b_obj_0035",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 113,
+            "oid": "env3b_obj_0035",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 113,
+            "oid": "env3b_obj_0027",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 103,
+            "oid": "env3b_obj_0027",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 107,
+            "oid": "env3b_obj_0026",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          }
+        ]
+      },
+      "cov_0.5": {
+        "n_lookalike_counterfactuals": 28,
+        "n_with_corrective_post_evidence": 28,
+        "n_without_corrective_post_evidence": 0,
+        "corrective_post_evidence_pass_rate": 1.0,
+        "design_valid": true,
+        "detail": [
+          {
+            "seed": 103,
+            "oid": "env3b_obj_0008",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 107,
+            "oid": "env3b_obj_0009",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0009",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 103,
+            "oid": "env3b_obj_0007",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 113,
+            "oid": "env3b_obj_0009",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0008",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 109,
+            "oid": "env3b_obj_0009",
+            "original_category": "wood_log",
+            "target_category": "stone_block",
+            "target_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "post_features_present": [
+              "block_like",
+              "brownish",
+              "cold_to_touch",
+              "discolored",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "heavy_weight",
+              "long_shape",
+              "rough_texture",
+              "scratch_resistant"
+            ],
+            "corrective_features_found": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "original_features_present": [
+              "has_bark_texture"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 107,
+            "oid": "env3b_obj_0017",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0018",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0017",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 103,
+            "oid": "env3b_obj_0018",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 113,
+            "oid": "env3b_obj_0018",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 107,
+            "oid": "env3b_obj_0018",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0016",
+            "original_category": "stone_block",
+            "target_category": "wood_log",
+            "target_diagnostic_features": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_diagnostic_features": [
+              "block_like",
+              "cold_to_touch",
+              "has_crystal_flecks",
+              "has_granular_surface",
+              "scratch_resistant"
+            ],
+            "post_features_present": [
+              "brownish",
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "has_crystal_flecks",
+              "heavy_weight",
+              "long_shape",
+              "porous_surface",
+              "rough_texture"
+            ],
+            "corrective_features_found": [
+              "fibrous",
+              "flammable",
+              "has_bark_texture",
+              "porous_surface"
+            ],
+            "original_features_present": [
+              "has_crystal_flecks"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 109,
+            "oid": "env3b_obj_0035",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0034",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0036",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 103,
+            "oid": "env3b_obj_0036",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 107,
+            "oid": "env3b_obj_0035",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 109,
+            "oid": "env3b_obj_0036",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 109,
+            "oid": "env3b_obj_0034",
+            "original_category": "wooden_pickaxe",
+            "target_category": "apple",
+            "target_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "post_features_present": [
+              "fruity_scent",
+              "greenish",
+              "has_grip_area",
+              "has_peel_texture",
+              "has_stem_remnant",
+              "light_weight",
+              "round_small",
+              "smooth_texture"
+            ],
+            "corrective_features_found": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "original_features_present": [
+              "has_grip_area"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 101,
+            "oid": "env3b_obj_0027",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 113,
+            "oid": "env3b_obj_0026",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 109,
+            "oid": "env3b_obj_0027",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 113,
+            "oid": "env3b_obj_0025",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 103,
+            "oid": "env3b_obj_0025",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 113,
+            "oid": "env3b_obj_0027",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          },
+          {
+            "seed": 107,
+            "oid": "env3b_obj_0025",
+            "original_category": "apple",
+            "target_category": "wooden_pickaxe",
+            "target_diagnostic_features": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_diagnostic_features": [
+              "fruity_scent",
+              "has_peel_texture",
+              "has_stem_remnant"
+            ],
+            "post_features_present": [
+              "elongated_with_handle",
+              "greenish",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "has_stem_remnant",
+              "jointed",
+              "light_weight",
+              "movable",
+              "round_small",
+              "smooth_texture",
+              "spotted"
+            ],
+            "corrective_features_found": [
+              "elongated_with_handle",
+              "has_grip_area",
+              "has_metal_head",
+              "has_shaft_shape",
+              "jointed",
+              "movable"
+            ],
+            "original_features_present": [
+              "has_stem_remnant"
+            ],
+            "has_corrective_evidence": true
+          }
+        ]
+      }
+    }
+  },
+  "policy_experiments": {
+    "cost_0.03_original": {
+      "A": {
+        "n_test": 180,
+        "policy_net": 0.42,
+        "always_obs_net": 0.42,
+        "always_try": 0.25,
+        "oracle_sel": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.01
+      },
+      "B": {
+        "n_test": 90,
+        "policy_net": 0.42,
+        "always_obs_net": 0.42,
+        "always_try": 0.25,
+        "oracle_sel": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.01
+      },
+      "C": {
+        "n_test": 180,
+        "policy_net": 0.43,
+        "always_obs_net": 0.42,
+        "always_try": 0.25,
+        "oracle_sel": 0.43,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0,
+        "vs_always_obs": 0.01,
+        "vs_oracle": 0.0
+      }
+    },
+    "cost_0.03_0.25": {
+      "A": {
+        "n_test": 180,
+        "policy_net": 0.42,
+        "always_obs_net": 0.42,
+        "always_try": 0.25,
+        "oracle_sel": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.01
+      },
+      "B": {
+        "n_test": 90,
+        "policy_net": 0.42,
+        "always_obs_net": 0.42,
+        "always_try": 0.25,
+        "oracle_sel": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.01
+      },
+      "C": {
+        "n_test": 180,
+        "policy_net": 0.42,
+        "always_obs_net": 0.42,
+        "always_try": 0.25,
+        "oracle_sel": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.01
+      }
+    },
+    "cost_0.03_0.5": {
+      "A": {
+        "n_test": 180,
+        "policy_net": 0.37,
+        "always_obs_net": 0.37,
+        "always_try": 0.15,
+        "oracle_sel": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.06
+      },
+      "B": {
+        "n_test": 90,
+        "policy_net": 0.42,
+        "always_obs_net": 0.42,
+        "always_try": 0.25,
+        "oracle_sel": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.01
+      },
+      "C": {
+        "n_test": 180,
+        "policy_net": 0.42,
+        "always_obs_net": 0.42,
+        "always_try": 0.05,
+        "oracle_sel": 0.43,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.01
+      }
+    },
+    "cost_0.05_original": {
+      "A": {
+        "n_test": 180,
+        "policy_net": 0.4,
+        "always_obs_net": 0.4,
+        "always_try": 0.25,
+        "oracle_sel": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.0167
+      },
+      "B": {
+        "n_test": 90,
+        "policy_net": 0.4,
+        "always_obs_net": 0.4,
+        "always_try": 0.25,
+        "oracle_sel": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.0167
+      },
+      "C": {
+        "n_test": 180,
+        "policy_net": 0.4167,
+        "always_obs_net": 0.4,
+        "always_try": 0.25,
+        "oracle_sel": 0.4167,
+        "obs_rate": 0.6667,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 0.0,
+        "vs_always_obs": 0.0167,
+        "vs_oracle": 0.0
+      }
+    },
+    "cost_0.05_0.25": {
+      "A": {
+        "n_test": 180,
+        "policy_net": 0.4,
+        "always_obs_net": 0.4,
+        "always_try": 0.25,
+        "oracle_sel": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.0167
+      },
+      "B": {
+        "n_test": 90,
+        "policy_net": 0.4,
+        "always_obs_net": 0.4,
+        "always_try": 0.25,
+        "oracle_sel": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.0167
+      },
+      "C": {
+        "n_test": 180,
+        "policy_net": 0.4,
+        "always_obs_net": 0.4,
+        "always_try": 0.25,
+        "oracle_sel": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.0167
+      }
+    },
+    "cost_0.05_0.5": {
+      "A": {
+        "n_test": 180,
+        "policy_net": 0.35,
+        "always_obs_net": 0.35,
+        "always_try": 0.15,
+        "oracle_sel": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.0667
+      },
+      "B": {
+        "n_test": 90,
+        "policy_net": 0.4,
+        "always_obs_net": 0.4,
+        "always_try": 0.25,
+        "oracle_sel": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.0167
+      },
+      "C": {
+        "n_test": 180,
+        "policy_net": 0.4,
+        "always_obs_net": 0.4,
+        "always_try": 0.05,
+        "oracle_sel": 0.4167,
+        "obs_rate": 1.0,
+        "pos_obs_rate": 1.0,
+        "nonpos_obs_rate": 1.0,
+        "vs_always_obs": 0.0,
+        "vs_oracle": 0.0167
+      }
+    }
+  },
+  "question_reports": {},
+  "overall_verdicts": {
+    "cost_0.03_cov_0.25": {
+      "verdict": "FAIL: Mixed coverage exists but policy still collapses to always-observe on Test A",
+      "sigs_broken": 4,
+      "total_sigs": 8,
+      "determinism_broken": true,
+      "test_a_collapsed": true,
+      "test_a_beats_always_obs": false,
+      "test_b_collapsed": true,
+      "test_b_beats_always_obs": false,
+      "test_c_passes": false,
+      "corrective_post_evidence_pass_rate": 1.0,
+      "design_valid": true
+    },
+    "cost_0.03_cov_0.5": {
+      "verdict": "FAIL: Mixed coverage exists but policy still collapses to always-observe on Test A",
+      "sigs_broken": 4,
+      "total_sigs": 8,
+      "determinism_broken": true,
+      "test_a_collapsed": true,
+      "test_a_beats_always_obs": false,
+      "test_b_collapsed": true,
+      "test_b_beats_always_obs": false,
+      "test_c_passes": false,
+      "corrective_post_evidence_pass_rate": 1.0,
+      "design_valid": true
+    },
+    "cost_0.05_cov_0.25": {
+      "verdict": "FAIL: Mixed coverage exists but policy still collapses to always-observe on Test A",
+      "sigs_broken": 4,
+      "total_sigs": 8,
+      "determinism_broken": true,
+      "test_a_collapsed": true,
+      "test_a_beats_always_obs": false,
+      "test_b_collapsed": true,
+      "test_b_beats_always_obs": false,
+      "test_c_passes": false,
+      "corrective_post_evidence_pass_rate": 1.0,
+      "design_valid": true
+    },
+    "cost_0.05_cov_0.5": {
+      "verdict": "FAIL: Mixed coverage exists but policy still collapses to always-observe on Test A",
+      "sigs_broken": 4,
+      "total_sigs": 8,
+      "determinism_broken": true,
+      "test_a_collapsed": true,
+      "test_a_beats_always_obs": false,
+      "test_b_collapsed": true,
+      "test_b_beats_always_obs": false,
+      "test_c_passes": false,
+      "corrective_post_evidence_pass_rate": 1.0,
+      "design_valid": true
+    }
+  }
+}

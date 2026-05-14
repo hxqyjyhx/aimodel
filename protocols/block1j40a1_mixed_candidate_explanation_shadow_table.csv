@@ -1,0 +1,6 @@
+seed,total_mixed,gap_pred,state_pred,split_pred,noise_pred,unresolved_pred,macro_accuracy,over_split_rate,noise_overfit_rate,unresolved_rate,heldout_available,all_source_ids,hidden_leak,oracle_leak
+101,65,18,19,20,5,3,0.5214,0.75,0.0,0.0462,True,True,False,False
+103,63,9,32,15,6,1,0.4862,0.4,0.6667,0.0159,True,True,False,False
+107,57,9,32,9,6,1,0.4219,1.0,0.5,0.0175,True,True,False,False
+109,63,7,24,21,4,7,0.4944,0.4762,0.5,0.1111,True,True,False,False
+113,65,12,29,15,6,3,0.4489,0.6,0.8333,0.0462,True,True,False,False

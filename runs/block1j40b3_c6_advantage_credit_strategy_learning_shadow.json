@@ -1,0 +1,173 @@
+{
+  "block_id": "1J40b-3",
+  "condition": "C6_observe_try_counterfactual_v0",
+  "elapsed_seconds": 1.7,
+  "total_records": 1320,
+  "observe_records": 240,
+  "try_records": 1080,
+  "switch_records": 0,
+  "proxy_records": 0,
+  "n_seeds": 5,
+  "n_episodes": 5,
+  "recursive_leakage_check_passed": true,
+  "audit_label_used_as_input": false,
+  "episode_heldout": {
+    "mse": 0.026648,
+    "mae": 0.094173,
+    "mse_global": 0.106396,
+    "mse_per_action": 0.07615,
+    "mse_action_type_only": 0.076182,
+    "ridge_vs_per_action_delta_mse": 0.049502,
+    "ridge_vs_global_delta_mse": 0.079748,
+    "ridge_vs_ato_delta_mse": 0.049534,
+    "per_action_mse": {
+      "observe": 0.079524,
+      "try_burn_as_fuel": 0.06649,
+      "try_craft_plank": 0.0,
+      "try_eat": 0.025388,
+      "try_mine_by_hand": 4e-06,
+      "try_mine_with_pickaxe": 1.9e-05,
+      "try_use_as_tool": 5e-06
+    },
+    "n_train": 1065,
+    "n_test": 255
+  },
+  "loso": {
+    "avg_mse": 0.013296,
+    "avg_shadow_observe_rate": 0.3636,
+    "per_seed": {
+      "101": {
+        "mse": 0.013296,
+        "mae": 0.065501,
+        "shadow_observe_rate": 0.3636
+      },
+      "103": {
+        "mse": 0.013296,
+        "mae": 0.065501,
+        "shadow_observe_rate": 0.3636
+      },
+      "107": {
+        "mse": 0.013296,
+        "mae": 0.065501,
+        "shadow_observe_rate": 0.3636
+      },
+      "109": {
+        "mse": 0.013296,
+        "mae": 0.065501,
+        "shadow_observe_rate": 0.3636
+      },
+      "113": {
+        "mse": 0.013296,
+        "mae": 0.065501,
+        "shadow_observe_rate": 0.3636
+      }
+    }
+  },
+  "shadow_policy": {
+    "overall_observe_rate": 0.3725,
+    "overall_try_rate": 0.6275,
+    "n_observe_chosen": 95,
+    "n_try_chosen": 160,
+    "mean_observe_q": 0.3988,
+    "mean_best_try_q": 0.4608
+  },
+  "role_based_shadow": {
+    "observe_helps": {
+      "observe_rate": 0.8636,
+      "mean_Q_observe": 0.5565,
+      "mean_Q_best_try": 0.4745
+    },
+    "observe_neutral": {
+      "observe_rate": 0.0,
+      "mean_Q_observe": 0.2706,
+      "mean_Q_best_try": 0.4504
+    },
+    "observe_wasteful": {
+      "observe_rate": 0.0,
+      "mean_Q_observe": 0.2899,
+      "mean_Q_best_try": 0.4505
+    }
+  },
+  "top_action_match": {
+    "available": true,
+    "rate": 0.5,
+    "n_complete_sets": 10
+  },
+  "calibration": {
+    "observe": [
+      {
+        "mean_pred": 0.2373,
+        "mean_true": 0.4139,
+        "n": 9
+      },
+      {
+        "mean_pred": 0.3865,
+        "mean_true": 0.4494,
+        "n": 9
+      },
+      {
+        "mean_pred": 0.3865,
+        "mean_true": 0.4494,
+        "n": 9
+      },
+      {
+        "mean_pred": 0.4186,
+        "mean_true": 0.4183,
+        "n": 9
+      },
+      {
+        "mean_pred": 0.5241,
+        "mean_true": 0.6383,
+        "n": 9
+      }
+    ],
+    "try": [
+      {
+        "mean_pred": -0.1834,
+        "mean_true": -0.15,
+        "n": 42
+      },
+      {
+        "mean_pred": -0.15,
+        "mean_true": -0.15,
+        "n": 42
+      },
+      {
+        "mean_pred": -0.0479,
+        "mean_true": -0.1357,
+        "n": 42
+      },
+      {
+        "mean_pred": 0.2993,
+        "mean_true": 0.3786,
+        "n": 42
+      },
+      {
+        "mean_pred": 0.4727,
+        "mean_true": 0.45,
+        "n": 42
+      }
+    ]
+  },
+  "policy_decisions_changed": false,
+  "switch_q_values_created": false,
+  "proxy_records_used": 0,
+  "implementation_status": "pass",
+  "failure_reason": "none",
+  "acceptance_checks": {
+    "recursive_leakage_check_passed": true,
+    "audit_label_used_as_input": true,
+    "heldout_evaluation_exists": true,
+    "baseline_comparison_exists": true,
+    "top_action_match_available": true,
+    "observe_rate_on_helps > neutral": true,
+    "observe_rate_on_helps > wasteful": true,
+    "overall_observe_rate in (0.05, 0.95)": true,
+    "policy_decisions_changed = false": true,
+    "environment_changed = false": true,
+    "switch_q_values_created = false": true,
+    "proxy_records_used = 0": true,
+    "all_records_have_source_ids": true,
+    "no_seed_crashes": true
+  }
+}

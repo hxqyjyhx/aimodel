@@ -1,0 +1,15 @@
+audit,condition,available,key_stat,value
+1,token_persistence,True,unique_tokens,60
+1,token_persistence,True,tokens_multiple_episodes,0
+1,token_persistence,True,repeated_observe_tokens,0
+2,repeated_observation,False,repeated_observe_count,0
+2,repeated_observation,False,mean_repeated_observes,1.0
+3,state_observation,False,state_feature_count,0
+3,state_observation,False,state_events_with_data,0
+4,multi_action_covariation,True,mixed_objects,60
+4,multi_action_covariation,True,mixed_action_pairs,462
+5,heldout_split,True,episode_count,5
+5,heldout_split,True,temporally_heldout_possible,True
+6,irreducible_noise,False,inconsistent_pairs,0
+7,surface_matched_rates,False,objects_with_mixed,60
+7,surface_matched_rates,False,mean_mixed_rate,0.7

@@ -1,0 +1,335 @@
+{
+  "block_id": "1J40b-7b",
+  "elapsed_seconds": 2.3,
+  "seeds": [
+    101,
+    103,
+    107,
+    109,
+    113
+  ],
+  "implementation_status": "PASS",
+  "primary_observe_cost": 0.03,
+  "robustness_observe_cost": 0.05,
+  "feature_audit": {
+    "n_pre_surface_features": 14,
+    "n_post_observe_features": 28,
+    "n_model_feature_keys": 35,
+    "hidden_in_pre_keys": false,
+    "hidden_in_post_keys": false,
+    "hidden_before_reveal_violations": 0,
+    "forbidden_fields_in_model": 0,
+    "pre_surface_feature_names": [
+      "brownish",
+      "discolored",
+      "greenish",
+      "has_bark_texture",
+      "has_crystal_flecks",
+      "has_grip_area",
+      "has_stem_remnant",
+      "heavy_weight",
+      "light_weight",
+      "long_shape",
+      "rough_texture",
+      "round_small",
+      "smooth_texture",
+      "spotted"
+    ],
+    "post_observe_feature_names": [
+      "block_like",
+      "brownish",
+      "cold_to_touch",
+      "discolored",
+      "elongated_with_handle",
+      "fibrous",
+      "flammable",
+      "fruity_scent",
+      "greenish",
+      "has_bark_texture",
+      "has_crystal_flecks",
+      "has_granular_surface",
+      "has_grip_area",
+      "has_metal_head",
+      "has_peel_texture",
+      "has_shaft_shape",
+      "has_stem_remnant",
+      "heavy_weight",
+      "jointed",
+      "light_weight",
+      "long_shape",
+      "movable",
+      "porous_surface",
+      "rough_texture",
+      "round_small",
+      "scratch_resistant",
+      "smooth_texture",
+      "spotted"
+    ]
+  },
+  "audit_voi": {
+    "cost_0.03": {
+      "positive_net": 120,
+      "non_positive_net": 60,
+      "pos_rate": 0.6667
+    },
+    "cost_0.05": {
+      "positive_net": 120,
+      "non_positive_net": 60,
+      "pos_rate": 0.6667
+    }
+  },
+  "primary": {
+    "cost": 0.03,
+    "status": "PASS",
+    "aggregate": {
+      "pre_mean": 0.25,
+      "always_try": 0.25,
+      "always_observe_net": 0.42,
+      "always_observe_gross": 0.45,
+      "random_observe": 0.3433,
+      "oracle_selective_net": 0.43,
+      "learned_policy_net": 0.43,
+      "learned_policy_gross": 0.45,
+      "learned_minus_always_observe": 0.01,
+      "learned_minus_always_try": 0.18,
+      "learned_minus_oracle": 0.0,
+      "observe_rate": 0.6667,
+      "direct_try_rate": 0.3333,
+      "pos_net_observe_rate": 1.0,
+      "nonpos_net_observe_rate": 0.0,
+      "harmful_observe_rate": 0.0,
+      "mean_q_error": 0.0014
+    },
+    "checks": {
+      "learned_policy_net > always_observe_net": true,
+      "learned_policy_net > always_try": true,
+      "observe_rate between 0 and 1": true,
+      "pos_obs_rate > nonpos_obs_rate": true,
+      "hidden_audit_fields_absent": true,
+      "forbidden_fields_absent": true
+    },
+    "per_category": {
+      "wood_log": {
+        "count": 45,
+        "policy_mean_net": 0.43,
+        "obs_rate": 0.6667
+      },
+      "stone_block": {
+        "count": 45,
+        "policy_mean_net": 0.43,
+        "obs_rate": 0.6667
+      },
+      "apple": {
+        "count": 45,
+        "policy_mean_net": 0.43,
+        "obs_rate": 0.6667
+      },
+      "wooden_pickaxe": {
+        "count": 45,
+        "policy_mean_net": 0.43,
+        "obs_rate": 0.6667
+      }
+    },
+    "per_nfeat": {
+      "4": {
+        "count": 60,
+        "policy_mean_net": 0.42000000000000004,
+        "obs_rate": 1.0
+      },
+      "5": {
+        "count": 90,
+        "policy_mean_net": 0.43000000000000005,
+        "obs_rate": 0.6666666666666666
+      },
+      "6": {
+        "count": 30,
+        "policy_mean_net": 0.45,
+        "obs_rate": 0.0
+      }
+    },
+    "per_seed": {
+      "101": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "policy_net": 0.43,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      },
+      "103": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "policy_net": 0.43,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      },
+      "107": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "policy_net": 0.43,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      },
+      "109": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "policy_net": 0.43,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      },
+      "113": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.42,
+        "oracle_selective": 0.43,
+        "policy_net": 0.43,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      }
+    }
+  },
+  "robustness": {
+    "cost": 0.05,
+    "status": "PASS",
+    "aggregate": {
+      "pre_mean": 0.25,
+      "always_try": 0.25,
+      "always_observe_net": 0.4,
+      "always_observe_gross": 0.45,
+      "random_observe": 0.3433,
+      "oracle_selective_net": 0.4167,
+      "learned_policy_net": 0.4167,
+      "learned_policy_gross": 0.45,
+      "learned_minus_always_observe": 0.0167,
+      "learned_minus_always_try": 0.1667,
+      "learned_minus_oracle": 0.0,
+      "observe_rate": 0.6667,
+      "direct_try_rate": 0.3333,
+      "pos_net_observe_rate": 1.0,
+      "nonpos_net_observe_rate": 0.0,
+      "harmful_observe_rate": 0.0,
+      "mean_q_error": 0.0014
+    },
+    "checks": {
+      "learned_policy_net > always_observe_net": true,
+      "learned_policy_net > always_try": true,
+      "observe_rate between 0 and 1": true,
+      "pos_obs_rate > nonpos_obs_rate": true,
+      "hidden_audit_fields_absent": true,
+      "forbidden_fields_absent": true
+    },
+    "per_category": {
+      "wood_log": {
+        "count": 45,
+        "policy_mean_net": 0.4167,
+        "obs_rate": 0.6667
+      },
+      "stone_block": {
+        "count": 45,
+        "policy_mean_net": 0.4167,
+        "obs_rate": 0.6667
+      },
+      "apple": {
+        "count": 45,
+        "policy_mean_net": 0.4167,
+        "obs_rate": 0.6667
+      },
+      "wooden_pickaxe": {
+        "count": 45,
+        "policy_mean_net": 0.4167,
+        "obs_rate": 0.6667
+      }
+    },
+    "per_nfeat": {
+      "4": {
+        "count": 60,
+        "policy_mean_net": 0.4,
+        "obs_rate": 1.0
+      },
+      "5": {
+        "count": 90,
+        "policy_mean_net": 0.4166666666666667,
+        "obs_rate": 0.6666666666666666
+      },
+      "6": {
+        "count": 30,
+        "policy_mean_net": 0.45,
+        "obs_rate": 0.0
+      }
+    },
+    "per_seed": {
+      "101": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "policy_net": 0.4167,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      },
+      "103": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "policy_net": 0.4167,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      },
+      "107": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "policy_net": 0.4167,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      },
+      "109": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "policy_net": 0.4167,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      },
+      "113": {
+        "pre_mean": 0.25,
+        "always_observe_net": 0.4,
+        "oracle_selective": 0.4167,
+        "policy_net": 0.4167,
+        "obs_rate": 0.6667,
+        "direct_try_rate": 0.3333,
+        "pos_net_obs_rate": 1.0,
+        "nonpos_net_obs_rate": 0.0,
+        "mean_q_error": 0.0014
+      }
+    }
+  }
+}
