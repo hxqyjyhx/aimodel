@@ -4,23 +4,26 @@ import config
 
 
 class HarnessResult:
+    """存储一次 episode 运行的结果，包括预测、事件日志和预算消耗等。"""
     def __init__(self, predictions, event_log, agent_obs,
                  pre_probe_entropies=None, pre_decision_entropies=None):
-        self.predictions = predictions
-        self.event_log = event_log
-        self.agent_obs = agent_obs
-        self.budget_spent = agent_obs.budget_spent
-        self.budget_remaining = agent_obs.budget_remaining
-        self.pre_probe_entropies = pre_probe_entropies or {}
-        self.pre_decision_entropies = pre_decision_entropies or {}
+        self.predictions = predictions  # 模型的最终预测结果
+        self.event_log = event_log  # 事件日志，记录运行过程中的关键事件
+        self.agent_obs = agent_obs  # agent 观测到的环境状态
+        self.budget_spent = agent_obs.budget_spent  # 已消耗的预算
+        self.budget_remaining = agent_obs.budget_remaining  # 剩余预算
+        self.pre_probe_entropies = pre_probe_entropies or {}  # 探测前的熵值（策略内部记录）
+        self.pre_decision_entropies = pre_decision_entropies or {}  # 决策前的熵值
 
     @property
     def objects_visited(self):
+        """返回 episode 中 agent 访问过的对象总数。"""
         return sum(1 for oid in self.agent_obs.get_all_object_ids()
                    if self.agent_obs.is_visited(oid))
 
     @property
     def objects_probed(self):
+        """返回 episode 中 agent 执行过探测的对象总数。"""
         count = 0
         for oid in self.agent_obs.get_all_object_ids():
             if self.agent_obs.get_probe_results(oid):
@@ -29,9 +32,11 @@ class HarnessResult:
 
 
 class EpisodeHarness:
+    """运行单个 episode 的核心引擎，在预算约束下驱动 agent 与环境交互。"""
+
     def __init__(self, environment, policy):
-        self._env = environment
-        self._policy = policy
+        self._env = environment  # 环境实例，负责状态转换和探测操作
+        self._policy = policy  # 策略实例，决定下一步访问哪个对象以及是否探测
 
     def run(self):
         obs = self._env.reset()
