@@ -1,6 +1,5 @@
 """EpisodeHarness: runs a single episode with budget enforcement."""
 
-import config
 
 
 class HarnessResult:

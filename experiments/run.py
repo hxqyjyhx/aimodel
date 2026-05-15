@@ -5,38 +5,27 @@ import sys
 import json
 import copy
 import random
-import math
 import time
 
+# Ensure the project root is in the path so `src.minimc` is importable
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
-# Path to parent experiment for imports
-PARENT_DIR = os.path.join(CURRENT_DIR, "..", "exp004_5l_instance_outcome_memory")
-sys.path.insert(0, PARENT_DIR)
+from src.minimc import config
+from src.minimc.environment import MiniMCEnvironment
+from src.minimc.harness import EpisodeHarness, HarnessResult
+from src.minimc.evaluator import MiniMCEvaluator
+from tests.test_guardrails import run_all_guardrail_tests
 
-# Also need 5a3 for AFFORDANCE_PROFILES
-A3_DIR = os.path.join(CURRENT_DIR, "..", "exp004_5a3_tool_material_transfer")
-sys.path.insert(0, A3_DIR)
-
-# And 5k for CategoryPosteriorLearner
-K5_DIR = os.path.join(CURRENT_DIR, "..", "exp004_5k_episodic_sparse_outcome")
-sys.path.insert(0, K5_DIR)
-
-# And 5i for execute_probe
-I5_DIR = os.path.join(CURRENT_DIR, "..", "exp004_5i_object_uncertainty_probe")
-sys.path.insert(0, I5_DIR)
-
-import config
-from environment import MiniMCEnvironment
-from harness import EpisodeHarness, HarnessResult
-from evaluator import MiniMCEvaluator
-from guardrail_tests import run_all_guardrail_tests
-
-from instance_outcome_memory import InstanceOutcomeMemory
-from run_004_5n1 import run_phase_a_training
-from run_004_5l import run_cluster_baselines
-from sparse_outcome_collector import collect_sparse_probe_outcomes
-from category_posterior_learner import CategoryPosteriorLearner
+# External dependencies (stubs in src.minimc.deps — provide real implementations)
+from src.minimc.deps import (
+    InstanceOutcomeMemory,
+    run_phase_a_training,
+    run_cluster_baselines,
+    collect_sparse_probe_outcomes,
+)
 
 
 # =========================================================================
@@ -45,7 +34,7 @@ from category_posterior_learner import CategoryPosteriorLearner
 
 def _make_policy(cfg_id, im_base, cp_base, simulator, seed, cost_weight=None):
     """Instantiate a single policy for a given config_id."""
-    from policies import (
+    from src.minimc.policies import (
         C0a_NoInteractionPolicy, C0b_ObserveOnlyPolicy,
         C2_ClusterRefPolicy, C8_ForcedEIGPolicy,
         C13_InstanceVOIPolicy, C13_ForcedVisitProbeGatePolicy,
@@ -91,7 +80,7 @@ def _make_policy(cfg_id, im_base, cp_base, simulator, seed, cost_weight=None):
 
 def _run_episode(env, policy):
     """Run an episode through the harness. Handles C14a specially."""
-    from policies import C14a_TruthAnswerOracle
+    from src.minimc.policies import C14a_TruthAnswerOracle
     if isinstance(policy, C14a_TruthAnswerOracle):
         predictions = policy.get_answer()
         obs = env.reset()
@@ -152,7 +141,7 @@ def run_single_seed(seed):
 
     # Phase D: Assign positions
     print("  Phase D: Assigning positions...")
-    from simulator_truth import MiniMCSimulatorTruth
+    from src.minimc.simulator_truth import MiniMCSimulatorTruth
     positions = MiniMCSimulatorTruth.assign_positions(
         test_oids, config.GRID_ROWS, config.GRID_COLS,
         config.AGENT_START, rng
@@ -174,14 +163,13 @@ def run_single_seed(seed):
     evaluator_oracle = MiniMCEvaluator(oracle_env)
 
     # C14a (truth answer) — special case, uses simulator directly
-    from simulator_truth import MiniMCSimulatorTruth as SimTruth
     c14a_sim = main_env.simulator
     c14a_policy = _make_policy("C14a_truth_answer_oracle", im_base, None,
                                c14a_sim, seed)
     c14a_preds = c14a_policy.get_answer()
     # Use main evaluator for C14a
-    from agent_obs import AgentObs
-    from event_log import EventLog
+    from src.minimc.agent_obs import AgentObs
+    from src.minimc.event_log import EventLog
     dummy_log = EventLog()
     dummy_obs = AgentObs(c14a_sim, config.DEFAULT_INITIAL_BUDGET,
                          config.REACH_COST_PER_UNIT, config.OBSERVE_COST,
@@ -273,7 +261,7 @@ def run_calibration_grid(cue_filter=None, budget_filter=None, cw_filter=None):
     all_cue_results = {}
     t_start = time.time()
 
-    from simulator_truth import MiniMCSimulatorTruth
+    from src.minimc.simulator_truth import MiniMCSimulatorTruth
 
     # Filter cues
     cues_to_run = [c for c in config.CUE_CONDITIONS
@@ -807,7 +795,7 @@ def main():
     )
     c2_posterior = cluster_results.get("C2")
 
-    from simulator_truth import MiniMCSimulatorTruth
+    from src.minimc.simulator_truth import MiniMCSimulatorTruth
     positions = MiniMCSimulatorTruth.assign_positions(
         test_oids, config.GRID_ROWS, config.GRID_COLS,
         config.AGENT_START, rng

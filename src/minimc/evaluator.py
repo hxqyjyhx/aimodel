@@ -2,9 +2,9 @@
 
 import math
 
-from environment import _TASK_QUERIES
-from policies import CORE_ACTION_FEATURES
-import config
+from .environment import _TASK_QUERIES
+from .policies import CORE_ACTION_FEATURES
+from . import config
 
 
 class MiniMCEvaluator:

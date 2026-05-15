@@ -1,7 +1,7 @@
 """Layer 2: AgentObsView (read-only policy interface) and AgentObs (mutable)."""
 
-import config
-from simulator_truth import MiniMCSimulatorTruth
+from . import config
+from .simulator_truth import MiniMCSimulatorTruth
 
 
 class BudgetExceededError(Exception):

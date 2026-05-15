@@ -1,10 +1,13 @@
 [project]
-name = "aimodel"
+name = "minimc"
 version = "0.1.0"
-description = "Add your description here"
+description = "Mini-MC v0 — Cost-Structured Instance+VOI Environment"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "isort>=8.0.1",
-    "mypy>=2.1.0",
-]
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[tool.setuptools.packages.find]
+where = ["src"]

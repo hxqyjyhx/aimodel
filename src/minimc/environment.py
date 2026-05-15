@@ -1,9 +1,9 @@
 """MiniMCEnvironment — wraps SimulatorTruth + AgentObs, harness-facing API."""
 
-from simulator_truth import MiniMCSimulatorTruth
-from agent_obs import AgentObs
-from event_log import EventLog
-import config
+from .simulator_truth import MiniMCSimulatorTruth
+from .agent_obs import AgentObs
+from .event_log import EventLog
+from . import config
 
 
 class MiniMCEnvironment:

@@ -3,15 +3,18 @@
 import json
 import copy
 import random
-import os
-import sys
+import inspect
 
-import config
-from environment import MiniMCEnvironment
-from agent_obs import BudgetExceededError, AgentObsView
-from policies import C13_InstanceVOIPolicy, C8_ForcedEIGPolicy, C2_ClusterRefPolicy
-from policies import C0b_ObserveOnlyPolicy, C14b_BudgetedOraclePolicy
-from policies import MAIN_CANDIDATE_ACTIONS
+from src.minimc import config
+from src.minimc.environment import MiniMCEnvironment
+from src.minimc.agent_obs import BudgetExceededError, AgentObsView
+from src.minimc.policies import (
+    C13_InstanceVOIPolicy, C8_ForcedEIGPolicy, C2_ClusterRefPolicy,
+    C0b_ObserveOnlyPolicy, C14b_BudgetedOraclePolicy,
+    MAIN_CANDIDATE_ACTIONS,
+)
+from src.minimc.harness import EpisodeHarness
+from src.minimc.event_log import EventLog
 
 
 def run_all_guardrail_tests(env, test_objects, positions, im_base,
@@ -45,7 +48,6 @@ def run_all_guardrail_tests(env, test_objects, positions, im_base,
 
 # ---- Helper: quick episode runner ----
 def _run_episode(env, policy):
-    from harness import EpisodeHarness
     harness = EpisodeHarness(env, policy)
     return harness.run()
 
@@ -64,7 +66,6 @@ def test_object_id_persistence(env, test_objects, positions, im_base,
                                cluster_posterior, simulator):
     im = im_base.clone()
     rng = random.Random(101)
-    # Use C14 oracle policy to guarantee enough probe events for persistence check
     policy = C14b_BudgetedOraclePolicy(im, rng, simulator)
     env1 = _make_env_copy(env)
     result = _run_episode(env1, policy)
@@ -74,17 +75,6 @@ def test_object_id_persistence(env, test_objects, positions, im_base,
     if len(probe_events) < 2:
         return False, "Need at least 2 probe events (C14 should always probe)"
 
-    # Check: same object probed twice should have same outcome
-    by_object = {}
-    for e in probe_events:
-        oid = e["object_id"]
-        by_object.setdefault(oid, []).append(e["outcome"])
-    for oid, outcomes in by_object.items():
-        if len(outcomes) >= 2 and len(set(outcomes)) > 1:
-            # Different outcomes could be valid if probing different actions
-            pass
-
-    # Check: probe result matches ground truth profile
     for e in probe_events[:5]:
         oid = e["object_id"]
         action = e["action"]
@@ -106,15 +96,9 @@ def test_no_hidden_leakage(env, test_objects, positions, im_base,
                  "_probe", "event_log"]
     for attr in forbidden:
         if hasattr(view, attr):
-            # For AgentObsView, _simulator should exist but be private
             if attr == "_simulator":
                 continue
             return False, f"AgentObsView exposes forbidden attribute: {attr}"
-
-    # Check policy signatures use AgentObsView
-    import inspect
-    sig = inspect.signature(MiniMCEnvironment.reset)
-    # This checks that policies accept AgentObsView, not AgentObs
     return True, "No hidden leakage detected in AgentObsView"
 
 
@@ -160,8 +144,17 @@ def test_probe_outcome_binding(env, test_objects, positions, im_base,
         for action in MAIN_CANDIDATE_ACTIONS[:2]:
             outcome = simulator.probe(oid, action)[0]
             cat = simulator.get_hidden_category(oid)
-            from objects import AFFORDANCE_PROFILES
-            expected_str = AFFORDANCE_PROFILES[cat].get(action, "fail")
+            try:
+                from src.minimc.deps.objects_stub import AFFORDANCE_PROFILES
+                expected_str = AFFORDANCE_PROFILES[cat].get(action, "fail")
+            except (ImportError, AttributeError):
+                # Fallback: use profile from object data
+                profile = simulator.get_ground_truth_affordances(oid)
+                feat = "mine_by_hand_success" if action == "mine_by_hand" else action + "_success"
+                expected = profile.get(feat, 0.0)
+                if abs(outcome - expected) > 1e-9:
+                    return False, f"Probe {oid}.{action}: {outcome} vs expected {expected}"
+                continue
             expected = 1.0 if expected_str == "success" else 0.0
             if abs(outcome - expected) > 1e-9:
                 return False, f"Probe {oid}.{action}: {outcome} vs expected {expected}"
@@ -171,7 +164,6 @@ def test_probe_outcome_binding(env, test_objects, positions, im_base,
 # ---- Test 6 ----
 def test_oracle_separation(env, test_objects, positions, im_base,
                            cluster_posterior, simulator):
-    # Run C14 in one env, C13 in another — verify C13 doesn't see oracle info
     im_oracle = im_base.clone()
     env_oracle = _make_env_copy(env)
     rng_o = random.Random(99)
@@ -184,7 +176,6 @@ def test_oracle_separation(env, test_objects, positions, im_base,
     policy_c = C13_InstanceVOIPolicy(im_c13, rng_c, cost_weight=0.5)
     result_c = _run_episode(env_c13, policy_c)
 
-    # C13 should NOT have oracle access
     if hasattr(policy_c, '_simulator'):
         return False, "C13 policy has simulator reference"
     return True, "Oracle separation: C14 and C13 use separate envs"
@@ -223,12 +214,10 @@ def test_event_log_completeness(env, test_objects, positions, im_base,
     if not events:
         return False, "Empty event log"
 
-    # Check step monotonic
     steps = [e.get("step", -1) for e in events]
     if steps != sorted(steps):
         return False, "Steps not monotonic"
 
-    # Check required fields per event type
     for e in events:
         event_type = e.get("event")
         if event_type == "reach":
@@ -247,8 +236,8 @@ def test_event_log_completeness(env, test_objects, positions, im_base,
 # ---- Test 9 ----
 def test_budget_hard_enforcement(env, test_objects, positions, im_base,
                                  cluster_posterior, simulator):
-    from agent_obs import AgentObs
-    from event_log import EventLog
+    from src.minimc.agent_obs import AgentObs
+    from src.minimc.event_log import EventLog
 
     obs = AgentObs(simulator, 0.01, config.REACH_COST_PER_UNIT,
                    config.OBSERVE_COST, config.PROBE_COST, EventLog())
@@ -264,7 +253,7 @@ def test_budget_hard_enforcement(env, test_objects, positions, im_base,
 # ---- Test 10 ----
 def test_tap_sound_exclusion(env, test_objects, positions, im_base,
                              cluster_posterior, simulator):
-    assert "tap_sound" not in MAIN_CANDIDATE_ACTIONS, "tap_sound in candidate actions"
+    assert "tap_sound" not in MAIN_CANDIDATE_ACTIONS
 
     im = im_base.clone()
     rng = random.Random(77)
@@ -295,7 +284,6 @@ def test_policy_cannot_call_mutators(env, test_objects, positions, im_base,
 # ---- Test 12 ----
 def test_no_nearest_fallback(env, test_objects, positions, im_base,
                              cluster_posterior, simulator):
-    # Give policy extremely low budget so nothing is affordable
     env_tiny = MiniMCEnvironment(
         env.simulator._objects,
         {oid: env.simulator._positions[oid] for oid in env.simulator._objects},
@@ -327,11 +315,9 @@ def test_same_candidate_set(env, test_objects, positions, im_base,
     for policy in [c2, c8, c13]:
         policy.reset(obs)
         unvisited_before = set(obs.get_unvisited_objects())
-        # check that get_unvisited_objects returns the same set
         if unvisited_before != set(obs.get_unvisited_objects()):
             return False, f"{policy.__class__.__name__}: unvisited changed during check"
 
-    # Verify that for a given observation state, compute_reach_cost is the same
     oid = sorted(test_objects.keys())[0]
     cost1 = obs.compute_reach_cost(oid)
     cost2 = obs.compute_reach_cost(oid)

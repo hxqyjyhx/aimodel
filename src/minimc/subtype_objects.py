@@ -9,12 +9,7 @@ Design principle: category alone is insufficient; probing has marginal value.
 """
 import random
 
-# Reuse existing visible feature lists from objects.py
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                "..", "exp004_5a3_tool_material_transfer"))
-from objects import (
+from .deps.objects_stub import (
     ACTIVE_FEATURES_PHASE_A,
     PREDICTOR_AUGMENTED_FEATURES,
     SPURIOUS_VISIBLE_FEATURES,
@@ -245,7 +240,7 @@ def _generate_visible_features_subtype(category, subtype, rng):
     Features not specified in visible_cue_probs fall back to category-level
     defaults from objects._visible_feature_probs.
     """
-    from objects import _visible_feature_probs as _cat_probs
+    from .deps.objects_stub import _visible_feature_probs as _cat_probs
 
     subtype_def = SUBTYPE_DEFINITIONS[category]
     cue_probs = subtype_def["visible_cue_probs"].get(subtype, {})
@@ -263,7 +258,7 @@ def _generate_visible_features_subtype(category, subtype, rng):
     _randomize_spurious_visible(feats, rng)
 
     # Color variants with subtype influence
-    from objects import _randomize_color_variants
+    from .deps.objects_stub import _randomize_color_variants
     color_probs = dict(cat_probs)
     if "brownish" in cue_probs:
         color_probs["brownish"] = cue_probs["brownish"]
